@@ -8,6 +8,7 @@ import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
 import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
+import InvestorProfile from './Components/InvestorProfile/InvestorProfile';
 
 // const App = () => {
 //   return (

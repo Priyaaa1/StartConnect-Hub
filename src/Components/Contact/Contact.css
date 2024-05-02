@@ -57,3 +57,9 @@
     display: block;
     margin: 20px 0;
 }
+
+.contact-col button{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
