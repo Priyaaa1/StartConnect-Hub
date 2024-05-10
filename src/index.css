@@ -10,6 +10,9 @@
 body{
   background: #F5F5F5;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 a{
   text-decoration: none;
