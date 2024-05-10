@@ -1,10 +1,18 @@
+.login-outerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90.5vh;
+}
+
 .login-container {
   width: 400px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 h2 {
