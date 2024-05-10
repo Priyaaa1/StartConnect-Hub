@@ -18,6 +18,11 @@ a{
   cursor: pointer;
 }
 
+a:hover{
+  text-decoration: underline;
+  color:lightgoldenrodyellow;
+}
+
 .container{
   padding-left: 10%;
   padding-right: 10%;
