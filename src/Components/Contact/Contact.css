@@ -63,3 +63,40 @@
     justify-content: center;
     align-items: center;
 }
+
+/* Media query for Smart Phone */
+@media (max-width: 600px) {
+    .contact {
+      margin-top: 10%;
+      flex-direction: column; /* Change flex direction to stack elements vertically */
+
+    }
+  
+    .contact-col {
+      flex-basis: 100%; 
+      margin-bottom: 50px; 
+      text-align: center; 
+    }
+  
+    .contact-col h3 {
+      font-size: 20px; 
+      margin-bottom: 10px; /* Reduce margin bottom */
+      justify-content: center;
+    }
+  
+    .contact-col h3 img {
+      width: 25px; /* Reduce image size */
+    }
+  
+    .contact form input,
+    .contact form textarea {
+      padding: 10px;
+      font-size: 18px;
+      width: 350px;
+    }
+  
+    .contact-col button {
+      width: 100%; 
+    }
+  }
+  
