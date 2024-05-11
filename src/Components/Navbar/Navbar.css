@@ -11,6 +11,23 @@ nav{
     justify-content: space-between;
     z-index: 10;
 }
+.nav-link:hover {
+  color: #ffcc00; 
+  font-size: 20px;
+  box-shadow: 0px 4px 20px 10px rgba(151, 120, 120, 0.2);
+}
+
+.nav-link.active {
+  font-weight: bold; 
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(240, 148, 148, 0.2);
+}
+
+a{
+  font-weight: bold;
+}
+
+
 
 .logo{
     width: 80px;

@@ -56,51 +56,39 @@ const Navbar = () => {
 	  }
 
 	return (
-		<nav
-			className={`container ${
-				sticky ||
-				location.pathname === "/login" ||
-				location.pathname === "/signup"
-					? "dark-nav"
-					: ""
-			}`}>
-			<img src={logo} alt="" className="logo" onClick={toggleMenu}></img>
-			<ul className={mobileMenu ? "" : "hide-mobile-menu"}>
-				<li>
-				<NavLink to="/" onClick={() => scrollToHero()}>
-					 Home
-					 </NavLink>
-				</li>
-				<li>
-					<NavLink to="/#about" onClick={() => scrollToAbout()}>
-						About
-					</NavLink>
-				</li>
-				<li>
-					<NavLink to="/" onClick={() => scrollToTerminology()}>
-						Testimonials
-					</NavLink>
-				</li>
-				<li>
-					<NavLink to="/#contact" onClick={() => scrollToContact()}>
-						Contact Us
-					</NavLink>
-				</li>
-				{/* <li><button className='btn'>Login</button></li>
-        <li><button className='btn'>Signup</button></li> */}
-				<li>
-					<NavLink to="/login">Login</NavLink>
-				</li>
-				<li>
-					<NavLink to="/signup">Signup</NavLink>
-				</li>
-			</ul>
-			<img
-				src={menu_icon}
-				alt=""
-				className="menu-icon"
-				onClick={toggleMenu}></img>
-		</nav>
+		
+		<nav className={`container ${sticky ? "dark-nav" : ""}`}>
+		<img src={logo} alt="" className="logo" onClick={toggleMenu} />
+		<ul className={mobileMenu ? "" : "hide-mobile-menu"}>
+			<li>
+				<NavLink to="/" className="nav-link" activeClassName="active" onClick={() => scrollTo('hero')}>
+					Home
+				</NavLink>
+			</li>
+			<li>
+				<NavLink to="/#about" className="nav-link" activeClassName="active" onClick={() => scrollTo('about')}>
+					About
+				</NavLink>
+			</li>
+			<li>
+				<NavLink to="/" className="nav-link" activeClassName="active" onClick={() => scrollTo('testimonials')}>
+					Testimonials
+				</NavLink>
+			</li>
+			<li>
+				<NavLink to="/#contact" className="nav-link" activeClassName="active" onClick={() => scrollTo('contact')}>
+					Contact Us
+				</NavLink>
+			</li>
+			<li>
+				<NavLink to="/login" className="nav-link" activeClassName="active">Login</NavLink>
+			</li>
+			<li>
+				<NavLink to="/signup" className="nav-link" activeClassName="active">Signup</NavLink>
+			</li>
+		</ul>
+		<img src={menu_icon} alt="" className="menu-icon" onClick={toggleMenu} />
+	</nav>
 	);
 };
 
