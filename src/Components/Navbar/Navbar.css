@@ -22,7 +22,9 @@ nav ul li{
     margin: 5px 20px;
     font-size: 16px;
 }
-
+nav ul li a.active{
+    color: lightgoldenrodyellow;
+}
 .dark-nav{
     background: #212EA0;
     transition: 0.5s;
@@ -59,9 +61,6 @@ nav ul li{
     nav ul li{
         display: block;
         margin: 25px 40px;
-    }
-    nav ul li a.active{
-        color: lightgoldenrodyellow;
     }
     .menu-icon{
         display: block;
