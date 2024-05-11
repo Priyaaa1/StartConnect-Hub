@@ -28,7 +28,7 @@ const Login = () => {
 				/>
 				<button onClick={handleLogin}>Login</button>
 				<p>
-					Don't have an account? <NavLink to="/signup">Sign up</NavLink>
+					Don't have an account? <NavLink to="/signup" className="sign-hover">Sign up</NavLink>
 				</p>
 			</div>
 		</div>

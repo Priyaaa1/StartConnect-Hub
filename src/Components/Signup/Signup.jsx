@@ -36,7 +36,7 @@ const Signup = () => {
 				/>
 				<button onClick={handleSignUp}>Sign Up</button>
 				<p>
-					Already have an account? <NavLink to="/login">Login</NavLink>
+					Already have an account? <NavLink to="/login" className="sign-hover">Login</NavLink>
 				</p>
 			</div>
 		</div>

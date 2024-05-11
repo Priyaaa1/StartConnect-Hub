@@ -8,7 +8,7 @@ const Hero = () => {
         <div className='hero-text'>
             <h1>StartConnect Hub</h1>
             <p>Connecting visionaries for growth and success, bridging the gap between ideas and investments</p>
-            <button className='btn'>Explore more <img src={dark_arrow} alt=''></img></button>
+            <button className='btn explore-button'>Explore more <img src={dark_arrow} alt=''></img></button>
         </div>
     </div>
   )

@@ -44,6 +44,11 @@ a:hover{
   align-items: center;
   justify-content: center;
 }
+.btn:hover{
+  transition: ease-in-out 0.3s;
+  color: white;
+  background-color: rgb(53, 53, 181);
+}
 
 .btn img{
   width: 20px;
