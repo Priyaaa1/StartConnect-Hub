@@ -36,3 +36,34 @@
     color: #676767;
     margin-bottom: 15px;
 }
+
+@media (max-width: 600px) {
+    .about {
+      flex-direction: column; /* Change flex direction to stack elements vertically */
+      align-items: center; /* Center align items */
+    }
+
+    #heading{
+        display: flex;
+        justify-content: center;
+    }
+  
+    .about-left,
+    .about-right {
+      flex-basis: 100%;
+      margin-bottom: 30px; 
+    }
+  
+    .about-img {
+      border-radius: 15px; 
+    }
+  
+    .about h2 {
+      font-size: 28px; /* Reduce font size */
+      text-align: center; /* Center align text */
+    }
+  
+    .about p {
+      text-align: center; 
+    }
+  }

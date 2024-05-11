@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-// import { Link } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 import { useLocation } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo2.png";
@@ -18,8 +18,42 @@ const Navbar = () => {
 
 	const [mobileMenu, setMobileMenu] = useState(false);
 	const toggleMenu = () => {
-		mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
+		setMobileMenu(!mobileMenu);
 	};
+
+
+	//  scroll to the "hero" section when clicked
+	const scrollToHero = () => {
+		scroller.scrollTo('hero', {
+		  smooth: true,
+		  offset: 0,
+		  duration: 500
+		});
+	  };
+
+	  const scrollToAbout = () => {
+		scroller.scrollTo('about', {
+		  smooth: true,
+		  offset: -260,
+		  duration: 500
+		});
+	  };
+
+	  const scrollToTerminology =() =>{
+		scroller.scrollTo('testimonials',{
+			smooth:true,
+			offset:0,
+			duration:500
+		})
+	  }
+
+	  const scrollToContact =() =>{
+		scroller.scrollTo('contact',{
+			smooth:true,
+			offset:-260,
+			duration:500
+		})
+	  }
 
 	return (
 		<nav
@@ -30,27 +64,27 @@ const Navbar = () => {
 					? "dark-nav"
 					: ""
 			}`}>
-			<img src={logo} alt="" className="logo"></img>
+			<img src={logo} alt="" className="logo" onClick={toggleMenu}></img>
 			<ul className={mobileMenu ? "" : "hide-mobile-menu"}>
 				<li>
-					<Link to="/hero" smooth={true} offset={0} duration={500}>
-						Home
-					</Link>
+				<NavLink to="/" onClick={() => scrollToHero()}>
+					 Home
+					 </NavLink>
 				</li>
 				<li>
-					<Link to="about" smooth={true} offset={-260} duration={500}>
+					<NavLink to="/#about" onClick={() => scrollToAbout()}>
 						About
-					</Link>
+					</NavLink>
 				</li>
 				<li>
-					<Link to="testimonials" smooth={true} offset={0} duration={500}>
+					<NavLink to="/" onClick={() => scrollToTerminology()}>
 						Testimonials
-					</Link>
+					</NavLink>
 				</li>
 				<li>
-					<Link to="contact" smooth={true} offset={-260} duration={500}>
+					<NavLink to="/#contact" onClick={() => scrollToContact()}>
 						Contact Us
-					</Link>
+					</NavLink>
 				</li>
 				{/* <li><button className='btn'>Login</button></li>
         <li><button className='btn'>Signup</button></li> */}
