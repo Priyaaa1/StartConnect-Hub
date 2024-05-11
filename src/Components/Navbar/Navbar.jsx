@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import { scroller } from 'react-scroll';
 // import { Link } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import "./Navbar.css";
@@ -21,6 +22,40 @@ const Navbar = () => {
 		mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
 	};
 
+
+	//  scroll to the "hero" section when clicked
+	const scrollToHero = () => {
+		scroller.scrollTo('hero', {
+		  smooth: true,
+		  offset: 0,
+		  duration: 500
+		});
+	  };
+
+	  const scrollToAbout = () => {
+		scroller.scrollTo('about', {
+		  smooth: true,
+		  offset: -260,
+		  duration: 500
+		});
+	  };
+
+	  const scrollToTerminology =() =>{
+		scroller.scrollTo('testimonials',{
+			smooth:true,
+			offset:0,
+			duration:500
+		})
+	  }
+
+	  const scrollToContact =() =>{
+		scroller.scrollTo('contact',{
+			smooth:true,
+			offset:-260,
+			duration:500
+		})
+	  }
+
 	return (
 		<nav
 			className={`container ${
@@ -33,22 +68,22 @@ const Navbar = () => {
 			<img src={logo} alt="" className="logo"></img>
 			<ul className={mobileMenu ? "" : "hide-mobile-menu"}>
 				<li>
-					<Link to="/hero" smooth={true} offset={0} duration={500}>
-						Home
-					</Link>
+				<NavLink to="/" onClick={() => scrollToHero()}>
+					 Home
+					 </NavLink>
 				</li>
 				<li>
-					<Link to="about" smooth={true} offset={-260} duration={500}>
+					<NavLink to="/" onClick={() => scrollToAbout()}>
 						About
-					</Link>
+					</NavLink>
 				</li>
 				<li>
-					<Link to="testimonials" smooth={true} offset={0} duration={500}>
+					<NavLink to="/" onClick={() => scrollToTerminology()}>
 						Testimonials
-					</Link>
+					</NavLink>
 				</li>
 				<li>
-					<Link to="contact" smooth={true} offset={-260} duration={500}>
+					<Link to="/" onClick={() => scrollToContact()}>
 						Contact Us
 					</Link>
 				</li>
