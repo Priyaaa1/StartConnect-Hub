@@ -11,25 +11,61 @@
   }
   
   */
+  /* Resetting default margin and padding */
+
   .footer {
-    margin-top: auto; /* Push the footer to the bottom */
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid #797979;
-    background-color: #f9f9f9; /* add a background color */
-    padding:  1.5rem; /* adjusted padding */ /* adjusted padding */
+    background-color: #212EA0; /* Match the background color of the nav bar */
+    color: #fff; /* Text color */
+    padding: 1.5rem; /* Adjust padding as needed */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease;
+    transform: translateY(100%);
+    z-index: 10; /* Ensure the footer is above other content */
   }
   
+  .footer.visible {
+    transform: translateY(0);
+  }
   
-  .footer ul {
+  .footer-content {
+    flex: 1;
+  }
+  
+  ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
   
-  .footer ul li {
+  ul li {
     display: inline-block;
     margin-left: 20px;
+    font-size: 16px; /* Match font size with nav bar */
   }
+  
+  ul li a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
+  
+  ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Media query for tablets */
+  @media (max-width: 1000px) {
+    /* Adjust styles for tablets if needed */
+  }
+  
+  /* Media query for smartphones */
+  @media (max-width: 600px) {
+    /* Adjust styles for smartphones if needed */
+  }
+  
