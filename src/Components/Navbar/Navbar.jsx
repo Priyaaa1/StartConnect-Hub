@@ -73,7 +73,7 @@ const Navbar = () => {
 					 </NavLink>
 				</li>
 				<li>
-					<NavLink to="/" onClick={() => scrollToAbout()}>
+					<NavLink to="/#about" onClick={() => scrollToAbout()}>
 						About
 					</NavLink>
 				</li>
@@ -83,9 +83,9 @@ const Navbar = () => {
 					</NavLink>
 				</li>
 				<li>
-					<Link to="/" onClick={() => scrollToContact()}>
+					<NavLink to="/#contact" onClick={() => scrollToContact()}>
 						Contact Us
-					</Link>
+					</NavLink>
 				</li>
 				{/* <li><button className='btn'>Login</button></li>
         <li><button className='btn'>Signup</button></li> */}
