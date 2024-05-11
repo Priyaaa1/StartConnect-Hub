@@ -32,6 +32,8 @@ nav ul li{
     display: none;
 }
 
+
+/* Media query for tablets */
 @media(max-width: 1000px){
     .logo{
         width: 140px;
@@ -41,31 +43,41 @@ nav ul li{
     }
 }
 
-@media(max-width: 840px){
-    nav{
-        padding: 15px 0;
+
+/* SmartPhone Media query */
+@media (max-width: 600px) {
+    nav {
+      padding: 15px 20px; /* Adjust padding for better spacing */
     }
-    nav ul{
-        position: fixed;
-        top: 0;;
-        right: -200px;
-        bottom: 0;
-        background: #212EA0;
-        z-index: -1;
-        width: 200px;
-        padding-top: 70px;
-        transition: 0.5s;
+  
+    .logo {
+      width: 50px;
     }
-    nav ul li{
-        display: block;
-        margin: 25px 40px;
+  
+    nav ul {
+      position: absolute; /* Change position to absolute */
+      top: 60px; /* Adjust top position */
+      right: 20px; /* Adjust right position */
+      background: #212ea0;
+      z-index: 10; /* Increase z-index to show above other content */
+      width: 200px;
+      padding-top: 20px; /* Adjust padding-top */
+      transition: 0.5s;
     }
-    .menu-icon{
-        display: block;
-        width: 30px;
-        cursor: pointer;
+  
+    nav ul li {
+      display: block;
+      margin: 10px 0; /* Adjust margin */
+      text-align: center; /* Center align menu items */
     }
-    .hide-mobile-menu{
-        right: -200px;
+  
+    .menu-icon {
+      display: block;
+      width: 30px;
+      cursor: pointer;
     }
-}
+  
+    .hide-mobile-menu {
+        display: none;
+    }
+  }

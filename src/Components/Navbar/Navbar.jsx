@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { scroller } from 'react-scroll';
-// import { Link } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo2.png";
@@ -19,7 +18,7 @@ const Navbar = () => {
 
 	const [mobileMenu, setMobileMenu] = useState(false);
 	const toggleMenu = () => {
-		mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
+		setMobileMenu(!mobileMenu);
 	};
 
 
@@ -65,7 +64,7 @@ const Navbar = () => {
 					? "dark-nav"
 					: ""
 			}`}>
-			<img src={logo} alt="" className="logo"></img>
+			<img src={logo} alt="" className="logo" onClick={toggleMenu}></img>
 			<ul className={mobileMenu ? "" : "hide-mobile-menu"}>
 				<li>
 				<NavLink to="/" onClick={() => scrollToHero()}>
