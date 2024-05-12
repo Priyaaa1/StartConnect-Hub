@@ -15,12 +15,10 @@ body {
   background: linear-gradient(to left top, #031a9a, #8b53ff);
 }
 .wrapper {
-  max-width: 1100px;
-  width: 100%;
   position: relative;
 }
 .wrapper i {
-  top: 50%;
+  top: -18%;
   height: 50px;
   width: 50px;
   cursor: pointer;
@@ -34,6 +32,14 @@ body {
   transform: translateY(-50%);
   transition: transform 0.1s linear;
 }
+
+#left{
+  left: 10%;
+}
+#right{
+  right:10%;
+}
+
 .wrapper i:active {
   transform: translateY(-50%) scale(0.85);
 }

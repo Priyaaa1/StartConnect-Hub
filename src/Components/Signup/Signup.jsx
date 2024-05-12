@@ -12,13 +12,14 @@ const Signup = () => {
 	};
 
 	return (
-		<div className="signup-outerContainer">
+		<div className=" rounded-xl shadow-2xl p-10 w-[500px] max-md:max-w-[320px]  border ">
 			{" "}
-			<div className="signup-container">
-				<h2>Sign Up</h2>
+			<form className="flex flex-col w-full gap-7 justify-center">
+				<h2 className="text-2xl font-bold ">Sign Up</h2>
 				<input
 					type="email"
 					placeholder="Email"
+					className="focus:outline-none border-none p-2 shadow-lg  "
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
 				/>
@@ -26,19 +27,21 @@ const Signup = () => {
 					type="password"
 					placeholder="Password"
 					value={password}
+					className="focus:outline-none border-none p-2 shadow-lg "
 					onChange={(e) => setPassword(e.target.value)}
 				/>
 				<input
 					type="password"
 					placeholder="Confirm Password"
 					value={confirmPassword}
+					className="focus:outline-none border-none p-2 shadow-lg "
 					onChange={(e) => setConfirmPassword(e.target.value)}
 				/>
-				<button onClick={handleSignUp}>Sign Up</button>
+				<button onClick={handleSignUp} className="bg-blue-500 p-2 text-white">Sign Up</button>
 				<p>
 					Already have an account? <NavLink to="/login">Login</NavLink>
 				</p>
-			</div>
+			</form>
 		</div>
 	);
 };

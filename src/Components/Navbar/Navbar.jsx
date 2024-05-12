@@ -56,7 +56,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`container ${
+      className={`z-50 max-lg:px-3 flex flex-row fixed top-0 left-0 w-full items-center justify-between px-20 h-20 max-md:justify-between max-sm:px-8 ${
         sticky ||
         location.pathname === "/login" ||
         location.pathname === "/signup"
@@ -64,41 +64,42 @@ const Navbar = () => {
           : ""
       }`}
     >
-      <img src={logo} alt="" className="logo" onClick={toggleMenu}></img>
-      <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
+      <img src={logo} alt="" onClick={toggleMenu} className="h-20 w-20" ></img>
+      <ul className={`${mobileMenu ? "" : "hide-mobile-menu"} flex  md:gap-8 sm:gap-3 items-center font-bold text-white max-sm:hidden`}>
         <li>
-          <NavLink to="/" onClick={() => scrollToHero()}>
+          <NavLink className="hover:text-blue-500 " to="/" onClick={() => scrollToHero()} >
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/#about" onClick={() => scrollToAbout()}>
+          <NavLink className="hover:text-blue-500 " to="/#about" onClick={() => scrollToAbout()}>
             About
           </NavLink>
         </li>
         <li>
-          <NavLink to="/#tesimonials" onClick={() => scrollToTestimonials()}>
+          <NavLink className="hover:text-blue-500 " to="/#tesimonials" onClick={() => scrollToTestimonials()}>
             Testimonials
           </NavLink>
         </li>
         <li>
-          <NavLink to="/#contact" onClick={() => scrollToContact()}>
+          <NavLink className="hover:text-blue-500 " to="/#contact" onClick={() => scrollToContact()}>
             Contact Us
           </NavLink>
         </li>
         {/* <li><button className='btn'>Login</button></li>
         <li><button className='btn'>Signup</button></li> */}
         <li>
-          <NavLink to="/login">Login</NavLink>
-        </li>
-        <li>
-          <NavLink to="/signup">Signup</NavLink>
+          <NavLink to="/signup">
+            <button className="bg-white p-2 text-black font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition">
+              Register
+            </button>
+          </NavLink>
         </li>
       </ul>
       <img
         src={menu_icon}
         alt=""
-        className="menu-icon"
+        className=" w-5 sm:hidden"
         onClick={toggleMenu}
       ></img>
     </nav>

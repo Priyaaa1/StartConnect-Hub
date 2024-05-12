@@ -23,10 +23,13 @@ function Testimonials() {
   };
   return (
     <>
-      <div className="wrapper" id="testimonials">
+
+      <h1 className="text-center  md:text-5xl font-extrabold mt-28 sm:text-[30px] max-sm:mb-12">Testimonies</h1>
+
+      <div className="wrapper container mx-auto mt-10 mb-32 max-md:px-5" id="testimonials">
         <i
           id="left"
-          className="fa-solid fa-angle-left"
+          className="fa-solid fa-angle-left bg-red-600"
           onClick={() => scrollCarousel("left")}
         ></i>
         <ul className="carousel" ref={carouselRef}>
@@ -91,9 +94,7 @@ function Testimonials() {
           onClick={() => scrollCarousel("right")}
         ></i>
       </div>
-      <h3 className="small" style={{ textAlign: "center" }}>
-        swipe left
-      </h3>
+
     </>
   );
 }

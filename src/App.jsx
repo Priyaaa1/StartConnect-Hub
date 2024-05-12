@@ -50,15 +50,12 @@ import Testimonials from "./Components/Testimonials/Testimonials";
 const App = () => {
   return (
     <Router>
-      <div>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
-        <Footer />
-      </div>
     </Router>
   );
 };
@@ -66,12 +63,13 @@ const App = () => {
 const Home = () => {
   return (
     <>
-      <Hero />
-      <div className="container">
+      <div className="w-screen">
+        <Hero />
         <About />
         <Testimonials />
         <Title subTitle="Contact Us" title="Get in Touch" />
         <Contact />
+        <Footer />
       </div>
     </>
   );

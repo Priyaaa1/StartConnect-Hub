@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 *{
   margin: 0;
@@ -26,42 +29,5 @@ a:hover{
   color:lightgoldenrodyellow;
 }
 
-.container{
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-.btn{
-  background: white;
-  color: #212121;
-  padding: 14px 25px;
-  font-size: 16px;
-  border-radius: 30px;
-  cursor: pointer;
-  border: 0;
-  outline: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn img{
-  width: 20px;
-  margin-left: 10px;
-}
-
-.btn.dark-btn{
-  background: #212EA0;
-  color: #fff;
-}
 
 
-@media(max-width: 1200px){
-    .container{
-      padding-left: 5%;
-      padding-right: 5%;
-    }
-    .btn{
-      padding: 14px 22px;
-    }
-}
