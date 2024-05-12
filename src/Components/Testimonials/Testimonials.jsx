@@ -24,6 +24,7 @@ function Testimonials() {
   return (
     <>
       <div className="wrapper" id="testimonials">
+        <h3 class="testimonial_head">TESTIMONIALS</h3>
         <i
           id="left"
           className="fa-solid fa-angle-left"
