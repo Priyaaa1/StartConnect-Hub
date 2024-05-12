@@ -39,8 +39,8 @@ const Contact = () => {
     >
       <div className="flex flex-col max-w-[500px] ">
         <div className=" flex  flex-col items-start max-md:items-center justify-center">
-          <h3 className="flex items-center text-2xl max-md:text-md gap-2 font-bold">
-            Send us a message<img src={msg_icon} className="w-10 m-2" alt=""></img>
+          <h3 className="flex items-center text-2xl max-md:text-md max-md:whitespace-nowrap gap-2 font-bold">
+            Send us a message<img src={msg_icon} className="w-10 m-2 max-md:hidden" alt=""></img>
           </h3>
           <p className="text-left text-lg max-md:text-sm max-md:text-center">
             Feel free to reach out through contact form. Your feedback,
