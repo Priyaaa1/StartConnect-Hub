@@ -31,6 +31,15 @@ a:hover{
   padding-right: 10%;
 }
 
+#testimonials h3{
+  color: #212EA0;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  
+}
+
 .btn{
   background: white;
   color: #212121;
