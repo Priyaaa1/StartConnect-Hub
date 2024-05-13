@@ -28,3 +28,8 @@
 .hero-text button{
     width: 40%;
 }
+
+.hero-text .btn:hover{
+    background-color:rgb(111, 111, 160);
+    color:white;
+}
