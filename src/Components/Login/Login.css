@@ -54,5 +54,6 @@ p a {
 }
 
 p a:hover {
+  color: #0056b3;
   text-decoration: underline;
 }
