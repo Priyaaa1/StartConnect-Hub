@@ -64,7 +64,7 @@ const Navbar = () => {
           : ""
       }`}
     >
-      <img src={logo} alt="" className="logo" onClick={toggleMenu}></img>
+      <NavLink to="/" onClick={() => scrollToHero()}><img src={logo} alt="" className="logo" onClick={toggleMenu} href="/"></img></NavLink>
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
           <NavLink to="/" onClick={() => scrollToHero()}>
