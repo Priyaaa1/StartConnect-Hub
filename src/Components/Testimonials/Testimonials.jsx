@@ -92,9 +92,6 @@ function Testimonials() {
           onClick={() => scrollCarousel("right")}
         ></i>
       </div>
-      <h3 className="small" style={{ textAlign: "center" }}>
-        swipe left
-      </h3>
     </>
   );
 }
