@@ -8,6 +8,7 @@ import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
 import Testimonials from "./Components/Testimonials/Testimonials";
+import GoToTop from "./Components/GoToTop";
 
 // const App = () => {
 //   return (
@@ -49,15 +50,20 @@ import Testimonials from "./Components/Testimonials/Testimonials";
 
 const App = () => {
   return (
+   
     <Router>
+      
       <div>
+      
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
+        <GoToTop/>
         <Footer />
+        
       </div>
     </Router>
   );
@@ -66,6 +72,7 @@ const App = () => {
 const Home = () => {
   return (
     <>
+    
       <Hero />
       <div className="container">
         <About />
