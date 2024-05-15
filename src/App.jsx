@@ -9,6 +9,8 @@ import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import GoToTop from "./Components/GoToTop";
+import Accordian from "./Components/FAQ/accordian";
+import './App.css';
 
 // const App = () => {
 //   return (
@@ -75,8 +77,10 @@ const Home = () => {
     
       <Hero />
       <div className="container">
+        <h3 id='header'>ABOUT US</h3>
         <About />
         <Testimonials />
+        <Accordian /> 
         <Title subTitle="Contact Us" title="Get in Touch" />
         <Contact />
       </div>
