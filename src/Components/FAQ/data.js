@@ -1,28 +1,28 @@
 const data = [
     {
       id  : '1',
-      question: "What are accordion components?",
+      question: "Who can use StartConnect Hub?",
       answer:
-        "Accordion components are user interface elements used for organizing and presenting content in a collapsible manner. They typically consist of a header, content, and an expand/collapse action.",
+        "StartConnect Hub is open to both startups seeking funding and investors looking for new opportunities. We welcome users from all industries and stages of development.",
     },
     {
       id  : '2',
-      question: "What are they used for?",
+      question: "What information do I need to provide to list my startup?",
       answer:
-        "They are commonly employed in various contexts, including FAQs, product descriptions, navigation menus, settings panels, and data tables, to save screen space and provide a structured and user-friendly interface for presenting information or options.",
+        "You’ll need to provide a detailed business plan, information about your team, your market analysis, financial projections, and any other relevant details that can help attract investors.",
     },
     {
       id  : '3',
-      question: "Accordion as a musical instrument",
+      question: "How does StartConnect Hub protect my information?",
       answer:
-        "The accordion is a musical instrument with a keyboard and bellows. It produces sound by air passing over reeds when the player expands or compresses the bellows, used in various music genres.",
+        "We take your privacy and security very seriously. Our platform uses advanced encryption and security measures to protect your data. Please review our Privacy Policy for more details.",
     },
     {
       id  : '4',
-      question: "Can I create an accordion component with a different framework?",
+      question: "How can I contact customer support?",
       answer:
-        "Yes of course, it is very possible to create an accordion component with another framework.",
-    },
+        "You can reach our customer support team by emailing support@startConnectHub.com. We’re here to help!",
+    }
   ];
 
   export default data;
