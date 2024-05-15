@@ -9,7 +9,7 @@ import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import GoToTop from "./Components/GoToTop";
-
+import ChatAssistant from "./ChatAssistant/ChatAssistant"
 // const App = () => {
 //   return (
 //     <div>
@@ -48,6 +48,18 @@ import GoToTop from "./Components/GoToTop";
 //   )
 // }
 
+/*const MyComponent = () => {
+  return (
+    <div>
+      <Chatbot
+        config={config}
+        messageParser={MessageParser}
+        actionProvider={ActionProvider}
+      />
+    </div>
+  );
+};*/
+
 const App = () => {
   return (
    
@@ -62,6 +74,7 @@ const App = () => {
           <Route path="/signup" element={<Signup />} />
         </Routes>
         <GoToTop/>
+        <ChatAssistant/>
         <Footer />
         
       </div>
@@ -72,7 +85,6 @@ const App = () => {
 const Home = () => {
   return (
     <>
-    
       <Hero />
       <div className="container">
         <About />
