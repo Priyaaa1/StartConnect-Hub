@@ -62,9 +62,16 @@ const Navbar = () => {
         location.pathname === "/signup"
           ? "dark-nav"
           : ""
-      }`}
-    >
-     <NavLink to="/" onClick={() => scrollToHero()}><img src={logo} alt="" className="logo" onClick={toggleMenu} href="/"></img></NavLink>
+      }`}>
+      <NavLink to="/" onClick={() => scrollToHero()}>
+        <img
+          src={logo}
+          alt=""
+          className="logo"
+          onClick={toggleMenu}
+          href="/"></img>
+      </NavLink>
+      <h1 className="heading">STARTCONNECT</h1>
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
           <NavLink to="/" onClick={() => scrollToHero()}>
@@ -99,8 +106,7 @@ const Navbar = () => {
         src={menu_icon}
         alt=""
         className="menu-icon"
-        onClick={toggleMenu}
-      ></img>
+        onClick={toggleMenu}></img>
     </nav>
   );
 };

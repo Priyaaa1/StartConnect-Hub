@@ -1,85 +1,101 @@
-nav{
-    width: 100%;
-    /* background: #333; */
-    color: #fff;
-    padding: 4px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 10;
+nav {
+  width: 100%;
+  /* background: #333; */
+  color: #fff;
+  padding: 4px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
 }
 
-.logo{
-    width: 80px;
+.logo {
+  width: 80px;
 }
 
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 5px 20px;
-    font-size: 16px;
-}
-nav ul li a.active{
-    color: lightgoldenrodyellow;
-}
-.dark-nav{
-    background: #212EA0;
-    transition: 0.5s;
+.heading {
+  padding-right: 300px;
+
 }
 
-.menu-icon{
-    display: none;
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 5px 20px;
+  font-size: 16px;
+}
+
+nav ul li a.active {
+  color: lightgoldenrodyellow;
+}
+
+.dark-nav {
+  background: #212EA0;
+  transition: 0.5s;
+}
+
+.menu-icon {
+  display: none;
 }
 
 
 /* Media query for tablets */
-@media(max-width: 1000px){
-    .logo{
-        width: 140px;
-    }
-    nav ul li{
-        margin: 10px 15px;
-    }
+@media(max-width: 1000px) {
+  .logo {
+    width: 140px;
+  }
+
+  nav ul li {
+    margin: 10px 15px;
+  }
 }
 
 
 /* SmartPhone Media query */
 @media (max-width: 600px) {
-    nav {
-      padding: 15px 20px; /* Adjust padding for better spacing */
-    }
-  
-    .logo {
-      width: 50px;
-    }
-  
-    nav ul {
-      position: absolute; /* Change position to absolute */
-      top: 60px; /* Adjust top position */
-      right: 20px; /* Adjust right position */
-      background: #212ea0;
-      z-index: 10; /* Increase z-index to show above other content */
-      width: 200px;
-      padding-top: 20px; /* Adjust padding-top */
-      transition: 0.5s;
-    }
-  
-    nav ul li {
-      display: block;
-      margin: 10px 0; /* Adjust margin */
-      text-align: center; /* Center align menu items */
-    }
-  
-    .menu-icon {
-      display: block;
-      width: 30px;
-      cursor: pointer;
-    }
-  
-    .hide-mobile-menu {
-        display: none;
-    }
+  nav {
+    padding: 15px 20px;
+    /* Adjust padding for better spacing */
   }
+
+  .logo {
+    width: 50px;
+  }
+
+  nav ul {
+    position: absolute;
+    /* Change position to absolute */
+    top: 60px;
+    /* Adjust top position */
+    right: 20px;
+    /* Adjust right position */
+    background: #212ea0;
+    z-index: 10;
+    /* Increase z-index to show above other content */
+    width: 200px;
+    padding-top: 20px;
+    /* Adjust padding-top */
+    transition: 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+    /* Adjust margin */
+    text-align: center;
+    /* Center align menu items */
+  }
+
+  .menu-icon {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .hide-mobile-menu {
+    display: none;
+  }
+}
