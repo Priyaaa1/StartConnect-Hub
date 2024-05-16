@@ -3,7 +3,7 @@ import React from 'react';
 const MessageParser = ({ children, actions }) => {
   
   const parse = (message) => {
-    if (message.includes('hello') || message.includes('hi') || message.includes('hey')) {
+    if (message.includes('hello') || message.includes('hi') || message.includes('hey') ||message.includes('Hi') ){
       actions.handleHello();
     }
     else if (
