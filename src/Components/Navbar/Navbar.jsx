@@ -46,6 +46,14 @@ const Navbar = () => {
     });
   };
 
+  const scrollToFAQ = () => {
+    scroller.scrollTo("accordian", {
+      smooth: true,
+      offset: -260,
+      duration: 500,
+    });
+  };
+
   const scrollToContact = () => {
     scroller.scrollTo("contact", {
       smooth: true,
@@ -67,7 +75,7 @@ const Navbar = () => {
       <a href="/" className="logo-link">
         <img src={logo} alt="" className="logo" onClick={toggleMenu} />
       </a>
-      
+    
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
           <NavLink to="/" onClick={() => scrollToHero()}>
@@ -82,6 +90,11 @@ const Navbar = () => {
         <li>
           <NavLink to="/#tesimonials" onClick={() => scrollToTestimonials()}>
             Testimonials
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/#accordian" onClick={() => scrollToFAQ()}>
+            FAQ's
           </NavLink>
         </li>
         <li>
