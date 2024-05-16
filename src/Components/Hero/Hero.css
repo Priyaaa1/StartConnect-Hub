@@ -1,13 +1,29 @@
 .hero{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), url('../../assets/investors.jpeg');
+    /* background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), url('../../assets/investors.jpeg'); */
     background-size: cover;
     background-position: center;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: animate 16s ease-in-out infinite;
+}
+
+@keyframes animate{
+    0%,100%{
+        background-image: url('../../assets/investors.jpeg');
+    }
+    25%{
+        background-image: url('../../assets/5.jpg');
+    }
+    50%{
+        background-image: url('../../assets/2.jpg');
+    }
+    75%{
+        background-image: url('../../assets/3.jpg');
+    }
 }
 .hero-text{
     text-align: center;
