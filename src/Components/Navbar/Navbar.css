@@ -48,35 +48,53 @@ nav ul li a.active{
 
 /* SmartPhone Media query */
 @media (max-width: 600px) {
+   
     nav {
       padding: 15px 20px; /* Adjust padding for better spacing */
+      width: 100%;
+      /* background: #333; */
+      color: #fff;
+      padding: 4px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
     }
   
     .logo {
-      width: 50px;
+      width: 80px;
+      padding: 10px;
     }
   
     nav ul {
       position: absolute; /* Change position to absolute */
       top: 60px; /* Adjust top position */
       right: 20px; /* Adjust right position */
-      background: #212ea0;
+      background: linear-gradient(to right, rgb(133, 133, 212) , rgb(19, 211, 169));
       z-index: 10; /* Increase z-index to show above other content */
-      width: 200px;
-      padding-top: 20px; /* Adjust padding-top */
+      width: 400px;
+      height: 400px;
+      padding-top: 20px;
       transition: 0.5s;
+      border-radius: 30px;
     }
   
     nav ul li {
       display: block;
-      margin: 10px 0; /* Adjust margin */
-      text-align: center; /* Center align menu items */
+      margin: 10px 0; 
+      text-align: center;
+      font-size: 30px;
     }
   
     .menu-icon {
       display: block;
-      width: 30px;
+      width: 40px;
       cursor: pointer;
+      
+      margin-right: 10px;
     }
   
     .hide-mobile-menu {
