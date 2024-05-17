@@ -9,13 +9,10 @@ import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import GoToTop from "./Components/GoToTop";
-<<<<<<< HEAD
 import ChatAssistant from "./ChatAssistant/ChatAssistant"
-=======
 import Accordian from "./Components/FAQ/accordian";
 import './App.css';
 
->>>>>>> ec2fdcecfb2df1e4804f56e87261af4df5325d73
 // const App = () => {
 //   return (
 //     <div>
