@@ -19,12 +19,19 @@ nav{
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 5px 20px;
-    font-size: 16px;
+    margin: 8px 12px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 8px;
+    background-color: #212EA0;
+    color: #fff;
+    border-radius: 5px;
 }
-nav ul li a.active{
-    color: lightgoldenrodyellow;
+nav ul li :hover{
+  text-decoration: none;
+  color: #fff;
 }
+
 .dark-nav{
     background: #212EA0;
     transition: 0.5s;
@@ -60,7 +67,7 @@ nav ul li a.active{
       position: absolute; /* Change position to absolute */
       top: 60px; /* Adjust top position */
       right: 20px; /* Adjust right position */
-      background: #212ea0;
+      /* background: #212ea0; */
       z-index: 10; /* Increase z-index to show above other content */
       width: 200px;
       padding-top: 20px; /* Adjust padding-top */
