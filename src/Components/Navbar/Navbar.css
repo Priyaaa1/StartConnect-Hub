@@ -38,24 +38,27 @@ nav ul li a.active{
 /* Media query for tablets */
 @media(max-width: 1000px){
     .logo{
-        width: 140px;
+        width: 60px;
     }
     nav ul li{
         margin: 10px 15px;
     }
 }
+@media(max-width: 800px){
+  nav ul li {
+    font-size: 14px;
+  } 
+}
 
 
 /* SmartPhone Media query */
-@media (max-width: 600px) {
+@media (max-width: 730px) {
     nav {
       padding: 15px 20px; /* Adjust padding for better spacing */
     }
-  
     .logo {
       width: 50px;
     }
-  
     nav ul {
       position: absolute; /* Change position to absolute */
       top: 60px; /* Adjust top position */
