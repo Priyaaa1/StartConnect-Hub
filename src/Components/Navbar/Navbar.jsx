@@ -79,37 +79,84 @@ const Navbar = () => {
           onClick={toggleMenu}
           href="/"></img>
       </NavLink>
-      <h1 className="heading">STARTCONNECT</h1>
+
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
           <NavLink to="/" onClick={() => scrollToHero()}>
+            <lord-icon
+              style={{
+                height: "20px",
+                width: "20px",
+                paddingTop: "3px",
+              }}
+              src="https://cdn.lordicon.com/wmwqvixz.json"
+              trigger="hover"
+              colors="primary:#ffffff"></lord-icon>{" "}
             Home
           </NavLink>
         </li>
         <li>
           <NavLink to="/#about" onClick={() => scrollToAbout()}>
+            <lord-icon
+              style={{
+                height: "20px",
+                width: "20px",
+                paddingTop: "3px",
+              }}
+              src="https://cdn.lordicon.com/jnzhohhs.json"
+              trigger="hover"
+              colors="primary:#ffffff"></lord-icon>{" "}
             About
           </NavLink>
         </li>
         <li>
           <NavLink to="/#tesimonials" onClick={() => scrollToTestimonials()}>
+            <lord-icon
+              style={{
+                height: "20px",
+                width: "20px",
+                paddingTop: "3px",
+              }}
+              src="https://cdn.lordicon.com/hrjifpbq.json"
+              trigger="hover"
+              colors="primary:#ffffff"></lord-icon>{" "}
             Testimonials
           </NavLink>
         </li>
         <li>
           <NavLink to="/#accordian" onClick={() => scrollToFAQ()}>
+            <lord-icon
+              style={{
+                height: "20px",
+                width: "20px",
+                paddingTop: "3px",
+              }}
+              src="https://cdn.lordicon.com/pyoiumqr.json"
+              trigger="hover"
+              colors="primary:#ffffff"></lord-icon>{" "}
             FAQ's
           </NavLink>
         </li>
         <li>
           <NavLink to="/#contact" onClick={() => scrollToContact()}>
+            <lord-icon
+              style={{
+                height: "20px",
+                width: "20px",
+                paddingTop: "3px",
+              }}
+              src="https://cdn.lordicon.com/srsgifqc.json"
+              trigger="hover"
+              colors="primary:#ffffff"></lord-icon>{" "}
             Contact Us
           </NavLink>
         </li>
         {/* <li><button className='btn'>Login</button></li>
         <li><button className='btn'>Signup</button></li> */}
         <li>
-          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/login">
+            <i class="fa-solid fa-right-to-bracket"></i> Login
+          </NavLink>
         </li>
         <li>
           <NavLink to="/signup">Signup</NavLink>
