@@ -15,7 +15,13 @@ nav{
 .logo{
     width: 80px;
 }
-
+.logIn{
+  /*background-color: rgb(145, 99, 187);*/
+  background-color: transparent;
+}
+.logIn:hover{
+  background-color: rgb(109, 65, 151);
+}
 nav ul li{
     display: inline-block;
     list-style: none;
