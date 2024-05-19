@@ -40,9 +40,7 @@ const Footer = () => {
                 <div>The StartConnect-Hub Blog</div>
                 <div>Collaboration</div>
                 <div>Media</div>
-                <div>Terms and Conditoons</div>
-                <div>Privacy Policy</div>
-                <div>Mission and Vision</div>
+                
               </div>
             </div>
           </div>
