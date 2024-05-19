@@ -55,7 +55,7 @@ const App = () => {
    
     <Router>
       
-      <div>
+      <div className="main-div">
       
         <Navbar />
         <Routes>
