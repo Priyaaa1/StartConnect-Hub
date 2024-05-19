@@ -42,7 +42,7 @@ nav ul li a.active {
 }
 
 
-/* Media query for tablets */
+
 @media(max-width: 1000px) {
   .logo {
     width: 140px;
@@ -51,10 +51,17 @@ nav ul li a.active {
   nav ul li {
     margin: 10px 15px;
   }
+
+}
+@media(max-width: 800px){
+  nav ul li {
+    font-size: 14px;
+  } 
 }
 
 
 /* SmartPhone Media query */
+
 @media (max-width: 600px) {
   nav {
     padding: 15px 20px;
@@ -99,3 +106,4 @@ nav ul li a.active {
     display: none;
   }
 }
+
