@@ -50,7 +50,7 @@ body{
 
 .companyCss{
   font-size: 16px;
-   margin-top: 10px;
+   margin-bottom: 60px;
 }
 .moreInfoCss{
 font-size: 16px;
@@ -131,7 +131,7 @@ margin-top: 30px;
 .companyCss{
  
     margin-bottom:0px;
-    margin-top:60px;
+    margin-top:0px;
 }
 
 .moreInfoCss{
@@ -162,6 +162,7 @@ margin-top: 20px;
  }
  .companyCss{
   font-size: 14px;
+  margin-top: 0px;
  }
 
  .moreInfoCss{
@@ -189,7 +190,8 @@ margin-top: 20px;
 
  .companyCss{
   font-size: 14px;
-  margin-bottom:10px;
+  margin-bottom:60px;
+  
  }
 
  .moreInfoCss{
