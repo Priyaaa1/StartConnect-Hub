@@ -3,7 +3,7 @@ import Avatar from "../ChatAssistant/Avatar";
 import UserAvatar from "../ChatAssistant/UserAvatar"
 const config = {
     botName: "InvestIQ",
-    initialMessages: [createChatBotMessage(`Welcome to StartConnect Hub! 🙌`)],
+    initialMessages: [createChatBotMessage(`Welcome to StartConnect-Hub! 🙌`)],
     customComponents:{
         botAvatar: (props) => <Avatar {...props} />,
         userAvatar: (props) => <UserAvatar {...props} />,

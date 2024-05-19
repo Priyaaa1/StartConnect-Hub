@@ -14,11 +14,11 @@ const MessageParser = ({ children, actions }) => {
       message.includes('mission of company')||
       message.includes('what does this company do?')||
       message.includes('What does this company do?')||
-      message.include('What is StartConnect-Hub?')
+      message.includes('What is StartConnect-Hub?')
     ){
       actions.companyDetails();
     } 
-    else if (message.includes('how to reach startConnect-Hub?'))  {actions.contactUs();
+    else if (message.includes('how to reach StartConnect-Hub?'))  {actions.contactUs();
     }
   } 
 
