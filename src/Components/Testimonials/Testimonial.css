@@ -75,7 +75,8 @@ body {
   list-style: none;
   background: #fff;
   cursor: pointer;
-  padding-bottom: 15px;
+  padding-inline:1rem;
+  padding-bottom: 14px;
   flex-direction: column;
   border-radius: 8px;
 }
