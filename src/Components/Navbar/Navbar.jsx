@@ -102,11 +102,16 @@ const Navbar = () => {
         {/* <li><button className='btn'>Login</button></li>
         <li><button className='btn'>Signup</button></li> */}
         <li>
+          <NavLink to="/login">
+          <button className='logIn'>LOG IN</button>
+          </NavLink>
+        </li>
+        {/*<li>
           <NavLink to="/login">Login</NavLink>
         </li>
         <li>
           <NavLink to="/signup">Signup</NavLink>
-        </li>
+      </li>*/}
       </ul>
       <img
         src={menu_icon}
