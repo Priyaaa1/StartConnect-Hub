@@ -3,6 +3,8 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
+
+    
     <footer className="footer">
       <div className="footer-content">
         <ul className="footer-links">
@@ -17,7 +19,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="/faq">
+            <a href="/#accordian">
               <i className="fas fa-question"></i> FAQ
             </a>
           </li>
