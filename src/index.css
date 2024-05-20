@@ -10,9 +10,21 @@
 body{
   background: #F5F5F5;
 }
+
+/*Scrollbar*/
 body::-webkit-scrollbar {
-  display: none;
+  width: 8px; /* Width of the scrollbar */
 }
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #007bff; /* Color of the thumb */
+  border-radius: 6px; /* Roundness of the thumb */
+}
+
 
 a{
   text-decoration: none;
@@ -29,6 +41,15 @@ a:hover{
 .container{
   padding-left: 10%;
   padding-right: 10%;
+}
+
+#testimonials h3{
+  color: #212EA0;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  
 }
 
 .btn{
@@ -54,6 +75,7 @@ a:hover{
   background: #212EA0;
   color: #fff;
 }
+
 
 
 @media(max-width: 1200px){

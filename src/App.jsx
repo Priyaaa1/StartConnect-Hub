@@ -8,7 +8,12 @@ import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
 import Testimonials from "./Components/Testimonials/Testimonials";
-
+import GoToTop from "./Components/GoToTop";
+import Accordian from "./Components/FAQ/accordian";
+import './App.css';
+import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
+import Chatbot from 'react-chatbot-kit'
+import 'react-chatbot-kit/build/main.css'
 // const App = () => {
 //   return (
 //     <div>
@@ -49,15 +54,20 @@ import Testimonials from "./Components/Testimonials/Testimonials";
 
 const App = () => {
   return (
+   
     <Router>
+      
       <div>
+      
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
+        <GoToTop/>
         <Footer />
+        
       </div>
     </Router>
   );
@@ -66,10 +76,14 @@ const App = () => {
 const Home = () => {
   return (
     <>
+    
       <Hero />
+      <ChatAssistant/>
       <div className="container">
+        <h3 id='header'>ABOUT US</h3>
         <About />
         <Testimonials />
+        <Accordian /> 
         <Title subTitle="Contact Us" title="Get in Touch" />
         <Contact />
       </div>

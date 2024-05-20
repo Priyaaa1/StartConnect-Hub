@@ -24,6 +24,8 @@ function Testimonials() {
   return (
     <>
       <div className="wrapper" id="testimonials">
+        <h3 class="testimonial_head">TESTIMONIALS</h3>
+        <div>
         <i
           id="left"
           className="fa-solid fa-angle-left"
@@ -90,10 +92,11 @@ function Testimonials() {
           className="fa-solid fa-angle-right"
           onClick={() => scrollCarousel("right")}
         ></i>
+
+
+        </div>
+        
       </div>
-      <h3 className="small" style={{ textAlign: "center" }}>
-        swipe left
-      </h3>
     </>
   );
 }

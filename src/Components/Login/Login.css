@@ -54,7 +54,12 @@ text-decoration: none;
 }
 
 p a:hover {
+
 text-decoration: underline;
+
+  color: #0056b3;
+  text-decoration: underline;
+
 }
 .valid {
 border: 1px solid green;

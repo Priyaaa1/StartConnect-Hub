@@ -1,0 +1,37 @@
+h2 {
+    text-align: center;
+    color: #212EA0;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    
+}
+
+h3 {
+    padding: 10px;
+}
+
+.question {
+    background-color: #212EA0;
+    border: 3px solid whitesmoke;
+    color: azure;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+} 
+
+.item {
+    padding: 10px;
+}
+
+.content {
+    justify-content: center;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    font-family: "Outfit", sans-serif;
+}
+
