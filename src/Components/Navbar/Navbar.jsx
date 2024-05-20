@@ -63,7 +63,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav
+    <nav 
       className={`container ${
         sticky ||
         location.pathname === "/login" ||
