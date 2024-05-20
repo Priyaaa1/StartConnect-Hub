@@ -14,7 +14,7 @@ const ChatAssistant = () => {
     setIsOpen(!isOpen);
   };
     return (
-      <div className="chatbot">
+      <div className="chatbot chatbot-scroll">
         <img className="Logo" src="chatbotLogo.jpeg" alt="Logo" onClick={toggleChatbot} />
       {isOpen && 
         <Chatbot
