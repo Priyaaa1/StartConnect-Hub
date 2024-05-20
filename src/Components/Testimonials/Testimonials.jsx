@@ -90,7 +90,7 @@ function Testimonials() {
               <img src="user-4.png" alt="img" draggable="false" />
             </div>
             <div className="info">
-              <h2>James Khosravi</h2>
+              <h2 className="names">James Khosravi</h2>
               <span className="text">
                 Empowering entrepreneurs to achieve their goals
               </span>

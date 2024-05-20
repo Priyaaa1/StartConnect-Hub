@@ -83,7 +83,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 5px;
-  padding: 10px;
 }
 
 .carousel .card {
@@ -106,10 +105,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000;
   color: #fff;
-  width: 50px;
-  height: 50px;
+  background: #212EA0; 
+  width: 148px;
+  height: 148px;
   border-radius: 50%;
   font-size: 2rem;
   font-weight: 700;
@@ -124,62 +123,33 @@ body {
   border: 4px solid #fff;
 }
 
-.card .info{
-  margin-top: 25px;
-}
-
-.carousel  .card .c-1{
-  background: #f9ca24;
-  box-shadow: 0 0 0 0 #f9ca24;
-}
-
-.carousel  .card .c-2{
-  background: #6c5ce7;
-  box-shadow: 0 0 0 0 #6c5ce7;
-}
-
-.carousel  .card .c-3{
-  background: #f9ca24;
-  box-shadow: 0 0 0 0 #f9ca24;
-}
-
-.carousel  .card .c-4{
-  background: #3DA5D8;
-  box-shadow: 0 0 0 0 #3DA5D8;
-}
-
-.carousel  .card .c-5{
-  background: #f9ca24;
-  box-shadow: 0 0 0 0 #f9ca24;
-}
-
-.carousel  .card .c-6{
-  background: #6c5ce7;
-  box-shadow: 0 0 0 0 #6c5ce7;
+.carousel  .card .c-1 ,.c-2,.c-3 ,.c-4,.c-5,.c-6 {
+   background: #212EA0; 
+   box-shadow: 0 0 0 0 #212EA0; 
 }
 
 .carousel  .card:hover .c-1{
-  box-shadow: 0 0 0 300px #f9ca24;
+  box-shadow: 0 0 0 300px #212EA0;
 }
 
 .carousel  .card:hover .c-2{
-  box-shadow: 0 0 0 300px #6c5ce7;
+  box-shadow: 0 0 0 300px #212EA0;
 }
 
 .carousel  .card:hover .c-3{
-  box-shadow: 0 0 0 300px #f9ca24;
+   box-shadow: 0 0 0 300px #212EA0;
 }
 
 .carousel  .card:hover .c-4{
-  box-shadow: 0 0 0 300px #3DA5D8;
+   box-shadow: 0 0 0 300px #212EA0;
 }
 
 .carousel  .card:hover .c-5{
-  box-shadow: 0 0 0 300px #f9ca24;
+   box-shadow: 0 0 0 300px #212EA0;
 }
 
 .carousel  .card:hover .c-6{
-  box-shadow: 0 0 0 300px #6c5ce7;
+   box-shadow: 0 0 0 300px #212EA0;
 }
 
 .carousel  .card .info {
@@ -198,6 +168,7 @@ body {
 }
 
 .carousel  .card .info span {
+  color: #6A6D78;
   margin: 5px;
   padding: 5px;
   font-size: 1.1rem;
@@ -207,16 +178,11 @@ body {
   margin-bottom: 15px;
 }
 
-.carousel:hover .card{
-  opacity: .5;
-  filter: blur(3px);
-}
-
 .carousel .card:hover{
-  overflow: hidden;
-  opacity: 1;
-  filter: blur(0px);
-}
+  h2, span{
+    color: white;
+  }
+} 
 
   @media screen and (max-width: 900px) {
     .wrapper .carousel {
