@@ -155,12 +155,14 @@ const Navbar = () => {
         <li><button className='btn'>Signup</button></li> */}
         <li>
           <NavLink to="/login">
+
             <i class="fa-solid fa-right-to-bracket"></i> Login
           </NavLink>
+
         </li>
         <li>
           <NavLink to="/signup">Signup</NavLink>
-        </li>
+      </li>*/}
       </ul>
       <img
         src={menu_icon}
