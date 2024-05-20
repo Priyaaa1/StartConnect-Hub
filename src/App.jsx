@@ -11,7 +11,9 @@ import Testimonials from "./Components/Testimonials/Testimonials";
 import GoToTop from "./Components/GoToTop";
 import Accordian from "./Components/FAQ/accordian";
 import './App.css';
-
+import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
+import Chatbot from 'react-chatbot-kit'
+import 'react-chatbot-kit/build/main.css'
 // const App = () => {
 //   return (
 //     <div>
@@ -76,6 +78,7 @@ const Home = () => {
     <>
     
       <Hero />
+      <ChatAssistant/>
       <div className="container">
         <h3 id='header'>ABOUT US</h3>
         <About />
