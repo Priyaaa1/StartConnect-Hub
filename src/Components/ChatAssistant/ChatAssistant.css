@@ -23,6 +23,18 @@
 .react-chatbot-kit-chat-input {
   outline: none;
 }
+.react-chatbot-kit-chat-message-container{
+  overflow-x: hidden;
+  padding: 0 7.5px 10px 10.5px;
+  height: 455px;
+}
+.react-chatbot-kit-user-chat-message {
+  padding: 15px;
+  margin-right: 9px;
+}
+.react-chatbot-kit-chat-input-form{
+  margin: -3px 10px;
+}
 .react-chatbot-kit-chat-inner-container {
   background-color: rgb(76, 96, 128);
 }
@@ -46,7 +58,9 @@
 
 .react-chatbot-kit-chat-btn-send {
   background-color: #55a0ea;
-  height: 45px;
+  height: 43px;
+  width: 90px;
+  margin: 0px 10px;
 }
 .Logo {
   height: 50px;
