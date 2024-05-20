@@ -14,6 +14,7 @@ body {
   width: 100%;
   position: relative;
   padding-bottom: 100px;
+  z-index: -1;
 }
 .wrapper i {
   top: 50%;

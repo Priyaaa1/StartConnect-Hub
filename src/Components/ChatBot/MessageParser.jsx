@@ -1,4 +1,5 @@
 import React from 'react';
+import { act } from 'react';
 
 const MessageParser = ({ children, actions }) => {
   
@@ -19,6 +20,12 @@ const MessageParser = ({ children, actions }) => {
       actions.companyDetails();
     } 
     else if (message.includes('how to reach StartConnect-Hub?'))  {actions.contactUs();
+    }
+    else if(message.trim()==""){
+      actions.emptyHandle();
+    }
+    else{
+      actions.abchandle();
     }
   } 
 
