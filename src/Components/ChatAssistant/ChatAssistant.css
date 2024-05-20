@@ -1,12 +1,13 @@
 .chatbot {
-    position: fixed;
-    bottom: 0;
-    right:0;
-    margin-right:20px;
-    margin-bottom: 12px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-bottom: 12px;
+  z-index: 40;
 }
 .react-chatbot-kit-chat-input {
-  outline:none;
+  outline: none;
 }
 .react-chatbot-kit-chat-inner-container {
   background-color: rgb(76, 96, 128);
@@ -31,21 +32,21 @@
 
 .react-chatbot-kit-chat-btn-send {
   background-color: #55a0ea;
-  height:45px;
+  height: 45px;
 }
-.Logo{
-  height:50px;
-  width:50px;
+.Logo {
+  height: 50px;
+  width: 50px;
   border-radius: 50px;
-  right:12px;
+  right: 12px;
 }
-.Avatar{
-  height:50px;
-  width:50px;
+.Avatar {
+  height: 50px;
+  width: 50px;
   border-radius: 50px;
 }
-.userAvatar{
-  height:50px;
-  width:50px;
-  border-radius:50px;
+.userAvatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
 }
