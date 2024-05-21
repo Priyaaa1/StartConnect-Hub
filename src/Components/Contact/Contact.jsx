@@ -67,6 +67,9 @@ const Contact = () => {
           <input
             type="tel"
             name="phone"
+            pattern="[0-9]*"
+            minLength="10"
+            maxLength="10"
             placeholder="Enter your phone"
             required
           ></input>
