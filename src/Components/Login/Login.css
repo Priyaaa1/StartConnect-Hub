@@ -1,59 +1,110 @@
 .login-outerContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90.5vh;
 }
 
 .login-container {
-  width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+width: 358.67px;
+margin: 0 auto;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 10px;
+background-color: #fff;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+font-size: 24px;
+margin-bottom: 20px;
 }
 
 input {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+width: 358.67px;
+margin-bottom: 10px;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-sizing: border-box;
 }
 
 button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
+width: 100%;
+padding: 10px;
+border: none;
+border-radius: 5px;
+background-color: #007bff;
+color: #fff;
+cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+background-color: #0056b3;
 }
 
 p {
-  margin-top: 15px;
-  text-align: center;
+margin-top: 15px;
+text-align: center;
 }
 
 p a {
-  color: #007bff;
-  text-decoration: none;
+color: #007bff;
+text-decoration: none;
 }
 
 p a:hover {
+
+text-decoration: underline;
+
   color: #0056b3;
   text-decoration: underline;
+
+}
+.valid {
+border: 1px solid green;
+}
+
+.error {
+border: 1px solid red;
+}
+
+.shake {
+animation: shake 0.5s;
+}
+
+@keyframes shake {
+0% {
+  transform: translate(1px, 1px) rotate(0deg);
+}
+10% {
+  transform: translate(-1px, -2px) rotate(-1deg);
+}
+20% {
+  transform: translate(-3px, 0px) rotate(1deg);
+}
+30% {
+  transform: translate(3px, 2px) rotate(0deg);
+}
+40% {
+  transform: translate(1px, -1px) rotate(1deg);
+}
+50% {
+  transform: translate(-1px, 2px) rotate(-1deg);
+}
+60% {
+  transform: translate(-3px, 1px) rotate(0deg);
+}
+70% {
+  transform: translate(3px, 1px) rotate(-1deg);
+}
+80% {
+  transform: translate(-1px, -1px) rotate(1deg);
+}
+90% {
+  transform: translate(1px, 2px) rotate(0deg);
+}
+100% {
+  transform: translate(1px, -2px) rotate(-1deg);
+}
 }
