@@ -17,6 +17,7 @@ import './App.css';
 import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
+import Explore from '../src/Pages/Explore'
 // const App = () => {
 //   return (
 //     <div>
@@ -55,12 +56,13 @@ import 'react-chatbot-kit/build/main.css'
 //   )
 // }
 
+
 const App = () => {
   return (
    
     <Router>
       
-      <div>
+      <div className="main-div">
       
         <Navbar />
         <Routes>
