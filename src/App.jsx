@@ -14,6 +14,7 @@ import './App.css';
 import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
+import Explore from '../src/Pages/Explore'
 // const App = () => {
 //   return (
 //     <div>
@@ -52,6 +53,7 @@ import 'react-chatbot-kit/build/main.css'
 //   )
 // }
 
+
 const App = () => {
   return (
    
@@ -64,6 +66,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path='/explore' element={<Explore/>}/>
         </Routes>
         <GoToTop/>
         <Footer />
