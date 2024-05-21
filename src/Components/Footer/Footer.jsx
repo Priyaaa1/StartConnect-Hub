@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-content">
         <ul className="footer-links">
           <li>
-            <a href="/#about">
+            <a href="/aboutus">
               <i className="fas fa-users"></i> About Us
             </a>
           </li>
@@ -18,7 +18,7 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <a href="/#accordian">
+            <a href="/faq">
               <i className="fas fa-question"></i> FAQ
             </a>
           </li>
