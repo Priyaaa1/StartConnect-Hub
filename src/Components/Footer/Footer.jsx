@@ -3,6 +3,8 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
+
+    
     <footer className="footer">
       <div className="footer-content">
         <ul className="footer-links">
@@ -17,7 +19,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="/faq">
+            <a href="/#accordian">
               <i className="fas fa-question"></i> FAQ
             </a>
           </li>
@@ -26,6 +28,8 @@ const Footer = () => {
               <i className="fas fa-envelope"></i> Contact Us
             </a>
           </li>
+        </ul>
+        <ul className="footer-links">
           <li>
             <a href="/blog">
               <i className="fas fa-newspaper"></i> Blog
@@ -88,7 +92,9 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <span className="copyright">© 2024 StartConnect-Hub. All rights reserved.</span>
+      <span className="copyright">
+        © 2024 StartConnect-Hub. All rights reserved.
+      </span>
     </footer>
   );
 };

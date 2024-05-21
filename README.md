@@ -30,17 +30,19 @@ Contributions are always welcome!
 
 You are all set !
 
-8. Perfom your desired changes to the code base.
+8. Perform your desired changes to the code base.
 
 9. Track your changes.
 `git add .`
 
-10. Commit your changes.
-`git commit -m "relevant commit message"`
+10. Commit your changes with a relevant commit message. For example, if you added a new feature, you could use:
+`git commit -m "Add feature X"`
+    Or if you fixed a bug, you could use:
+`git commit -m "Fix issue Y"`
 
 11. Push the committed changes in your feature branch to your remote repo.
 `git push -u origin <your_branch_name>`
 
-12. To create a pull request, click on "Compare and pull requests". Please ensure you compare your feature branch to the desired branch of the repo you are suppose to make a PR to.
+12. To create a pull request, click on "Compare and pull requests". Please ensure you compare your feature branch to the desired branch of the repo you are supposed to make a PR to.
 
 13. Voila 🎉 You have made a PR to the StartConnect-Hub project. Sit back patiently and relax while the project maintainers review your PR.

@@ -11,7 +11,10 @@ import Testimonials from "./Components/Testimonials/Testimonials";
 import GoToTop from "./Components/GoToTop";
 import Accordian from "./Components/FAQ/accordian";
 import './App.css';
-
+import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
+import Chatbot from 'react-chatbot-kit'
+import 'react-chatbot-kit/build/main.css'
+import Explore from '../src/Pages/Explore'
 // const App = () => {
 //   return (
 //     <div>
@@ -50,18 +53,20 @@ import './App.css';
 //   )
 // }
 
+
 const App = () => {
   return (
    
     <Router>
       
-      <div>
+      <div className="main-div">
       
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path='/explore' element={<Explore/>}/>
         </Routes>
         <GoToTop/>
         <Footer />
@@ -76,6 +81,7 @@ const Home = () => {
     <>
     
       <Hero />
+      <ChatAssistant/>
       <div className="container">
         <h3 id='header'>ABOUT US</h3>
         <About />
