@@ -7,6 +7,9 @@ import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
+import AboutUs from "./Components/Footer/Components/AboutUS";
+import Faq from "./Components/Footer/Components/faq";
+import ContactUS from "./Components/Footer/Components/contact";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import GoToTop from "./Components/GoToTop";
 import Accordian from "./Components/FAQ/accordian";
@@ -64,6 +67,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/contact" element={<ContactUS />} />
         </Routes>
         <GoToTop/>
         <Footer />
