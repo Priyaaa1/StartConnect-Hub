@@ -22,6 +22,11 @@
   gap: 5px;
 }
 
+@media  (min-height:600px){
+  .footer-links{
+    flex-direction: column;
+  }
+}
 .footer-links {
   list-style: none;
   padding: 0;
