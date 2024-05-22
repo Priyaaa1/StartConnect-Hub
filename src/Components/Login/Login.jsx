@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Login.css";
+import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
+
+
+
+
 
 const Login = () => {
 	const [email, setEmail] = useState("");
@@ -30,7 +36,18 @@ const Login = () => {
 				<p>
 					Don't have an account? <NavLink to="/signup">Sign up</NavLink>
 				</p>
+                <GoogleLogin
+                onSuccess={credentialResponse => {
+					const credentialDecoded=jwtDecode(credentialResponse.credential);
+					console.log(credentialDecoded);
+                }}
+                onError={() => {
+                    console.log('Login Failed');
+                }}
+            />
 			</div>
+            
+			
 		</div>
 	);
 };
