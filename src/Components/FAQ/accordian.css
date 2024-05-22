@@ -8,19 +8,35 @@ h2 {
     
 }
 
-h3 {
-    padding: 10px;
-}
-
 .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #212EA0;
     border: 3px solid whitesmoke;
     color: azure;
     border-radius: 10px;
     padding-top: 15px;
+    padding-right: 20px;
     padding-bottom: 15px;
     padding-left: 10px;
 } 
+
+.accordian .question:hover {
+    background-color: #000c7c;
+}
+
+.arrow-icon {
+    transition: transform 0.5s ease-in-out;
+}
+
+.accordian .active-faq {
+    transform: rotate(-180deg);
+}
+
+h3 {
+    padding: 10px;
+}
 
 .item {
     padding: 10px;
@@ -29,11 +45,15 @@ h3 {
 .content {
     transition: max-height 1s ease-in-out;
     justify-content: center;
-    padding: 20px;
-    border: 3px solid black;
+    box-sizing: content-box;
+    /* padding: 20px; */
+    /* border: 3px solid black; */
     border-radius: 10px;
-    margin: 10px;
+    /* margin: 10px; */
     font-family: "Outfit", sans-serif;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, margin 0.5s ease-in-out, border 0.5s ease-in-out;
 }
 .content.show {
     max-height: 500px; /* Set a reasonable max-height to allow transition */
