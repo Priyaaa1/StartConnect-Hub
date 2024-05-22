@@ -30,7 +30,7 @@ h2 {
     transition: transform 0.5s ease-in-out;
 }
 
-.active-faq {
+.accordian .active-faq {
     transform: rotate(-180deg);
 }
 
