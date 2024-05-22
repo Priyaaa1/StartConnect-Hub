@@ -27,6 +27,7 @@ h3 {
 }
 
 .content {
+    transition: max-height 1s ease-in-out;
     justify-content: center;
     padding: 20px;
     border: 3px solid black;
@@ -34,4 +35,8 @@ h3 {
     margin: 10px;
     font-family: "Outfit", sans-serif;
 }
-
+.content.show {
+    max-height: 500px; /* Set a reasonable max-height to allow transition */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

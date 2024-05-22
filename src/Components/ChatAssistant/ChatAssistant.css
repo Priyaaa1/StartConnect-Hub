@@ -1,5 +1,6 @@
 .chatbot {
   position: fixed;
+  z-index: 2;
   bottom: 0;
   right: 0;
   margin-right: 20px;
@@ -25,7 +26,7 @@
 }
 .react-chatbot-kit-chat-message-container{
   overflow-x: hidden;
-  padding: 0 7.5px 10px 10.5px;
+  padding: 0 5.5px 25px 5.5px;
   height: 455px;
 }
 .react-chatbot-kit-user-chat-message {
