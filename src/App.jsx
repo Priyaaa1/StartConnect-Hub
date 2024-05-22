@@ -1,4 +1,8 @@
+// import ReactDOM from 'react-dom';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import About from "./Components/About/About";
@@ -65,6 +69,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const App = () => {
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, // animation duration in milliseconds
+        mirror: true,
+        offset: 80,
+        disable: 'mobile',
+      });
+    }, []);
   return (
    
     <Router>
