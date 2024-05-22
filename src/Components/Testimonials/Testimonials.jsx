@@ -25,6 +25,7 @@ function Testimonials() {
     <>
       <div className="wrapper" id="testimonials">
         <h3 class="testimonial_head">TESTIMONIALS</h3>
+        <div>
         <i
           id="left"
           className="fa-solid fa-angle-left"
@@ -139,6 +140,10 @@ function Testimonials() {
           className="fa-solid fa-angle-right"
           onClick={() => scrollCarousel("right")}
         ></i>
+
+
+        </div>
+        
       </div>
     </>
   );

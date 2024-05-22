@@ -1,4 +1,4 @@
-.signup-outerContainer{
+.signup-outerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,11 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #f9f9f9;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.signup-container > input {
+  outline: none;
 }
 
 h2 {
