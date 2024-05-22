@@ -1,22 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
   return (
-
-    
     <footer className="footer">
       <div className="footer-content">
         <ul className="footer-links">
           <li>
-            <a href="/about-us">
+            <a href="/#about">
               <i className="fas fa-users"></i> About Us
             </a>
           </li>
           <li>
-            <a href="/how-it-works">
+            <Link to="/howitworks">
               <i className="fas fa-lightbulb"></i> How it Works
-            </a>
+            </Link>
           </li>
           <li>
             <a href="/#accordian">
@@ -24,7 +23,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="/contact">
+            <a href="/#contact">
               <i className="fas fa-envelope"></i> Contact Us
             </a>
           </li>
@@ -36,19 +35,19 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="/vision-mission">
+            <a href="/visionandmission">
               <i className="fas fa-eye"></i> Vision & Mission
             </a>
           </li>
           <li>
-            <a href="/privacy-policy">
+            <Link to="/privacypolicy">
               <i className="fas fa-lock"></i> Privacy Policy
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/terms-conditions">
+            <Link to="/termsandconditions">
               <i className="fas fa-file-contract"></i> Terms & Conditions
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
