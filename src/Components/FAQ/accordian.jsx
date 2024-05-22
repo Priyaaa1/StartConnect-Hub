@@ -40,7 +40,7 @@ function Accordian() {
                   <h3> {dataItem.question} </h3>
                   <div
                     className={`arrow-icon ${
-                      selected === dataItem.id ? "active" : ""
+                      selected === dataItem.id ? "active-faq" : ""
                     }`}
                   >
                     <FaChevronDown />
@@ -53,8 +53,8 @@ function Accordian() {
                   style={{
                     maxHeight:
                       selected === dataItem.id
-                        ? // dataItem.id gives only content height
-                          `${heights[dataItem.id]}px`
+                        ? // dataItem.id gives content height dynamycally and 100 added for extra space if needed
+                          `${heights[dataItem.id] + 100}px`
                         : "0",
                     padding: selected === dataItem.id ? "20px" : "",
                     border: selected === dataItem.id ? "3px solid black" : "",
