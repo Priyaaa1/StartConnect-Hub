@@ -15,7 +15,7 @@ function Accordian () {
         <>
         <h2> FAQ's</h2>
         <div id="accordian">
-        <div className="accordian">
+        <div className="accordian" data-aos="flip-up">
             {
                 data && data.length > 0 ? 
                 data.map(dataItem=> <div className="item" > 
