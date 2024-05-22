@@ -93,6 +93,7 @@ body {
   background: #fff;
   cursor: pointer;
   padding-bottom: 15px;
+  padding-top: 15px;
   flex-direction: column;
   border-radius: 8px;
   overflow: hidden;
