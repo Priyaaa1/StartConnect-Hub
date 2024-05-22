@@ -65,6 +65,7 @@ const PolicyWrapper = styled.div`
   h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    margin-top: 80px;
   }
 
 h2 {

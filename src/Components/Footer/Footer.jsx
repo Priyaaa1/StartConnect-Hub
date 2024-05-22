@@ -13,7 +13,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <Link to="/how-it-works">
+            <Link to="/howitworks">
               <i className="fas fa-lightbulb"></i> How it Works
             </Link>
           </li>
@@ -35,7 +35,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="/vision-mission">
+            <a href="/visionandmission">
               <i className="fas fa-eye"></i> Vision & Mission
             </a>
           </li>
@@ -45,7 +45,7 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link to="/terms-conditions">
+            <Link to="/termsandconditions">
               <i className="fas fa-file-contract"></i> Terms & Conditions
             </Link>
           </li>
