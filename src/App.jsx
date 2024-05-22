@@ -19,6 +19,8 @@ import PrivacyPolicy from "./Pages/privacypolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import VisionAndMission from "./Pages/VisionAndMission";
 import HowItWorks from "./Pages/HowItWorks";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // const App = () => {
 //   return (
