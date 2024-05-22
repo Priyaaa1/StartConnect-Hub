@@ -15,6 +15,8 @@ import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
 import Explore from '../src/Pages/Explore'
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
+
 // const App = () => {
 //   return (
 //     <div>
@@ -67,6 +69,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path='/explore' element={<Explore/>}/>
+          <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
         </Routes>
         <GoToTop/>
         <Footer />
