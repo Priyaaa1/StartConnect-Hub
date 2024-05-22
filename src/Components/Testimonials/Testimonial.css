@@ -89,13 +89,8 @@
   list-style: none;
   background: #fff;
   cursor: pointer;
-<<<<<<< HEAD
   padding-bottom: 15px;
   padding-top: 15px;
-=======
-  padding-inline:1rem;
-  padding-bottom: 14px;
->>>>>>> b772db300e652875305a6cece719fe1555711d3f
   flex-direction: column;
   border-radius: 8px;
   overflow: hidden;
