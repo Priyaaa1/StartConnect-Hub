@@ -11,6 +11,16 @@ import Testimonials from "./Components/Testimonials/Testimonials";
 import GoToTop from "./Components/GoToTop";
 import Accordian from "./Components/FAQ/accordian";
 import './App.css';
+import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
+import Chatbot from 'react-chatbot-kit'
+import 'react-chatbot-kit/build/main.css'
+import Explore from '../src/Pages/Explore'
+import PrivacyPolicy from "./Pages/privacypolicy";
+import TermsAndConditions from "./Pages/TermsAndConditions";
+import VisionAndMission from "./Pages/VisionAndMission";
+import HowItWorks from "./Pages/HowItWorks";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // const App = () => {
 //   return (
@@ -50,19 +60,26 @@ import './App.css';
 //   )
 // }
 
+
 const App = () => {
   return (
    
     <Router>
       
-      <div>
+      <div className="main-div">
       
-        <Navbar />
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path='/explore' element={<Explore/>}/>
+          <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
+          <Route path='/termsandconditions' element={<TermsAndConditions />}/>
+          <Route path='/visionandmission' element={<VisionAndMission />}/>
+          <Route path='/howitworks' element={<HowItWorks />}/>
         </Routes>
+        <ChatAssistant/>
         <GoToTop/>
         <Footer />
         
@@ -74,8 +91,9 @@ const App = () => {
 const Home = () => {
   return (
     <>
-    
+       
       <Hero />
+
       <div className="container">
         <h3 id='header'>ABOUT US</h3>
         <About />

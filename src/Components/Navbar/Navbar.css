@@ -1,6 +1,6 @@
 nav{
     width: 100%;
-    /* background: #333; */
+     background: rgba(0, 0, 128,.6);
     color: #fff;
     padding: 4px 0;
     position: fixed;
@@ -15,7 +15,13 @@ nav{
 .logo{
     width: 80px;
 }
-
+.logIn{
+  /*background-color: rgb(145, 99, 187);*/
+  background-color: transparent;
+}
+.logIn:hover{
+  background-color: rgb(109, 65, 151);
+}
 nav ul li{
     display: inline-block;
     list-style: none;
