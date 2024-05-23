@@ -62,25 +62,7 @@ font-size: 16px;
  margin-bottom: 130px;
 
 }
-/* 
-@media only screen and (max-width:574px) {
- .footer-col{
-   width:100%;
-   margin-top:20px;
-   
- } 
- 
 
-}
-
-
-@media only screen and (max-width:767px) {
- .footer-col{
-   width:50%;
-  margin-top:0px
- } 
-
-} */
 
 @media (min-width:344px) and (max-width:522px){
 .footer-col{
@@ -110,7 +92,6 @@ margin-top: 30px;
 }
 .copyright {
   font-size: 14px;
- 
   margin-top: 20px; 
   display: flex;
           justify-content: left;
