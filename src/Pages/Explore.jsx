@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import './Explore.css';
+import { NavLink } from 'react-router-dom';
 
 function Explore() {
   return (
@@ -23,7 +24,7 @@ function Explore() {
                 </Card.Text>
                 </div>
                 <div className='button-container'>
-                <Button className="button-container" variant="primary" href="#">
+                <Button className="button-container" variant="primary" href="/investormanagementpage">
                 Know More
                 </Button>
                 </div>

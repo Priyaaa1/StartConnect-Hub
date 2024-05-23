@@ -15,11 +15,13 @@ import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
 import Explore from '../src/Pages/Explore'
-import PrivacyPolicy from "./Pages/privacypolicy";
+import PrivacyPolicy from "../src/Pages/PrivacyPolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import VisionAndMission from "./Pages/VisionAndMission";
 import HowItWorks from "./Pages/HowItWorks";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import InvestorManagementPage from "./Pages/InvestorManagementPage";
+import { PiSelectionInverseThin } from "react-icons/pi";
+/*import 'bootstrap/dist/css/bootstrap.min.css';*/  /* This line of code caused orientation issue/bug in the UI of HOME PAGE */
 
 
 // const App = () => {
@@ -78,6 +80,7 @@ const App = () => {
           <Route path='/termsandconditions' element={<TermsAndConditions />}/>
           <Route path='/visionandmission' element={<VisionAndMission />}/>
           <Route path='/howitworks' element={<HowItWorks />}/>
+          <Route path='/investormanagementpage' element={<InvestorManagementPage/>}/>
         </Routes>
         <ChatAssistant/>
         <GoToTop/>
