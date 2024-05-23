@@ -22,6 +22,13 @@ import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
 import Explore from '../src/Pages/Explore'
+import PrivacyPolicy from "./Pages/privacypolicy";
+import TermsAndConditions from "./Pages/TermsAndConditions";
+import VisionAndMission from "./Pages/VisionAndMission";
+import HowItWorks from "./Pages/HowItWorks";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 // const App = () => {
 //   return (
 //     <div>
@@ -76,7 +83,7 @@ const App = () => {
       
       <div className="main-div">
       
-        <Navbar />
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -84,7 +91,12 @@ const App = () => {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/contact" element={<ContactUS />} />
+          <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
+          <Route path='/termsandconditions' element={<TermsAndConditions />}/>
+          <Route path='/visionandmission' element={<VisionAndMission />}/>
+          <Route path='/howitworks' element={<HowItWorks />}/>
         </Routes>
+        <ChatAssistant/>
         <GoToTop/>
         <Footer />
         
@@ -96,9 +108,9 @@ const App = () => {
 const Home = () => {
   return (
     <>
-    
+       
       <Hero />
-      <ChatAssistant/>
+
       <div className="container">
         <h3 id='header'>ABOUT US</h3>
         <About />

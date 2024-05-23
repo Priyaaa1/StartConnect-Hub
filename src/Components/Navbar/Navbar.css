@@ -1,6 +1,6 @@
 nav{
     width: 100%;
-    /* background: #333; */
+     background: rgba(0, 0, 128,.6);
     color: #fff;
     padding: 4px 0;
     position: fixed;
