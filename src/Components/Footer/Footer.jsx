@@ -68,7 +68,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-twitter"></i>
+              <i className="fab fa-x-twitter"></i>
             </a>
           </li>
           <li>
