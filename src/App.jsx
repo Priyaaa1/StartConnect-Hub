@@ -1,5 +1,7 @@
 // import ReactDOM from 'react-dom';
 import React, { useEffect } from 'react';
+// import ReactDOM from 'react-dom';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -88,9 +90,6 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/contact" element={<ContactUS />} />
           <Route path='/explore' element={<Explore/>}/>
           <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
           <Route path='/termsandconditions' element={<TermsAndConditions />}/>
