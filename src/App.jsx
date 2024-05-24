@@ -29,6 +29,8 @@ import TermsAndConditions from "./Pages/TermsAndConditions";
 import VisionAndMission from "./Pages/VisionAndMission";
 import HowItWorks from "./Pages/HowItWorks";
 import InvestorManagementPage from "./Pages/InvestorManagementPage";
+import FinancialServices from './Pages/FinancialServices'
+import FullServiceFund from './Pages/FullServiceFund';
 import { PiSelectionInverseThin } from "react-icons/pi";
 /*import 'bootstrap/dist/css/bootstrap.min.css';*/  /* This line of code caused orientation issue/bug in the UI of HOME PAGE */
 
@@ -98,6 +100,8 @@ const App = () => {
           <Route path='/visionandmission' element={<VisionAndMission />}/>
           <Route path='/howitworks' element={<HowItWorks />}/>
           <Route path='/investormanagementpage' element={<InvestorManagementPage/>}/>
+          <Route path='/financialservicesPage' element = {<FinancialServices/>}/>
+          <Route path="/fullservicefund" element={<FullServiceFund/>}/>
         </Routes>
         <ChatAssistant/>
         <GoToTop/>

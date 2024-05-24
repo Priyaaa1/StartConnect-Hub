@@ -51,9 +51,11 @@ function Explore() {
                 </Card.Text>
                 </div>
                 <div className='button-container'>
-                <Button className="button-container" href="#">
+                <NavLink to='/financialservicesPage'>
+                <Button className="button-container">
                   Know More
                 </Button>
+                </NavLink>
                 </div>
               </Card.Body>
              </div>
@@ -76,9 +78,11 @@ function Explore() {
                 </Card.Text>
                 </div>
                 <div className='button-container'>
-                <Button className="button-container" variant="primary" href="#">
+                <NavLink to="/fullservicefund">
+                <Button className="button-container" variant="primary">
                 Know More
                 </Button>
+                </NavLink> 
                 </div>
               </Card.Body>
              </div>
