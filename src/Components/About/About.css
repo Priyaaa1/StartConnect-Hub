@@ -12,6 +12,10 @@
 
 .about-right{
   flex-basis: 56%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .about-img{
@@ -31,6 +35,7 @@
   margin: 10px 0;
   max-width: 400px;
   color: black;
+  text-align: center;
   
 }
 
@@ -54,6 +59,7 @@
   .about-right {
     flex-basis: 100%;
     margin-bottom: 30px; 
+    flex-direction: column;
   }
 
   .about-img {

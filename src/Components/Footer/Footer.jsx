@@ -1,9 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer">
+
       <div className="grid-container">
         <div
           className="row"
@@ -119,7 +121,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <span className="copyright" >
+      <span className="copyright">
         © 2024 StartConnect-Hub. All rights reserved.
       </span>
     </footer>
