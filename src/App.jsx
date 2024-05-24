@@ -1,7 +1,7 @@
 // import ReactDOM from 'react-dom';
 import React, { useEffect } from 'react';
 // import ReactDOM from 'react-dom';
-import React, { useEffect } from 'react';
+//import React, { useEffect } from 'react'; import already included
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
