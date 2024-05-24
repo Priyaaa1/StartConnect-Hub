@@ -13,7 +13,12 @@ import Accordian from "./Components/FAQ/accordian";
 import './App.css';
 import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
 import Chatbot from 'react-chatbot-kit'
-import 'react-chatbot-kit/build/main.css'
+import 'react-chatbot-kit/build/main.css';
+import Blog from "./Pages/Blog/blog";
+import Policy from "./Pages/PrivacyPolicy/Policy";
+import Terms from "./Pages/TermsAndConditions/Terms";
+import Statements from "./Pages/Vision and Mission/Page";
+
 // const App = () => {
 //   return (
 //     <div>
@@ -64,9 +69,19 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/Vision and mission" element={<Statements />} />
+          <Route path="/Privacy Policy" element={<Policy />} />
+          <Route path="/Terms and Conditions" element={<Terms />} />
+          <Route path="/about" element={<Home  />} />
+          <Route path="/howitworks" element={<Home  />} />
+          <Route path="/faq" element={<Home />} />
+          <Route path="/contactus" element={<Home  />} />
+
         </Routes>
         <GoToTop/>
         <Footer />
+        
         
       </div>
     </Router>

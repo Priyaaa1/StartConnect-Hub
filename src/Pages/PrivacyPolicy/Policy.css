@@ -1,0 +1,27 @@
+.innerLayer {
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 98%;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.outerLayer {
+    padding-top: 97px;
+    padding-bottom: 13px;
+    background-color: #212EA0;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+h1 {
+    padding-bottom: 20px;
+}

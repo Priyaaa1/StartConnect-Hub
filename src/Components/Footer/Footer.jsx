@@ -1,5 +1,8 @@
 import React from "react";
 import "./Footer.css";
+import { NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import App from "../../App";
 
 const Footer = () => {
   return (
@@ -7,47 +10,51 @@ const Footer = () => {
       <div className="footer-content">
         <ul className="footer-links">
           <li>
-            <a href="/about-us">
-              <i className="fas fa-users"></i> About Us
-            </a>
+            <NavLink to="/about">
+              <i className="fas fa-users"></i> About us
+            </NavLink>
           </li>
           <li>
-            <a href="/how-it-works">
-              <i className="fas fa-lightbulb"></i> How it Works
-            </a>
+          <NavLink to="/howitworks">
+              <i className="fas fa-lightbulb"></i> How it Works 
+          </NavLink>
           </li>
           <li>
-            <a href="/faq">
+          <NavLink to="/faq">
               <i className="fas fa-question"></i> FAQ
-            </a>
+          </NavLink>
           </li>
           <li>
-            <a href="/contact">
-              <i className="fas fa-envelope"></i> Contact Us
-            </a>
+          <NavLink to="/contactus">
+              <i className="fas fa-envelope"></i> Contact us
+          </NavLink>
           </li>
           <li>
-            <a href="/blog">
+          <NavLink to="/blog">
               <i className="fas fa-newspaper"></i> Blog
-            </a>
+          </NavLink>
           </li>
           <li>
-            <a href="/vision-mission">
+          <NavLink to="/Vision and mission">
               <i className="fas fa-eye"></i> Vision & Mission
-            </a>
+          </NavLink>
           </li>
           <li>
-            <a href="/privacy-policy">
+          <NavLink to="/Privacy Policy">
               <i className="fas fa-lock"></i> Privacy Policy
-            </a>
+          </NavLink>
           </li>
           <li>
-            <a href="/terms-conditions">
+          <NavLink to="/Terms and Conditions">
               <i className="fas fa-file-contract"></i> Terms & Conditions
-            </a>
+          </NavLink>
           </li>
         </ul>
+
+            
+
       </div>
+            
       <div className="social-media">
         <ul className="social-media-links">
           <li>

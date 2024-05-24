@@ -25,6 +25,16 @@
   justify-content: center;
 }
 
+.vision {
+  background-color: #f5f5f5;
+  color: #000000;
+}
+
+.vision:hover {
+  color: #007bff;
+  background-color: #f5f5f5 ;
+}
+
 .footer-links li {
   margin-right: 15px;
   margin-left: 15px;
