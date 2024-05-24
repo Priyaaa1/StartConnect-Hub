@@ -24,9 +24,11 @@ function Explore() {
                 </Card.Text>
                 </div>
                 <div className='button-container'>
+                <NavLink to='/investormanagementpage'>
                 <Button className="button-container" variant="primary" href="/investormanagementpage">
                 Know More
                 </Button>
+                </NavLink>
                 </div>
               </Card.Body>
              </div>
