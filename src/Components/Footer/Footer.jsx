@@ -119,11 +119,7 @@ const Footer = () => {
         </div>
       </div>
 
-      
-      <span
-        className="copyright"
-        
-      >
+      <span className="copyright" >
         © 2024 StartConnect-Hub. All rights reserved.
       </span>
     </footer>
