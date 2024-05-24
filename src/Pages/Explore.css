@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.explore{
+    width: 100%;
+    min-height: 50vh;
+    background-color: #1e1e4b99 ;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn{
+    justify-content: center;
+    width:200px;
+    padding-left:200x;
+}
+.title{
+    color:black;
+}
+
+
+.explore {
+    padding-top: 90px;
+    padding-left: 90px;
+    padding-right: 90px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .card-container {
+    margin-top: 20px;
+    padding-bottom:34px;
+    
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    background-size: cover;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content:space-between ;
+  }
+
+  .card-img-top {
+    padding-left:45px;
+    justify-content:center;
+    align-items:center;
+    width: auto;
+    height: 90px;
+    display: flex
+  }
+  
+  
+  .card-body {
+    padding: 15px;
+    padding-bottom:23px;
+    background-color: rgb(171, 186, 213);
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: small;
+    margin-bottom: 15px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+  .button-container {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+.btn{
+  background-color: rgb(206 152 206)
+}
+.btn:hover{
+    color:rgb(17, 1, 1);
+    background-color: rgb(129, 166, 235);
+    text-decoration: none;
+}
+.card:hover{
+    background-color:rgb(211, 183, 211);
+}
