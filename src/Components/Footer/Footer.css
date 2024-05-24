@@ -22,6 +22,15 @@
   gap: 5px;
 }
 
+#dark .footer {
+  background-color: rgb(34, 34, 34);
+  border: none;
+}
+
+#dark a {
+  color: white;
+}
+
 @media  (min-height:600px){
   .footer-links{
     flex-direction: column;

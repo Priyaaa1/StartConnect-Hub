@@ -54,6 +54,10 @@
   resize: none;
   border-radius: 10px;
 }
+
+#dark .send {
+  color: blue;
+}
 .contact form {
   display: flex;
   flex-direction: column;

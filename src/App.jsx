@@ -1,7 +1,6 @@
 // import ReactDOM from 'react-dom';
-import React, { useEffect } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 // import ReactDOM from 'react-dom';
-import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -24,7 +23,7 @@ import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
 import Explore from '../src/Pages/Explore'
-import PrivacyPolicy from "./Pages/privacypolicy";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import VisionAndMission from "./Pages/VisionAndMission";
 import HowItWorks from "./Pages/HowItWorks";
@@ -69,8 +68,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //   )
 // }
 
+export const ThemeContext = createContext("light")
 
 const App = () => {
+  const [theme,setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  }
+
     useEffect(() => {
       AOS.init({
         duration: 1000, // animation duration in milliseconds
@@ -79,11 +85,11 @@ const App = () => {
         disable: 'mobile',
       });
     }, []);
+
   return (
-   
+   <ThemeContext.Provider value={{theme, toggleTheme}}>
+    <div className="main-div" id={theme}>
     <Router>
-      
-      <div className="main-div">
       
       <Navbar />
         <Routes>
@@ -99,9 +105,9 @@ const App = () => {
         <ChatAssistant/>
         <GoToTop/>
         <Footer />
-        
-      </div>
     </Router>
+    </div>
+    </ThemeContext.Provider>
   );
 };
 
