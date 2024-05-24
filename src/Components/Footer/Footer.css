@@ -9,8 +9,7 @@ body{
 }
 .footer {
   background-color: #212EA0;
-  
-  width:'100%';
+  width:100%;
   padding:20px;
   /* height:300px; */
   
@@ -18,10 +17,10 @@ body{
 
 .grid-container{
   display:grid;
-  
   color:#fff;
  
 }
+
 .row{
   display:flex;
   flex-wrap: wrap;
@@ -66,9 +65,7 @@ font-size: 16px;
 
 @media (min-width:344px) and (max-width:522px){
 .footer-col{
-   width:100%;
- 
-   
+   width:100%;  
  } 
  .needHelpCss{
    margin-bottom:0px;
@@ -128,7 +125,7 @@ margin-top: 20px;
 
 .copyright {
   font-size: 14px;
- 
+
   margin-top: 10px; 
   display: flex;
           justify-content: center;
@@ -190,7 +187,6 @@ margin-top: 20px;
     margin-top: 0px;
   
   }
-
 }
 
 
