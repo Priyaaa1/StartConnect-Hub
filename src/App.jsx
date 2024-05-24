@@ -1,4 +1,10 @@
+// import ReactDOM from 'react-dom';
+import React, { useEffect } from 'react';
+// import ReactDOM from 'react-dom';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import About from "./Components/About/About";
@@ -7,6 +13,9 @@ import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
+import AboutUs from "./Components/Footer/Components/AboutUS";
+import Faq from "./Components/Footer/Components/faq";
+import ContactUS from "./Components/Footer/Components/contact";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import GoToTop from "./Components/GoToTop";
 import Accordian from "./Components/FAQ/accordian";
@@ -64,6 +73,14 @@ import { PiSelectionInverseThin } from "react-icons/pi";
 
 
 const App = () => {
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, // animation duration in milliseconds
+        mirror: true,
+        offset: 80,
+        disable: 'mobile',
+      });
+    }, []);
   return (
    
     <Router>
