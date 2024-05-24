@@ -20,6 +20,7 @@ const Login = () => {
 		<div className="login-outerContainer">
 			<div className="login-container">
 				<h2>Login</h2>
+				<div className="input">
 				<input
 					type="email"
 					placeholder="Email"
@@ -32,7 +33,8 @@ const Login = () => {
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
 				/>
-				<button onClick={handleLogin}>Login</button>
+				</div>
+				<NavLink to="/explore"><button onClick={handleLogin}>Login</button></NavLink>
 				<p>
 					Don't have an account? <NavLink to="/signup">Sign up</NavLink>
 				</p>
