@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 .explore{
     width: 100%;
@@ -70,11 +70,12 @@
   }
   
   .card-text {
-    font-size: small;
-    margin-bottom: 15px;
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
+    font-family: "Open Sans, sans-serif";
+    font-weight: normal;
     font-style: normal;
+    font-size: medium;
+    text-transform:none;
+    font-variation-settings: "wdth" 100;
   }
   
   .button-container {
