@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
@@ -13,9 +13,9 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <Link to="/howitworks">
+            <NavLink to="/howitworks">
               <i className="fas fa-lightbulb"></i> How it Works
-            </Link>
+            </NavLink>
           </li>
           <li>
             <a href="/faq">
@@ -40,14 +40,14 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <Link to="/privacypolicy">
+            <NavLink to="/privacypolicy">
               <i className="fas fa-lock"></i> Privacy Policy
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/termsandconditions">
+            <NavLink to="/termsandconditions">
               <i className="fas fa-file-contract"></i> Terms & Conditions
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
