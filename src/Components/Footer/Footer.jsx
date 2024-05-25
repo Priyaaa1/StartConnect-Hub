@@ -1,30 +1,29 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
   return (
-
-    
     <footer className="footer">
       <div className="footer-content">
         <ul className="footer-links">
           <li>
-            <a href="/about-us">
+            <a href="/aboutus">
               <i className="fas fa-users"></i> About Us
             </a>
           </li>
           <li>
-            <a href="/how-it-works">
+            <NavLink to="/howitworks">
               <i className="fas fa-lightbulb"></i> How it Works
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/#accordian">
+            <a href="/faq">
               <i className="fas fa-question"></i> FAQ
             </a>
           </li>
           <li>
-            <a href="/contact">
+            <a href="/#contact">
               <i className="fas fa-envelope"></i> Contact Us
             </a>
           </li>
@@ -36,19 +35,19 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="/vision-mission">
+            <a href="/visionandmission">
               <i className="fas fa-eye"></i> Vision & Mission
             </a>
           </li>
           <li>
-            <a href="/privacy-policy">
+            <NavLink to="/privacypolicy">
               <i className="fas fa-lock"></i> Privacy Policy
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/terms-conditions">
+            <NavLink to="/termsandconditions">
               <i className="fas fa-file-contract"></i> Terms & Conditions
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>
@@ -69,7 +68,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-twitter"></i>
+              <i className="fab fa-x-twitter"></i>
             </a>
           </li>
           <li>
