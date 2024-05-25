@@ -92,7 +92,7 @@ const Footer = () => {
         </ul>
       </div>
       <span className="copyright">
-        © 2024 StartConnect-Hub. All rights reserved.
+      © {new Date().getFullYear()} StartConnect-Hub. All rights reserved.
       </span>
     </footer>
   );
