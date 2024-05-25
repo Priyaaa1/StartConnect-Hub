@@ -10,6 +10,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const location = useLocation();
   const [sticky, setSticky] = useState(false);
+  
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY > 200 ? setSticky(true) : setSticky(false);

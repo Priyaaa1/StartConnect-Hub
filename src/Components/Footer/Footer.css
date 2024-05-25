@@ -1,108 +1,158 @@
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
 .footer {
-  background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: #212EA0;
+  width:100%;
+  padding:20px; 
+}
+
+.grid-container{
+  display:grid;
+  color:#fff;
+}
+
+.row{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  /* background-color: #007bff; */
+  letter-spacing: 0.5px,        
 }
 
-.footer-content {
-  display: flex;
-  /* flex-direction: row; */
-  align-items: center;
-  text-align: center;
-  justify-content: space-evenly;
-  margin-bottom: 10px;
-  width: 100%;
-  /* background: #cf2020; */
-  gap: 5px;
-}
-
-@media  (min-height:600px){
-  .footer-links{
-    flex-direction: column;
-  }
-}
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 5px;
-  justify-content: space-evenly;
-  width: 100%;
-  /* background: #000; */
-}
-
-.footer-links li {
-  margin-right: 15px;
-  margin-left: 15px;
-  display: inline;
-}
-
-.footer-links li a {
-  color: #000000;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-size: 15px;
-}
-
-.footer-links li a:hover {
-  color: #007bff;
-}
-
-.social-media {
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.social-media-links {
-  list-style: none;
-  padding: 0;
-  display: flex;
-}
-
-.social-media-links li {
-  margin-right: 10px;
-  margin-left: 10px; 
-}
-
-.social-media-links li a {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-size: 20px;
-}
-
-.social-media-links li a:hover {
-  color: #007bff;
+.footer-col{
+  width:25%;
+  padding: 0 5px;
 }
 
 .copyright {
-  margin-top: 0px; 
+  margin-top: 50px; 
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media screen and (max-width : 750px) {
-  body {
-    background-color: lightgreen;
+.needHelpCss{
+  font-size: 16px;
+  margin-bottom: 60px;
+}
+
+.companyCss{
+  font-size: 16px;
+   margin-bottom: 60px;
+}
+
+.moreInfoCss{
+font-size: 16px;
+margin-bottom: 85px;
+}
+
+.socialSitesCss{
+font-size: 16px;
+margin-bottom: 130px;
+}
+
+
+@media (min-width:344px) and (max-width:522px){
+.footer-col{
+   width:100%;  
+ } 
+ .needHelpCss{
+   margin-bottom:0px;
+ }
+.companyCss{
+   margin-top: 30px;
+   margin-bottom:0px;
+}
+.moreInfoCss{
+font-size: 16px;
+margin-top: 30px;
+margin-bottom:0px;
+}
+.socialSitesCss{
+  margin-top:30px;
+  margin-bottom:0px;
+}
+.copyright {
+  font-size: 14px;
+  margin-top: 20px; 
+  display: flex;
+  justify-content: left;
+}
+}
+
+@media (min-width:523px) and (max-width:846px){
+.footer-col{
+   width:50%;
+ } 
+ .needHelpCss{
+   margin-bottom:5px;   
+ }
+.companyCss{
+ margin-bottom:0px;
+ margin-top:0px;
+}
+.moreInfoCss{
+font-size: 16px;
+margin-top: 20px;
+}
+.socialSitesCss{
+  margin-top:20px;
   }
-  .footer-content {
-    /* display: flex; */
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 10px;
+.copyright {
+  font-size: 14px;
+  margin-top: 10px; 
+  display: flex;
+  justify-content: center;
+}
+}
+
+@media (min-width:523px) and (max-width:596px) {
+.needHelpCss{
+   font-size: 14px;
+ }
+ .companyCss{
+  font-size: 14px;
+  margin-top: 0px;
+ }
+ .moreInfoCss{
+  font-size: 14px;
+ }
+ .socialSitesCss{
+  font-size: 14px;
+ }
+}
+
+@media (min-width:850px) and (max-width:1107px){
+  .footer-col{
+   width:30%;  
+ } 
+.needHelpCss{
+   font-size: 14px;
+   margin-bottom: 65px;
+ }
+ .companyCss{
+  font-size: 14px;
+  margin-bottom:60px;
+ }
+ .moreInfoCss{
+  font-size: 14px;
+  margin-bottom: 90px;
+ }
+  .socialSitesCss{
+  font-size: 14px;
+  margin-top:0px;
+  margin-bottom: 20px;
   }
-  .footer-links {
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+  .copyright{
+    margin-top: 0px;
   }
 }
