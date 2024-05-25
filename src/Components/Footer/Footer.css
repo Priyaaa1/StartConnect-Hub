@@ -64,7 +64,7 @@ margin-bottom: 130px;
   color: #fff;
   text-decoration: none;
   position: relative;
-  transition: color 0.3s ease;
+  transition: color 0.8s ease, transform 0.8s ease;
 }
 
 .footer-col a:hover::after {
@@ -74,15 +74,22 @@ margin-bottom: 130px;
 .footer-col a:hover {
   color: #8d8de1;
   text-decoration: none;
-}
+  transform: scale(1.1); 
 
+}
 .footer-col a i {
   font-size: 20px;
-  transition: color 0.9s ease;
+  transition: color 0.5s ease, font-size 0.8s ease;
 }
-
+.socialSitesCss {
+  font-size: 16px;
+  margin-bottom: 130px;
+  height: 70px; 
+}
 .footer-col a:hover i {
   color: #8d8de1;
+  /* transform: scale(1.1); */
+  font-size: 24px;
 }
 
 @media (min-width:344px) and (max-width:522px){
