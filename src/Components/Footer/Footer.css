@@ -60,6 +60,30 @@ font-size: 16px;
 margin-bottom: 130px;
 }
 
+.footer-col a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.footer-col a:hover::after {
+  width: 100%;
+  left: 0;
+}
+.footer-col a:hover {
+  color: #8d8de1;
+  text-decoration: none;
+}
+
+.footer-col a i {
+  font-size: 20px;
+  transition: color 0.9s ease;
+}
+
+.footer-col a:hover i {
+  color: #8d8de1;
+}
 
 @media (min-width:344px) and (max-width:522px){
 .footer-col{

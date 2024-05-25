@@ -20,7 +20,9 @@ nav{
   background-color: transparent;
 }
 .logIn:hover{
-  background-color: rgb(109, 65, 151);
+  /* background-color: rgb(109, 65, 151); */
+  background-color: #8d8de1;
+  transition: background-color 0.9s ease;
 }
 nav ul li{
     display: inline-block;
@@ -31,11 +33,37 @@ nav ul li{
 nav ul li a.active{
     color: lightgoldenrodyellow;
 }
+
 .dark-nav{
     background: #212EA0;
     transition: 0.5s;
 }
 
+.nav1 a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav1 a:hover {
+  /* color: #FFD700;  */
+  color: #8d8de1;
+  text-decoration: none;
+}
+/* .nav1 a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ADD8E6; 
+  transition: width 0.9s ease, left 0.9s ease;
+}
+.nav1 a:hover::after {
+  width: 100%;
+  left: 0;
+} */
 .menu-icon{
     display: none;
 }
