@@ -39,12 +39,12 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 17px;
+  left: 20px;
   color: white;
   background-color: blue;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   cursor: pointer;
   &:hover {

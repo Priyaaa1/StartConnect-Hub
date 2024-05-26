@@ -33,6 +33,9 @@
 .hero-text h1{
     font-size: 60px;
     font-weight: 600;
+    display: flex;
+    text-align: center;
+    width: fit-content;
 }
 
 .hero-text p{

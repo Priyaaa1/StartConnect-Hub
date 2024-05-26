@@ -1,0 +1,16 @@
+#header {
+    text-align: center;
+    color: #212EA0;
+    font-size: 23px;
+    font-weight: 600;
+    padding-top: 60px;
+
+}
+.main-div{
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    overflow-x: hidden;
+}

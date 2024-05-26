@@ -10,6 +10,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const location = useLocation();
   const [sticky, setSticky] = useState(false);
+  
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY > 200 ? setSticky(true) : setSticky(false);
@@ -46,6 +47,14 @@ const Navbar = () => {
     });
   };
 
+  const scrollToFAQ = () => {
+    scroller.scrollTo("accordian", {
+      smooth: true,
+      offset: -260,
+      duration: 500,
+    });
+  };
+
   const scrollToContact = () => {
     scroller.scrollTo("contact", {
       smooth: true,
@@ -55,7 +64,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav
+    <nav 
       className={`container ${
         sticky ||
         location.pathname === "/login" ||
@@ -82,6 +91,11 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/#accordian" onClick={() => scrollToFAQ()}>
+            FAQ's
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/#contact" onClick={() => scrollToContact()}>
             Contact Us
           </NavLink>
@@ -89,11 +103,16 @@ const Navbar = () => {
         {/* <li><button className='btn'>Login</button></li>
         <li><button className='btn'>Signup</button></li> */}
         <li>
+          <NavLink to="/login">
+          <button className='logIn'>LOG IN</button>
+          </NavLink>
+        </li>
+        {/*<li>
           <NavLink to="/login">Login</NavLink>
         </li>
         <li>
           <NavLink to="/signup">Signup</NavLink>
-        </li>
+      </li>*/}
       </ul>
       <img
         src={menu_icon}
