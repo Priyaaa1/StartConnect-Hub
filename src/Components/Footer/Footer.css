@@ -64,7 +64,7 @@ margin-bottom: 130px;
   color: #fff;
   text-decoration: none;
   position: relative;
-  transition: color 0.8s ease, transform 0.8s ease;
+  transition: color 0.5s ease, transform 0.5s ease;
 }
 
 .footer-col a:hover::after {
@@ -79,7 +79,7 @@ margin-bottom: 130px;
 }
 .footer-col a i {
   font-size: 16px;
-  transition: color 0.5s ease, font-size 0.8s ease;
+  transition: color 0.5s ease, font-size 0.5s ease;
 }
 .socialSitesCss {
   font-size: 16px;
