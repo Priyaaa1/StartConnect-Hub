@@ -111,11 +111,17 @@ const App = () => {
     </Router>
   );
 };
+export const LoginToHero=()=>{
+  return(
+    <>
+    <MainHomePage/>
+    </>
+  )
+}
 
 const Home = () => {
   return (
-    <>
-       
+    <> 
       <Hero />
 
       <div className="container">
