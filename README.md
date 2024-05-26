@@ -2,6 +2,23 @@
 
 StartConnect Hub is a revolutionary platform designed to bridge the gap between startups and investors, fostering collaboration, innovation, and growth in the entrepreneurial ecosystem. Our mission is to empower startups to succeed by providing them with the resources, connections, and support they need to thrive, while also enabling investors to discover and invest in promising opportunities.
 
+<div align=center>
+  <h2>This Project is the part of</h2>
+  <img alt="GSSoC" src="https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png#gh-light-mode-only" width=87%>
+  <img alt="GSSoC" src="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png#gh-dark-mode-only"/>
+</div>
+
+##  Project Mentors ✨
+
+<table>
+  <tr>
+<td align="center"><a href="https://github.com/rohitroy-github"><img src="https://avatars.githubusercontent.com/u/68563695?v=4" width="100px;" alt="Rohit Roy"/><br /><sub><b>Rohit Roy</b></sub></a></td>
+  
+<td align="center"><a href="https://github.com/shubhamsinha21"><img src="https://avatars.githubusercontent.com/u/84564814?v=4"  width="100px;" alt="Shubham Sinha"/><br /><sub><b>Shubham Sinha</b></sub></a></td>
+  
+ </tr>
+</table>
+
 ## 🌟 Contributing
 
 Contributions are always welcome! Follow these steps to get started:
