@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Login.css";
+import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
+
+
+
+
 
 const Login = () => {
 	const [email, setEmail] = useState("");
@@ -14,6 +20,7 @@ const Login = () => {
 		<div className="login-outerContainer">
 			<div className="login-container">
 				<h2>Login</h2>
+				<div className="input">
 				<input
 					type="email"
 					placeholder="Email"
@@ -26,11 +33,23 @@ const Login = () => {
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
 				/>
-				<button onClick={handleLogin}>Login</button>
+				</div>
+				<NavLink to="/explore"><button onClick={handleLogin}>Login</button></NavLink>
 				<p>
 					Don't have an account? <NavLink to="/signup">Sign up</NavLink>
 				</p>
+                <GoogleLogin
+                onSuccess={credentialResponse => {
+					const credentialDecoded=jwtDecode(credentialResponse.credential);
+					console.log(credentialDecoded);
+                }}
+                onError={() => {
+                    console.log('Login Failed');
+                }}
+            />
 			</div>
+            
+			
 		</div>
 	);
 };

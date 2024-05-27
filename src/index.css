@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
@@ -71,6 +73,8 @@ body{
 }
 
 .text-heading-2 {
+  margin-top: 0px;
+  padding-bottom: 0px;
   font-size: var(--g-font-size-base);
   font-weight: var(--g-font-weight-semi-bold);
 }
@@ -148,8 +152,8 @@ a:hover{
 
 @media(max-width: 1200px){
     .container{
-      padding-left: 5%;
-      padding-right: 5%;
+      /* padding-left: 5%; */
+      /* padding-right: 5%; */
     }
     .btn{
       padding: 14px 22px;
