@@ -73,10 +73,12 @@
   background: #fff;
   cursor: pointer;
   padding-inline:1rem;
-  padding-bottom: 14px;
+  padding-bottom: 10px;
   flex-direction: column;
   border-radius: 8px;
-  
+  padding: 2rem;
+  /* padding-top: 1.5rem; */
+
 }
 .carousel .card .img {
   background: #8b53ff;
@@ -86,9 +88,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5rem;
+  /* padding-top: 1.5rem; */
+  /* margin-top: 1rem; */
 }
-
+/* .carousel .card{
+  padding-top: 1.5rem;
+} */
 .card .img img  {
   width: 140px;
   height: 140px;
@@ -98,23 +103,47 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0rem;
 }
+.carousel .card .img1 {
+  background: #8b53ff;
+  height: 156px;
+  width: 148px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  /* margin-top: 1rem; */
+}
+.card .img1 img  {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 1rem; */
 
+}
 .carousel .card h2 {
   font-weight: 500;
   font-size: 1.56rem;
-  margin: 20px 0 5px;
+  margin: 20x 0 0;
+  margin-bottom: -2px;
 }
 .carousel .card span {
   color: #6a6d78;
-  font-size: 1.31rem;
+  font-size: 1.11rem;
   text-align: center;
-  margin: 0 10px;
+  margin: 0 10px ;
 }
 
 .text {
   text-align: center;
+  margin-top: -2px;
 }
 .small {
   display: none;

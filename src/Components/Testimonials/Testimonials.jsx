@@ -33,7 +33,7 @@ function Testimonials() {
         ></i>
         <ul className="carousel" ref={carouselRef}>
           <li className="card">
-            <div className="img">
+            <div className="img1">
               <img src="user-1.png" alt="img" draggable="false" />
             </div>
             <h2>Blanche Pearson</h2>
@@ -42,7 +42,7 @@ function Testimonials() {
             </span>
           </li>
           <li className="card">
-            <div className="img">
+            <div className="img1">
               <img src="user-2.png" alt="img" draggable="false" />
             </div>
             <h2>Noah</h2>
