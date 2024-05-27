@@ -1,0 +1,254 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+.section{
+    width: 100%;
+}
+.section .container{
+    width: 80%;
+    display: block;
+    margin: 0px auto;
+    padding: 50px 0px;
+}
+.container .title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.container .title h1{
+    text-transform: uppercase;
+    font-size: 42px;
+    color: #256307;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+.container .title h1::after{
+    content: "";
+    height: 5px;
+    width: 170px;
+    background-color: #3bd607;
+    border-radius: 25px;
+    display: block;
+    margin: auto;
+} 
+.aboutcontent{
+    float: right;
+    width: 55%;
+    border: 3px solid;
+    border-radius: 20px;
+    padding: 20px 30px 25px;
+    font-size: 16px;
+}
+.image-section{
+    float: left;
+    width: 40%;
+}
+.image-section img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.spancontent{
+    font-weight: bold;
+    font-size: larger;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.container .social{
+    width: 100%;
+    clear: both;
+    margin-top: 50px;
+    text-align: center;
+    display: inline-block;
+}
+.container .social i{
+    color: #fff;
+    font-size: 22px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    line-height: 45px;
+    text-align: center;
+    background-color: #029273;
+    margin: 0px 5px;
+}
+.container .social i:hover{
+    color: #fff;
+    background-color: #88941e;
+    transition: 1s ease;
+    transform: rotate(360deg);
+}
+@media screen and (max-width: 768px){
+    .section .container{
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+    .aboutcontent{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .image-section{
+        float: none;
+        width: 100%;
+        margin-top: 50px;
+    }
+    .image-section img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    .container .title h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    .container .social i{
+        font-size: 19px;
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+    }
+} 
+
+
+/* Accordian CSS */
+.faqh2 {
+    text-align: center;
+    color: #212EA0;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin:100px 0 15px;
+}
+#faq{
+    margin: 10px 90px 100px 90px;
+}
+.faqh3 {
+    padding: 1px;
+}
+.faqquestion {
+    background-color: #424592;
+    border: 3px solid whitesmoke;
+    color: azure;
+    border-radius: 10px;
+    padding: 3px 10px 3px 0;
+} 
+.item {
+    padding: 10px;
+}
+.faqcontent {
+    justify-content: center;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    font-family: "Outfit", sans-serif;
+}
+
+/* Contact */
+.contact{
+    margin: 70px auto;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-col{
+    flex-basis: 48%;
+    color: #676767;
+}
+
+.contact-col h3{
+    color: #000F38;
+    font-weight: 500;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-col h3 img{
+    width: 35px;
+    margin-left: 10px;
+}
+
+.contact-col p{
+    max-width: 450px;
+    list-style: 0.3;
+}
+
+.contact-col ul li{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.contact-col ul li img{
+    width: 25px;
+    margin-right: 10px;
+}
+
+.contact form input, .contact form textarea{
+    display: block;
+    width: 100%;
+    background: #ebebeb;
+    padding: 15px;
+    border: 0;
+    outline: 0;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    resize: none;
+}
+
+.contact-col span{
+    display: block;
+    margin: 20px 0;
+}
+
+.contact-col button{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media query for Smart Phone */
+@media (max-width: 600px) {
+    .contact {
+      margin-top: 10%;
+      flex-direction: column; /* Change flex direction to stack elements vertically */
+
+    }
+  
+    .contact-col {
+      flex-basis: 100%; 
+      margin-bottom: 50px; 
+      text-align: center; 
+    }
+  
+    .contact-col h3 {
+      font-size: 20px; 
+      margin-bottom: 10px; /* Reduce margin bottom */
+      justify-content: center;
+    }
+  
+    .contact-col h3 img {
+      width: 25px; /* Reduce image size */
+    }
+  
+    .contact form input,
+    .contact form textarea {
+      padding: 10px;
+      font-size: 18px;
+      width: 350px;
+    }
+  
+    .contact-col button {
+      width: 100%; 
+    }
+  }
+  

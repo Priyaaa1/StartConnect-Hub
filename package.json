@@ -13,10 +13,16 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@kinde-oss/kinde-auth-react": "^3.0.28",
+    "aos": "^2.3.4",
+    "@react-oauth/google": "^0.12.1",
+    "jwt-decode": "^4.0.0",
+    "bootstrap": "^5.3.3",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
+    "react-chatbot-kit": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
-    "react-router-dom": "^6.22.3",
+    "react-router-dom": "^6.23.1",
     "react-scroll": "^1.9.0",
     "styled-components": "^6.1.11"
   },
@@ -24,11 +30,14 @@
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "vite": "^5.2.0"
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.2.11"
   },
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "main": "vite.config.js",
