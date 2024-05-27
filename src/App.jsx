@@ -13,22 +13,22 @@ import Accordian from "./Components/FAQ/accordian";
 import './App.css';
 
 // const App = () => {
-//   return (
-//     <div>
-//       <Navbar/>
-//       <Hero/>
-//       <div className='container'>
-//         <About/>
-//         <Title subTitle='Contact Us' title='Get in Touch'/>
-//         <Contact/>
-//         <Footer/>
-//       </div>
-//     </div>
-//   )
+  //   return (
+    //     <div>
+    //       <Navbar/>
+    //       <Hero/>
+    //       <div className='container'>
+    //         <About/>
+    //         <Title subTitle='Contact Us' title='Get in Touch'/>
+    //         <Contact/>
+    //         <Footer/>
+    //       </div>
+    //     </div>
+    //   )
 // }
 
 // const App = () => {
-//   return (
+  //   return (
 //     <Router>
 //       <div>
 //         <Navbar />
@@ -52,11 +52,8 @@ import './App.css';
 
 const App = () => {
   return (
-   
-    <Router>
-      
+    <Router> 
       <div>
-      
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -65,7 +62,6 @@ const App = () => {
         </Routes>
         <GoToTop/>
         <Footer />
-        
       </div>
     </Router>
   );
@@ -74,7 +70,6 @@ const App = () => {
 const Home = () => {
   return (
     <>
-    
       <Hero />
       <div className="container">
         <h3 id='header'>ABOUT US</h3>

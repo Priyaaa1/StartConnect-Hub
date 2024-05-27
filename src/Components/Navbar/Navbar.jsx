@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import {useKindeAuth} from "@kinde-oss/kinde-auth-react";
 import { scroller } from "react-scroll";
 import { useLocation } from "react-router-dom";
 import "./Navbar.css";
@@ -8,6 +8,10 @@ import menu_icon from "../../assets/menu-icon.png";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+
+  
+  const { login, register, user, logout, isLoading, isAuthenticated } = useKindeAuth();
+
   const location = useLocation();
   const [sticky, setSticky] = useState(false);
   useEffect(() => {
@@ -99,15 +103,47 @@ const Navbar = () => {
             Contact Us
           </NavLink>
         </li>
+        {!isAuthenticated && (<>
+          <li>
+            <NavLink onClick={register} type="button">Register</NavLink>
+          </li>
+          <li>
+            <NavLink onClick={login} type="button">Log In</NavLink>
+          </li>
+        </>)}
         {/* <li><button className='btn'>Login</button></li>
         <li><button className='btn'>Signup</button></li> */}
-        <li>
+        
+        
+        {/* <li>
           <NavLink to="/login">Login</NavLink>
         </li>
         <li>
           <NavLink to="/signup">Signup</NavLink>
-        </li>
+        </li> */}
       </ul>
+        {isAuthenticated && (<div className="profile-blob">
+            {user.picture !== "" ? (
+              <img
+                className="avatar"
+                src={user.picture}
+                alt="user profile avatar"
+              />
+            ) : (
+              <div className="avatar">
+                {user?.given_name?.[0]}
+                {user?.family_name?.[1]}
+              </div>
+            )}
+            <div>
+              <p className="text-heading-2">
+                {user?.given_name} {user?.family_name}
+              </p>
+              <NavLink className="text-subtle" onClick={logout}>
+                Sign out
+              </NavLink>
+            </div>
+        </div>)}
       <img
         src={menu_icon}
         alt=""
