@@ -8,6 +8,15 @@ StartConnect Hub is a revolutionary platform designed to bridge the gap between 
   <img alt="GSSoC" src="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png#gh-dark-mode-only"/>
 </div>
 
+##  Project Admin ✨
+
+<table>
+  <tr>
+<td align="center"><a href="https://github.com/Priyaaa1"><img src="https://avatars.githubusercontent.com/u/105431748?v=4" width="100px;" alt="Priya Maheshwari"/><br /><sub><b>Priya Maheshwari</b></sub></a></td>
+  
+ </tr>
+</table>
+
 ##  Project Mentors ✨
 
 <table>
