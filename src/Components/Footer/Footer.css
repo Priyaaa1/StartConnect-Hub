@@ -1,0 +1,161 @@
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+.footer {
+  background-color: #212EA0;
+  width:100%;
+  padding:20px; 
+}
+
+.grid-container{
+  display:grid;
+  color:#fff;
+}
+
+.row{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 0.5px,        
+}
+
+.footer-col{
+  width:25%;
+  padding: 0 5px;
+}
+
+.copyright {
+  margin-top: 50px; 
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.needHelpCss{
+  font-size: 16px;
+  margin-bottom: 60px;
+}
+
+.companyCss{
+  font-size: 16px;
+   margin-bottom: 60px;
+}
+
+.moreInfoCss{
+font-size: 16px;
+margin-bottom: 85px;
+}
+
+.socialSitesCss{
+font-size: 16px;
+margin-bottom: 130px;
+}
+
+.footer-col a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.footer-col a:hover::after {
+  width: 100%;
+  left: 0;
+}
+.footer-col a:hover {
+  /* color: #8d8de1; */
+  text-decoration: none;
+  transform: scale(1.1); 
+
+}
+.footer-col a i {
+  font-size: 16px;
+  transition: color 0.5s ease, font-size 0.5s ease;
+}
+.socialSitesCss {
+  font-size: 16px;
+  margin-bottom: 130px;
+  height: 70px; 
+}
+.footer-col a:hover i {
+  /* color: #8d8de1; */
+  /* transform: scale(1.1); */
+  font-size: 20px;
+}
+
+@media (min-width:523px) and (max-width:846px){
+  .footer-col{
+     width:50%;
+   } 
+   .needHelpCss{
+     margin-bottom:5px;   
+   }
+  .companyCss{
+   margin-bottom:0px;
+   margin-top:0px;
+  }
+  .moreInfoCss{
+  font-size: 16px;
+  margin-top: 20px;
+  }
+  .socialSitesCss{
+    margin-top:20px;
+    }
+  .copyright {
+    font-size: 14px;
+    margin-top: 10px; 
+    display: flex;
+    justify-content: center;
+  }
+  }
+  
+  @media (min-width:523px) and (max-width:596px) {
+  .needHelpCss{
+     font-size: 14px;
+   }
+   .companyCss{
+    font-size: 14px;
+    margin-top: 0px;
+   }
+   .moreInfoCss{
+    font-size: 14px;
+   }
+   .socialSitesCss{
+    font-size: 14px;
+   }
+  }
+  
+  @media (min-width:850px) and (max-width:1107px){
+    .footer-col{
+     width:30%;  
+   } 
+  .needHelpCss{
+     font-size: 14px;
+     margin-bottom: 65px;
+   }
+   .companyCss{
+    font-size: 14px;
+    margin-bottom:60px;
+   }
+   .moreInfoCss{
+    font-size: 14px;
+    margin-bottom: 90px;
+   }
+    .socialSitesCss{
+    font-size: 14px;
+    margin-top:0px;
+    margin-bottom: 20px;
+    }
+    .copyright{
+      margin-top: 0px;
+    }
+  }
