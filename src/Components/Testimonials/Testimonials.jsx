@@ -50,6 +50,7 @@ function Testimonials() {
               Connecting with investors was seamless and rewarding.
             </span>
           </li>
+          
           <li className="card">
             <div className="img">
               <img src="user-3.png" alt="img" draggable="false" />
