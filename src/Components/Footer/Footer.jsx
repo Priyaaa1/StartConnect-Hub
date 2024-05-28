@@ -50,76 +50,56 @@ const Footer = () => {
       duration: 500,
     });
   };
+
   return (
     <footer className="footer">
-
       <div className="grid-container">
-        <div
-          className="row"
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-
-            letterSpacing: 0.5,
-          }}
-        >
+        <div className="row">
           <div className="footer-col">
             <div className="needHelpCss">
-              <div style={{ fontSize: 20, textTransform: "uppercase" , marginTop: 15}}>
-                Need Help
-              </div>
-              <div style={{ marginTop: 10 }}>
+              <div className="footer-title">Need Help</div>
+              <div className="footer-links">
                 <div>
-                  <NavLink to="/#contact" onClick={() => scrollToContact()}>
-                      Contact Us
+                  <NavLink to="/#contact" onClick={scrollToContact}>
+                    Contact Us
                   </NavLink>
                 </div>
                 <div>
-                  <NavLink to="/#accordian" onClick={() => scrollToFAQ()}>
+                  <NavLink to="/#accordian" onClick={scrollToFAQ}>
                     FAQ's
                   </NavLink>
                 </div>
                 <div>
-                  <NavLink to="/#tesimonials" onClick={() => scrollToTestimonials()}>
+                  <NavLink to="/#tesimonials" onClick={scrollToTestimonials}>
                     Testimonials
                   </NavLink>
                 </div>
-                
                 <div>Career</div>
                 <div>Sitemap</div>
-                
               </div>
             </div>
           </div>
 
           <div className="footer-col">
             <div className="companyCss">
-              <div style={{ fontSize: 20, textTransform: "uppercase" }}>
-                Company
-              </div>
-{/* <div> */}
-              <div style={{ marginTop: 10 }}>
+              <div className="footer-title">Company</div>
+              <div className="footer-links">
                 <div>
-                <NavLink to="/#about" onClick={() => scrollToAbout()}>
-                  About Us
-                </NavLink>
+                  <NavLink to="/#about" onClick={scrollToAbout}>
+                    About Us
+                  </NavLink>
                 </div>
                 <div>The StartConnect-Hub Blog</div>
                 <div>Collaboration</div>
                 <div>Media</div>
-                
               </div>
             </div>
           </div>
 
           <div className="footer-col">
             <div className="moreInfoCss">
-              <div style={{ fontSize: 20, textTransform: "uppercase" }}>
-                More info
-              </div>
-
-              <div style={{ marginTop: 10 }}>
+              <div className="footer-title">More info</div>
+              <div className="footer-links">
                 <div>Terms and Conditions</div>
                 <div>Privacy Policy</div>
                 <div>Mission and Vision</div>
@@ -129,19 +109,9 @@ const Footer = () => {
 
           <div className="footer-col">
             <div className="socialSitesCss">
-              <div style={{ fontSize: 20, textTransform: "uppercase" }}>
-                let's connect
-              </div>
-              <div
-                style={{
-                  marginTop: 10,
-                  display: "flex",
-                  justifyContent: "space-around",
-                  width: "50%",
-                }}
-              >
+              <div className="footer-title">let's connect</div>
+              <div className="social-icons">
                 <div>
-                  {" "}
                   <a
                     href="https://facebook.com/yourpage"
                     target="_blank"
@@ -150,9 +120,7 @@ const Footer = () => {
                     <i className="fab fa-facebook"></i>
                   </a>
                 </div>
-
                 <div>
-                  {" "}
                   <a
                     href="https://twitter.com/yourpage"
                     target="_blank"
@@ -162,7 +130,6 @@ const Footer = () => {
                   </a>
                 </div>
                 <div>
-                  {" "}
                   <a
                     href="https://linkedin.com/yourpage"
                     target="_blank"
@@ -172,7 +139,6 @@ const Footer = () => {
                   </a>
                 </div>
                 <div>
-                  {" "}
                   <a
                     href="https://instagram.com/yourpage"
                     target="_blank"
@@ -187,9 +153,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <span className="copyright">
+      <div className="copyright">
         © {new Date().getFullYear()} StartConnect-Hub. All rights reserved.
-      </span>
+      </div>
     </footer>
   );
 };

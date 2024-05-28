@@ -10,6 +10,8 @@
 }
 
 body{
+  line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
   background: #F5F5F5;
 }
 
