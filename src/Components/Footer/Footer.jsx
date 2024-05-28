@@ -145,9 +145,9 @@ const Footer = () => {
                   <a
                     href="https://facebook.com/yourpage"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer" className="facebook"
                   >
-                    <i className="fab fa-facebook"></i>
+                    <i className="fab fa-facebook" style={{fontSize:"25px"}}></i>
                   </a>
                 </div>
 
@@ -156,9 +156,11 @@ const Footer = () => {
                   <a
                     href="https://twitter.com/yourpage"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer" className="twitter"
                   >
-                    <i className="fab fa-twitter"></i>
+                    <i ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+</svg></i>
                   </a>
                 </div>
                 <div>
@@ -166,9 +168,9 @@ const Footer = () => {
                   <a
                     href="https://linkedin.com/yourpage"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer" className="linkedin"
                   >
-                    <i className="fab fa-linkedin"></i>
+                    <i className="fab fa-linkedin" style={{fontSize:"25px"}}></i>
                   </a>
                 </div>
                 <div>
@@ -176,9 +178,9 @@ const Footer = () => {
                   <a
                     href="https://instagram.com/yourpage"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer" className="instagram"
                   >
-                    <i className="fab fa-instagram"></i>
+                    <i className="fab fa-instagram" style={{fontSize:"25px"}}></i>
                   </a>
                 </div>
               </div>
