@@ -78,6 +78,7 @@
   border-radius: 8px;
 }
 .carousel .card .img {
+  margin-top: 15px;
   background: #8b53ff;
   height: 148px;
   width: 148px;
@@ -93,7 +94,7 @@
 .carousel .card h2 {
   font-weight: 500;
   font-size: 1.56rem;
-  margin: 30px 0 5px;
+  /* margin: 30px 0 5px; */
 }
 .carousel .card span {
   color: #6a6d78;
