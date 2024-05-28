@@ -104,7 +104,7 @@ const Navbar = () => {
         <li><button className='btn'>Signup</button></li> */}
         <li>
           <NavLink to="/login">
-          <button className='logIn'>LOG IN</button>
+          <button >LOG IN</button>
           </NavLink>
         </li>
         {/*<li>
