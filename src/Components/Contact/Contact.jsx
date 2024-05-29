@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "react-modal";
 import "./Contact.css";
 import msg_icon from "../../assets/msg-icon.png";
 import mail_icon from "../../assets/mail-icon.png";
 import phone_icon from "../../assets/phone-icon.png";
 import location_icon from "../../assets/location-icon.png";
 import white_arrow from "../../assets/white-arrow.png";
+import Loader from "../loader/Loader.jsx";
+// Set the root element for the modal
+Modal.setAppElement("#root");
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [loading,setLoading] =useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
+    setLoading(true);
     const formData = new FormData(event.target);
 
     formData.append("access_key", "5759d7fc-28f1-473a-a904-ab8d5f981280");
@@ -25,14 +40,18 @@ const Contact = () => {
 
     if (data.success) {
       setResult("Form Submitted Successfully");
+      setLoading(false);
       event.target.reset();
+      openModal(); // Open modal on successful form submission
     } else {
       console.log("Error", data);
+      setLoading(false);
       setResult(data.message);
     }
   };
 
   return (
+
     <div className="contact" id="contact">
       <div className="contact-col">
         <h3>
@@ -55,7 +74,8 @@ const Contact = () => {
         </ul>
       </div>
       <div className="contact-col">
-        <form onSubmit={onSubmit}>
+     
+      <form onSubmit={onSubmit}>
           <label>Your name</label>
           <input
             type="text"
@@ -82,12 +102,25 @@ const Contact = () => {
           ></textarea>
           <div className="btn-div">
             <button type="submit" className="btn dark-btn">
-              Submit <img src={white_arrow}></img>
+            {loading ? <Loader/> :<>  Submit <img src={white_arrow} alt=""></img></>
+            }
             </button>
           </div>
         </form>
+      
         <span>{result}</span>
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Success Modal"
+        className="Modal"
+        overlayClassName="Overlay"
+      >
+        <h2>Success</h2>
+        <p>Your message has been posted successfully!</p>
+        <button onClick={closeModal}>Close</button>
+      </Modal>
     </div>
   );
 };

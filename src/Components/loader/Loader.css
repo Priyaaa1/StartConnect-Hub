@@ -1,0 +1,38 @@
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #fff; /* Assuming the loader should have a white color */
+    border-radius: 50%;
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    animation: spin 1s linear infinite;
+    display: inline-block; /* Ensure the loader takes only its defined space */
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensures the loader is centered vertically in its container */
+    width: 100%; /* Ensures the loader is centered horizontally in its container *
+  }
+  
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+  }
+  
+  .btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensures the button container is centered */
+  }
+  
