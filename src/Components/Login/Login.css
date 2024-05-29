@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90.5vh;
-  margin-top:19px;
+  height: 60vh;
+  margin-top: 150px; /* Adjust this value to move the login box down */
   background-color: #fff;
 }
 
@@ -12,9 +12,9 @@
   background-image: linear-gradient(315deg, #ffffff 0%, #91a6ff 74%);
   width: 400px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 05px;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -23,33 +23,33 @@
   outline: none;
 }
 
-.input{
-  padding:23px;
-  border:none;
+.input {
+  padding: 20px;
+  border: none;
 }
 
 h2 {
   font-size: 28px;
-  margin-bottom: 20px;
-  padding:21px;
+  margin-bottom: 10px;
+  padding: 20px;
 }
 
 input {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-sizing: border-box;
-  border:none;
-  outline:none;
+  border: none;
+  outline: none;
 }
 
 button {
-  width: 100%;
-  padding: 10px;
+  width: 50%;
+  padding: 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
@@ -60,25 +60,25 @@ button:hover {
 }
 
 p {
-  margin-top: 15px;
+  margin-top: 10px;
   text-align: center;
-  padding-bottom: 12px;
+  padding-bottom: 20px;
 }
 
 p a {
   color: #007bff;
   text-decoration: none;
-  margin-top:12px;
+  margin-top: 12px;
 }
 
 p a:hover {
   color: #0056b3;
   text-decoration: underline;
 }
-.googlelogin{
-  padding:12px;
-  margin-top:12px;
-  width:100%;
-  text-align:center;
-  margin-left:23px;
+.googlelogin {
+  padding: 20px;
+  margin-top: 12px;
+  width: 50%;
+  text-align: center;
+  margin-left: 50px;
 }
