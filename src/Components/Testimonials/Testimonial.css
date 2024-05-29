@@ -76,6 +76,11 @@
   padding-bottom: 14px;
   flex-direction: column;
   border-radius: 8px;
+  transition: transform .2s;
+}
+.card:hover{
+  box-shadow: 10px 10px 5px #aaaaaa;
+  transform: scale(1.1);
 }
 .carousel .card .img {
   background: #8b53ff;
