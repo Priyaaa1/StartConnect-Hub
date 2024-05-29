@@ -23,10 +23,10 @@ const Footer = () => {
                 Need Help
               </div>
               <div style={{ marginTop: 10 }}>
-                <div>Contact us</div>
-                <div>FAQ's</div>
-                <div>Career</div>
-                <div>Sitemap</div>
+                <div><NavLink to='/#contact'>Contact us</NavLink></div>
+                <div><NavLink to="/faq">FAQ's</NavLink></div>
+                <div><NavLink to=''>Careers</NavLink></div>
+                <div><NavLink to="">Sitemap</NavLink></div>
               </div>
             </div>
           </div>
@@ -38,9 +38,9 @@ const Footer = () => {
               </div>
 
               <div style={{ marginTop: 10 }}>
-                <div>About us</div>
-                <div>The StartConnect-Hub Blog</div>
-                <div>Collaboration</div>
+                <div><NavLink to='/#header'>About us</NavLink></div>
+                <div><NavLink to=''>The StartConnect-Hub Blog</NavLink></div>
+                <div><NavLink to= '' >Collaboration</NavLink></div>
                 <div>Media</div>
                 
               </div>
@@ -54,9 +54,9 @@ const Footer = () => {
               </div>
 
               <div style={{ marginTop: 10 }}>
-                <div>Terms and Conditions</div>
-                <div>Privacy Policy</div>
-                <div>Mission and Vision</div>
+              <div><NavLink to='/termsandconditions'>Terms and Conditions</NavLink></div>
+              <div><NavLink to ='/privacypolicy'>Privacy Policy</NavLink></div>
+              <div><NavLink to='/visionandmission'>Mission and Vision</NavLink></div>
               </div>
             </div>
           </div>
