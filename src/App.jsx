@@ -88,8 +88,8 @@ const App = () => {
     <Router>
       
       <div className="main-div">
-        
-        <Navbar />
+      
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -102,7 +102,6 @@ const App = () => {
           <Route path='/investormanagementpage' element={<InvestorManagementPage/>}/>
           <Route path='/financialservicesPage' element = {<FinancialServices/>}/>
           <Route path="/fullservicefund" element={<FullServiceFund/>}/>
-          <Route path='/faq' element={<Faq/>}/>
         </Routes>
         <ChatAssistant/>
         <GoToTop/>
