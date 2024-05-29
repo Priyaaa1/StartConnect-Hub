@@ -11,9 +11,10 @@
   width: 100%;
   position: relative;
   padding-bottom: 100px;
+  padding-left: 25px;
 }
 .wrapper i {
-  top: 50%;
+  top: 45%;
   height: 50px;
   width: 50px;
   cursor: pointer;
@@ -27,6 +28,13 @@
   transform: translateY(-50%);
   transition: transform 0.1s linear;
 }
+
+#left{
+  position: absolute;
+  left: 0;
+  z-index:1;
+}
+
 .wrapper i:active {
   transform: translateY(-50%) scale(0.85);
 }
@@ -66,23 +74,45 @@
   justify-content: center;
   align-items: center;
 }
+
+.carousel  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5px;
+}
+
 .carousel .card {
+  transition: all 0.4s;
   scroll-snap-align: start;
   height: 342px;
   list-style: none;
   background: #fff;
   cursor: pointer;
-  padding-inline:1rem;
-  padding-bottom: 14px;
+  padding-bottom: 15px;
+  padding-top: 15px;
   flex-direction: column;
   border-radius: 8px;
+  overflow: hidden;
 }
-.carousel .card .img {
-  background: #8b53ff;
-  height: 148px;
+
+
+.carousel  .img {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #212EA0; 
   width: 148px;
+  height: 148px;
   border-radius: 50%;
-}
+  font-size: 2rem;
+  font-weight: 700;
+  transition: .5s; 
+} 
+
 .card .img img {
   width: 140px;
   height: 140px;
@@ -90,29 +120,67 @@
   object-fit: cover;
   border: 4px solid #fff;
 }
-.carousel .card h2 {
-  font-weight: 500;
-  font-size: 1.56rem;
-  margin: 30px 0 5px;
-}
-.carousel .card span {
-  color: #6a6d78;
-  font-size: 1.31rem;
+
+.carousel  .card .c-1 ,.c-2,.c-3 ,.c-4,.c-5,.c-6 {
+   background: #212EA0; 
+   box-shadow: 0 0 0 0 #212EA0; 
 }
 
-.text {
+.carousel  .card:hover .c-1{
+  box-shadow: 0 0 0 300px #212EA0;
+}
+
+.carousel  .card:hover .c-2{
+  box-shadow: 0 0 0 300px #212EA0;
+}
+
+.carousel  .card:hover .c-3{
+   box-shadow: 0 0 0 300px #212EA0;
+}
+
+.carousel  .card:hover .c-4{
+   box-shadow: 0 0 0 300px #212EA0;
+}
+
+.carousel  .card:hover .c-5{
+   box-shadow: 0 0 0 300px #212EA0;
+}
+
+.carousel  .card:hover .c-6{
+   box-shadow: 0 0 0 300px #212EA0;
+}
+
+.carousel  .card .info {
+  position: relative;
+  z-index: 1;
+  transition: .5s;
+}
+
+.carousel  .card:hover .info {
+  color: #fff;
+}
+
+.carousel  .card .info h2 {
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+.carousel  .card .info span {
+  color: #6A6D78;
+  margin: 5px;
+  padding: 5px;
+  font-size: 1.1rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
 }
-.small {
-  display: none;
-  text-align: center;
-  color: dodgerblue;
-  margin-top: 1rem;
-}
-.card:hover img {
-  transition: transform 0.3s ease;
-  transform: scale(1.1);
-}
+
+.carousel .card:hover{
+  h2, span{
+    color: white;
+  }
+} 
   @media screen and (max-width: 900px) {
     .wrapper .carousel {
       grid-auto-columns: calc((100% / 2) - 9px);
