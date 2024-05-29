@@ -1,7 +1,7 @@
 // import ReactDOM from 'react-dom';
 import React, { useEffect } from 'react';
 // import ReactDOM from 'react-dom';
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -24,7 +24,7 @@ import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
 import Explore from '../src/Pages/Explore'
-import PrivacyPolicy from "./Pages/privacypolicy";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import VisionAndMission from "./Pages/VisionAndMission";
 import HowItWorks from "./Pages/HowItWorks";
