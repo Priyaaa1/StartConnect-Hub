@@ -11,9 +11,10 @@
   width: 100%;
   position: relative;
   padding-bottom: 100px;
+  padding-left: 25px;
 }
 .wrapper i {
-  top: 50%;
+  top: 45%;
   height: 50px;
   width: 50px;
   cursor: pointer;
@@ -26,6 +27,11 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
   transform: translateY(-50%);
   transition: transform 0.1s linear;
+}
+#left{
+  position: absolute;
+  left: 0;
+  z-index:1;
 }
 .wrapper i:active {
   transform: translateY(-50%) scale(0.85);
@@ -66,34 +72,38 @@
   justify-content: center;
   align-items: center;
 }
+.carousel  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5px;
+}
 .carousel .card {
+  transition: all 0.4s;
   scroll-snap-align: start;
-  height: 342px;
   list-style: none;
   background: #fff;
   cursor: pointer;
-  padding-inline:1rem;
-  padding-bottom: 10px;
+  /* padding-inline:1rem; */
+  padding-bottom: 15px;
+  padding-top: 15px;
   flex-direction: column;
   border-radius: 8px;
   padding: 2rem;
-  /* padding-top: 1.5rem; */
-
+  overflow: hidden;
 }
 .carousel .card .img {
-  background: #8b53ff;
+  /* background: #212EA0; */
   height: 148px;
   width: 148px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-top: 1.5rem; */
-  /* margin-top: 1rem; */
+  background: #212EA0; 
+  box-shadow: 0 0 0 0 #212EA0; 
 }
-/* .carousel .card{
-  padding-top: 1.5rem;
-} */
+
 .card .img img  {
   width: 140px;
   height: 140px;
@@ -104,9 +114,15 @@
   justify-content: center;
   align-items: center;
 }
+.carousel  .img {
+  transition: .5s; 
+} 
+.carousel  .img1 {
+  transition: .5s; 
+} 
 .carousel .card .img1 {
-  background: #8b53ff;
-  height: 156px;
+  /* background: #212EA0; */
+  height: 148px;
   width: 148px;
   border-radius: 50%;
   display: flex;
@@ -115,6 +131,8 @@
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   /* margin-top: 1rem; */
+    background: #212EA0; 
+    box-shadow: 0 0 0 0 #212EA0; 
 }
 .card .img1 img  {
   width: 140px;
@@ -128,20 +146,47 @@
   /* padding-top: 1rem; */
 
 }
-.carousel .card h2 {
-  font-weight: 500;
-  font-size: 1.56rem;
-  margin: 20x 0 0;
-  margin-bottom: -2px;
+.carousel  .card .info {
+  position: relative;
+  z-index: 1;
+  transition: .5s;
 }
-.carousel .card span {
+
+.carousel  .card:hover .info {
+  color: #fff;
+}
+
+.carousel  .card .info h2 {
+  margin: 20px 0 0;
+  font-size: 1.2rem;
+  /* margin-bottom: -2px; */
+  /* font-weight: 500; */
+}
+.carousel  .card .info span {
+  color: #6A6D78;
+  /* margin: 5px; */
+  margin: 0 10px ;
+  /* padding: 5px; */
+  font-size: 1.1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.carousel .card:hover{
+  h2, span{
+    color: white;
+  }
+} 
+/* .carousel .card span {
   color: #6a6d78;
   font-size: 1.11rem;
   text-align: center;
   margin: 0 10px ;
-}
+} */
 
-.text {
+/* .text {
   text-align: center;
   margin-top: -2px;
 }
@@ -150,10 +195,10 @@
   text-align: center;
   color: dodgerblue;
   margin-top: 1rem;
-}
+} */
 .card:hover img {
-  transition: transform 0.3s ease;
-  transform: scale(1.1);
+
+  box-shadow: 0 0 0 300px #212EA0;
 }
   @media screen and (max-width: 900px) {
     .wrapper .carousel {
