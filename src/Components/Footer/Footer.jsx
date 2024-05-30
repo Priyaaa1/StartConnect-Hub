@@ -120,9 +120,15 @@ const Footer = () => {
               </div>
 
               <div style={{ marginTop: 10 }}>
-                <div>Terms and Conditions</div>
-                <div>Privacy Policy</div>
-                <div>Mission and Vision</div>
+                <div><NavLink to="/termsandconditions">
+                Terms and Conditions
+                </NavLink>
+                 </div>
+                <div>
+                  <NavLink to ="/privacypolicy">Privacy Policy</NavLink></div>
+                <div>
+                  <NavLink to="/visionandmission">Mission and Vision</NavLink>
+                </div>
               </div>
             </div>
           </div>
