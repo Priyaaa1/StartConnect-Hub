@@ -7,10 +7,12 @@ const config = {
     customComponents:{
         botAvatar: (props) => <Avatar {...props} />,
         userAvatar: (props) => <UserAvatar {...props} />,
-        header: () => <div style={{ backgroundColor: 'rgb(153, 189, 230)', 
-        padding: "12px", 
+        header: () => <div style={{ backgroundColor:' #007bff', 
+        color:"white",
+        padding:"10px" ,
         borderRadius: "3px",
         textAlign:"center" ,
+        fontSize:"20px",
         display:"flex" }}>
               StartConnect Hub Bot- InvestIQ
         </div>

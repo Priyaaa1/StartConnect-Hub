@@ -28,8 +28,12 @@ body{
 }
 
 .footer-col{
-  width:25%;
-  padding: 0 5px;
+  /* width:25%;
+  padding: 0 5px; */
+  flex: 1;
+  padding: 0 10px;
+  min-width: 220px;
+  margin-bottom: 20px;
 }
 
 .copyright {
@@ -60,13 +64,57 @@ font-size: 16px;
 margin-bottom: 130px;
 }
 
-.footer-col a {
+.footer-col a i{
   color: #fff;
   text-decoration: none;
   position: relative;
+  padding: 10px;
   transition: color 0.5s ease, transform 0.5s ease;
+  margin-right: 6px;
 }
+.facebook i{
+  /* color: #fff; */
+  background-color: #1877F2;
+  border-radius: 30px;
+}
+.twitter i{
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+}
+i svg{
+  margin-top: 7px;
+  height: 20px;
 
+}
+.linkedin i {
+  color: white;
+  background-color:#0762c8;
+  border-radius: 30px;
+}
+.instagram i{
+  color: white;
+  background-color:#d6249f;
+  border-radius: 30px;
+}
+.facebook i:hover{
+  color: #1877F2;
+  background-color: #fff;
+
+}
+.twitter i:hover{
+  background-color: #fff;
+  color:black;
+}
+.linkedin i:hover{
+  background-color: #fff;
+  color: #0762c8;
+}
+.instagram i:hover{
+  background-color: #fff;
+
+  color: #ee2a7b;
+}
 .footer-col a:hover::after {
   width: 100%;
   left: 0;
