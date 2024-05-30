@@ -86,10 +86,10 @@
   cursor: pointer;
   /* padding-inline:1rem; */
   padding-bottom: 15px;
-  padding-top: 15px;
+  padding-top: 35px;
   flex-direction: column;
   border-radius: 8px;
-  padding: 2rem;
+  /* padding: 2rem; */
   overflow: hidden;
 }
 .carousel .card .img {
