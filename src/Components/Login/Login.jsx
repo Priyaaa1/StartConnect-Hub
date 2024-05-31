@@ -33,7 +33,6 @@ const Login = () => {
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
 				/>
-				
 				</div>
 				<NavLink to="/explore"><button onClick={handleLogin}>Login</button></NavLink>
 				<p>
