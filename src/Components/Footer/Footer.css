@@ -17,9 +17,13 @@
   letter-spacing: 0.5px;
 }
 
-.footer-col {
-  width: 20%; /* Adjust the width of each column */
-  padding: 0 5px;
+.footer-col{
+  /* width:25%;
+  padding: 0 5px; */
+  flex: 1;
+  padding: 0 10px;
+  min-width: 220px;
+  margin-bottom: 20px;
 }
 
 .copyright {
@@ -47,10 +51,48 @@
     font-size: 14px; /* Reduce font size for smaller screens */
   }
 
-  .copyright {
-    font-size: 12px; /* Reduce font size for smaller screens */
-  }
+.copyright {
+  font-size: 12px; /* Reduce font size for smaller screens */
 }
+
+.footer-col a i {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding: 10px;
+  transition: color 0.5s ease, transform 0.5s ease;
+  margin-right: 6px;
+}
+
+}
+.facebook i{
+  /* color: #fff; */
+  background-color: #1877F2;
+  border-radius: 30px;
+}
+.twitter i{
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+}
+i svg{
+  margin-top: 7px;
+  height: 20px;
+
+}
+.linkedin i {
+  color: white;
+  background-color:#0762c8;
+  border-radius: 30px;
+}
+.instagram i{
+  color: white;
+  background-color:#d6249f;
+  border-radius: 30px;
+}
+.facebook i:hover{
+  color: #1877F2;
+  background-color: #fff;
 
 /* Center the login box */
 .login-outerContainer {
@@ -61,6 +103,27 @@
   background-color: #fff;
 }
 
+.twitter i:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.linkedin i:hover {
+  background-color: #fff;
+  color: #0762c8;
+}
+
+.instagram i:hover {
+  background-color: #fff;
+  color: #ee2a7b;
+}
+
+.footer-col a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+
 .login-container {
   background-color: #ffffff;
   background-image: linear-gradient(315deg, #ffffff 0%, #91a6ff 74%);
@@ -70,4 +133,5 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 }
