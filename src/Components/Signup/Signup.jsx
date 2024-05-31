@@ -23,7 +23,7 @@ const Signup = () => {
             }
             const hashedPassword = hashPassword(password);
             // Send hashed password to the server for signup
-            console.log("Hashed password:", hashedPassword);
+            // console.log("Hashed password:", hashedPassword);
             // Your signup logic here (e.g., sending signup request to server)
         } catch (error) {
             console.error("Sign up failed:", error);

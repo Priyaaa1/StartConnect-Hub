@@ -18,7 +18,7 @@ const Login = () => {
         try {
             const hashedPassword = hashPassword(password);
             // Send hashed password to the server for authentication
-            console.log("Hashed password:", hashedPassword);
+            // console.log("Hashed password:", hashedPassword);
             // Your authentication logic here (e.g., sending login request to server)
         } catch (error) {
             console.error("Login failed:", error);
