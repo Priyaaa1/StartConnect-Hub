@@ -1,28 +1,42 @@
 import { useEffect, useState } from "react";
-
 import { scroller } from "react-scroll";
-import { useLocation } from "react-router-dom";
+import { useLocation, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo2.png";
 import menu_icon from "../../assets/menu-icon.png";
-import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
   const [sticky, setSticky] = useState(false);
-  
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const [visible, setVisible] = useState(true);
+  let lastScrollY = window.scrollY;
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      window.scrollY > 200 ? setSticky(true) : setSticky(false);
-    });
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setSticky(currentScrollY > 200);
+
+      if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        setVisible(false);
+      } else {
+        // Scrolling up
+        setVisible(true);
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
-  const [mobileMenu, setMobileMenu] = useState(false);
   const toggleMenu = () => {
     setMobileMenu(!mobileMenu);
   };
-  // const isHomePage = location.pathname === "/";
-  //  scroll to the "hero" section when clicked
+
   const scrollToHero = () => {
     scroller.scrollTo("hero", {
       smooth: true,
@@ -64,62 +78,64 @@ const Navbar = () => {
   };
 
   return (
-    <nav 
+    <nav
       className={`container ${
-        sticky ||
-        location.pathname === "/login" ||
-        location.pathname === "/signup"
+        sticky || location.pathname === "/login" || location.pathname === "/signup"
           ? "dark-nav"
           : ""
-      }`}
+      } ${visible ? "" : "hidden-nav"}`}
     >
-     <NavLink to="/" onClick={() => scrollToHero()}><img src={logo} alt="" className="logo" onClick={toggleMenu} href="/"></img></NavLink>
+      <NavLink to="/" onClick={() => scrollToHero()}>
+        <img src={logo} alt="" className="logo" />
+      </NavLink>
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
-      <li><div className="nav1">
-          <NavLink to="/" onClick={() => scrollToHero()}>
-            Home
-          </NavLink></div>
+        <li>
+          <div className="nav1">
+            <NavLink to="/" onClick={() => scrollToHero()}>
+              Home
+            </NavLink>
+          </div>
         </li>
-        <li><div className="nav1">
-          <NavLink to="/#about" onClick={() => scrollToAbout()}>
-            About
-          </NavLink></div>
+        <li>
+          <div className="nav1">
+            <NavLink to="/#about" onClick={() => scrollToAbout()}>
+              About
+            </NavLink>
+          </div>
         </li>
-        <li><div className="nav1">
-          <NavLink to="/#tesimonials" onClick={() => scrollToTestimonials()}>
-            Testimonials
-          </NavLink></div>
+        <li>
+          <div className="nav1">
+            <NavLink to="/#tesimonials" onClick={() => scrollToTestimonials()}>
+              Testimonials
+            </NavLink>
+          </div>
         </li>
-        <li><div className="nav1">
-          <NavLink to="/#accordian" onClick={() => scrollToFAQ()}>
-            FAQ's
-          </NavLink></div>
+        <li>
+          <div className="nav1">
+            <NavLink to="/#accordian" onClick={() => scrollToFAQ()}>
+              FAQ's
+            </NavLink>
+          </div>
         </li>
-        <li><div className="nav1">
-          <NavLink to="/#contact" onClick={() => scrollToContact()}>
-            Contact Us
-          </NavLink></div>
+        <li>
+          <div className="nav1">
+            <NavLink to="/#contact" onClick={() => scrollToContact()}>
+              Contact Us
+            </NavLink>
+          </div>
         </li>
-        {/* <li><button className='btn'>Login</button></li>
-        <li><button className='btn'>Signup</button></li> */}
         <li>
           <NavLink to="/login">
-          <button className='logIn'>LOG IN</button>
+            <button className='logIn'>LOG IN</button>
           </NavLink>
         </li>
-        {/*<li>
-          <NavLink to="/login">Login</NavLink>
-        </li>
-        <li>
-          <NavLink to="/signup">Signup</NavLink>
-      </li>*/}
       </ul>
       <img
         src={menu_icon}
         alt=""
         className="menu-icon"
         onClick={toggleMenu}
-      ></img>
+      />
     </nav>
   );
 };

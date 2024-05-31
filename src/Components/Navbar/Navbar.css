@@ -10,6 +10,7 @@ nav{
   align-items: center;
   justify-content: space-between;
   z-index: 10;
+  transition: top 0.3s ease-in-out;
 }
 
 .logo{
@@ -34,6 +35,9 @@ nav ul li a.active{
 .dark-nav{
   background: #212EA0;
   transition: 0.5s;
+}
+.hidden-nav {
+  top: -100px; /* Adjust this value to hide the navbar completely */
 }
 
 .menu-icon{
