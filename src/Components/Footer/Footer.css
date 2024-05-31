@@ -10,22 +10,33 @@
 }
 
 .row {
+  margin: 1rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  gap: .5rem;
   align-items: center;
   letter-spacing: 0.5px;
+  line-height: 1.5;
 }
 
 .footer-col{
   /* width:25%;
   padding: 0 5px; */
-  flex: 1;
+  width: 200px;
+  height: 150px;
   padding: 0 10px;
   min-width: 220px;
   margin-bottom: 20px;
 }
-
+.footer-section-title{
+  font-size: 20px;
+  text-transform: uppercase ;
+}
+.footer-section-list{
+margin-top: 10px ;
+color: lightgray;
+}
 .copyright {
   margin-top: 20px; /* Add some space at the top */
   color: #fff;
@@ -33,48 +44,32 @@
   justify-content: center;
   align-items: center;
 }
-
-/* Adjust font sizes for smaller screens */
-@media (max-width: 846px) {
-  .footer-col {
-    width: 50%; /* Adjust column width for smaller screens */
-  }
-
-  .footer-col a {
-    font-size: 14px; /* Reduce font size for smaller screens */
-  }
-
-  .needHelpCss,
-  .companyCss,
-  .moreInfoCss,
-  .socialSitesCss {
-    font-size: 14px; /* Reduce font size for smaller screens */
-  }
-
-.copyright {
-  font-size: 12px; /* Reduce font size for smaller screens */
+.social-sites-list{
+  margin-top: 10px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+  height: 40px;
+}
+.icon-styles{
+  font-size: 30px;
 }
 
-.footer-col a i {
-  color: #fff;
-  text-decoration: none;
-  position: relative;
-  padding: 10px;
-  transition: color 0.5s ease, transform 0.5s ease;
-  margin-right: 6px;
-}
-
-}
 .facebook i{
   /* color: #fff; */
   background-color: #1877F2;
+  padding: 2px;
   border-radius: 30px;
 }
 .twitter i{
+  font-size: 28px;
   background-color: black;
   color: white;
+  padding-inline: 4px;
   border-radius: 30px;
 }
+
 i svg{
   margin-top: 7px;
   height: 20px;
@@ -83,17 +78,19 @@ i svg{
 .linkedin i {
   color: white;
   background-color:#0762c8;
-  border-radius: 30px;
+  padding: 1px 3px;
+  border-radius: 4px;
 }
 .instagram i{
   color: white;
   background-color:#d6249f;
-  border-radius: 30px;
+  padding: 1px 3px;
+  border-radius: 8px;
 }
 .facebook i:hover{
   color: #1877F2;
   background-color: #fff;
-
+}
 /* Center the login box */
 .login-outerContainer {
   display: flex;
@@ -123,6 +120,12 @@ i svg{
   left: 0;
 }
 
+.footer-col a i {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
 
 .login-container {
   background-color: #ffffff;
@@ -133,5 +136,31 @@ i svg{
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 490px){
+.footer-col{
+  height: auto;
+}
+}
+/* Adjust font sizes for smaller screens */
+@media (max-width: 846px) {
+  .footer-col {
+    width: 40%; /* Adjust column width for smaller screens */
+  }
+
+  .footer-col a {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .needHelpCss,
+  .companyCss,
+  .moreInfoCss,
+  .socialSitesCss {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+.copyright {
+  font-size: 12px; /* Reduce font size for smaller screens */
 }
 }

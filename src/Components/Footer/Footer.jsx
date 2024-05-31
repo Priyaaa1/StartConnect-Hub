@@ -56,20 +56,13 @@ const Footer = () => {
       <div className="grid-container">
         <div
           className="row"
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-
-            letterSpacing: 0.5,
-          }}
         >
           <div className="footer-col">
             <div className="needHelpCss">
-              <div style={{ fontSize: 20, textTransform: "uppercase" , marginTop: 15}}>
+              <div className="footer-section-title" >
                 Need Help
               </div>
-              <div style={{ marginTop: 10 }}>
+              <div className="footer-section-list" >
                 <div>
                   <NavLink to="/#contact" onClick={() => scrollToContact()}>
                       Contact Us
@@ -95,11 +88,10 @@ const Footer = () => {
 
           <div className="footer-col">
             <div className="companyCss">
-              <div style={{ fontSize: 20, textTransform: "uppercase" }}>
+              <div className="footer-section-title" >
                 Company
               </div>
-{/* <div> */}
-              <div style={{ marginTop: 10 }}>
+              <div className="footer-section-list" >
                 <div>
                 <NavLink to="/#about" onClick={() => scrollToAbout()}>
                   About Us
@@ -115,11 +107,11 @@ const Footer = () => {
 
           <div className="footer-col">
             <div className="moreInfoCss">
-              <div style={{ fontSize: 20, textTransform: "uppercase" }}>
+              <div className="footer-section-title" >
                 More info
               </div>
 
-              <div style={{ marginTop: 10 }}>
+              <div className="footer-section-list" >
                 <div><NavLink to="/termsandconditions">
                 Terms and Conditions
                 </NavLink>
@@ -135,58 +127,46 @@ const Footer = () => {
 
           <div className="footer-col">
             <div className="socialSitesCss">
-              <div style={{ fontSize: 20, textTransform: "uppercase" }}>
+              <div className="footer-section-title">
                 let's connect
               </div>
-              <div
-                style={{
-                  marginTop: 10,
-                  display: "flex",
-                  justifyContent: "space-around",
-                  width: "50%",
-                }}
-              >
+              <div className="social-sites-list">
                 <div>
-                  {" "}
                   <a
                     href="https://facebook.com/yourpage"
                     target="_blank"
                     rel="noopener noreferrer" className="facebook"
                   >
-                    <i className="fab fa-facebook" style={{fontSize:"25px"}}></i>
+                    <i className="fab fa-facebook icon-styles" ></i>
                   </a>
                 </div>
-
                 <div>
-                  {" "}
                   <a
                     href="https://twitter.com/yourpage"
                     target="_blank"
                     rel="noopener noreferrer" className="twitter"
                   >
-                    <i ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-</svg></i>
+                    <i className="icon-styles"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="14" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                    </svg></i>
                   </a>
                 </div>
                 <div>
-                  {" "}
                   <a
                     href="https://linkedin.com/yourpage"
                     target="_blank"
                     rel="noopener noreferrer" className="linkedin"
                   >
-                    <i className="fab fa-linkedin" style={{fontSize:"25px"}}></i>
+                    <i className="fab fa-linkedin icon-styles" ></i>
                   </a>
                 </div>
                 <div>
-                  {" "}
                   <a
                     href="https://instagram.com/yourpage"
                     target="_blank"
                     rel="noopener noreferrer" className="instagram"
                   >
-                    <i className="fab fa-instagram" style={{fontSize:"25px"}}></i>
+                    <i className="fab fa-instagram icon-styles"></i>
                   </a>
                 </div>
               </div>
