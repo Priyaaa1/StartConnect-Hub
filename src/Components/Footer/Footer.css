@@ -1,72 +1,69 @@
-body{
-	line-height: 1.5;
-	font-family: 'Poppins', sans-serif;
-}
-*{
-	margin:0;
-	padding:0;
-	box-sizing: border-box;
-}
-
 .footer {
   background-color: #212EA0;
-  width:100%;
-  padding:20px; 
+  width: 100%;
+  padding: 10px 0; /* Add padding to provide some space around the footer */
 }
 
-.grid-container{
-  display:grid;
-  color:#fff;
+.grid-container {
+  display: grid;
+  color: #fff;
 }
 
-.row{
-  display:flex;
+.row {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  letter-spacing: 0.5px,        
+  letter-spacing: 0.5px;
 }
 
 .footer-col{
-  width:25%;
-  padding: 0 5px;
+  /* width:25%;
+  padding: 0 5px; */
+  flex: 1;
+  padding: 0 10px;
+  min-width: 220px;
+  margin-bottom: 20px;
 }
 
 .copyright {
-  margin-top: 50px; 
-  color:#fff;
+  margin-top: 20px; /* Add some space at the top */
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.needHelpCss{
-  font-size: 16px;
-  margin-bottom: 60px;
+/* Adjust font sizes for smaller screens */
+@media (max-width: 846px) {
+  .footer-col {
+    width: 50%; /* Adjust column width for smaller screens */
+  }
+
+  .footer-col a {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .needHelpCss,
+  .companyCss,
+  .moreInfoCss,
+  .socialSitesCss {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+.copyright {
+  font-size: 12px; /* Reduce font size for smaller screens */
 }
 
-.companyCss{
-  font-size: 16px;
-   margin-bottom: 60px;
-}
-
-.moreInfoCss{
-font-size: 16px;
-margin-bottom: 85px;
-}
-
-.socialSitesCss{
-font-size: 16px;
-margin-bottom: 130px;
-}
-
-.footer-col a i{
+.footer-col a i {
   color: #fff;
   text-decoration: none;
   position: relative;
   padding: 10px;
   transition: color 0.5s ease, transform 0.5s ease;
   margin-right: 6px;
+}
+
 }
 .facebook i{
   /* color: #fff; */
@@ -97,109 +94,44 @@ i svg{
   color: #1877F2;
   background-color: #fff;
 
-}
-.twitter i:hover{
+/* Center the login box */
+.login-outerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; /* Adjust height as needed */
   background-color: #fff;
-  color:black;
 }
-.linkedin i:hover{
+
+.twitter i:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.linkedin i:hover {
   background-color: #fff;
   color: #0762c8;
 }
-.instagram i:hover{
-  background-color: #fff;
 
+.instagram i:hover {
+  background-color: #fff;
   color: #ee2a7b;
 }
+
 .footer-col a:hover::after {
   width: 100%;
   left: 0;
 }
-.footer-col a:hover {
-  /* color: #8d8de1; */
-  text-decoration: none;
-  transform: scale(1.1); 
 
-}
-.footer-col a i {
-  font-size: 16px;
-  transition: color 0.5s ease, font-size 0.5s ease;
-}
-.socialSitesCss {
-  font-size: 16px;
-  margin-bottom: 130px;
-  height: 70px; 
-}
-.footer-col a:hover i {
-  /* color: #8d8de1; */
-  /* transform: scale(1.1); */
-  font-size: 20px;
-}
 
-@media (min-width:523px) and (max-width:846px){
-  .footer-col{
-     width:50%;
-   } 
-   .needHelpCss{
-     margin-bottom:5px;   
-   }
-  .companyCss{
-   margin-bottom:0px;
-   margin-top:0px;
-  }
-  .moreInfoCss{
-  font-size: 16px;
-  margin-top: 20px;
-  }
-  .socialSitesCss{
-    margin-top:20px;
-    }
-  .copyright {
-    font-size: 14px;
-    margin-top: 10px; 
-    display: flex;
-    justify-content: center;
-  }
-  }
-  
-  @media (min-width:523px) and (max-width:596px) {
-  .needHelpCss{
-     font-size: 14px;
-   }
-   .companyCss{
-    font-size: 14px;
-    margin-top: 0px;
-   }
-   .moreInfoCss{
-    font-size: 14px;
-   }
-   .socialSitesCss{
-    font-size: 14px;
-   }
-  }
-  
-  @media (min-width:850px) and (max-width:1107px){
-    .footer-col{
-     width:30%;  
-   } 
-  .needHelpCss{
-     font-size: 14px;
-     margin-bottom: 65px;
-   }
-   .companyCss{
-    font-size: 14px;
-    margin-bottom:60px;
-   }
-   .moreInfoCss{
-    font-size: 14px;
-    margin-bottom: 90px;
-   }
-    .socialSitesCss{
-    font-size: 14px;
-    margin-top:0px;
-    margin-bottom: 20px;
-    }
-    .copyright{
-      margin-top: 0px;
-    }
-  }
+.login-container {
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #91a6ff 74%);
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+}
