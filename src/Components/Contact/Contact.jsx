@@ -35,7 +35,7 @@ const Contact = () => {
   return (
     <div className="contact" id="contact">
       <div className="contact-col">
-        <h3>
+        <h3 className="send">
           Send us a message<img src={msg_icon} alt=""></img>
         </h3>
         <p>

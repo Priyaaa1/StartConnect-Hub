@@ -1,5 +1,5 @@
 // import ReactDOM from 'react-dom';
-import React, { useEffect } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 // import ReactDOM from 'react-dom';
 //import React, { useEffect } from 'react'; import already included
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -73,8 +73,17 @@ import { PiSelectionInverseThin } from "react-icons/pi";
 //   )
 // }
 
+export const ThemeContext = createContext("light");
+
 
 const App = () => {
+
+  const [theme,setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  }
+
     useEffect(() => {
       AOS.init({
         duration: 1000, // animation duration in milliseconds
@@ -84,6 +93,8 @@ const App = () => {
       });
     }, []);
   return (
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
+    <div className="main-div" id={theme}>
    
     <Router>
       
@@ -109,6 +120,8 @@ const App = () => {
         
       </div>
     </Router>
+    </div>
+    </ThemeContext.Provider>
   );
 };
 export const LoginToHero=()=>{
