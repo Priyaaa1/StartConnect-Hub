@@ -82,3 +82,11 @@ p a:hover {
   text-align: center;
   margin-left: 50px;
 }
+.warningmsg{
+  margin: 0;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 10px;
+  /* justify-content: center;
+  display: flex; */
+}

@@ -33,6 +33,37 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     updateState(message);
   };
 
+  const handleServices = () => {
+    const message = createChatBotMessage("Our services include investor management, financial services,full service funds, and more. You can visit our website for a detailed list of services.");
+    updateState(message);
+  };
+  
+  const handleCost = () => {
+    const message = createChatBotMessage("Our pricing varies depending on the scope of the project and specific requirements. Please contact our sales team for detailed pricing information tailored to your needs.");
+    updateState(message);
+  };
+  
+  
+  const handleMore = () => {
+    const message = createChatBotMessage("Our mission is to empower businesses with innovative technology solutions and help them achieve their goals efficiently and effectively.");
+    updateState(message);
+  };
+  
+  const handleLocation = () => {
+    const message = createChatBotMessage("We are located in India. You can visit contact details for more");
+    updateState(message);
+  };
+  
+  const handleExperience = () => {
+    const message = createChatBotMessage("We have been in business for more than 2 years, serving clients worldwide.");
+    updateState(message);
+  };
+  
+  const handleThank = () => {
+    const message = createChatBotMessage("Hope I could help! Stay connected and thank you.");
+    updateState(message);
+  };
+
   const defaultResponse = () => {
     const message = createChatBotMessage("I'm not sure about that. Can you ask something else? Or You can feel free to checkout Frequently asked questions") ;
     updateState(message) ;
@@ -53,6 +84,12 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             companyDetails,
             contactUs,
             suggestQuestions ,
+            handleCost,
+            handleExperience,
+            handleLocation,
+            handleServices,
+            handleMore,
+            handleThank,
             defaultResponse
           },
         });

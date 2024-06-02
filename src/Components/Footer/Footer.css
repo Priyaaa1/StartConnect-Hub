@@ -9,6 +9,15 @@
   color: #fff;
 }
 
+#dark .footer {
+  background-color: rgb(34, 34, 34);
+  border: none;
+}
+
+#dark a {
+  color: white;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
