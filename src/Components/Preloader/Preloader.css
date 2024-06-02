@@ -1,0 +1,12 @@
+.pre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 37%;
+    left: 47%;
+    width: 10vw;
+    height: 10vh;
+} 
+
+ 
