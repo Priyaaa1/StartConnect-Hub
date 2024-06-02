@@ -68,9 +68,11 @@
   margin: 20px 0;
 }
 
-.btn-div{
-  width: 100%;
+.btn-div .btn:hover{
+  /* width: 100%; */
   display: flex;
+  background-color:rgb(111, 111, 160);
+  color:white;
   justify-content: center;
 }
 
@@ -82,6 +84,10 @@
   padding-right: 40px;
 }
 
+ .btn:hover{
+  background-color:rgb(111, 111, 160);
+  color:white;
+}
 /* Media query for Smart Phone */
 @media (max-width: 600px) {
   .contact {

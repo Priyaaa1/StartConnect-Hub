@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
-    "aos": "^2.3.4",
     "@react-oauth/google": "^0.12.1",
-    "jwt-decode": "^4.0.0",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
+    "jwt-decode": "^4.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-chatbot-kit": "^2.2.2",
@@ -35,7 +35,7 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
-    "vite": "^5.2.11"
+    "vite": "^5.2.12"
   },
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "main": "vite.config.js",
