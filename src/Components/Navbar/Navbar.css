@@ -71,9 +71,9 @@ nav ul li {
   }
   nav ul {
     position: absolute; /* Change position to absolute */
-    top: 60px; /* Adjust top position */
-    right: 20px; /* Adjust right position */
-    background: #212ea0;
+    top: 82.56px; /* Adjust top position */
+    right: 0px; /* Adjust right position */
+    background: #6261acfa;
     z-index: 10; /* Increase z-index to show above other content */
     width: 200px;
     padding-top: 20px; /* Adjust padding-top */
@@ -93,6 +93,9 @@ nav ul li {
   }
 
   .hide-mobile-menu {
-      display: none;
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
   }
 }

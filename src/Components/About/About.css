@@ -10,6 +10,10 @@
   flex-basis: 40%;
 }
 
+#dark .about-heading {
+  color: white;
+}
+
 .about-right{
   flex-basis: 56%;
   display: flex;

@@ -11,6 +11,10 @@
   color: #676767;
 }
 
+#dark .send {
+  color: blue;
+}
+
 .contact-col h3 {
   color: #000f38;
   font-weight: 500;
