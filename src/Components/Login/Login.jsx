@@ -39,14 +39,12 @@ const Login = () => {
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
 				/>
-				{warnings.email && <p style={{ color: 'red' }} className="warningmsg">{warnings.email}</p>}
 				<input
 					type="password"
 					placeholder="Password"
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
 				/>
-		        {warnings.password && <p style={{ color: 'red'}} className="warningmsg">{warnings.password}</p>}
 				</div>
 				<NavLink to="/explore"><button onClick={handleLogin}>Login</button>
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
