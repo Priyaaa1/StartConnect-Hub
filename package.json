@@ -12,9 +12,11 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@react-oauth/google": "^0.12.1",
+    "antd": "^5.17.4",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "jwt-decode": "^4.0.0",
+    "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-chatbot-kit": "^2.2.2",
