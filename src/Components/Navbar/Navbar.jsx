@@ -1,15 +1,25 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { scroller } from "react-scroll";
 import { useLocation, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo2.png";
 import menu_icon from "../../assets/menu-icon.png";
+import {Switch} from "antd";
+import { ThemeContext } from "../../App";
+
 
 const Navbar = () => {
   const location = useLocation();
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [visible, setVisible] = useState(true);
+  const { theme, toggleTheme } = useContext(ThemeContext); 
+  const [themes, setThemes] = useState("light");
+
+  const handleThemeChange = () => {
+    toggleTheme(); 
+    setThemes((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
   let lastScrollY = window.scrollY;
 
   useEffect(() => {
@@ -129,6 +139,7 @@ const Navbar = () => {
             <button className='logIn'>LOG IN</button>
           </NavLink>
         </li>
+        <li><Switch style={{ backgroundColor: themes === "dark" ? "#000000" : ""}} onChange={handleThemeChange} checked={theme === "dark"} checkedChildren="Dark Mode" unCheckedChildren="Light Mode" /></li>
       </ul>
       <img
         src={menu_icon}
