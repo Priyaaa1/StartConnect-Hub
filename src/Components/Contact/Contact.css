@@ -67,7 +67,7 @@
   display: block;
   margin: 20px 0;
 }
-
+/*Added the hover effct here on  submit button */
 .btn-div .btn:hover{
 
   display: flex;
