@@ -11,10 +11,22 @@ import { jwtDecode } from "jwt-decode";
 const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
+
+    const hashPassword = async(password) =>{
+        return password.split('').reverse().join('');
+    }
 
 	const handleLogin = () => {
-		console.log("Logging in with email:", email, "and password:", password);
+        try{
+            const HashedPassword = hashPassword(password)
+        } catch(error){
+            console.log("login failed: ",error)
+            setErrorMessage("Invalid email or password")
+        }
+		// console.log("Logging in with email:", email, "and password:", password);
 	};
+
 
 	return (
 		<div className="login-outerContainer">
@@ -34,7 +46,9 @@ const Login = () => {
 					onChange={(e) => setPassword(e.target.value)}
 				/>
 				</div>
-				<NavLink to="/explore"><button onClick={handleLogin}>Login</button></NavLink>
+				<NavLink to="/explore"><button onClick={handleLogin}>Login</button>
+                {errorMessage && <p className="error-message">{errorMessage}</p>}
+                </NavLink>
 				<p>
 					Don't have an account? <NavLink to="/signup">Sign up</NavLink>
 				</p>

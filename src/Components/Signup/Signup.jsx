@@ -8,9 +8,24 @@ const Signup = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
 
-    const handleSignUp = () => {
-        console.log("Signing up with email:", email, "and password:", password);
+    const hashPassword = (password) =>{
+        return password.split('').reverse().join('');
+    }
+
+    const handleSignUp = async() => {
+        try{
+            if(password !==confirmPassword){
+                setErrorMessage("Password do not match")
+                return;
+            } 
+            const HashedPassword = hashPassword(password)
+        } catch(error){
+            console.error("Sign up failed:", error);
+            setErrorMessage("Sign up failed");
+        }
+        // console.log("Signing up with email:", email, "and password:", password);
     };
 
     return (
@@ -35,7 +50,7 @@ const Signup = () => {
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                 />
-                <button onClick={handleSignUp}>Sign Up</button>
+                <button onClick={handleSignUp}>Sign Up</button>{errorMessage && <p className="error-message">{errorMessage}</p>}
                 <p>
                     Already have an account? <NavLink to="/login">Login</NavLink>
                 </p>
