@@ -69,7 +69,7 @@
 }
 
 .btn-div .btn:hover{
-  /* width: 100%; */
+
   display: flex;
   background-color:rgb(111, 111, 160);
   color:white;
