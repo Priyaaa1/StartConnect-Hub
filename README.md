@@ -96,3 +96,18 @@ You are all set! 🎉
 ---
 
 Thank you for your contributions! Your efforts help improve StartConnect Hub and support our mission to empower startups and investors. Happy coding! 🚀✨
+
+<div align="center">
+  <h2 style="font-size:3rem;">Our Contributors <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /></h2>
+  <h3>Thank you for contributing to our repository</h3>
+
+<a href="https://github.com/Priyaaa1/StartConnect-Hub/graphs/contributors">
+<img src="https://contributors-img.web.app/image?repo=Priyaaa1/StartConnect-Hub"/>
+
+  </a>
+
+<p style="font-family:var(--ff-philosopher);font-size:3rem;"><b> Show some <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /> by starring this awesome repository!
+
+</div>
+<h3 style="text-align:center;font-size:2rem;">
+If you find this project helpful, please consider giving it a star! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="30" height="30"></p>
