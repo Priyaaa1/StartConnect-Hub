@@ -106,9 +106,8 @@ const Footer = () => {
                 </NavLink>
                 </div>
                 <div>The StartConnect-Hub Blog</div>
-                <div>Collaboration</div>
+                <div><a href="https://github.com/Priyaaa1/StartConnect-Hub">Collaboration</a></div>
                 <div>Media</div>
-                
               </div>
             </div>
           </div>
