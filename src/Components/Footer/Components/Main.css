@@ -244,7 +244,7 @@
     .contact form textarea {
       padding: 10px;
       font-size: 18px;
-      width: 350px;
+      /* width: 350px; */
     }
   
     .contact-col button {
