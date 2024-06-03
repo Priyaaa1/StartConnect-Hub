@@ -12,8 +12,22 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@react-oauth/google": "^0.12.1",
+<<<<<<< HEAD
+    "aos": "^2.3.4",
+    "aws-sdk": "^2.1631.0",
+    "bcrypt": "^5.1.1",
+    "bootstrap": "^5.3.3",
+    "express": "^4.19.2",
+    "jwt-decode": "^4.0.0",
+    "mock-aws-s3": "^4.0.2",
+    "nock": "^13.5.4",
+=======
+    "antd": "^5.17.4",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.3",
     "jwt-decode": "^4.0.0",
     "lottie-react": "^2.4.0",
+>>>>>>> f020c6f407c96b0042b08751f6f7fcf48be54888
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-chatbot-kit": "^2.2.2",
