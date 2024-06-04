@@ -1,7 +1,10 @@
-import React from 'react'
+import {React,useEffect} from 'react'
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 const FullServiceFund = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   return (
     <FullServicefundPageWrapper>
     <h1 >Full Service Fund</h1>
