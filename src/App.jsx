@@ -73,25 +73,27 @@ import { PiSelectionInverseThin } from "react-icons/pi";
 //   )
 // }
 
-export const ThemeContext = createContext("light");
-
+export const ThemeContext = createContext();
 
 const App = () => {
-
-  const [theme,setTheme] = useState("light");
+  const storedTheme = localStorage.getItem('theme') || 'light';
+  const [theme, setTheme] = useState(storedTheme);
 
   const toggleTheme = () => {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
-  }
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
 
-    useEffect(() => {
-      AOS.init({
-        duration: 1000, // animation duration in milliseconds
-        mirror: true,
-        offset: 80,
-        disable: 'mobile',
-      });
-    }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in milliseconds
+      mirror: true,
+      offset: 80,
+      disable: 'mobile',
+    });
+  }, []);
+
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
     <div className="main-div" id={theme}>
@@ -120,17 +122,10 @@ const App = () => {
         
       </div>
     </Router>
-    </div>
+      </div>
     </ThemeContext.Provider>
   );
 };
-export const LoginToHero=()=>{
-  return(
-    <>
-    <MainHomePage/>
-    </>
-  )
-}
 
 const Home = () => {
   return (
