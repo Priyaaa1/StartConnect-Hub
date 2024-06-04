@@ -1,108 +1,146 @@
 .footer {
-  background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
-  padding: 20px 0;
+  background-color: #212EA0;
+  width: 100%;
+  padding: 10px 0; /* Add padding to provide some space around the footer */
+}
+
+.grid-container {
+  display: grid;
+  color: #fff;
+}
+
+#dark .footer {
+  background-color: rgb(34, 34, 34);
+  border: none;
+}
+
+#dark a {
+  color: white;
+}
+
+.row {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  /* background-color: #007bff; */
+  letter-spacing: 0.5px;
 }
 
-.footer-content {
-  display: flex;
-  /* flex-direction: row; */
-  align-items: center;
-  text-align: center;
-  justify-content: space-evenly;
-  margin-bottom: 10px;
-  width: 100%;
-  /* background: #cf2020; */
-  gap: 5px;
-}
-
-@media  (min-height:600px){
-  .footer-links{
-    flex-direction: column;
-  }
-}
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 5px;
-  justify-content: space-evenly;
-  width: 100%;
-  /* background: #000; */
-}
-
-.footer-links li {
-  margin-right: 15px;
-  margin-left: 15px;
-  display: inline;
-}
-
-.footer-links li a {
-  color: #000000;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-size: 15px;
-}
-
-.footer-links li a:hover {
-  color: #007bff;
-}
-
-.social-media {
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.social-media-links {
-  list-style: none;
-  padding: 0;
-  display: flex;
-}
-
-.social-media-links li {
-  margin-right: 10px;
-  margin-left: 10px; 
-}
-
-.social-media-links li a {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-size: 20px;
-}
-
-.social-media-links li a:hover {
-  color: #007bff;
+.footer-col{
+  /* width:25%;
+  padding: 0 5px; */
+  flex: 1;
+  padding: 0 10px;
+  min-width: 220px;
+  margin-bottom: 20px;
 }
 
 .copyright {
-  margin-top: 0px; 
+  margin-top: 20px; /* Add some space at the top */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media screen and (max-width : 750px) {
-  body {
-    background-color: lightgreen;
+/* Adjust font sizes for smaller screens */
+@media (max-width: 846px) {
+  .footer-col {
+    width: 50%; /* Adjust column width for smaller screens */
   }
-  .footer-content {
-    /* display: flex; */
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 10px;
+
+  .footer-col a {
+    font-size: 14px; /* Reduce font size for smaller screens */
   }
-  .footer-links {
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+
+  .needHelpCss,
+  .companyCss,
+  .moreInfoCss,
+  .socialSitesCss {
+    font-size: 14px; /* Reduce font size for smaller screens */
   }
+
+.copyright {
+  font-size: 12px; /* Reduce font size for smaller screens */
+}
+
+.footer-col a i {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding: 10px;
+  transition: color 0.5s ease, transform 0.5s ease;
+  margin-right: 6px;
+}
+
+}
+.facebook i{
+  /* color: #fff; */
+  background-color: #1877F2;
+  border-radius: 30px;
+}
+.twitter i{
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+}
+i svg{
+  margin-top: 7px;
+  height: 20px;
+
+}
+.linkedin i {
+  color: white;
+  background-color:#0762c8;
+  border-radius: 30px;
+}
+.instagram i{
+  color: white;
+  background-color:#d6249f;
+  border-radius: 30px;
+}
+.facebook i:hover{
+  color: #1877F2;
+  background-color: #fff;
+
+/* Center the login box */
+.login-outerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; /* Adjust height as needed */
+  background-color: #fff;
+}
+
+.twitter i:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.linkedin i:hover {
+  background-color: #fff;
+  color: #0762c8;
+}
+
+.instagram i:hover {
+  background-color: #fff;
+  color: #ee2a7b;
+}
+
+.footer-col a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+
+.login-container {
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #91a6ff 74%);
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 }

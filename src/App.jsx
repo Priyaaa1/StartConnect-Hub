@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+// import ReactDOM from 'react-dom';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -21,13 +22,26 @@ import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
 import Explore from '../src/Pages/Explore'
-// import PrivacyPolicy from "./Pages/privacypolicy";
+import PrivacyPolicy from "../src/Pages/PrivacyPolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import VisionAndMission from "./Pages/VisionAndMission";
 import HowItWorks from "./Pages/HowItWorks";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import InvestorManagementPage from "./Pages/InvestorManagementPage";
+import FinancialServices from './Pages/FinancialServices'
+import FullServiceFund from './Pages/FullServiceFund';
+import { PiSelectionInverseThin } from "react-icons/pi";
+
+export const ThemeContext = createContext("light");
+
 
 const App = () => {
+
+  const [theme,setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  }
+
     useEffect(() => {
       AOS.init({
         duration: 1000, // animation duration in milliseconds
@@ -37,6 +51,8 @@ const App = () => {
       });
     }, []);
   return (
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
+    <div className="main-div" id={theme}>
    
     <Router>
       
@@ -55,6 +71,9 @@ const App = () => {
           <Route path='/termsandconditions' element={<TermsAndConditions />}/>
           <Route path='/visionandmission' element={<VisionAndMission />}/>
           <Route path='/howitworks' element={<HowItWorks />}/>
+          <Route path='/investormanagementpage' element={<InvestorManagementPage/>}/>
+          <Route path='/financialservicesPage' element = {<FinancialServices/>}/>
+          <Route path="/fullservicefund" element={<FullServiceFund/>}/>
         </Routes>
         <ChatAssistant/>
         <GoToTop/>
@@ -62,13 +81,21 @@ const App = () => {
         
       </div>
     </Router>
+    </div>
+    </ThemeContext.Provider>
   );
 };
+export const LoginToHero=()=>{
+  return(
+    <>
+    <MainHomePage/>
+    </>
+  )
+}
 
 const Home = () => {
   return (
-    <>
-       
+    <> 
       <Hero />
 
       <div className="container">

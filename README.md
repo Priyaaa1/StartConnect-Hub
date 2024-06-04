@@ -2,7 +2,55 @@
 
 StartConnect Hub is a revolutionary platform designed to bridge the gap between startups and investors, fostering collaboration, innovation, and growth in the entrepreneurial ecosystem. Our mission is to empower startups to succeed by providing them with the resources, connections, and support they need to thrive, while also enabling investors to discover and invest in promising opportunities.
 
+<div align=center>
+  <h2>This Project is the part of</h2>
+  <img alt="GSSoC" src="https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png#gh-light-mode-only" width=87%>
+  <img alt="GSSoC" src="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png#gh-dark-mode-only"/>
+</div>
+
+##  Project Admin ✨
+
+<table>
+  <tr>
+<td align="center"><a href="https://github.com/Priyaaa1"><img src="https://avatars.githubusercontent.com/u/105431748?v=4" width="100px;" alt="Priya Maheshwari"/><br /><sub><b>Priya Maheshwari</b></sub></a></td>
+  
+ </tr>
+</table>
+
+##  Project Mentors ✨
+
+<table>
+  <tr>
+<td align="center"><a href="https://github.com/rohitroy-github"><img src="https://avatars.githubusercontent.com/u/68563695?v=4" width="100px;" alt="Rohit Roy"/><br /><sub><b>Rohit Roy</b></sub></a></td>
+  
+<td align="center"><a href="https://github.com/shubhamsinha21"><img src="https://avatars.githubusercontent.com/u/84564814?v=4"  width="100px;" alt="Shubham Sinha"/><br /><sub><b>Shubham Sinha</b></sub></a></td>
+
+<td align="center"><a href="https://github.com/RishabhDhawad"><img src="https://avatars.githubusercontent.com/u/75854893?v=4" width="100px;" alt="Rishabh Dhawad"/><br /><sub><b>Rishabh Dhawad</b></sub></a></td>
+  </tr>
+</table>
+
 ## 🌟 Contributing
+
+<table align="center">
+    <thead align="center">
+        <tr border: 1px;>
+            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="20" height="20"> Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Lady%20Beetle.png" width="20" height="20"> Issues</b></td>
+            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Check%20Mark%20Button.png" width="20" height="20"> Open PRs</b></td>
+            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Cross%20Mark.png" width="20" height="20"> Closed PRs</b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/Priyaaa1/StartConnect-Hub?style=flat&logo=github"/></td>
+             <td><img alt="Forks" src="https://img.shields.io/github/forks/Priyaaa1/StartConnect-Hub?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/Priyaaa1/StartConnect-Hub?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/Priyaaa1/StartConnect-Hub?style=flat&logo=github"/></td>
+           <td><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Priyaaa1/StartConnect-Hub?style=flat&color=critical&logo=github"/></td>
+        </tr>
+    </tbody>
+</table>
 
 Contributions are always welcome! Follow these steps to get started:
 
@@ -69,3 +117,18 @@ You are all set! 🎉
 ---
 
 Thank you for your contributions! Your efforts help improve StartConnect Hub and support our mission to empower startups and investors. Happy coding! 🚀✨
+
+<div align="center">
+  <h2 style="font-size:3rem;">Our Contributors <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /></h2>
+  <h3>Thank you for contributing to our repository</h3>
+
+<a href="https://github.com/Priyaaa1/StartConnect-Hub/graphs/contributors">
+<img src="https://contributors-img.web.app/image?repo=Priyaaa1/StartConnect-Hub"/>
+
+  </a>
+
+<p style="font-family:var(--ff-philosopher);font-size:3rem;"><b> Show some <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /> by starring this awesome repository!
+
+</div>
+<h3 style="text-align:center;font-size:2rem;">
+If you find this project helpful, please consider giving it a star! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="30" height="30"></p>
