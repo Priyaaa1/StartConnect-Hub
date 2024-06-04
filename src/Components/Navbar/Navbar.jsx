@@ -64,7 +64,7 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`container ${
+      className={`container1 ${
         sticky ||
         location.pathname === "/login" ||
         location.pathname === "/signup"

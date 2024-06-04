@@ -23,7 +23,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="/#contact">
+            <a href="/contact">
               <i className="fas fa-envelope"></i> Contact Us
             </a>
           </li>

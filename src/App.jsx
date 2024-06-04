@@ -1,6 +1,3 @@
-// import ReactDOM from 'react-dom';
-import React, { useEffect } from 'react';
-// import ReactDOM from 'react-dom';
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from 'aos';
@@ -24,51 +21,11 @@ import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
 import Explore from '../src/Pages/Explore'
-import PrivacyPolicy from "./Pages/privacypolicy";
+// import PrivacyPolicy from "./Pages/privacypolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import VisionAndMission from "./Pages/VisionAndMission";
 import HowItWorks from "./Pages/HowItWorks";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-// const App = () => {
-//   return (
-//     <div>
-//       <Navbar/>
-//       <Hero/>
-//       <div className='container'>
-//         <About/>
-//         <Title subTitle='Contact Us' title='Get in Touch'/>
-//         <Contact/>
-//         <Footer/>
-//       </div>
-//     </div>
-//   )
-// }
-
-// const App = () => {
-//   return (
-//     <Router>
-//       <div>
-//         <Navbar />
-//         <Routes>
-//           <Route path="/" exact>
-//             <Hero />
-//             <div className='container'>
-//               <About />
-//               <Title subTitle='Contact Us' title='Get in Touch' />
-//               <Contact />
-//               <Footer />
-//             </div>
-//           </Route>
-//           <Route path="/login" component={Login} />
-//           <Route path="/signup" component={Signup} />
-//         </Routes>
-//       </div>
-//     </Router>
-//   )
-// }
-
 
 const App = () => {
     useEffect(() => {
@@ -90,8 +47,11 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/contact" element={<ContactUS />} />
           <Route path='/explore' element={<Explore/>}/>
-          <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
+          {/* <Route path='/privacypolicy' element={<PrivacyPolicy/>}/> */}
           <Route path='/termsandconditions' element={<TermsAndConditions />}/>
           <Route path='/visionandmission' element={<VisionAndMission />}/>
           <Route path='/howitworks' element={<HowItWorks />}/>
