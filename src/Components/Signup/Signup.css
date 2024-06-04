@@ -57,3 +57,33 @@ NavLink:hover {
   text-decoration: underline;
   color: #0056b3;
 }
+
+/* Signup.css */
+.error-message {
+  color: red;
+  display: block;
+}
+
+input.valid {
+  border-color: green;
+}
+
+input.invalid {
+  border-color: red;
+}
+
+
+
+
+.signup-container button:hover {
+  background-color: #0056b3;
+}
+
+.signup-container p {
+  margin-top: 10px;
+}
+
+.signup-container .error-message {
+  font-size: 12px;
+  color: red;
+}
