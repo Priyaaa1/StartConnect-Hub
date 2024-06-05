@@ -1,3 +1,7 @@
+.container1{
+  padding-left: 10%;
+  padding-right: 10%;
+}
 nav{
   width: 100%;
    background: rgba(0, 0, 128,.6);
@@ -12,7 +16,6 @@ nav{
   z-index: 10;
   transition: top 0.3s ease-in-out;
 }
-
 .logo{
   width: 80px;
 }
