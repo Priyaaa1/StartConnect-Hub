@@ -86,10 +86,10 @@ const Footer = () => {
                   </NavLink>
                 </div>
                 
-                <div>Career</div>
-                <div>Sitemap</div>
-                
-              </div>
+                <div className="foot">Career</div>
+                <div className="foot">Sitemap</div>
+                </div>
+             
             </div>
           </div>
 
@@ -105,9 +105,9 @@ const Footer = () => {
                   About Us
                 </NavLink>
                 </div>
-                <div>The StartConnect-Hub Blog</div>
-                <div>Collaboration</div>
-                <div>Media</div>
+                <div className="foot">The StartConnect-Hub Blog</div>
+                <div className="foot">Collaboration</div>
+                <div className="foot">Media</div>
                 
               </div>
             </div>

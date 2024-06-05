@@ -18,6 +18,14 @@
   color: white;
 }
 
+ .needHelpCss a:hover, .foot:hover,.companyCss a:hover, .moreInfoCss a:hover {
+  color:rgb(13, 168, 171); 
+}
+
+#dark .needHelpCss a:hover,#dark .foot:hover,#dark .companyCss a:hover, #dark .moreInfoCss a:hover {
+  color:rgb(13, 168, 171);  
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
