@@ -88,9 +88,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`container ${
-        sticky || location.pathname === "/login" || location.pathname === "/signup"
+    <nav 
+      className={`container1 ${
+        sticky ||
+        location.pathname === "/login" ||
+        location.pathname === "/signup"
           ? "dark-nav"
           : ""
       } ${visible ? "" : "hidden-nav"}`}
