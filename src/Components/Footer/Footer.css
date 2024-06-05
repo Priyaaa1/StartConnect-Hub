@@ -17,7 +17,8 @@
 #dark a {
   color: white;
 }
-/* Added the hover in this footer section */
+/* Added the hover in this footer section  */
+/* Added the foot class in this footer section non href tags  */
  .needHelpCss a:hover, .foot:hover,.companyCss a:hover, .moreInfoCss a:hover {
   color:rgb(13, 168, 171); 
 }
