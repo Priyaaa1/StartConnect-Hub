@@ -185,7 +185,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <a
-                    href="https://github.com/Priyaaa1"
+                    href="https://github.com/Priyaaa1/StartConnect-Hub"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="github"
