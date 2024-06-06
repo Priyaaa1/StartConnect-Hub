@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef , useEffect} from "react";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./Testimonial.css";
 function Testimonials() {
@@ -12,15 +12,24 @@ function Testimonials() {
 
     if (
       direction === "right" &&
-      carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth
+      carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - cardWidth
     ) {
       carousel.scrollLeft = 0;
-    } else if (direction === "left" && carousel.scrollLeft === 0) {
+    } else if (direction === "left" && carousel.scrollLeft <= 0) {
       carousel.scrollLeft = carousel.scrollWidth - carousel.offsetWidth;
     } else {
       carousel.scrollLeft += scrollAmount;
     }
   };
+  
+  useEffect(() => {
+    const autoSlideInterval = setInterval(() => {
+      scrollCarousel("right");
+    }, 3000); 
+
+    return () => clearInterval(autoSlideInterval);
+  }, []);
+
   return (
     <>
         <div className="wrapper" id="testimonials">
