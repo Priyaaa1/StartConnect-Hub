@@ -97,6 +97,7 @@ const Navbar = () => {
     >
       <NavLink to="/" onClick={() => scrollToHero()}>
         <img src={logo} alt="" className="logo" />
+        <div class = "name_nav"> <p>  <b>Start Connect Hub</b></p> </div> 
       </NavLink>
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
