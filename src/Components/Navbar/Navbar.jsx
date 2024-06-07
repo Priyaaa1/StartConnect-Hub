@@ -5,7 +5,7 @@ import "./Navbar.css";
 import logo from "../../assets/logo2.png";
 import menu_icon from "../../assets/menu-icon.png";
 import { ThemeContext } from "../../App";
-import 'boxicons';
+// import 'boxicons';
 
 const Navbar = () => {
   const location = useLocation();
