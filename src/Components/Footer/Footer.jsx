@@ -465,6 +465,7 @@ const Footer = () => {
                     About Us
                   </NavLink>
                 </div>
+              
                 <div className="foot">The StartConnect-Hub Blog</div>
                 <div className="foot">
                   <a href="https://github.com/Priyaaa1/StartConnect-Hub" target="_blank" rel="noopener noreferrer">
