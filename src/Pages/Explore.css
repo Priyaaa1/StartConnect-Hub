@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 .explore{
     width: 100%;
@@ -70,11 +70,12 @@
   }
   
   .card-text {
-    font-size: small;
-    margin-bottom: 15px;
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
+    font-family: "Open Sans, sans-serif";
+    font-weight: normal;
     font-style: normal;
+    font-size: medium;
+    text-transform:none;
+    font-variation-settings: "wdth" 100;
   }
   
   .button-container {
@@ -93,3 +94,79 @@
 .card:hover{
     background-color:rgb(211, 183, 211);
 }
+
+/* Explore.css */
+.explore {
+  text-align: center;
+  padding: 20px;
+}
+
+.header-container {
+  position: relative;
+  display: inline-block;
+}
+
+.header-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-image:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+.cardDiv {
+  margin-top: 20px;
+}
+
+.card-container {
+  margin-bottom: 20px;
+}
+
+
+/* Explore.css */
+
+/* General styling for the Explore component */
+.explore {
+  text-align: center;
+  padding: 20px;
+  margin-top: 80px;  /* Adjust this value based on the height of your navbar */
+}
+
+.header-container {
+  position: relative;
+  display: inline-block;
+}
+
+.header-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-image:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+.cardDiv {
+  margin-top: 20px;
+}
+
+.card-container {
+  margin-bottom: 20px;
+}
+
+

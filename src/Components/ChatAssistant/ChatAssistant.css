@@ -35,6 +35,9 @@
 }
 .react-chatbot-kit-chat-input-form{
   margin: -3px 10px;
+  position:fixed;
+  bottom: 2px;
+  width:auto;
 }
 .react-chatbot-kit-chat-inner-container {
   background-color: rgb(76, 96, 128);

@@ -10,6 +10,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const location = useLocation();
   const [sticky, setSticky] = useState(false);
+  
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY > 200 ? setSticky(true) : setSticky(false);
@@ -20,7 +21,7 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMobileMenu(!mobileMenu);
   };
-
+  // const isHomePage = location.pathname === "/";
   //  scroll to the "hero" section when clicked
   const scrollToHero = () => {
     scroller.scrollTo("hero", {
@@ -74,30 +75,30 @@ const Navbar = () => {
     >
      <NavLink to="/" onClick={() => scrollToHero()}><img src={logo} alt="" className="logo" onClick={toggleMenu} href="/"></img></NavLink>
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
-        <li>
+      <li><div className="nav1">
           <NavLink to="/" onClick={() => scrollToHero()}>
             Home
-          </NavLink>
+          </NavLink></div>
         </li>
-        <li>
+        <li><div className="nav1">
           <NavLink to="/#about" onClick={() => scrollToAbout()}>
             About
-          </NavLink>
+          </NavLink></div>
         </li>
-        <li>
+        <li><div className="nav1">
           <NavLink to="/#tesimonials" onClick={() => scrollToTestimonials()}>
             Testimonials
-          </NavLink>
+          </NavLink></div>
         </li>
-        <li>
+        <li><div className="nav1">
           <NavLink to="/#accordian" onClick={() => scrollToFAQ()}>
             FAQ's
-          </NavLink>
+          </NavLink></div>
         </li>
-        <li>
+        <li><div className="nav1">
           <NavLink to="/#contact" onClick={() => scrollToContact()}>
             Contact Us
-          </NavLink>
+          </NavLink></div>
         </li>
         {/* <li><button className='btn'>Login</button></li>
         <li><button className='btn'>Signup</button></li> */}
