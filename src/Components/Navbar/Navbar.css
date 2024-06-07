@@ -16,6 +16,23 @@ nav{
   z-index: 10;
   transition: top 0.3s ease-in-out;
 }
+ /* CSS for name in navbar */
+ .name_nav {
+  color: rgb(255, 255, 255); 
+  font-size: 3vw; 
+  position: relative;
+  bottom: 5.5vw; 
+  left: 5.5vw; 
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .name_nav {
+    font-size: 4vw;
+    bottom: 8vw;
+    left: 6vw;
+  }
+}
 .logo{
   width: 80px;
 }
