@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 const TermsAndConditions = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <TermsWrapper>
       <div>
@@ -69,3 +73,4 @@ const TermsWrapper = styled.div`
 `;
 
 export default TermsAndConditions;
+

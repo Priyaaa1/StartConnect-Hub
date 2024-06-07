@@ -11,6 +11,7 @@
   color: #676767;
 }
 
+
 #dark .send {
   color: blue;
 }
@@ -48,7 +49,7 @@
 .contact form input,
 .contact form textarea {
   display: block;
-  width: 100%;
+  width: 90%;
   background: #ebebeb;
   padding: 15px;
   border: 0;
@@ -71,10 +72,12 @@
   display: block;
   margin: 20px 0;
 }
+/*Added the hover effct here on  submit button */
+.btn-div .btn:hover{
 
-.btn-div{
-  width: 100%;
   display: flex;
+  background-color:rgb(111, 111, 160);
+  color:white;
   justify-content: center;
 }
 
@@ -85,7 +88,14 @@
   padding-left: 40px;
   padding-right: 40px;
 }
+/* input{
+  width:70vw;
+} */
 
+ .btn:hover{
+  background-color:rgb(111, 111, 160);
+  color:white;
+}
 /* Media query for Smart Phone */
 @media (max-width: 600px) {
   .contact {
@@ -123,7 +133,7 @@
   .contact form textarea {
     padding: 10px;
     font-size: 18px;
-    width: 350px;
+    /* width: 350px; */
   }
 
   /* .contact-col button {
@@ -138,4 +148,6 @@
   .contact-col form input, .contact-col form textarea{
     width: 80vw;
     }
+ 
+   
 }
