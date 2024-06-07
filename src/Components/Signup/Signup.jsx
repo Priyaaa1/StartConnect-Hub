@@ -47,7 +47,9 @@ const Signup = () => {
   };
 
   const validateEmail = (email) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const domainRegex = /\.(com|in|org|net|edu|gov|co)$/; // Add more domains as needed
+    return emailRegex.test(email) && domainRegex.test(email);
   };
 
   const validatePassword = (password) => {
