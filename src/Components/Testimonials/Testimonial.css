@@ -24,20 +24,22 @@
   line-height: 50px;
   background: #fff;
   border-radius: 50%;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 1);
   transform: translateY(-50%);
   transition: transform 0.1s linear;
+  color:gray;
 }
 #left{
   position: absolute;
   left: 0;
   z-index:1;
+  color:gray;
 }
 .wrapper i:active {
   transform: translateY(-50%) scale(0.85);
 }
 .wrapper i:first-child {
-  left: -22px;
+  left: -57px;
 }
 .wrapper i:last-child {
   right: -22px;

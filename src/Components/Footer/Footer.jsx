@@ -415,6 +415,33 @@ const Footer = () => {
     });
   };
 
+<<<<<<< HEAD
+=======
+  const scrollToTestimonials = () => {
+    scroller.scrollTo("testimonials", {
+      smooth: true,
+      offset: -260,
+      duration: 500,
+    });
+  };
+
+  const scrollToFAQ = () => {
+    scroller.scrollTo("accordian", {
+      smooth: true,
+      offset: -260,
+      duration: 500,
+    });
+  };
+
+  const scrollToContact = () => {
+    scroller.scrollTo("contact", {
+      smooth: true,
+      offset: -260,
+      duration: 500,
+    });
+  };
+
+>>>>>>> 0f6d53ca332fac02a293e6d55874f4a7a6a363b0
   return (
     <footer className="footer">
       <div className="grid-container">
@@ -434,7 +461,11 @@ const Footer = () => {
               </div>
               <div style={{ marginTop: 10 }}>
                 <div>
+<<<<<<< HEAD
                   <NavLink to="/#contact" onClick={() => scrollToSection("contact")}>
+=======
+                  <NavLink to="/#contact" onClick={() => scrollToContact()}>
+>>>>>>> 0f6d53ca332fac02a293e6d55874f4a7a6a363b0
                     Contact Us
                   </NavLink>
                 </div>
@@ -448,8 +479,13 @@ const Footer = () => {
                     Testimonials
                   </NavLink>
                 </div>
+<<<<<<< HEAD
                 <div className="foot">Career</div>
                 <div className="foot">Sitemap</div>
+=======
+                <div>Career</div>
+                <div>Sitemap</div>
+>>>>>>> 0f6d53ca332fac02a293e6d55874f4a7a6a363b0
               </div>
             </div>
           </div>
@@ -461,6 +497,7 @@ const Footer = () => {
               </div>
               <div style={{ marginTop: 10 }}>
                 <div>
+<<<<<<< HEAD
                   <NavLink to="/#about" onClick={() => scrollToSection("about")}>
                     About Us
                   </NavLink>
@@ -473,6 +510,15 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className="foot">Media</div>
+=======
+                  <NavLink to="/#about" onClick={() => scrollToAbout()}>
+                    About Us
+                  </NavLink>
+                </div>
+                <div>The StartConnect-Hub Blog</div>
+                <div><a href="https://github.com/Priyaaa1/StartConnect-Hub">Collaboration</a></div>
+                <div>Media</div>
+>>>>>>> 0f6d53ca332fac02a293e6d55874f4a7a6a363b0
               </div>
             </div>
           </div>
@@ -484,7 +530,13 @@ const Footer = () => {
               </div>
               <div style={{ marginTop: 10 }}>
                 <div>
+<<<<<<< HEAD
                   <NavLink to="/termsandconditions">Terms and Conditions</NavLink>
+=======
+                  <NavLink to="/termsandconditions">
+                    Terms and Conditions
+                  </NavLink>
+>>>>>>> 0f6d53ca332fac02a293e6d55874f4a7a6a363b0
                 </div>
                 <div>
                   <NavLink to="/privacypolicy">Privacy Policy</NavLink>
@@ -526,7 +578,11 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="twitter"
                   >
+<<<<<<< HEAD
                     <i className="fab fa-twitter" style={{ fontSize: "25px" }}></i>
+=======
+                    <i className="fa-brands fa-square-x-twitter" style={{ fontSize: "25px" }}></i>
+>>>>>>> 0f6d53ca332fac02a293e6d55874f4a7a6a363b0
                   </a>
                 </div>
                 <div>
@@ -572,3 +628,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

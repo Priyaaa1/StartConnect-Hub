@@ -1,3 +1,7 @@
+.container1{
+  padding-left: 10%;
+  padding-right: 10%;
+}
 nav{
   width: 100%;
    background: rgba(0, 0, 128,.6);
@@ -12,7 +16,6 @@ nav{
   z-index: 10;
   transition: top 0.3s ease-in-out;
 }
-
 .logo{
   width: 80px;
 }
@@ -98,4 +101,40 @@ nav ul li {
       overflow: hidden;
       transition: all 0.3s ease-in-out;
   }
+}
+.theme-toggle-button {
+  background: rgba(128, 128, 128, 0.2); /* Subtle grey background */
+  border: none; /* Remove border */
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px; /* Increase padding for larger button */
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.theme-toggle-button:hover {
+  transform: scale(1.1);
+  background: rgba(128, 128, 128, 0.4); /* Darker grey on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.theme-toggle-button:focus {
+  outline: none;
+}
+
+.theme-toggle-button box-icon {
+  width: 20px; /* Smaller icon size */
+  height: 20px; /* Smaller icon size */
+  fill: white; /* Icon color to white */
+}
+
+.dark-nav .theme-toggle-button {
+  background: rgba(128, 128, 128, 0.2);
+}
+
+.dark-nav .theme-toggle-button:hover {
+  background: rgba(128, 128, 128, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

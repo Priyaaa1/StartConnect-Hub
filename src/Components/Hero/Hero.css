@@ -1,8 +1,8 @@
 .hero{
     width: 100%;
     min-height: 100vh;
-    /* background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), url('../../assets/investors.jpeg'); */
-    background-size: cover;
+    background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), url('../../assets/investors.png');
+    background-size:cover;
     background-position: center;
     color: #fff;
     display: flex;
@@ -13,7 +13,7 @@
 
 @keyframes animate{
     0%,100%{
-        background-image: url('../../assets/investors.jpeg');
+        background-image: url('../../assets/nile_3.jpg');
     }
     25%{
         background-image: url('../../assets/5.jpg');
@@ -22,14 +22,13 @@
         background-image: url('../../assets/2.jpg');
     }
     75%{
-        background-image: url('../../assets/3.jpg');
+        background-image: url('../../assets/nile_2.jpg');
     }
 }
 .hero-text{
     text-align: center;
     max-width: 800px;
 }
-
 .hero-text h1{
     font-size: 60px;
     font-weight: 600;
@@ -37,13 +36,11 @@
     text-align: center;
     width: fit-content;
 }
-
 .hero-text p{
     max-width: 700px;
     margin: 10px auto 20px;
     line-height: 1.4;
 }
-
 .hero-text button{
     width: 40%;
 }

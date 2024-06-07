@@ -4,9 +4,8 @@ import { useLocation, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo2.png";
 import menu_icon from "../../assets/menu-icon.png";
-import {Switch} from "antd";
 import { ThemeContext } from "../../App";
-
+import 'boxicons';
 
 const Navbar = () => {
   const location = useLocation();
@@ -20,6 +19,7 @@ const Navbar = () => {
     toggleTheme(); 
     setThemes((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
+
   let lastScrollY = window.scrollY;
 
   useEffect(() => {
@@ -88,9 +88,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`container ${
-        sticky || location.pathname === "/login" || location.pathname === "/signup"
+    <nav 
+      className={`container1 ${
+        sticky ||
+        location.pathname === "/login" ||
+        location.pathname === "/signup"
           ? "dark-nav"
           : ""
       } ${visible ? "" : "hidden-nav"}`}
@@ -139,7 +141,16 @@ const Navbar = () => {
             <button className='logIn'>LOG IN</button>
           </NavLink>
         </li>
-        <li><Switch style={{ backgroundColor: themes === "dark" ? "#000000" : ""}} onChange={handleThemeChange} checked={theme === "dark"} checkedChildren="Dark Mode" unCheckedChildren="Light Mode" /></li>
+        <li>
+  <button className="theme-toggle-button" onClick={handleThemeChange} title="Change Theme">
+    {themes === "light" ? (
+      <box-icon name='moon' flip='horizontal'></box-icon>
+    ) : (
+      <box-icon name='sun' flip='horizontal'></box-icon>
+    )}
+  </button>
+</li>
+
       </ul>
       <img
         src={menu_icon}
