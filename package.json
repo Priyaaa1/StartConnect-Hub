@@ -12,9 +12,18 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@react-oauth/google": "^0.12.1",
+<<<<<<< HEAD
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "jwt-decode": "^4.0.0",
+=======
+    "antd": "^5.17.4",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.3",
+    "boxicons": "^2.1.4",
+    "jwt-decode": "^4.0.0",
+    "lottie-react": "^2.4.0",
+>>>>>>> 6f289bf2fb134484f7ab18bce1bc14085b76537f
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-chatbot-kit": "^2.2.2",
@@ -36,7 +45,7 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
-    "vite": "^5.2.11"
+    "vite": "^5.2.12"
   },
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "main": "vite.config.js",

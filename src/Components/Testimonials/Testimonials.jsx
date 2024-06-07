@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef , useEffect} from "react";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./Testimonial.css";
 function Testimonials() {
@@ -12,19 +12,28 @@ function Testimonials() {
 
     if (
       direction === "right" &&
-      carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth
+      carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - cardWidth
     ) {
       carousel.scrollLeft = 0;
-    } else if (direction === "left" && carousel.scrollLeft === 0) {
+    } else if (direction === "left" && carousel.scrollLeft <= 0) {
       carousel.scrollLeft = carousel.scrollWidth - carousel.offsetWidth;
     } else {
       carousel.scrollLeft += scrollAmount;
     }
   };
+  
+  useEffect(() => {
+    const autoSlideInterval = setInterval(() => {
+      scrollCarousel("right");
+    }, 3000); 
+
+    return () => clearInterval(autoSlideInterval);
+  }, []);
+
   return (
     <>
-      <div className="wrapper" id="testimonials" data-aos="zoom-in">
-        <h3 className="testimonial_head">TESTIMONIALS</h3>
+        <div className="wrapper" id="testimonials">
+        <h3 class="testimonial_head">TESTIMONIALS</h3>
         <div>
         <i
           id="left"
@@ -33,58 +42,68 @@ function Testimonials() {
         ></i>
         <ul className="carousel" ref={carouselRef}>
           <li className="card">
-            <div className="img">
+            <div className="img1">
               <img src="user-1.png" alt="img" draggable="false" />
             </div>
-            <h2>Blanche Pearson</h2>
-            <span className="text">
-              StartConnectHub transformed my idea into a thriving business
-            </span>
+            <div className="info">
+              <h2>Blanche Pearson</h2>
+              <span className="text">
+                StartConnectHub transformed my idea into a thriving business
+              </span>
+            </div>
           </li>
           <li className="card">
-            <div className="img">
+            <div className="img1">
               <img src="user-2.png" alt="img" draggable="false" />
             </div>
+            <div className="info">
             <h2>Noah</h2>
             <span className="text">
               Connecting with investors was seamless and rewarding.
             </span>
+            </div>
           </li>
+          
           <li className="card">
             <div className="img">
               <img src="user-3.png" alt="img" draggable="false" />
             </div>
+            <div className="info">
             <h2>Mia</h2>
             <span className="text">
               Innovative platform for turning dreams into reality.
             </span>
+            </div>
           </li>
           <li className="card">
             <div className="img">
               <img src="user-4.png" alt="img" draggable="false" />
             </div>
+            <div className="info">
             <h2>James Khosravi</h2>
             <span className="text">
               Empowering entrepreneurs to achieve their goals
-            </span>
+            </span></div>
           </li>
           <li className="card">
             <div className="img">
               <img src="user-5.jpg" alt="img" draggable="false" />
             </div>
+            <div className="info">
             <h2>Sophia</h2>
             <span className="text">
               Investors found my next big opportunity here.
-            </span>
+            </span></div>
           </li>
           <li className="card">
             <div className="img">
               <img src="user-6.jpg" alt="img" draggable="false" />
             </div>
+            <div className="info">
             <h2>Donald Horton</h2>
             <span className="text">
               A community dedicated to shaping the future.
-            </span>
+            </span></div>
           </li>
         </ul>
         <i

@@ -1,3 +1,7 @@
+.container1{
+  padding-left: 10%;
+  padding-right: 10%;
+}
 nav{
   width: 100%;
    background: rgba(0, 0, 128,.6);
@@ -10,8 +14,8 @@ nav{
   align-items: center;
   justify-content: space-between;
   z-index: 10;
+  transition: top 0.3s ease-in-out;
 }
-
 .logo{
   width: 80px;
 }
@@ -34,6 +38,9 @@ nav ul li a.active{
 .dark-nav{
   background: #212EA0;
   transition: 0.5s;
+}
+.hidden-nav {
+  top: -100px; /* Adjust this value to hide the navbar completely */
 }
 
 .menu-icon{
@@ -67,9 +74,9 @@ nav ul li {
   }
   nav ul {
     position: absolute; /* Change position to absolute */
-    top: 60px; /* Adjust top position */
-    right: 20px; /* Adjust right position */
-    background: #212ea0;
+    top: 82.56px; /* Adjust top position */
+    right: 0px; /* Adjust right position */
+    background: #6261acfa;
     z-index: 10; /* Increase z-index to show above other content */
     width: 200px;
     padding-top: 20px; /* Adjust padding-top */
@@ -89,6 +96,45 @@ nav ul li {
   }
 
   .hide-mobile-menu {
-      display: none;
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
   }
+}
+.theme-toggle-button {
+  background: rgba(128, 128, 128, 0.2); /* Subtle grey background */
+  border: none; /* Remove border */
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px; /* Increase padding for larger button */
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.theme-toggle-button:hover {
+  transform: scale(1.1);
+  background: rgba(128, 128, 128, 0.4); /* Darker grey on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.theme-toggle-button:focus {
+  outline: none;
+}
+
+.theme-toggle-button box-icon {
+  width: 20px; /* Smaller icon size */
+  height: 20px; /* Smaller icon size */
+  fill: white; /* Icon color to white */
+}
+
+.dark-nav .theme-toggle-button {
+  background: rgba(128, 128, 128, 0.2);
+}
+
+.dark-nav .theme-toggle-button:hover {
+  background: rgba(128, 128, 128, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

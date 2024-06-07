@@ -2,6 +2,7 @@
 // import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -32,58 +33,31 @@ import InvestorManagementPage from "./Pages/InvestorManagementPage";
 import FinancialServices from './Pages/FinancialServices'
 import FullServiceFund from './Pages/FullServiceFund';
 import { PiSelectionInverseThin } from "react-icons/pi";
-/*import 'bootstrap/dist/css/bootstrap.min.css';*/  /* This line of code caused orientation issue/bug in the UI of HOME PAGE */
 
-
-// const App = () => {
-//   return (
-//     <div>
-//       <Navbar/>
-//       <Hero/>
-//       <div className='container'>
-//         <About/>
-//         <Title subTitle='Contact Us' title='Get in Touch'/>
-//         <Contact/>
-//         <Footer/>
-//       </div>
-//     </div>
-//   )
-// }
-
-// const App = () => {
-//   return (
-//     <Router>
-//       <div>
-//         <Navbar />
-//         <Routes>
-//           <Route path="/" exact>
-//             <Hero />
-//             <div className='container'>
-//               <About />
-//               <Title subTitle='Contact Us' title='Get in Touch' />
-//               <Contact />
-//               <Footer />
-//             </div>
-//           </Route>
-//           <Route path="/login" component={Login} />
-//           <Route path="/signup" component={Signup} />
-//         </Routes>
-//       </div>
-//     </Router>
-//   )
-// }
-
+export const ThemeContext = createContext();
 
 const App = () => {
-    useEffect(() => {
-      AOS.init({
-        duration: 1000, // animation duration in milliseconds
-        mirror: true,
-        offset: 80,
-        disable: 'mobile',
-      });
-    }, []);
+  const storedTheme = localStorage.getItem('theme') || 'light';
+  const [theme, setTheme] = useState(storedTheme);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in milliseconds
+      mirror: true,
+      offset: 80,
+      disable: 'mobile',
+    });
+  }, []);
+
   return (
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
+    <div className="main-div" id={theme}>
    
     <Router>
       
@@ -94,8 +68,11 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/contact" element={<ContactUS />} />
           <Route path='/explore' element={<Explore/>}/>
-          <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
+          {/* <Route path='/privacypolicy' element={<PrivacyPolicy/>}/> */}
           <Route path='/termsandconditions' element={<TermsAndConditions />}/>
           <Route path='/visionandmission' element={<VisionAndMission />}/>
           <Route path='/howitworks' element={<HowItWorks />}/>
@@ -109,15 +86,10 @@ const App = () => {
         
       </div>
     </Router>
+      </div>
+    </ThemeContext.Provider>
   );
 };
-export const LoginToHero=()=>{
-  return(
-    <>
-    <MainHomePage/>
-    </>
-  )
-}
 
 const Home = () => {
   return (
