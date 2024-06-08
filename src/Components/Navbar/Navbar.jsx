@@ -6,6 +6,7 @@ import logo from "../../assets/logo2.png";
 import menu_icon from "../../assets/menu-icon.png";
 import {Switch} from "antd";
 import { ThemeContext } from "../../App";
+import { SunOutlined, MoonOutlined } from '@ant-design/icons';
 
 
 const Navbar = () => {
@@ -136,10 +137,18 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink to="/login">
-            <button className='logIn'>LOG IN</button>
+          <div class="button button-2">Login</div>
           </NavLink>
         </li>
-        <li><Switch style={{ backgroundColor: themes === "dark" ? "#000000" : ""}} onChange={handleThemeChange} checked={theme === "dark"} checkedChildren="Dark Mode" unCheckedChildren="Light Mode" /></li>
+        <li>
+        <Switch
+    style={{ backgroundColor: theme === 'dark' ? '#000000' : '' }}
+    onChange={handleThemeChange}
+    checked={theme === 'dark'}
+    checkedChildren={<MoonOutlined />}
+    unCheckedChildren={<SunOutlined />}
+  />
+        </li>
       </ul>
       <img
         src={menu_icon}

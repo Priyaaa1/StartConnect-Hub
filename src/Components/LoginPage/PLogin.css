@@ -1,0 +1,122 @@
+/* styles.scss */
+
+.google-login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .google-login-button {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .google-login-button:hover {
+    background-color: #357AE8;
+  }
+  
+  .google-icon {
+    margin-right: 10px;
+  }
+  
+
+  /* Base styles */
+.google-login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .google-login-button {
+    background: -webkit-linear-gradient(to right, #212EA0, #4A56E2);
+    background: linear-gradient(to right, #212EA0, #4A56E2);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .google-login-button:hover {
+    background: -webkit-linear-gradient(to right, #0B1B7A, #212EA0);
+    background: linear-gradient(to right, #0B1B7A, #212EA0);
+  }
+  
+  .google-icon {
+    margin-right: 10px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .google-login-button {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+    }
+  
+    .google-login-container {
+      margin-top: 15px;
+    }
+  
+    /* Additional responsive styles for form elements */
+    .form-container {
+      padding: 20px;
+    }
+  
+    .input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+    }
+  
+    .button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+    }
+  
+    .ghost-button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+    }
+  }
+  
+  /* Further adjustments for smaller screens */
+  @media (max-width: 480px) {
+    .google-login-button {
+      font-size: 14px;
+    }
+  
+    .input {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .ghost-button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  
