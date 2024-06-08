@@ -33,7 +33,7 @@ function Testimonials() {
   return (
     <>
         <div className="wrapper" id="testimonials">
-        <h3 class="testimonial_head">TESTIMONIALS</h3>
+        <h3 className="testimonial_head">TESTIMONIALS</h3>
         <div>
         <i
           id="left"
