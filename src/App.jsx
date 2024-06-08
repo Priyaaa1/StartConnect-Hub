@@ -2,6 +2,7 @@
 // import React, { useEffect } from 'react';
 import React, { createContext, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
+import React, { useEffect, useState, createContext } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -71,7 +72,7 @@ const App = () => {
           <Route path="/faq" element={<Faq />} />
           <Route path="/contact" element={<ContactUS />} />
           <Route path='/explore' element={<Explore/>}/>
-          {/* <Route path='/privacypolicy' element={<PrivacyPolicy/>}/> */}
+          <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
           <Route path='/termsandconditions' element={<TermsAndConditions />}/>
           <Route path='/visionandmission' element={<VisionAndMission />}/>
           <Route path='/howitworks' element={<HowItWorks />}/>
