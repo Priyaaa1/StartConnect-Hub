@@ -1,7 +1,7 @@
 .footer {
   background-color: #212EA0;
   width: 100%;
-  padding: 10px 0; /* Add padding to provide some space around the footer */
+  padding: 10px 0; 
 }
 
 .grid-container {
@@ -16,6 +16,15 @@
 
 #dark a {
   color: white;
+}
+/* Added the hover in this footer section  */
+
+ .needHelpCss a:hover, .foot:hover,.companyCss a:hover, .moreInfoCss a:hover {
+  color:rgb(13, 168, 171); 
+}
+
+#dark .needHelpCss a:hover,#dark .foot:hover,#dark .companyCss a:hover, #dark .moreInfoCss a:hover {
+  color:rgb(13, 168, 171);  
 }
 
 .row {
