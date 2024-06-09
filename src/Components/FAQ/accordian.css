@@ -21,6 +21,10 @@ h2 {
     padding-bottom: 15px;
     padding-left: 10px;
 } 
+.question h3:hover {
+    color: #fff; 
+  }
+  
 
 .accordian .question:hover {
     background-color: #000c7c;
