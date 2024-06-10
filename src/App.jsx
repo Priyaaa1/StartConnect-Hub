@@ -1,8 +1,5 @@
-// import ReactDOM from 'react-dom';
-// import React, { useEffect } from 'react';
 import React, { createContext, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import React, { createContext, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -22,17 +19,15 @@ import GoToTop from "./Components/GoToTop";
 import Accordian from "./Components/FAQ/accordian";
 import './App.css';
 import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
-import Chatbot from 'react-chatbot-kit'
-import 'react-chatbot-kit/build/main.css'
-import Explore from '../src/Pages/Explore'
+import 'react-chatbot-kit/build/main.css';
+import Explore from './Pages/Explore';
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import VisionAndMission from "./Pages/VisionAndMission";
 import HowItWorks from "./Pages/HowItWorks";
 import InvestorManagementPage from "./Pages/InvestorManagementPage";
-import FinancialServices from './Pages/FinancialServices'
+import FinancialServices from './Pages/FinancialServices';
 import FullServiceFund from './Pages/FullServiceFund';
-import { PiSelectionInverseThin } from "react-icons/pi";
 
 export const ThemeContext = createContext();
 
@@ -57,35 +52,31 @@ const App = () => {
 
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
-    <div className="main-div" id={theme}>
-   
-    <Router>
-      
-      <div className="main-div">
-      
-      <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/contact" element={<ContactUS />} />
-          <Route path='/explore' element={<Explore/>}/>
-          <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
-          <Route path='/termsandconditions' element={<TermsAndConditions />}/>
-          <Route path='/visionandmission' element={<VisionAndMission />}/>
-          <Route path='/howitworks' element={<HowItWorks />}/>
-          <Route path='/investormanagementpage' element={<InvestorManagementPage/>}/>
-          <Route path='/financialservicesPage' element = {<FinancialServices/>}/>
-          <Route path="/fullservicefund" element={<FullServiceFund/>}/>
-        </Routes>
-        <ChatAssistant/>
-        <GoToTop/>
-        <Footer />
-        
-      </div>
-    </Router>
+      <div className="main-div" id={theme}>
+        <Router>
+          <div className="main-div">
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/aboutus" element={<AboutUs />} />
+              <Route path="/faq" element={<Faq />} />
+              <Route path="/contact" element={<ContactUS />} />
+              <Route path='/explore' element={<Explore/>}/>
+              <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
+              <Route path='/termsandconditions' element={<TermsAndConditions />}/>
+              <Route path='/visionandmission' element={<VisionAndMission />}/>
+              <Route path='/howitworks' element={<HowItWorks />}/>
+              <Route path='/investormanagementpage' element={<InvestorManagementPage/>}/>
+              <Route path='/financialservicesPage' element={<FinancialServices/>}/>
+              <Route path="/fullservicefund" element={<FullServiceFund/>}/>
+            </Routes>
+            <ChatAssistant/>
+            <GoToTop/>
+            <Footer />
+          </div>
+        </Router>
       </div>
     </ThemeContext.Provider>
   );
@@ -95,7 +86,6 @@ const Home = () => {
   return (
     <> 
       <Hero />
-
       <div className="container">
         <h3 id='header'>ABOUT US</h3>
         <About />
