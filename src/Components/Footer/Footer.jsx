@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+import './Footer.css';
+import { FaGithub } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { scroller } from "react-scroll";
-import { useLocation } from "react-router-dom";
-import { FaGithub } from "react-icons/fa";
-import "./Footer.css";
 
 const Footer = () => {
-  const location = useLocation();
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
@@ -29,158 +27,76 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer">
-      <div className="grid-container">
-        <div
-          className="row"
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            letterSpacing: 0.5,
-          }}
-        >
-          <div className="footer-col">
-            <div className="needHelpCss">
-              <div style={{ fontSize: 20, textTransform: "uppercase", marginTop: 15 }}>
-                Need Help
-              </div>
-              <div style={{ marginTop: 10 }}>
-                <div>
-                  <NavLink to="/#contact" onClick={() => scrollToSection("contact")}>
-                    Contact Us
-                  </NavLink>
-                </div>
-                <div>
-                  <NavLink to="/#accordian" onClick={() => scrollToSection("accordian")}>
-                    FAQ's
-                  </NavLink>
-                </div>
-                <div>
-                  <NavLink to="/#testimonials" onClick={() => scrollToSection("testimonials")}>
-                    Testimonials
-                  </NavLink>
-                </div>
-                <div>Career</div>
-                <div>Sitemap</div>
-              </div>
-            </div>
+    <div className='footer'>
+      <div className='footer-container footer-container-md'>
+        <div className='footer-1'>
+          <div className='footer-title'>Start Connect hub</div>
+        </div>
+        <div className='footer-half footer-sections'>
+          <div className='footer-2'>
+            <p className='footer-section-title'>Company</p>
+            <ul className='footer-links'>
+            <NavLink to="/#about" onClick={() => scrollToSection("about")}>
+            <li className='footer-link'><a href='/about'>About Us</a></li>
+            </NavLink>
+              <li className='footer-link'>Blogs</li>
+              <a href="https://github.com/Priyaaa1/StartConnect-Hub" target="_blank" rel="noopener noreferrer"><li className='footer-link'>Collaboration</li></a>
+              <li className='footer-link'>Media</li>
+            </ul>
           </div>
-
-          <div className="footer-col">
-            <div className="companyCss">
-              <div style={{ fontSize: 20, textTransform: "uppercase" }}>
-                Company
-              </div>
-              <div style={{ marginTop: 10 }}>
-                <div>
-                  <NavLink to="/#about" onClick={() => scrollToSection("about")}>
-                    About Us
-                  </NavLink>
-                </div>
-                <div>The StartConnect-Hub Blog</div>
-                <div>
-                  <a href="https://github.com/Priyaaa1/StartConnect-Hub" target="_blank" rel="noopener noreferrer">
-                    Collaboration
-                  </a>
-                </div>
-                <div>Media</div>
-              </div>
-            </div>
+          <div className='footer-2'>
+            <p className='footer-section-title'>Need Help</p>
+            <ul className='footer-links'>
+            <NavLink to="/#contact" onClick={() => scrollToSection("contact")}>
+            <li className='footer-link'>Contact Us</li>
+            </NavLink>
+              <NavLink to="/#testimonials" onClick={() => scrollToSection("testimonials")}>
+              <li className='footer-link'>Testimonials</li>
+              </NavLink>
+              <li className='footer-link'>Sitemap</li>
+              <NavLink to="/#accordian" onClick={() => scrollToSection("accordian")}>
+              <li className='footer-link'>FAQ</li>
+              </NavLink>
+            </ul>
           </div>
-
-          <div className="footer-col">
-            <div className="moreInfoCss">
-              <div style={{ fontSize: 20, textTransform: "uppercase" }}>
-                More info
-              </div>
-              <div style={{ marginTop: 10 }}>
-                <div>
-                  <NavLink to="/termsandconditions">Terms and Conditions</NavLink>
-                </div>
-                <div>
-                  <NavLink to="/privacypolicy">Privacy Policy</NavLink>
-                </div>
-                <div>
-                  <NavLink to="/visionandmission">Mission and Vision</NavLink>
-                </div>
-              </div>
-            </div>
+          <div className='footer-2'>
+            <p className='footer-section-title'>More Info</p>
+            <ul className='footer-links'>
+            <NavLink to="/privacypolicy"><li className='footer-link'>Privacy Policy</li></NavLink>
+              <NavLink to="/termsandconditions"><li className='footer-link'>Terms & Conditions</li></NavLink>
+              <NavLink to="/visionandmission"><li className='footer-link'>Vision and Mission</li></NavLink>
+              <li className='footer-link'>Career</li>
+            </ul>
           </div>
-
-          <div className="footer-col">
-            <div className="socialSitesCss">
-              <div style={{ fontSize: 20, textTransform: "uppercase" }}>
-                Let's Connect
-              </div>
-              <div
-                style={{
-                  marginTop: 10,
-                  display: "flex",
-                  justifyContent: "space-around",
-                  width: "60%",
-                }}
-              >
-                <div>
-                  <a
-                    href="https://facebook.com/yourpage"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="facebook"
-                  >
-                    <i className="fab fa-facebook" style={{ fontSize: "25px" }}></i>
-                  </a>
-                </div>
-                <div>
-                  <a
-                    href="https://twitter.com/yourpage"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="twitter"
-                  >
-                    <i className="fab fa-twitter" style={{ fontSize: "25px" }}></i>
-                  </a>
-                </div>
-                <div>
-                  <a
-                    href="https://linkedin.com/yourpage"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="linkedin"
-                  >
-                    <i className="fab fa-linkedin" style={{ fontSize: "25px" }}></i>
-                  </a>
-                </div>
-                <div>
-                  <a
-                    href="https://instagram.com/yourpage"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="instagram"
-                  >
-                    <i className="fab fa-instagram" style={{ fontSize: "25px" }}></i>
-                  </a>
-                </div>
-                <div>
-                  <a
-                    href="https://github.com/Priyaaa1/StartConnect-Hub"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="github"
-                  >
-                    <FaGithub style={{ fontSize: "25px" }} />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div className='footer-2'>
+      <p className='footer-section-title'>Let's Connect</p>
+      <div className='footer-icons footer-icons-md'>
+      <a href="https://linkedin.com/yourpage" target="_blank" rel='noreferrer'>
+      <i className="fab fa-linkedin" style={{ fontSize: "25px" }}/>
+        </a>
+        <a href="https://github.com/Priyaaa1/StartConnect-Hub" className='github' target="_blank" rel='noreferrer'>
+          <FaGithub/>
+        </a>
+        <a href="https://facebook.com/yourpage" target="_blank" rel='noreferrer'>
+        <i className="fab fa-facebook" style={{ fontSize: "25px" }}/>
+        </a>
+        <a href="https://twitter.com/yourpage" target="_blank" rel='noreferrer'>
+        <i className="fab fa-twitter" style={{ fontSize: "25px" }}/>
+        </a>
+        <a href="https://instagram.com/yourpage" target="_blank" rel='noreferrer'>
+        <i className="fab fa-instagram" style={{ fontSize: "25px" }}/>
+        </a>
+      </div>
+      </div>
+      </div>
+      <div className='footer-bottom'>
+        <div className='footer-bottom-link'>
+          &copy; 2024 StartConnect-Hub. All rights reserved.
         </div>
       </div>
-      <span className="copyright">
-        © {new Date().getFullYear()} StartConnect-Hub. All rights reserved.
-      </span>
-    </footer>
+    </div>
   );
-};
+}
 
 export default Footer;
