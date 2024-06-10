@@ -68,8 +68,9 @@ const Footer = () => {
               <li className='footer-link'>Career</li>
             </ul>
           </div>
-        </div>
       </div>
+      <div className='footer-2'>
+      <p className='footer-section-title'>Let's Connect</p>
       <div className='footer-icons footer-icons-md'>
       <a href="https://linkedin.com/yourpage" target="_blank" rel='noreferrer'>
       <i className="fab fa-linkedin" style={{ fontSize: "25px" }}/>
@@ -86,6 +87,8 @@ const Footer = () => {
         <a href="https://instagram.com/yourpage" target="_blank" rel='noreferrer'>
         <i className="fab fa-instagram" style={{ fontSize: "25px" }}/>
         </a>
+      </div>
+      </div>
       </div>
       <div className='footer-bottom'>
         <div className='footer-bottom-link'>
