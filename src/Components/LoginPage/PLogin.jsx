@@ -1,17 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import * as Components from './Components'
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 import './PLogin.css'
+import { Navigate, useNavigate } from 'react-router-dom';
 const PLogin = () => {
-    const [signIn, toggle] = React.useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [warnings, setWarnings] = useState({ email: "" });
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    let emailWarning = "";
+
+    if (!email) {
+      emailWarning = "*Please enter your email";
+    } else if (!validateEmail(email)) {
+      emailWarning = "*Please enter a valid email address!";
+    }
+
+    setWarnings({ email: emailWarning });
+
+    if (email && validateEmail(email)) {
+      console.log("Logging in with email:", email);
+      navigate("/explore");
+    }
+  };
+
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+  const [signIn, toggle] = React.useState(true);
   return (
     <Components.Container>
     <Components.SignUpContainer signinIn={signIn}>
         <Components.Form>
             <Components.Title className='createacc-title'>Create Account</Components.Title>
             <Components.Input type='text' placeholder='Name' />
-            <Components.Input type='email' placeholder='Email' />
+            <Components.Input type='email' placeholder='Email'  />
             <Components.Input type='password' placeholder='Password' />
             <Components.Button>Sign Up</Components.Button>
             <div className="google-login-container">
@@ -39,10 +65,19 @@ const PLogin = () => {
     <Components.SignInContainer signinIn={signIn}>
          <Components.Form>
              <Components.Title className="signin-title">Sign in</Components.Title>
-             <Components.Input type='email' placeholder='Email' />
-             <Components.Input type='password' placeholder='Password' />
+             <Components.Input type='email' placeholder='Email'
+             value={email}
+             onChange={(e) => {
+               setEmail(e.target.value);
+               setWarnings({ email: validateEmail(e.target.value)? "" : "*Please enter a valid email address!" });
+             }} />
+               {warnings.email && <p style={{ color: "red" }} className="warningmsg">{warnings.email}</p>}
+
+             <Components.Input type='password' placeholder='Password'
+             value={password}
+             onChange={(e) => setPassword(e.target.value)} />
              <Components.Anchor href='#'>Forgot your password?</Components.Anchor>
-             <Components.Button>Sigin In</Components.Button>
+             <Components.Button onClick={handleLogin}>Sigin In</Components.Button>
               
              <div className="google-login-container">
           <GoogleLogin
@@ -76,7 +111,7 @@ const PLogin = () => {
             <Components.Paragraph>
                 To keep connected with us please login with your personal info
             </Components.Paragraph>
-            <Components.GhostButton onClick={() => toggle(false)}>
+            <Components.GhostButton onClick={() => toggle(true)}>
                 Sign In
             </Components.GhostButton>
             </Components.LeftOverlayPanel>
