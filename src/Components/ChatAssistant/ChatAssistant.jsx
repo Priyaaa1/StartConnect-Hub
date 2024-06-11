@@ -17,7 +17,7 @@ const ChatAssistant = () => {
     <div className="chatbot chatbot-scroll">
       <img 
         className="Logo" 
-        src={isOpen ? "/src/assets/pngegg.png" : "chatbotLogo.jpeg"} 
+        src={isOpen ? "../../assets/pngegg.png" : "chatbotLogo.jpeg"} 
         alt="Logo" 
         onClick={toggleChatbot} 
       />
