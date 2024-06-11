@@ -17,7 +17,7 @@ nav{
   transition: top 0.3s ease-in-out;
 }
 nav.container1 p {
-    /* font-size: larger; */
+    
     color: #edf2f2;
     position: absolute;
     right: 65vw;
@@ -33,7 +33,7 @@ nav.container1 p {
 }
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .name_nav {
     font-size: 4vw;
     bottom: 8vw;
