@@ -57,11 +57,11 @@ const PrivacyPolicy = () => {
   );
 };
 
+  // color: #333;
 const PolicyWrapper = styled.div`
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
-  color: #333;
   line-height: 1.6;
 
   h1 {
@@ -72,7 +72,6 @@ const PolicyWrapper = styled.div`
 
 h2 {
     text-align: center;
-    color: #212EA0;
     font-weight: 600;
     display: flex;
     justify-content: left;

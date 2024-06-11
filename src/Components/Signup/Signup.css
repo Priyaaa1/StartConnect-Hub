@@ -10,8 +10,6 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  /*background-color: #f9f9f9;*/
-  background-color: #ffffff;
   background-image: linear-gradient(315deg, #ffffff 0%, #91a6ff 74%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -46,16 +44,6 @@ button {
 
 p {
   margin-top: 15px;
-}
-
-NavLink {
-  color: #007bff;
-  text-decoration: none;
-}
-
-NavLink:hover {
-  text-decoration: underline;
-  color: #0056b3;
 }
 
 /* Signup.css */

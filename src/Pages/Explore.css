@@ -3,9 +3,7 @@
 .explore{
     width: 100%;
     min-height: 50vh;
-    background-color: #1e1e4b99 ;
     background-position: center;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,9 +14,6 @@
     justify-content: center;
     width:200px;
     padding-left:200x;
-}
-.title{
-    color:black;
 }
 
 
@@ -64,7 +59,6 @@
   .card-body {
     padding: 15px;
     padding-bottom:23px;
-    background-color: rgb(171, 186, 213);
   }
   
   .card-title {
@@ -95,7 +89,7 @@
     text-decoration: none;
 }
 .card:hover{
-    background-color:rgb(211, 183, 211);
+    background-color:rgb(24,25,27);
 }
 
 /* Explore.css */

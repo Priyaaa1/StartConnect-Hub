@@ -1,6 +1,5 @@
 h2 {
     text-align: center;
-    color: #212EA0;
     font-weight: 600;
     display: flex;
     justify-content: center;
@@ -12,9 +11,9 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #212EA0;
-    border: 3px solid whitesmoke;
-    color: azure;
+    background-color: rgb(84,114,228);
+    border: 2px solid whitesmoke;
+    /* color: azure; */
     border-radius: 10px;
     padding-top: 15px;
     padding-right: 20px;

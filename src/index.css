@@ -46,7 +46,7 @@ a:hover{
 }
 
 #testimonials h3{
-  color: #212EA0;
+  /* color: #212EA0; */
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -56,7 +56,7 @@ a:hover{
 
 .btn{
   background: white;
-  color: #212121;
+  /* color: #212121; */
   padding: 14px 25px;
   font-size: 16px;
   border-radius: 30px;
@@ -73,10 +73,10 @@ a:hover{
   margin-left: 10px;
 }
 
-.btn.dark-btn{
+/* .btn.dark-btn{
   background: #212EA0;
   color: #fff;
-}
+} */
 
 
 

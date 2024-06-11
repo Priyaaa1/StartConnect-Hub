@@ -3,8 +3,10 @@ import './Footer.css';
 import { FaGithub } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { scroller } from "react-scroll";
+import { useSelector } from 'react-redux';
 
 const Footer = () => {
+  const theme = useSelector((state) => state.theme.value) ? "header-dark" : "header-light";
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
@@ -27,7 +29,7 @@ const Footer = () => {
   };
 
   return (
-    <div className='footer'>
+    <div className={`footer ${theme}`}>
       <div className='footer-container footer-container-md'>
         <div className='footer-1'>
           <div className='footer-title'>Start Connect hub</div>

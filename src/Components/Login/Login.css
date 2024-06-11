@@ -4,7 +4,6 @@
   align-items: center;
   height: 60vh;
   margin-top: 150px; /* Adjust this value to move the login box down */
-  background-color: #fff;
 }
 
 .login-container {
