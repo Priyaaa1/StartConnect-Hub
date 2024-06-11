@@ -9,7 +9,7 @@ const PLogin = () => {
     <Components.Container>
     <Components.SignUpContainer signinIn={signIn}>
         <Components.Form>
-            <Components.Title>Create Account</Components.Title>
+            <Components.Title className='createacc-title'>Create Account</Components.Title>
             <Components.Input type='text' placeholder='Name' />
             <Components.Input type='email' placeholder='Email' />
             <Components.Input type='password' placeholder='Password' />
@@ -38,7 +38,7 @@ const PLogin = () => {
 
     <Components.SignInContainer signinIn={signIn}>
          <Components.Form>
-             <Components.Title>Sign in</Components.Title>
+             <Components.Title className="signin-title">Sign in</Components.Title>
              <Components.Input type='email' placeholder='Email' />
              <Components.Input type='password' placeholder='Password' />
              <Components.Anchor href='#'>Forgot your password?</Components.Anchor>
@@ -76,7 +76,7 @@ const PLogin = () => {
             <Components.Paragraph>
                 To keep connected with us please login with your personal info
             </Components.Paragraph>
-            <Components.GhostButton onClick={() => toggle(true)}>
+            <Components.GhostButton onClick={() => toggle(false)}>
                 Sign In
             </Components.GhostButton>
             </Components.LeftOverlayPanel>
