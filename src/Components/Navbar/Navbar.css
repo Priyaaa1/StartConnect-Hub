@@ -16,8 +16,15 @@ nav{
   z-index: 10;
   transition: top 0.3s ease-in-out;
 }
+nav.container1 p {
+    /* font-size: larger; */
+    color: #edf2f2;
+    position: absolute;
+    right: 65vw;
+    font-size: xx-large;
+}
  /* CSS for name in navbar */
- .name_nav {
+/*  .name_nav {
   color: rgb(255, 255, 255); 
   font-size: 2vw; 
   position: relative;
@@ -32,7 +39,7 @@ nav{
     bottom: 8vw;
     left: 6vw;
   }
-}
+} */
 .logo{
   width: 80px;
 }
