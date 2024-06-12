@@ -98,7 +98,7 @@ const Navbar = () => {
       } ${visible ? "" : "hidden-nav"}`}
     >
       <NavLink to="/" onClick={() => scrollToHero()}>
-        <p>  <b>Start Connect Hub</b></p> 
+        <p>  <b>StartConnect Hub</b></p> 
         <img src={logo} alt="" className="logo" />
         
       </NavLink>
