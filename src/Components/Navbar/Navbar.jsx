@@ -104,7 +104,7 @@ const Navbar = () => {
         <li>
           <div className="nav1">
             <NavLink to="/" onClick={() => scrollToHero()}>
-              Home
+              Home 
             </NavLink>
           </div>
         </li>
