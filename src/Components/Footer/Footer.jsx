@@ -6,7 +6,7 @@ import { scroller } from "react-scroll";
 import { useSelector } from 'react-redux';
 
 const Footer = () => {
-  const theme = useSelector((state) => state.theme.value) ? "header-dark" : "header-light";
+  const theme = useSelector((state) => state.theme.value) ? "footer-dark" : "footer-light";
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {

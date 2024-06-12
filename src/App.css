@@ -17,7 +17,7 @@
 
 .header-light{
     /* background-color: #FFFFFF; */
-    background-color: rgb(84,114,228) !important;
+    background-color: rgba(0, 0, 128,.6) !important;
     border-color: #D8DADF !important;
     color: #11131f !important;
 }
@@ -25,6 +25,15 @@
     background-color:#11131f !important;
     border-color: #2D3135 !important;
     color: #FFFFFF !important;
+
+}
+.footer-light{
+    /* background-color: #FFFFFF; */
+    background-color: rgb(33,46,160) !important;
+    color: white !important;
+}
+.footer-dark{
+    background-color:#11131f !important;
 
 }
 .cardTheme-dark{

@@ -11,9 +11,9 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(84,114,228);
+    background-color: rgb(33,46,160);
     border: 2px solid whitesmoke;
-    /* color: azure; */
+    color: azure;
     border-radius: 10px;
     padding-top: 15px;
     padding-right: 20px;
