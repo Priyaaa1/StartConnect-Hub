@@ -17,13 +17,11 @@ nav{
   transition: top 0.3s ease-in-out;
 }
 nav.container1 p {
-    
     color: #edf2f2;
     position: absolute;
-    right: 60.5vw;
-    top: 0.3vw; 
-    font-size: 39px;
-  
+    right: 66.6vw;
+    top: 1vw;
+    font-size: 29px;
 }
  /* CSS for name in navbar */
 /*  .name_nav {
