@@ -49,7 +49,7 @@ function FeedbackPage() {
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nRating: ${rating}\nFeedback: ${feedback}`
     );
-    window.location.href = `mailto:sayyadmastan78@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:startconnect@hub.com?subject=${subject}&body=${body}`;
   };
 
   return (
