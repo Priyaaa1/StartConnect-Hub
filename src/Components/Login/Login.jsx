@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import "./Login.css";
 import { GoogleLogin } from "@react-oauth/google";
-import { jwtDecode } from "jwt-decode";
+import {jwtDecode} from "jwt-decode";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [warnings, setWarnings] = useState({ email: "" });
+  const [warnings, setWarnings] = useState({ email: "", password: "" });
   const navigate = useNavigate();
 
   const handleLogin = () => {
     let emailWarning = "";
+    let passwordWarning = "";
 
     if (!email) {
       emailWarning = "*Please enter your email";
@@ -19,9 +20,14 @@ const Login = () => {
       emailWarning = "*Please enter a valid email address!";
     }
 
-    setWarnings({ email: emailWarning });
+    if (!password) {
+      passwordWarning = "*Please enter your password";
+    }
 
-    if (email && validateEmail(email)) {
+    setWarnings({ email: emailWarning, password: passwordWarning });
+
+    
+    if (!emailWarning && !passwordWarning && email && password) {
       console.log("Logging in with email:", email);
       navigate("/explore");
     }
@@ -42,7 +48,12 @@ const Login = () => {
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
-              setWarnings({ email: validateEmail(e.target.value)? "" : "*Please enter a valid email address!" });
+              setWarnings((prevWarnings) => ({ ...prevWarnings, email: "" }));
+            }}
+            onBlur={(e) => {
+              if (!validateEmail(e.target.value)) {
+                setWarnings((prevWarnings) => ({ ...prevWarnings, email: "*Please enter a valid email address!" }));
+              }
             }}
           />
           {warnings.email && <p style={{ color: "red" }} className="warningmsg">{warnings.email}</p>}
@@ -50,8 +61,17 @@ const Login = () => {
             type="password"
             placeholder="Password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              setWarnings((prevWarnings) => ({ ...prevWarnings, password: "" }));
+            }}
+            onBlur={(e) => {
+              if (!e.target.value) {
+                setWarnings((prevWarnings) => ({ ...prevWarnings, password: "*Please enter your password" }));
+              }
+            }}
           />
+          {warnings.password && <p style={{ color: "red" }} className="warningmsg">{warnings.password}</p>}
         </div>
         <button onClick={handleLogin}>Login</button>
         <p>
