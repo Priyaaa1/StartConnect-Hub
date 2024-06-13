@@ -27,7 +27,7 @@ StartConnect Hub is a revolutionary platform designed to bridge the gap between 
 
 <td align="center"><a href="https://github.com/RishabhDhawad"><img src="https://avatars.githubusercontent.com/u/75854893?v=4" width="100px;" alt="Rishabh Dhawad"/><br /><sub><b>Rishabh Dhawad</b></sub></a></td>
 
-<td align="center"><a href="https://github.com/siv2r"><img src="https://avatars.githubusercontent.com/u/56887198?v=4" width="100px;" alt="Sivaram"/><br /><sub><b>Sivaram</b></sub></a></td>  
+<td align="center"><a href="https://github.com/siv2r"><img src="https://avatars.githubusercontent.com/u/56887198?v=4" width="100px;" alt="Sivaram"/><br /><sub><b>Sivaram</b></sub></a></td>
   </tr>
 </table>
 
