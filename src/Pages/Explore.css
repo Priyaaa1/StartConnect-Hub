@@ -36,7 +36,7 @@
   }
   
   .card {
-    border: 1px solid #ddd;
+    border: none;
     background-size: cover;
     border-radius: 8px;
     overflow: hidden;
@@ -78,7 +78,7 @@
   .button-container {
     margin-top: auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content:center
   }
 .btn{
   background-color: rgb(206 152 206)
