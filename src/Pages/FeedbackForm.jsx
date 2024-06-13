@@ -78,7 +78,7 @@ function FeedbackPage() {
             id="name"
             value={name}
             onChange={handleNameChange}
-
+            placeholder="Enter your name"
             required
           />
           <label htmlFor="email">Your Email</label>
@@ -87,7 +87,7 @@ function FeedbackPage() {
             id="email"
             value={email}
             onChange={handleEmailChange}
-
+            placeholder="Enter your email"
             required
           />
           <label htmlFor="feedback">Your Feedback</label>
@@ -96,7 +96,7 @@ function FeedbackPage() {
             rows="6"
             value={feedback}
             onChange={handleFeedbackChange}
-
+            placeholder="Let us know how we can improve..."
             required
           ></textarea>
           <button type="submit">
