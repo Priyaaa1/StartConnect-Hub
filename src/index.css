@@ -33,12 +33,26 @@ a{
   color: inherit;
   line-height: 1;
   cursor: pointer;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  background-color: transparent; 
 }
 
 a:hover{
-  text-decoration: underline;
-  color:lightgoldenrodyellow;
+  text-decoration: rgb(141, 108, 124);
+  
 }
+
+nav1{
+  padding: 10px 15px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav1:hover{
+  background-color: plum; /* Background color on hover */
+  color: black; /* Text color on hover */
+}
+
 
 .container{
   padding-left: 10%;
