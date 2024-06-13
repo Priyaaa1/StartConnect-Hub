@@ -47,8 +47,19 @@
     color: #141726 !important;
 }
     
-.dark {
+#dark {
     background-color:#141726 !important;
     border-color: #2D3135 !important;
     color: white !important;
+}
+
+nav1{
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav1:hover{
+    background-color: transparent; /* Background color on hover */
+    color: black; /* Text color on hover */
 }

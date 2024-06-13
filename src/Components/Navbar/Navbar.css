@@ -35,6 +35,19 @@ nav ul li{
 nav ul li a.active{
   color: lightgoldenrodyellow;
 }
+
+nav a {
+  color : #212EA0
+  transition : color 0.3s ease;
+}
+nav a:hover {
+
+  background-color: rgb(109, 65, 151); /* Background color on hover */
+  background-size: 80% 80%;
+  color: black;
+  border-radius: 3px ;
+
+}
 .dark-nav{
   /* background: #212EA0; */
   transition: 0.5s;
