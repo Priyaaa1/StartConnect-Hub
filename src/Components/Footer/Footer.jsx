@@ -27,6 +27,7 @@ const Footer = () => {
   };
 
   return (
+    
     <div className='footer'>
       <div className='footer-container footer-container-md'>
         <div className='footer-1'>
@@ -57,6 +58,7 @@ const Footer = () => {
               <NavLink to="/#accordian" onClick={() => scrollToSection("accordian")}>
               <li className='footer-link'>FAQ</li>
               </NavLink>
+              <NavLink to="/feedback"><li className='footer-link'>Feedback</li></NavLink>
             </ul>
           </div>
           <div className='footer-2'>
