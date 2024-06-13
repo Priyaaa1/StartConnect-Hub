@@ -16,7 +16,7 @@ const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [visible, setVisible] = useState(true);
-  const theme = useSelector((state) => state.theme.value) ? "header-dark" : "header-light";
+  const theme = "header-light";
   const dispatch = useDispatch()
   // const { theme, toggleTheme } = useContext(ThemeContext); 
   // const [themes, setThemes] = useState("light");
