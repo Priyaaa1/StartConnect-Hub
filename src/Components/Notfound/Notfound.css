@@ -1,0 +1,23 @@
+.notfound{
+    width: 50%;
+    height: 100vh;
+    margin-top: 70px;
+}
+.notfound-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100.5vh;
+}
+.btnx{
+    position: absolute;
+    bottom: 40px;
+    background-color: #212EA0;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}

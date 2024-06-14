@@ -33,6 +33,7 @@ import FinancialServices from './Pages/FinancialServices'
 import FullServiceFund from './Pages/FullServiceFund';
 import { PiSelectionInverseThin } from "react-icons/pi";
 import FeedbackPage from './Pages/FeedbackForm';
+import Notfound from './Components/Notfound/Notfound';
 
 export const ThemeContext = createContext();
 
@@ -63,7 +64,7 @@ const App = () => {
       
       <div className="main-div">
       
-      <Navbar />
+      <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -79,7 +80,9 @@ const App = () => {
           <Route path='/investormanagementpage' element={<InvestorManagementPage/>}/>
           <Route path='/financialservicesPage' element = {<FinancialServices/>}/>
           <Route path="/fullservicefund" element={<FullServiceFund/>}/>
-          <Route path="/feedback" element={<FeedbackPage />} /> 
+<Route path="/feedback" element={<FeedbackPage />} />
+<Route path="*" element={<Notfound />} />
+
         </Routes>
         <ChatAssistant/>
         <GoToTop/>
