@@ -10,10 +10,14 @@
     align-items: center;
     height: 100.5vh;
 }
-.btn{
+.btnx{
     position: absolute;
     bottom: 40px;
     background-color: #212EA0;
     color: #fff;
     border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
 }
