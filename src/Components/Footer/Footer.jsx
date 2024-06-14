@@ -54,6 +54,9 @@ const Footer = () => {
               <li className='footer-link'>Testimonials</li>
               </NavLink>
               <li className='footer-link'>Sitemap</li>
+              <NavLink to="/howitworks" onClick={() => scrollToSection("howitworks")}>
+              <li className='footer-link'>How it Works</li>
+              </NavLink>
               <NavLink to="/#accordian" onClick={() => scrollToSection("accordian")}>
               <li className='footer-link'>FAQ</li>
               </NavLink>
