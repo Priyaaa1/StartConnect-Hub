@@ -155,7 +155,24 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 769px) and (max-width: 990px) {
+  .footer-half {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .footer-2 {
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+
+  .footer-icons {
+    justify-content: flex-start;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 991px) {
   .footer-icons {
     justify-content: flex-start;
     margin-right: 0;
