@@ -10,7 +10,7 @@ StartConnect Hub is a revolutionary platform designed to bridge the gap between 
 
 ##  Project Admin ✨
 
-<table>
+<table align="center">
   <tr>
 <td align="center"><a href="https://github.com/Priyaaa1"><img src="https://avatars.githubusercontent.com/u/105431748?v=4" width="100px;" alt="Priya Maheshwari"/><br /><sub><b>Priya Maheshwari</b></sub></a></td>
   
@@ -19,13 +19,15 @@ StartConnect Hub is a revolutionary platform designed to bridge the gap between 
 
 ##  Project Mentors ✨
 
-<table>
+<table align="center">
   <tr>
 <td align="center"><a href="https://github.com/rohitroy-github"><img src="https://avatars.githubusercontent.com/u/68563695?v=4" width="100px;" alt="Rohit Roy"/><br /><sub><b>Rohit Roy</b></sub></a></td>
   
 <td align="center"><a href="https://github.com/shubhamsinha21"><img src="https://avatars.githubusercontent.com/u/84564814?v=4"  width="100px;" alt="Shubham Sinha"/><br /><sub><b>Shubham Sinha</b></sub></a></td>
 
 <td align="center"><a href="https://github.com/RishabhDhawad"><img src="https://avatars.githubusercontent.com/u/75854893?v=4" width="100px;" alt="Rishabh Dhawad"/><br /><sub><b>Rishabh Dhawad</b></sub></a></td>
+
+<td align="center"><a href="https://github.com/siv2r"><img src="https://avatars.githubusercontent.com/u/56887198?v=4" width="100px;" alt="Sivaram"/><br /><sub><b>Sivaram</b></sub></a></td>
   </tr>
 </table>
 
