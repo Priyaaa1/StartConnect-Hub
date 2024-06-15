@@ -97,13 +97,15 @@ const Navbar = () => {
       } ${visible ? "" : "hidden-nav"}`}
     >
       <NavLink to="/" onClick={() => scrollToHero()}>
+        <p>  <b>StartConnect Hub</b></p> 
         <img src={logo} alt="" className="logo" />
+        
       </NavLink>
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
           <div className="nav1">
             <NavLink to="/" onClick={() => scrollToHero()}>
-              Home
+              Home 
             </NavLink>
           </div>
         </li>

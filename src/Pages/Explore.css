@@ -41,7 +41,7 @@
   }
   
   .card {
-    border: 1px solid #ddd;
+    border: none;
     background-size: cover;
     border-radius: 8px;
     overflow: hidden;
@@ -84,7 +84,7 @@
   .button-container {
     margin-top: auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content:center
   }
 .btn{
   background-color: rgb(206 152 206)
@@ -94,9 +94,9 @@
     background-color: rgb(129, 166, 235);
     text-decoration: none;
 }
-.card:hover{
+ .card:hover{
     background-color:rgb(211, 183, 211);
-}
+} 
 
 /* Explore.css */
 .explore {
