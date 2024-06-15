@@ -49,8 +49,10 @@ nav.container1 p {
 /*background-color: rgb(145, 99, 187);*/
 background-color: transparent;
 }
+
 .logIn:hover{
-background-color: rgb(109, 65, 151);
+/* background-color: rgb(109, 65, 151); */
+text-decoration: underline;
 }
 nav ul li{
   display: inline-block;
@@ -64,15 +66,16 @@ nav ul li a.active{
 
 nav a {
   color : #212EA0
-  transition : color 0.3s ease;
+  transition ; color 0.3s ease;
 }
 nav a:hover {
    
-  background-color: rgb(109, 65, 151); /* Background color on hover */
+  /* background-color: rgb(109, 65, 151); Background color on hover */
   background-size: 80% 80%;
   color: black;
   border-radius: 3px ;
-
+  font-size: larger;
+  text-decoration: underline;
 }
 
 
@@ -144,14 +147,14 @@ nav ul li {
   }
 }
 .theme-toggle-button {
-  background: rgba(128, 128, 128, 0.2); /* Subtle grey background */
-  border: none; /* Remove border */
+  background: rgba(128, 128, 128, 0.2);
+  border: 2px solid white; /* Add white border */
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px; /* Increase padding for larger button */
+  padding: 8px;
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 

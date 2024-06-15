@@ -146,9 +146,9 @@ const Navbar = () => {
         <li>
   <button className="theme-toggle-button" onClick={handleThemeChange} title="Change Theme">
     {themes === "light" ? (
-      <box-icon name='moon' flip='horizontal'></box-icon>
+      <box-icon name='moon' flip='horizontal'>D</box-icon>
     ) : (
-      <box-icon name='sun' flip='horizontal'></box-icon>
+      <box-icon name='sun' flip='horizontal'>L</box-icon>
     )}
   </button>
 </li>
