@@ -1,11 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { scroller } from "react-scroll";
 import { useLocation, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo2.png";
 import menu_icon from "../../assets/menu-icon.png";
-import { ThemeContext } from "../../App";
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector,useDispatch } from 'react-redux'
 import { changeTheme } from "../../features/theme";
 import moonIcon from "./moon.jpg";
 import sunIcon from "./sun.jpg";
@@ -16,10 +15,9 @@ const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [visible, setVisible] = useState(true);
+  const isDark= useSelector((state)=>state.theme.value);
   const theme = "header-light";
   const dispatch = useDispatch()
-  // const { theme, toggleTheme } = useContext(ThemeContext); 
-  // const [themes, setThemes] = useState("light");
 
   const handleThemeChange = () => {
     console.log(theme)
@@ -104,7 +102,7 @@ const Navbar = () => {
       } ${visible ? "" : "hidden-nav"} ${theme}`}
     >
       <NavLink to="/" onClick={() => scrollToHero()}>
-        <p>  <b>StartConnect Hub</b></p> 
+        <p>  <b>Start Connect Hub</b></p> 
         <img src={logo} alt="" className="logo" />
         
       </NavLink>
@@ -151,7 +149,7 @@ const Navbar = () => {
         </li>
       </ul>
   <button className="theme-toggle-button" onClick={()=>dispatch(changeTheme())} title="Change Theme">
-    <img src={theme==="header-dark"?moonIcon:sunIcon} alt="Sun" />
+    <img src={isDark?moonIcon:sunIcon} alt="Sun" />
   </button>
       <img
         src={menu_icon}

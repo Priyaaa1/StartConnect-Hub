@@ -35,12 +35,8 @@ import { PiSelectionInverseThin } from "react-icons/pi";
 import Notfound from './Components/Notfound/Notfound';
 import { useSelector } from 'react-redux';
 
-export const ThemeContext = createContext();
-
 const App = () => {
   const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
-  const storedTheme = localStorage.getItem('theme') || 'light';
-  const [themes, setTheme] = useState(storedTheme);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -58,7 +54,6 @@ const App = () => {
   }, []);
 
   return (
-    <ThemeContext.Provider value={{themes, toggleTheme}}>
     <div className={`main-div ${theme}`}>
     <Router>
       <Navbar />
@@ -84,7 +79,6 @@ const App = () => {
         <Footer />
     </Router>
     </div>
-    </ThemeContext.Provider>
   );
 };
 

@@ -7,6 +7,7 @@
 nav{ 
   width: 100%;
   /* background: rgba(0, 0, 128,.6); */
+  font-size: 14px;
   padding: 4px 0;
   position: fixed;
   top: 0;
@@ -14,16 +15,13 @@ nav{
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   z-index: 10;
   transition: top 0.3s ease-in-out;
 }
 nav.container1 p {
-    color: #edf2f2;
-    position: absolute;
-    right: 66.6vw;
-    top: 1vw;
-    font-size: 29px;
+  color: #edf2f2;
+  display: flex;
+  align-items: center;
 }
  /* CSS for name in navbar */
 /*  .name_nav {
@@ -42,8 +40,10 @@ nav.container1 p {
     left: 6vw;
   }
 } */
-.logo{
-  width: 80px;
+.logo {
+  height: 52px;
+  width: 52px;
+  margin-right: 5px;
 }
 .logIn{
 /* background-color: rgb(145, 99, 187); */
@@ -56,15 +56,19 @@ nav ul li{
   display: inline-block;
   list-style: none;
   margin: 5px 20px;
-  font-size: 16px;
+  font-size: 14px;
 }
 nav ul li a.active{
   color: lightgoldenrodyellow;
 }
 
 nav a {
-  color : #212EA0;
-  transition : color 0.3s ease;
+  flex-wrap: wrap;
+  color: white;
+  margin-right: auto;
+  transition: color 0.3s ease;
+  display: flex;
+  flex-direction: row-reverse;
 }
 nav a:hover {
 
@@ -83,27 +87,34 @@ nav a:hover {
 
 .menu-icon{
   display: none;
+  margin-left: 15px;
 }
 
 
 /* Media query for tablets */
-@media(max-width: 1000px){
-  .logo{
-      width: 60px;
-  }
+@media(max-width: 1100px){
   nav ul li{
-      margin: 10px 15px;
+      margin: 10px 10px;
+      font-size: 14px;
   }
 }
-@media(max-width: 800px){
-nav ul li {
-  font-size: 14px;
-} 
+@media(max-width: 900px){
+  nav a {
+    flex-direction: column-reverse;
+    align-items: center;
+  } 
 }
 
 
 /* SmartPhone Media query */
-@media (max-width: 730px) {
+@media (max-width: 770px) {
+  nav ul li {
+    margin: 10px 5px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 700px) {
   nav {
     padding: 15px 20px; /* Adjust padding for better spacing */
   }
@@ -150,12 +161,13 @@ nav ul li {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ffffff;
   padding: 0; /* Increase padding for larger button */
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 .theme-toggle-button img{
-  height: 42px;
-  width: 42px;
+  height: 32px;
+  width: 32px;
   filter: grayscale();
   border-radius: 20px;
 }

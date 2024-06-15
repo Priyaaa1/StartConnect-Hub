@@ -42,10 +42,6 @@ button {
   cursor: pointer;
 }
 
-p {
-  margin-top: 15px;
-}
-
 /* Signup.css */
 .error-message {
   color: red;

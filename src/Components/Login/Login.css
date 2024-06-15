@@ -58,7 +58,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-p {
+.login-container p {
   margin-top: 10px;
   text-align: center;
   padding-bottom: 20px;
