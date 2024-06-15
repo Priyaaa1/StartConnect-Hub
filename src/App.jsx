@@ -28,6 +28,9 @@ import HowItWorks from "./Pages/HowItWorks";
 import InvestorManagementPage from "./Pages/InvestorManagementPage";
 import FinancialServices from './Pages/FinancialServices';
 import FullServiceFund from './Pages/FullServiceFund';
+import { PiSelectionInverseThin } from "react-icons/pi";
+import Notfound from './Components/Notfound/Notfound';
+
 
 export const ThemeContext = createContext();
 
@@ -77,6 +80,36 @@ const App = () => {
             <Footer />
           </div>
         </Router>
+    <div className="main-div" id={theme}>
+   
+    <Router>
+      
+      <div className="main-div">
+      
+      <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/contact" element={<ContactUS />} />
+          <Route path='/explore' element={<Explore/>}/>
+          <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
+          <Route path='/termsandconditions' element={<TermsAndConditions />}/>
+          <Route path='/visionandmission' element={<VisionAndMission />}/>
+          <Route path='/howitworks' element={<HowItWorks />}/>
+          <Route path='/investormanagementpage' element={<InvestorManagementPage/>}/>
+          <Route path='/financialservicesPage' element = {<FinancialServices/>}/>
+          <Route path="/fullservicefund" element={<FullServiceFund/>}/>
+          <Route path="*" element={<Notfound/>}/>
+        </Routes>
+        <ChatAssistant/>
+        <GoToTop/>
+        <Footer />
+        
+      </div>
+    </Router>
       </div>
     </ThemeContext.Provider>
   );
