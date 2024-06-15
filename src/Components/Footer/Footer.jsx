@@ -90,6 +90,27 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className='footer-2'>
+      <p className='footer-section-title'>Let's Connect</p>
+      <div className='footer-icons footer-icons-md'>
+      <a href="https://linkedin.com/yourpage" target="_blank" rel='noreferrer'>
+      <i className="fab fa-linkedin" style={{ fontSize: "25px" }}/>
+        </a>
+        <a href="https://github.com/Priyaaa1/StartConnect-Hub" className='github' target="_blank" rel='noreferrer'>
+          <FaGithub/>
+        </a>
+        <a href="https://facebook.com/yourpage" target="_blank" rel='noreferrer'>
+        <i className="fab fa-facebook" style={{ fontSize: "25px" }}/>
+        </a>
+        <a href="https://x.com/yourpage" target="_blank" rel='noreferrer'>
+        <i className="fab fa-x-twitter" style={{ fontSize: "25px" }}/>
+        </a>
+        <a href="https://instagram.com/yourpage" target="_blank" rel='noreferrer'>
+        <i className="fab fa-instagram" style={{ fontSize: "25px" }}/>
+        </a>
+      </div>
+      </div>
+      </div>
       <div className='footer-bottom'>
         <div className='footer-bottom-link'>
           &copy; 2024 StartConnect-Hub. All rights reserved.
