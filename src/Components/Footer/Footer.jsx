@@ -6,6 +6,7 @@ import { scroller } from "react-scroll";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
+  const theme = "footer-light";
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
@@ -28,8 +29,7 @@ const Footer = () => {
   };
 
   return (
-    
-    <div className='footer'>
+    <div className={`footer ${theme}`}>
       <div className='footer-container footer-container-md'>
         <div className='footer-1'>
           <div className='footer-title'>
@@ -70,10 +70,12 @@ const Footer = () => {
                 <li className='footer-link'>Testimonials</li>
               </NavLink>
               <li className='footer-link'>Sitemap</li>
+              <NavLink to="/howitworks" onClick={() => scrollToSection("howitworks")}>
+              <li className='footer-link'>How it Works</li>
+              </NavLink>
               <NavLink to="/#accordian" onClick={() => scrollToSection("accordian")}>
                 <li className='footer-link'>FAQ</li>
               </NavLink>
-              <NavLink to="/feedback"><li className='footer-link'>Feedback</li></NavLink>
             </ul>
           </div>
           <div className='footer-2'>
