@@ -33,6 +33,7 @@ import FinancialServices from './Pages/FinancialServices'
 import FullServiceFund from './Pages/FullServiceFund';
 import { PiSelectionInverseThin } from "react-icons/pi";
 import Notfound from './Components/Notfound/Notfound';
+import { Progressbar } from './Components/Progressbar';
 
 export const ThemeContext = createContext();
 
@@ -62,7 +63,7 @@ const App = () => {
     <Router>
       
       <div className="main-div">
-      
+      <Progressbar/>
       <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
