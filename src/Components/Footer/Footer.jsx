@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import { scroller } from "react-scroll";
 
 const Footer = () => {
+  const theme = "footer-light";
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
@@ -27,7 +28,7 @@ const Footer = () => {
   };
 
   return (
-    <div className='footer'>
+    <div className={`footer ${theme}`}>
       <div className='footer-container footer-container-md'>
         <div className='footer-1'>
           <div className='footer-title'>Start Connect hub</div>

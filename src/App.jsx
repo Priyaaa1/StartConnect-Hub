@@ -33,12 +33,10 @@ import FinancialServices from './Pages/FinancialServices'
 import FullServiceFund from './Pages/FullServiceFund';
 import { PiSelectionInverseThin } from "react-icons/pi";
 import Notfound from './Components/Notfound/Notfound';
-
-export const ThemeContext = createContext();
+import { useSelector } from 'react-redux';
 
 const App = () => {
-  const storedTheme = localStorage.getItem('theme') || 'light';
-  const [theme, setTheme] = useState(storedTheme);
+  const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -56,14 +54,9 @@ const App = () => {
   }, []);
 
   return (
-    <ThemeContext.Provider value={{theme, toggleTheme}}>
-    <div className="main-div" id={theme}>
-   
+    <div className={`main-div ${theme}`}>
     <Router>
-      
-      <div className="main-div">
-      
-      <Navbar/>
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -84,11 +77,8 @@ const App = () => {
         <ChatAssistant/>
         <GoToTop/>
         <Footer />
-        
-      </div>
     </Router>
-      </div>
-    </ThemeContext.Provider>
+    </div>
   );
 };
 

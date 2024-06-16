@@ -1,6 +1,6 @@
 #header {
     text-align: center;
-    color: #212EA0;
+    /* color: #212EA0; */
     font-size: 23px;
     font-weight: 600;
     padding-top: 60px;
@@ -15,22 +15,50 @@
     overflow-x: hidden;
 }
 
-#light {
-    background-color: white;
+.header-light{
+    /* background-color: #FFFFFF; */
+    background-color: rgba(0, 0, 128,.6) !important;
+    border-color: #D8DADF !important;
+    color: #11131f !important;
 }
+.header-dark{
+    background-color:#11131f !important;
+    border-color: #2D3135 !important;
+    color: #FFFFFF !important;
+}
+.footer-light{
+    /* background-color: #FFFFFF; */
+    background-color: rgb(33,46,160) !important;
+    color: white !important;
+}
+.footer-dark{
+    background-color:#11131f !important;
 
-#dark {
-    background-color: black;
-    color: white;
+}
+.cardTheme-dark{
+    background-color: rgb(24,25,27) !important;
+    border-color: #2D3135 !important;
+    color: white !important;
+}
+.light {
+    background-color: #FFFFFF !important;
+    border-color: #D8DADF !important;
+    color: #141726 !important;
+}
+    
+.dark {
+    background-color:#141726 !important;
+    border-color: #2D3135 !important;
+    color: white !important;
 }
 
 nav1{
-  padding: 10px 15px;
-  border-radius: 15px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav1:hover{
-  background-color: transparent; /* Background color on hover */
-  color: black; /* Text color on hover */
+    background-color: transparent; /* Background color on hover */
+    color: black; /* Text color on hover */
 }

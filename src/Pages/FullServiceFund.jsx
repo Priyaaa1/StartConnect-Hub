@@ -24,11 +24,11 @@ const FullServiceFund = () => {
     <section>
         <span>
         Capital Raising: 
+        </span>
         <p>
         Securing the right amount of capital is critical for startups at all stages. 
         StartConnectHub offers diverse funding options tailored to your specific needs:
         </p>
-        </span>
         <ul>
             <li>
             <span>Venture Capital: </span>Connect with leading venture capital firms that are eager to invest in high-potential startups.
@@ -48,10 +48,10 @@ const FullServiceFund = () => {
     <section>
     <span>
     Financial Planning and Strategy:
+        </span>
     <p>
     A robust financial plan is essential for sustainable growth. Our financial planning services include:
     </p>
-        </span>
         <ul>
             <li>
             <span>Budgeting and Forecasting: </span>Create detailed budgets and financial forecasts to guide your business decisions and strategy.
@@ -69,10 +69,10 @@ const FullServiceFund = () => {
     <section>
     <span>
     Investment Structuring:
+        </span>
     <p>
     Proper structuring of investments can maximize returns and minimize risks. We provide expertise in:
     </p>
-        </span>
         <ul>
             <li>
             <span>Equity Financing: </span>Structure equity deals that align with your business goals and investor expectations.
@@ -91,10 +91,10 @@ const FullServiceFund = () => {
     <section>
     <span>
     Due Diligence:
+        </span>
     <p>
     Thorough due diligence is crucial for making informed investment decisions. Our services include:
     </p>
-        </span>
         <ul>
             <li>
             <span>Business Analysis:</span> Conduct comprehensive analyses of business plans, financial statements, and market positioning.
@@ -121,10 +121,8 @@ const FullServicefundPageWrapper= styled.div`
 padding: 20px;
 max-width: 1000px;
 margin: 0 auto;
-color: #333;
 line-height: 1.6;
 p{
-    color:black;
     font-weight:normal;
 }
 
@@ -152,15 +150,15 @@ section{
 
 span{
     font-weight:semi-bold;
-    color:purple;
+    color:rgb(84,114,228);
     font-size:large;
 }
 h1{
     padding:45px;
     text-align:center;
-    color:#a13da1;
     margin-top:122px;
     font-weight:normal;
+    color:rgb(84,114,228);
 }
 h2{
     text-align:left;
@@ -169,7 +167,7 @@ h2{
     font-weight:normal;
     padding:45px;
     text-align:center;
-    color:#a13da1;
+    color:rgb(84,114,228);
     margin-top:20px;
 
 }

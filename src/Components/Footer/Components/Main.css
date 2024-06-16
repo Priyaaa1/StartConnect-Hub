@@ -118,7 +118,6 @@
 /* Accordian CSS */
 .faqh2 {
     text-align: center;
-    color: #212EA0;
     font-weight: 600;
     display: flex;
     justify-content: center;
@@ -158,13 +157,7 @@
     justify-content: space-between;
 }
 
-.contact-col{
-    flex-basis: 48%;
-    color: #676767;
-}
-
 .contact-col h3{
-    color: #000F38;
     font-weight: 500;
     font-size: 25px;
     display: flex;
