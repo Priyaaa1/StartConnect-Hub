@@ -34,6 +34,7 @@ import FullServiceFund from './Pages/FullServiceFund';
 import { PiSelectionInverseThin } from "react-icons/pi";
 import Notfound from './Components/Notfound/Notfound';
 import { useSelector } from 'react-redux';
+import FeedbackPage from './Pages/FeedbackForm';
 
 const App = () => {
   const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
@@ -72,6 +73,7 @@ const App = () => {
           <Route path='/investormanagementpage' element={<InvestorManagementPage/>}/>
           <Route path='/financialservicesPage' element = {<FinancialServices/>}/>
           <Route path="/fullservicefund" element={<FullServiceFund/>}/>
+          <Route path='/feedback' element={<FeedbackPage />}/>
           <Route path="*" element={<Notfound/>}/>
         </Routes>
         <ChatAssistant/>
