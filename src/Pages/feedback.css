@@ -12,7 +12,6 @@
     margin-bottom: 10px;
     margin-right: 500px;
     margin-left: 500px;
-
   }
   
   .feedback-form h2 {
@@ -41,7 +40,6 @@
     transition: transform 0.2s ease;
   }
   
-  /* Form styling */
   .feedback-form form {
     display: flex;
     flex-direction: column;
