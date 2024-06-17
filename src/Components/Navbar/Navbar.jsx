@@ -143,13 +143,6 @@ const Navbar = () => {
           </div>
         </li>
         <li>
-        <div className="nav1">
-            <NavLink to="/feedback">
-              Feedback
-            </NavLink>
-          </div>
-          </li>
-        <li>
           <NavLink to="/login">
             <button className='logIn'>LOG IN</button>
           </NavLink>
