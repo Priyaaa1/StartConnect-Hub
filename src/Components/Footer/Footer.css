@@ -54,9 +54,16 @@
   cursor: pointer;
 }
 
-.footer-link a{
+.footer-link a {
   text-decoration: none;
   color: white;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.footer-link a:hover, 
+.footer-link:hover {
+  color: #dc54b1; /* Change to your desired hover color */
+  text-decoration: underline; /* Add underline on hover */
 }
 
 .footer-icons {
@@ -74,11 +81,16 @@
 }
 
 .footer-icons i:hover {
+  color: #dc54b1; /* Change to your desired hover color */
   font-size: 2rem;
 }
 
 .footer-icons a {
   text-decoration: none;
+}
+
+.footer-icons a:hover {
+  color: #dc54b1; /* Change to your desired hover color */
 }
 
 .footer-icons-md {
@@ -95,6 +107,11 @@
 
 .footer-bottom-link {
   cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-bottom-link:hover {
+  color: #dc54b1; /* Change to your desired hover color */
 }
 
 .footer-sections {
