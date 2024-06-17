@@ -52,18 +52,20 @@
 .footer-link {
   padding: 0.25rem 0;
   cursor: pointer;
+  transition: transform 0.3s, color 0.3s; /* Add transition for smooth effect */
 }
 
 .footer-link a {
   text-decoration: none;
   color: white;
-  transition: color 0.3s, text-decoration 0.3s;
+  transition: color 0.3s, text-decoration 0.3s, transform 0.3s; /* Add transition for smooth effect */
 }
 
 .footer-link a:hover, 
 .footer-link:hover {
   color: #dc54b1; /* Change to your desired hover color */
   text-decoration: underline; /* Add underline on hover */
+  transform: scale(1.05); /* Zoom effect on hover */
 }
 
 .footer-icons {
@@ -77,20 +79,23 @@
 
 .footer-icons i {
   color: white;
-  transition: color 0.3s, font-size 0.3s;
+  transition: color 0.3s, font-size 0.3s, transform 0.3s; /* Add transform transition */
 }
 
 .footer-icons i:hover {
   color: #dc54b1; /* Change to your desired hover color */
   font-size: 2rem;
+  transform: scale(1.2); /* Zoom effect on hover */
 }
 
 .footer-icons a {
   text-decoration: none;
+  transition: transform 0.3s; /* Add transition for smooth effect */
 }
 
 .footer-icons a:hover {
   color: #dc54b1; /* Change to your desired hover color */
+  transform: scale(1.2); /* Zoom effect on hover */
 }
 
 .footer-icons-md {
@@ -107,11 +112,12 @@
 
 .footer-bottom-link {
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.3s; /* Add transition for smooth effect */
 }
 
 .footer-bottom-link:hover {
   color: #dc54b1; /* Change to your desired hover color */
+  transform: scale(1.05); /* Zoom effect on hover */
 }
 
 .footer-sections {
