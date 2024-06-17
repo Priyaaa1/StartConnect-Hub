@@ -61,6 +61,7 @@ const Footer = () => {
               <NavLink to="/#accordian" onClick={() => scrollToSection("accordian")}>
               <li className='footer-link'>FAQ</li>
               </NavLink>
+              <NavLink to="/feedback"><li className='footer-link'>Feedback</li></NavLink>
             </ul>
           </div>
           <div className='footer-2'>
