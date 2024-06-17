@@ -1,7 +1,11 @@
 import { useRef , useEffect} from "react";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./Testimonial.css";
+import { useSelector } from 'react-redux';
+
 function Testimonials() {
+  const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
+  const cardTheme = useSelector((state) => state.theme.value) ? "cardTheme-dark" : "light";
   const carouselRef = useRef(null);
 
   const scrollCarousel = (direction) => {
@@ -32,7 +36,7 @@ function Testimonials() {
 
   return (
     <>
-        <div className="wrapper" id="testimonials">
+        <div className={`wrapper ${theme}`} id="testimonials">
         <h3 className="testimonial_head">TESTIMONIALS</h3>
         <div>
         <i
@@ -41,7 +45,7 @@ function Testimonials() {
           onClick={() => scrollCarousel("left")}
         ></i>
         <ul className="carousel" ref={carouselRef}>
-          <li className="card">
+          <li className={`card ${cardTheme}`}>
             <div className="img1">
               <img src="user-1.png" alt="img" draggable="false" />
             </div>
@@ -52,7 +56,7 @@ function Testimonials() {
               </span>
             </div>
           </li>
-          <li className="card">
+          <li className={`card ${cardTheme}`}>
             <div className="img1">
               <img src="user-2.png" alt="img" draggable="false" />
             </div>
@@ -64,7 +68,7 @@ function Testimonials() {
             </div>
           </li>
           
-          <li className="card">
+          <li className={`card ${cardTheme}`}>
             <div className="img">
               <img src="user-3.png" alt="img" draggable="false" />
             </div>
@@ -75,7 +79,7 @@ function Testimonials() {
             </span>
             </div>
           </li>
-          <li className="card">
+          <li className={`card ${cardTheme}`}>
             <div className="img">
               <img src="user-4.png" alt="img" draggable="false" />
             </div>
@@ -85,7 +89,7 @@ function Testimonials() {
               Empowering entrepreneurs to achieve their goals
             </span></div>
           </li>
-          <li className="card">
+          <li className={`card ${cardTheme}`}>
             <div className="img">
               <img src="user-5.jpg" alt="img" draggable="false" />
             </div>
@@ -95,7 +99,7 @@ function Testimonials() {
               Investors found my next big opportunity here.
             </span></div>
           </li>
-          <li className="card">
+          <li className={`card ${cardTheme}`}>
             <div className="img">
               <img src="user-6.jpg" alt="img" draggable="false" />
             </div>

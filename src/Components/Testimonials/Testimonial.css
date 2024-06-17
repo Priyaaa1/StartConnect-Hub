@@ -33,7 +33,6 @@
   position: absolute;
   left: 0;
   z-index:1;
-  color:gray;
 }
 .wrapper i:active {
   transform: translateY(-50%) scale(0.85);
@@ -84,7 +83,6 @@
   transition: all 0.4s;
   scroll-snap-align: start;
   list-style: none;
-  background: #fff;
   cursor: pointer;
   /* padding-inline:1rem; */
   padding-bottom: 15px;
@@ -155,7 +153,6 @@
 }
 
 .carousel  .card:hover .info {
-  color: #fff;
 }
 
 .carousel  .card .info h2 {
@@ -165,7 +162,6 @@
   /* font-weight: 500; */
 }
 .carousel  .card .info span {
-  color: #6A6D78;
   /* margin: 5px; */
   margin: 0 10px ;
   /* padding: 5px; */
@@ -178,7 +174,6 @@
 
 .carousel .card:hover{
   h2, span{
-    color: white;
   }
 } 
 /* .carousel .card span {
@@ -215,7 +210,6 @@
     .small {
       display: block;
       text-align: center;
-      color: dodgerblue;
       margin-top: 1rem;
     }
   }

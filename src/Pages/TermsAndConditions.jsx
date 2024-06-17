@@ -51,7 +51,6 @@ const TermsWrapper = styled.div`
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
-  color: #333;
   line-height: 1.6;
 
   h1 {

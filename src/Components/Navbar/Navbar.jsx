@@ -1,10 +1,13 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { scroller } from "react-scroll";
 import { useLocation, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo2.png";
 import menu_icon from "../../assets/menu-icon.png";
-import { ThemeContext } from "../../App";
+import { useSelector,useDispatch } from 'react-redux'
+import { changeTheme } from "../../features/theme";
+import moonIcon from "./moon.jpg";
+import sunIcon from "./sun.jpg";
 // import 'boxicons';
 
 const Navbar = () => {
@@ -12,12 +15,13 @@ const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [visible, setVisible] = useState(true);
-  const { theme, toggleTheme } = useContext(ThemeContext); 
-  const [themes, setThemes] = useState("light");
+  const isDark= useSelector((state)=>state.theme.value);
+  const theme = "header-light";
+  const dispatch = useDispatch()
 
   const handleThemeChange = () => {
-    toggleTheme(); 
-    setThemes((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    console.log(theme)
+    dispatch(changeTheme())
   };
 
   let lastScrollY = window.scrollY;
@@ -95,10 +99,10 @@ const Navbar = () => {
         location.pathname === "/signup"
           ? "dark-nav"
           : ""
-      } ${visible ? "" : "hidden-nav"}`}
+      } ${visible ? "" : "hidden-nav"} ${theme}`}
     >
       <NavLink to="/" onClick={() => scrollToHero()}>
-        <p>  <b>StartConnect Hub</b></p> 
+        <p>  <b>Start Connect Hub</b></p> 
         <img src={logo} alt="" className="logo" />
         
       </NavLink>
@@ -139,28 +143,14 @@ const Navbar = () => {
           </div>
         </li>
         <li>
-        <div className="nav1">
-            <NavLink to="/feedback">
-              Feedback
-            </NavLink>
-          </div>
-          </li>
-        <li>
           <NavLink to="/login">
             <button className='logIn'>LOG IN</button>
           </NavLink>
         </li>
-        <li>
-  <button className="theme-toggle-button" onClick={handleThemeChange} title="Change Theme">
-    {themes === "light" ? (
-      <box-icon name='moon' flip='horizontal'></box-icon>
-    ) : (
-      <box-icon name='sun' flip='horizontal'></box-icon>
-    )}
-  </button>
-</li>
-
       </ul>
+  <button className="theme-toggle-button" onClick={()=>dispatch(changeTheme())} title="Change Theme">
+    <img src={isDark?moonIcon:sunIcon} alt="Sun" />
+  </button>
       <img
         src={menu_icon}
         alt=""

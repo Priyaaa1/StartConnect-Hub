@@ -1,6 +1,5 @@
 .title{
     text-align: center;
-    color: #212EA0;
     font-size: 22px;
     font-weight: 600;
     text-transform: uppercase;
@@ -9,9 +8,7 @@
 
 .title h2{
     font-size: 32px;
-    color: #000F38;
     margin-top: 5px;
     text-transform: none;
-    color: black;
     
 }
