@@ -31,7 +31,6 @@ import HowItWorks from "./Pages/HowItWorks";
 import InvestorManagementPage from "./Pages/InvestorManagementPage";
 import FinancialServices from './Pages/FinancialServices'
 import FullServiceFund from './Pages/FullServiceFund';
-import FeedbackPage from './Pages/FeedbackForm';
 import { PiSelectionInverseThin } from "react-icons/pi";
 import Notfound from './Components/Notfound/Notfound';
 import { useSelector } from 'react-redux';
@@ -73,7 +72,6 @@ const App = () => {
           <Route path='/investormanagementpage' element={<InvestorManagementPage/>}/>
           <Route path='/financialservicesPage' element = {<FinancialServices/>}/>
           <Route path="/fullservicefund" element={<FullServiceFund/>}/>
-          <Route path="/feedback" element={<FeedbackPage />} />
           <Route path="*" element={<Notfound/>}/>
         </Routes>
         <ChatAssistant/>
