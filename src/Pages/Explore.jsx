@@ -1,6 +1,9 @@
+
+
+// export default Explore;
 import { Container, Col, Card, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import './Explore.css';
+import './Explore.css'; // Ensure this import statement is present
 
 function Explore() {
   return (
@@ -13,70 +16,78 @@ function Explore() {
       </div>
 
       <Container className="cardDiv">
-        <Col md={4} className="mb-3">
-          <Card>
-            <div className="card-body">
-              <Card.Body>
-                <div className="title">
-                  <Card.Title>Investor Management</Card.Title>
-                  <Card.Text>
-                    Reimagining Investor Relations: Leverage software to drive meaningful, actionable engagement.
-                  </Card.Text>
+        {/* <Row className="justify-content-center"> */}
+          <Col md={4} className="mb-3">
+            
+              <Card>
+                <div className="card-body">
+                  <Card.Body>
+                    <div className="title">
+                      <Card.Title>Investor Management</Card.Title>
+                      <Card.Text>
+                        Reimagining Investor Relations: Leverage software to drive meaningful, actionable engagement.
+                      </Card.Text>
+                    </div>
+                    <div className="button-container">
+                      <NavLink to="/investormanagementpage">
+                        <Button className="button-container" variant="primary">
+                          Know More
+                        </Button>
+                      </NavLink>
+                    </div>
+                  </Card.Body>
                 </div>
-                <div className="button-container">
-                  <NavLink to="/investormanagementpage">
-                    <Button className="button-container" variant="primary">
-                      Know More
-                    </Button>
-                  </NavLink>
-                </div>
-              </Card.Body>
-            </div>
-          </Card>
-        </Col>
+              </Card>
+          </Col>
 
-        <Col md={4} className="mb-3">
-          <Card>
-            <div className="card-body">
-              <Card.Body>
-                <div className="title">
-                  <Card.Title>Financial Services</Card.Title>
-                  <Card.Text className="card-text">
-                    Empowering your business with expert financial solutions. From securing funding to managing
-                    investments, we provide the support you need to achieve financial success and drive growth.
-                  </Card.Text>
+          <Col md={4} className="mb-3">
+            
+              <Card>
+                <div className="card-body">
+                  <Card.Body>
+                    <div className="title">
+                      <Card.Title>Financial Services</Card.Title>
+                      <Card.Text className="card-text">
+                        Empowering your business with expert financial solutions. From securing funding to managing
+                        investments, we provide the support you need to achieve financial success and drive growth.
+                      </Card.Text>
+                    </div>
+                    <div className="button-container">
+                      <NavLink to="/financialservicesPage">
+                        <Button className="button-container">Know More</Button>
+                      </NavLink>
+                    </div>
+                  </Card.Body>
                 </div>
-                <div className="button-container">
-                  <NavLink to="/financialservicesPage">
-                    <Button className="button-container">Know More</Button>
-                  </NavLink>
+              </Card>
+            
+          </Col>
+        {/* </Row> */}
+        {/* <Row className="justify-content-center"> */}
+          <Col md={4} className="mb-3">
+            
+              <Card>
+                <div className="card-body">
+                  <Card.Body>
+                    <div className="title">
+                      <Card.Title>Full Service Funds</Card.Title>
+                      <Card.Text>
+                        Comprehensive financial solutions tailored to your needs. Our Full Service Funds offer expert guidance on securing funding, investment management, and strategic financial planning to ensure your business thrives and reaches its full potential.
+                      </Card.Text>
+                    </div>
+                    <div className="button-container">
+                      <NavLink to="/fullservicefund">
+                        <Button className="button-container" variant="primary">
+                          Know More
+                        </Button>
+                      </NavLink>
+                    </div>
+                  </Card.Body>
                 </div>
-              </Card.Body>
-            </div>
-          </Card>
-        </Col>
-
-        <Col md={4} className="mb-3">
-          <Card>
-            <div className="card-body">
-              <Card.Body>
-                <div className="title">
-                  <Card.Title>Full Service Funds</Card.Title>
-                  <Card.Text>
-                    Comprehensive financial solutions tailored to your needs. Our Full Service Funds offer expert guidance on securing funding, investment management, and strategic financial planning to ensure your business thrives and reaches its full potential.
-                  </Card.Text>
-                </div>
-                <div className="button-container">
-                  <NavLink to="/fullservicefund">
-                    <Button className="button-container" variant="primary">
-                      Know More
-                    </Button>
-                  </NavLink>
-                </div>
-              </Card.Body>
-            </div>
-          </Card>
-        </Col>
+              </Card>
+            
+          </Col>
+        {/* </Row> */}
       </Container>
     </>
   );

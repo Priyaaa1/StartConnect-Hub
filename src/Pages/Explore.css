@@ -1,16 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+.explore{
+    width: 100%;
+    min-height: 50vh;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+  border-radius: 8px;
+}
+
+.btn{
+    justify-content: center;
+    width:200px;
+    padding-left:200x;
+}
+
+
 .explore {
-  width: 100%;
-  min-height: 60vh;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 60px 90px 0;
-  /* Removed the margin-top */
+    padding-top: 90px;
+    padding-left: 90px;
+    padding-right: 90px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+  
+  .card-container {
+    margin-top: 20px;
+    padding-bottom:34px;
+    
+  }
+  
+  .card {
+    border: none;
+    background-size: cover;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content:space-between ;
+    margin-bottom: 20px;
+    
+  }
+
+  .card-img-top {
+    padding-left:45px;
+    justify-content:center;
+    align-items:center;
+    width: auto;
+    height: 90px;
+    display: flex
+  }
+  
+  
+  .card-body {
+    padding: 15px;
+    padding-bottom:23px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-family: "Open Sans, sans-serif";
+    font-weight: normal;
+    font-style: normal;
+    font-size: medium;
+    text-transform:none;
+    font-variation-settings: "wdth" 100;
+  }
+  
+  .button-container {
+    margin-top: auto;
+    display: flex;
+    justify-content:center
+  }
+.btn{
+  background-color: rgb(206 152 206)
+}
+.btn:hover{
+    color:rgb(17, 1, 1);
+    background-color: rgb(129, 166, 235);
+    text-decoration: none;
+}
+.card:hover{
+    background-color:rgb(24,25,27);
+}
+
+/* Explore.css */
+.explore {
   text-align: center;
+  padding: 20px;
 }
 
 .header-container {
@@ -19,10 +107,9 @@
 }
 
 .header-image {
-  width: 200%;  /* Adjusted to take the full width of the container */
-  max-width: 1000px;  /* Increased the max-width */
+  width: 100%;
+  max-width: 600px;
   height: auto;
-  border-radius: 15px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -32,73 +119,65 @@
 
 h1 {
   margin-top: 20px;
-  font-size: 2.5em;
-  color: #333;
+  font-size: 2em;
 }
 
 .cardDiv {
-  margin-top: 30px;
+  margin-top: 20px;
+  
+
 }
 
 .card-container {
-  margin: 20px auto;
-  flex: 1;
-  max-width: 90%;
-}
-
-.card {
-  border: none;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  transition: transform 0.2s ease-in-out;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
 
-.card-body {
+/* Explore.css */
+
+/* General styling for the Explore component */
+.explore {
+  text-align: center;
   padding: 20px;
+  margin-top: 80px;  /* Adjust this value based on the height of your navbar */
 }
 
-.card-title {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #555;
+.header-container {
+  position: relative;
+  display: inline-block;
 }
 
-.card-text {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  color: #777;
-}
-
-.button-container {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.btn {
+.header-image {
   width: 100%;
-  max-width: 200px;
-  background-color: #ce98ce;
-  color: white;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  max-width: 600px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
 }
 
-.btn:hover {
-  color: white;
-  background-color: #81a6eb;
-  text-decoration: none;
+.header-image:hover {
+  transform: scale(1.05);
 }
+
+h1 {
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+.cardDiv {
+  margin-top: 20px;
+}
+
+.card-container {
+  margin-bottom: 20px;
+  flex: 1;
+  max-width: 45%;
+  
+}
+
 
 @media screen and (max-width: 768px) {
   .explore {
-    padding: 20px;
+    padding: 10px;
   }
 
   .header-image {
@@ -106,15 +185,11 @@ h1 {
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .card-container {
     margin: 10px auto;
-    max-width: 100%;
-  }
-
-  .card {
-    margin-bottom: 20px;
+    max-width: 90%;
   }
 }
