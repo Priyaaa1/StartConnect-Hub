@@ -2,15 +2,21 @@
 
 .explore{
     width: 100%;
-    min-height: 50vh;
+    min-height: auto;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px 90px 0;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 80px;
 }
 
 img{
   border-radius: 8px;
+  width: 100%;
+  height: 100%;
 }
 
 .btn{
@@ -19,18 +25,6 @@ img{
     padding-left:200x;
 }
 
-
-.explore {
-    padding-top: 90px;
-    padding-left: 90px;
-    padding-right: 90px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 80px;
-  }
   
   .card-container {
     margin-top: 20px;
@@ -92,24 +86,20 @@ img{
     text-decoration: none;
 }
 .card:hover{
-    background-color:rgb(24,25,27);
+    background-color:rgba(59, 84, 135, 0.44);
 }
 
-/* Explore.css */
-.explore {
-  text-align: center;
-  padding: 20px;
-}
 
 .header-container {
   position: relative;
   display: inline-block;
 }
 
+
+
 .header-image {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
+  width: 70%;
+  height: 50%;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -138,7 +128,6 @@ h1 {
 /* General styling for the Explore component */
 .explore {
   text-align: center;
-  padding: 20px;
   margin-top: 80px;  /* Adjust this value based on the height of your navbar */
 }
 
@@ -147,12 +136,7 @@ h1 {
   display: inline-block;
 }
 
-.header-image {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
-}
+
 
 .header-image:hover {
   transform: scale(1.05);
