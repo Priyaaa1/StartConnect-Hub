@@ -52,11 +52,20 @@
 .footer-link {
   padding: 0.25rem 0;
   cursor: pointer;
+  transition: transform 0.3s, color 0.3s; 
 }
 
 .footer-link a {
   text-decoration: none;
   color: white;
+  transition: color 0.3s, text-decoration 0.3s, transform 0.3s; 
+}
+
+.footer-link a:hover, 
+.footer-link:hover {
+  color: #dc54b1; 
+  text-decoration: underline; 
+  transform: scale(1.05); 
 }
 
 .footer-icons {
@@ -68,15 +77,23 @@
 
 .footer-icons i {
   color: white;
-  transition: color 0.3s, font-size 0.3s;
+  transition: color 0.3s, font-size 0.3s, transform 0.3s; 
 }
 
 .footer-icons i:hover {
+  color: #dc54b1; 
   font-size: 2rem;
+  transform: scale(1.2); 
 }
 
 .footer-icons a {
   text-decoration: none;
+  transition: transform 0.3s; 
+}
+
+.footer-icons a:hover {
+  color: #dc54b1; 
+  transform: scale(1.2); 
 }
 
 .footer-icons-md {
@@ -93,6 +110,12 @@
 
 .footer-bottom-link {
   cursor: pointer;
+  transition: color 0.3s, transform 0.3s; 
+}
+
+.footer-bottom-link:hover {
+  color: #dc54b1; 
+  transform: scale(1.05); 
 }
 
 .footer-sections {
