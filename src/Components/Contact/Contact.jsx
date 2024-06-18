@@ -46,7 +46,7 @@ const Contact = () => {
         </p>
         <ul>
           <li>
-            <img src={mail_icon} alt=""></img>Contact@StartConnectHub.in
+            <img src={mail_icon} alt=""></img><a href="mailto:startconnecthub@gmail.com"> startconnecthub@gmail.com</a>
           </li>
           <li>
             <img src={phone_icon} alt=""></img>+91 1234567890
