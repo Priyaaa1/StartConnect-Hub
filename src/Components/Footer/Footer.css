@@ -1,13 +1,12 @@
 .footer {
+  background-color: #212ea0;
+  color: white;
   padding: 2.5rem 2.5rem 1rem 2.5rem;
 }
 
 .footer-container {
   display: flex;
-}
-
-.footer-container-md {
-  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -24,6 +23,7 @@
 .footer-half {
   width: 60%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
@@ -52,37 +52,52 @@
 .footer-link {
   padding: 0.25rem 0;
   cursor: pointer;
+  transition: transform 0.3s, color 0.3s; 
 }
 
-.footer-link a{
+.footer-link a {
   text-decoration: none;
   color: white;
+  transition: color 0.3s, text-decoration 0.3s, transform 0.3s; 
+}
+
+.footer-link a:hover, 
+.footer-link:hover {
+  color: #dc54b1; 
+  text-decoration: underline; 
+  transform: scale(1.05); 
 }
 
 .footer-icons {
   display: flex;
   gap: 1rem;
-  justify-content: center;
   margin-top: 1rem;
-  margin-right: 7rem;
   font-size: x-large;
 }
 
 .footer-icons i {
   color: white;
-  transition: color 0.3s, font-size 0.3s;
+  transition: color 0.3s, font-size 0.3s, transform 0.3s; 
 }
 
 .footer-icons i:hover {
+  color: #dc54b1; 
   font-size: 2rem;
+  transform: scale(1.2); 
 }
 
 .footer-icons a {
   text-decoration: none;
+  transition: transform 0.3s; 
+}
+
+.footer-icons a:hover {
+  color: #dc54b1; 
+  transform: scale(1.2); 
 }
 
 .footer-icons-md {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .footer-bottom {
@@ -95,10 +110,17 @@
 
 .footer-bottom-link {
   cursor: pointer;
+  transition: color 0.3s, transform 0.3s; 
+}
+
+.footer-bottom-link:hover {
+  color: #dc54b1; 
+  transform: scale(1.05); 
 }
 
 .footer-sections {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .profileContainer a {
@@ -127,22 +149,17 @@
   }
 
   .footer-2 {
-    width: 20%;
+    width: 45%;
+    margin-bottom: 2rem;
   }
 
   .footer-icons {
-    margin-right: 5rem;
-    justify-content: flex-end;
+    margin-right: 0;
+    justify-content: flex-start;
   }
 
   .footer-bottom {
-    justify-content: space-between;
-  }
-
-  .footer-bottom {
-    display: flex;
-    margin-top: 10px;
-    justify-content: left;
+    justify-content: center;
   }
 }
 
@@ -155,16 +172,31 @@
   .footer-2 {
     width: 100%;
   }
-
   .footer-icons {
-    margin-right: 0;
-    display: flex;
     justify-content: center;
   }
+}
 
-  .footer-bottom {
-    display: flex;
-    margin-top: 10px;
-    justify-content: center;
+@media (min-width: 769px) and (max-width: 990px) {
+  .footer-half {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .footer-2 {
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+
+  .footer-icons {
+    justify-content: flex-start;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 991px) {
+  .footer-icons {
+    justify-content: flex-start;
+    margin-right: 0;
   }
 }
