@@ -124,7 +124,7 @@ const Navbar = () => {
         </li>
         <li>
           <div className="nav1">
-            <NavLink to="/feedback">
+            <NavLink to="/feedback" onClick={() => setMobileMenu(false)}>
               Feedback
             </NavLink>
           </div>
@@ -150,6 +150,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
