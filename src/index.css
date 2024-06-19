@@ -35,11 +35,12 @@ a{
   cursor: pointer;
   transition: color 0.3s ease, text-decoration 0.3s ease;
   background-color: transparent; 
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  background-color: transparent; 
 }
 
 a:hover{
   text-decoration: rgb(141, 108, 124);
-  
 }
 
 nav1{
@@ -53,14 +54,13 @@ nav1:hover{
   color: black; /* Text color on hover */
 }
 
-
 .container{
   padding-left: 10%;
   padding-right: 10%;
 }
 
 #testimonials h3{
-  color: #212EA0;
+  /* color: #212EA0; */
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -70,7 +70,7 @@ nav1:hover{
 
 .btn{
   background: white;
-  color: #212121;
+  /* color: #212121; */
   padding: 14px 25px;
   font-size: 16px;
   border-radius: 30px;
@@ -87,10 +87,10 @@ nav1:hover{
   margin-left: 10px;
 }
 
-.btn.dark-btn{
+/* .btn.dark-btn{
   background: #212EA0;
   color: #fff;
-}
+} */
 
 
 

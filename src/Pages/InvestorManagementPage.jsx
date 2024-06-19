@@ -73,7 +73,6 @@ const ManagementPageWrapper= styled.div`
 padding: 20px;
 max-width: 1000px;
 margin: 0 auto;
-color: #333;
 line-height: 1.6;
 
 .button{
@@ -100,13 +99,13 @@ section{
 
 span{
     font-weight:semi-bold;
-    color:purple;
+    color:rgb(84,114,228);
     font-size:large;
 }
 h1{
     padding:45px;
     text-align:center;
-    color:#a13da1;
+    color:rgb(84,114,228);
     margin-top:122px;
     font-weight:normal;
 }
@@ -117,7 +116,7 @@ h2{
     font-weight:normal;
     padding:45px;
     text-align:center;
-    color:#a13da1;
+    color:rgb(84,114,228);
     margin-top:20px;
 
 }

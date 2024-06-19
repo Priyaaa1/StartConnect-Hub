@@ -29,12 +29,11 @@ import InvestorManagementPage from "./Pages/InvestorManagementPage";
 import FinancialServices from './Pages/FinancialServices';
 import FullServiceFund from './Pages/FullServiceFund';
 import Notfound from './Components/Notfound/Notfound';
-
-export const ThemeContext = createContext();
+import { useSelector } from 'react-redux';
+import FeedbackPage from './Pages/FeedbackForm';
 
 const App = () => {
-  const storedTheme = localStorage.getItem('theme') || 'light';
-  const [theme, setTheme] = useState(storedTheme);
+  const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -79,6 +78,32 @@ const App = () => {
         </Router>
       </div>
     </ThemeContext.Provider>
+    <div className={`main-div ${theme}`}>
+    <Router>
+      <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/contact" element={<ContactUS />} />
+          <Route path='/explore' element={<Explore/>}/>
+          <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
+          <Route path='/termsandconditions' element={<TermsAndConditions />}/>
+          <Route path='/visionandmission' element={<VisionAndMission />}/>
+          <Route path='/howitworks' element={<HowItWorks />}/>
+          <Route path='/investormanagementpage' element={<InvestorManagementPage/>}/>
+          <Route path='/financialservicesPage' element = {<FinancialServices/>}/>
+          <Route path="/fullservicefund" element={<FullServiceFund/>}/>
+          <Route path='/feedback' element={<FeedbackPage />}/>
+          <Route path="*" element={<Notfound/>}/>
+        </Routes>
+        <ChatAssistant/>
+        <GoToTop/>
+        <Footer />
+    </Router>
+    </div>
   );
 };
 
