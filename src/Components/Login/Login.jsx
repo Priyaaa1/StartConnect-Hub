@@ -46,7 +46,7 @@ const Login = () => {
   };
 
   return (
-    <GoogleOAuthProvider clientId="YOUR_GOOGLE_CLIENT_ID">
+    <GoogleOAuthProvider clientId="784513715091-aa0p18bmv854re0amstgj2up3656cvsd.apps.googleusercontent.com">
       <div className="login-outerContainer">
         <div className="login-container">
           <h2>Login</h2>
