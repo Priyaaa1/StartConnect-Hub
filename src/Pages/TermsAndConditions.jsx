@@ -40,7 +40,7 @@ const TermsAndConditions = () => {
         </section>
         <section>
           <h2>7. Contact Us</h2>
-          <p>If you have any questions or comments about these Terms and Conditions, you may email us at startconnect@hub.com.</p>
+          <p>If you have any questions or comments about these Terms and Conditions, you may email us at <a href="mailto:startconnecthub@gmail.com"> startconnecthub@gmail.com</a>.</p>
         </section>
       </div>
     </TermsWrapper>

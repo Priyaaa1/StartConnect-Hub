@@ -21,7 +21,7 @@ const data = [
       id  : '4',
       question: "How can I contact customer support?",
       answer:
-        "You can reach our customer support team by emailing support@startConnectHub.com. We’re here to help!",
+        "You can reach our customer support team by emailing startconnecthub@gmail.com. We’re here to help!",
     }
   ];
 
