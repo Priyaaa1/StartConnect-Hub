@@ -32,11 +32,14 @@ import Notfound from './Components/Notfound/Notfound';
 import { useSelector } from 'react-redux';
 import FeedbackPage from './Pages/FeedbackForm';
 
+const ThemeContext = createContext();
+
 const App = () => {
   const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
+  const [currentTheme, setTheme] = useState(theme);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
   };
@@ -51,59 +54,36 @@ const App = () => {
   }, []);
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="main-div" id={theme}>
-        <Router>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/faq" element={<Faq />} />
-            <Route path="/contact" element={<ContactUS />} />
-            <Route path='/explore' element={<Explore />} />
-            <Route path='/privacypolicy' element={<PrivacyPolicy />} />
-            <Route path='/termsandconditions' element={<TermsAndConditions />} />
-            <Route path='/visionandmission' element={<VisionAndMission />} />
-            <Route path='/howitworks' element={<HowItWorks />} />
-            <Route path='/investormanagementpage' element={<InvestorManagementPage />} />
-            <Route path='/financialservicesPage' element={<FinancialServices />} />
-            <Route path="/fullservicefund" element={<FullServiceFund />} />
-            <Route path="*" element={<Notfound />} />
-          </Routes>
-          <ChatAssistant />
-          <GoToTop />
-          <Footer />
-        </Router>
-      </div>
+    <ThemeContext.Provider value={{ theme: currentTheme, toggleTheme }}>
+      <>
+        <div className={`main-div ${currentTheme}`}>
+          <Router>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/aboutus" element={<AboutUs />} />
+              <Route path="/faq" element={<Faq />} />
+              <Route path="/contact" element={<ContactUS />} />
+              <Route path='/explore' element={<Explore />} />
+              <Route path='/privacypolicy' element={<PrivacyPolicy />} />
+              <Route path='/termsandconditions' element={<TermsAndConditions />} />
+              <Route path='/visionandmission' element={<VisionAndMission />} />
+              <Route path='/howitworks' element={<HowItWorks />} />
+              <Route path='/investormanagementpage' element={<InvestorManagementPage />} />
+              <Route path='/financialservicesPage' element={<FinancialServices />} />
+              <Route path="/fullservicefund" element={<FullServiceFund />} />
+              <Route path='/feedback' element={<FeedbackPage />} />
+              <Route path="*" element={<Notfound />} />
+            </Routes>
+            <ChatAssistant />
+            <GoToTop />
+            <Footer />
+          </Router>
+        </div>
+      </>
     </ThemeContext.Provider>
-    <div className={`main-div ${theme}`}>
-    <Router>
-      <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/contact" element={<ContactUS />} />
-          <Route path='/explore' element={<Explore/>}/>
-          <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
-          <Route path='/termsandconditions' element={<TermsAndConditions />}/>
-          <Route path='/visionandmission' element={<VisionAndMission />}/>
-          <Route path='/howitworks' element={<HowItWorks />}/>
-          <Route path='/investormanagementpage' element={<InvestorManagementPage/>}/>
-          <Route path='/financialservicesPage' element = {<FinancialServices/>}/>
-          <Route path="/fullservicefund" element={<FullServiceFund/>}/>
-          <Route path='/feedback' element={<FeedbackPage />}/>
-          <Route path="*" element={<Notfound/>}/>
-        </Routes>
-        <ChatAssistant/>
-        <GoToTop/>
-        <Footer />
-    </Router>
-    </div>
   );
 };
 
@@ -124,3 +104,5 @@ const Home = () => {
 };
 
 export default App;
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
