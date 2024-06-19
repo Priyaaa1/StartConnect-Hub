@@ -108,13 +108,13 @@ const Navbar = () => {
             </NavLink>
           </div>
         </li>
-        <li>
+        {/* <li>
           <div className="nav1">
             <NavLink to="/#faq" onClick={() => handleMenuItemClick("accordian", -260)}>
               FAQ's
             </NavLink>
           </div>
-        </li>
+        </li> */}
         <li>
           <div className="nav1">
             <NavLink to="/#contact" onClick={() => handleMenuItemClick("contact", -260)}>
@@ -122,13 +122,13 @@ const Navbar = () => {
             </NavLink>
           </div>
         </li>
-        <li>
+        {/* <li>
           <div className="nav1">
             <NavLink to="/feedback" onClick={() => setMobileMenu(false)}>
               Feedback
             </NavLink>
           </div>
-        </li>
+        </li> */}
         <li>
           <NavLink to="/login" onClick={() => setMobileMenu(false)}>
             <button className='logIn'>LOG IN</button>
