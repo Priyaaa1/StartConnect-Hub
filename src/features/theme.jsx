@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 export const themeSlice = createSlice({
   name: 'theme',
@@ -7,11 +7,11 @@ export const themeSlice = createSlice({
   },
   reducers: {
     changeTheme: (state) => {
-      state.value = !state.value
+      state.value = !state.value;
     },
   },
-})
+});
 
-export const { changeTheme } = themeSlice.actions
+export const { changeTheme } = themeSlice.actions;
 
-export default themeSlice.reducer
+export default themeSlice.reducer;
