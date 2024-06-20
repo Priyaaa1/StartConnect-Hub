@@ -5,7 +5,7 @@ import MessageParser from '../ChatBot/MessageParser';
 import ActionProvider from '../ChatBot/ActionProvider';
 import "./ChatAssistant.css"
 import React, { useState } from 'react';
-
+import cancel_icon from '../../assets/cancel-icon.png'
 
 const ChatAssistant = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,16 +13,24 @@ const ChatAssistant = () => {
   const toggleChatbot = () => {
     setIsOpen(!isOpen);
   };
-    return (
-      <div className="chatbot chatbot-scroll">
-        <img className="Logo" src="chatbotLogo.jpeg" alt="Logo" onClick={toggleChatbot} />
+
+  return (
+    <div className="chatbot chatbot-scroll">
+      <img 
+        className="Logo" 
+        src={isOpen ? cancel_icon : "chatbotLogo.jpeg"} 
+        alt="Logo" 
+        onClick={toggleChatbot} 
+      />
       {isOpen && 
         <Chatbot
           config={config}
           messageParser={MessageParser}
           actionProvider={ActionProvider}
-        />}
-      </div>
-    );
-  }
-export default ChatAssistant
+        />
+      }
+    </div>
+  );
+}
+
+export default ChatAssistant;

@@ -1,84 +1,66 @@
-.container1{
+.container1 {
   padding-left: 10%;
   padding-right: 10%;
 }
 
-
-nav{ 
+nav {
   width: 100%;
-   background: rgba(0, 0, 128,.6);
-  color: #fff;
-  padding: 4px 0;
+  font-size: 14px;
+  padding: 10px 0;
   position: fixed;
   top: 0;
+  border-bottom: 2px solid white;
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   z-index: 10;
   transition: top 0.3s ease-in-out;
 }
+
 nav.container1 p {
-    color: #edf2f2;
-    position: absolute;
-    right: 66.6vw;
-    top: 1vw;
-    font-size: 29px;
-}
- /* CSS for name in navbar */
-/*  .name_nav {
-  color: rgb(255, 255, 255); 
-  font-size: 2vw; 
-  position: relative;
-  bottom: 5.5vw; 
-  left: 5.5vw; 
+  color: #edf2f2;
+  display: flex;
+  align-items: center;
 }
 
-/* Media query for smaller screens */
-/*@media (max-width: 768px) {
-  .name_nav {
-    font-size: 4vw;
-    bottom: 8vw;
-    left: 6vw;
-  }
-} */
-.logo{
-  width: 80px;
-}
-.logIn{
-/*background-color: rgb(145, 99, 187);*/
-background-color: transparent;
-}
-.logIn:hover{
-background-color: rgb(109, 65, 151);
+.logo {
+  height: 52px;
+  width: 52px;
+  margin-right: 5px;
 }
 
-/*button hover*/
+.logIn {
+  background-color: transparent;
+}
 
-nav ul li{
+.logIn:hover {
+  background-color: rgb(109, 65, 151);
+}
+
+nav ul li {
   display: inline-block;
   list-style: none;
   margin: 5px 20px;
-  font-size: 16px;
+  font-size: 14px;
 }
-nav ul li a.active{
+
+nav ul li a.active {
   color: lightgoldenrodyellow;
 }
- 
-nav ul li a:hover{
+
+nav ul li a:hover {
   text-decoration: none;
 }
+
 nav ul li a {
   position: relative;
   text-decoration: none;
-  
-  
   transition: all 0.3s ease-in-out;
 }
+
 nav ul li a:before {
   content: "";
   position: absolute;
-  
   bottom: 0;
   left: 0;
   width: 100%;
@@ -96,21 +78,17 @@ nav ul li a:hover:before {
   transform: scaleX(1);
 }
 
-
-
-/*button*/
 .button {
   width: 100px;
   padding-top: 5px;
   padding-bottom: 5px;
   text-align: center;
   color: #000;
- 
   font-weight: 600;
-  
   cursor: pointer;
   display: inline-block;
 }
+
 .button-2 {
   color: #fff;
   border: 3px solid #c266d3;
@@ -119,85 +97,91 @@ nav ul li a:hover:before {
   background-size: 500px;
   background-repeat: no-repeat;
   background-position: 0%;
-  -webkit-transition:  300ms ease-in-out;
-  transition:  300ms ease-in-out;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
+
 .button-2:hover {
   background-position: 100%;
   color: #c266d3;
 }
 
-
-
 nav a {
-  color : #212EA0
-  transition : color 0.3s ease;
+  flex-wrap: wrap;
+  color: white;
+  margin-right: auto;
+  transition: color 0.3s ease;
+  display: flex;
+  flex-direction: row-reverse;
 }
+
 nav a:hover {
-   
-  background-color: rgb(109, 65, 151); /* Background color on hover */
+  background-color: rgb(109, 65, 151);
   background-size: 80% 80%;
   color: black;
-  border-radius: 3px ;
-
+  border-radius: 3px;
 }
 
-
- 
-.dark-nav{
+.dark-nav {
   background: #212EA0;
   transition: 0.5s;
 }
+
 .hidden-nav {
-  top: -100px; /* Adjust this value to hide the navbar completely */
+  top: -100px;
 }
 
-.menu-icon{
+.menu-icon {
   display: none;
+  margin-left: 15px;
 }
 
-
-
-/* Media query for tablets */
-@media(max-width: 1000px){
-  .logo{
-      width: 60px;
-  }
-  nav ul li{
-      margin: 10px 15px;
+@media (max-width: 1100px) {
+  nav ul li {
+    margin: 10px 10px;
+    font-size: 14px;
   }
 }
-@media(max-width: 800px){
-nav ul li {
-  font-size: 14px;
-} 
+
+@media (max-width: 900px) {
+  nav a {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 
+@media (max-width: 770px) {
+  nav ul li {
+    margin: 10px 5px;
+    font-size: 14px;
+  }
+}
 
-
-/* SmartPhone Media query */
-@media (max-width: 730px) {
+@media (max-width: 700px) {
   nav {
-    padding: 15px 20px; /* Adjust padding for better spacing */
+    padding: 15px 20px;
   }
+
   .logo {
     width: 50px;
   }
+
   nav ul {
-    position: absolute; /* Change position to absolute */
-    top: 82.56px; /* Adjust top position */
-    right: 0px; /* Adjust right position */
-    background: #6261acfa;
-    z-index: 10; /* Increase z-index to show above other content */
-    width: 200px;
-    padding-top: 20px; /* Adjust padding-top */
+    position: absolute;
+    top: 98px;
+    right: 0px;
+    background: rgba(0, 0, 128, 0.6);
+    z-index: 10;
+    width: 100%;
+    padding-top: 20px;
     transition: 0.5s;
+    display: none;
   }
 
   nav ul li {
     display: block;
-    margin: 10px 0; /* Adjust margin */
-    text-align: center; /* Center align menu items */
+    margin: 10px 0;
+    text-align: center;
   }
 
   .menu-icon {
@@ -206,29 +190,48 @@ nav ul li {
     cursor: pointer;
   }
 
-  .hide-mobile-menu {
-      height: 0;
-      padding: 0;
-      overflow: hidden;
-      transition: all 0.3s ease-in-out;
+  .show-mobile-menu {
+    display: block;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  nav ul li a:hover {
+    background-color: rgb(109, 65, 151);
+    color: black;
+    border-radius: 3px;
   }
 }
+
 .theme-toggle-button {
-  background: rgba(128, 128, 128, 0.2); /* Subtle grey background */
-  border: none; /* Remove border */
+  height: 42px;
+  width: 42px;
+  border: none;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px; /* Increase padding for larger button */
-  transition: transform 0.3s, box-shadow 0.3s, 0.3s;
+  background-color: #ffffff;
+  padding: 0;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.theme-toggle-button img {
+  height: 32px;
+  width: 32px;
+  filter: grayscale();
+  border-radius: 20px;
 }
 
 .theme-toggle-button:hover {
   transform: scale(1.1);
-  background: rgba(128, 128, 128, 0.4); /* Darker grey on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  background: rgba(128, 128, 128, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .theme-toggle-button:focus {
@@ -236,9 +239,9 @@ nav ul li {
 }
 
 .theme-toggle-button box-icon {
-  width: 20px; /* Smaller icon size */
-  height: 20px; /* Smaller icon size */
-  fill: white; /* Icon color to white */
+  width: 20px;
+  height: 20px;
+  fill: white;
 }
 
 .dark-nav .theme-toggle-button {

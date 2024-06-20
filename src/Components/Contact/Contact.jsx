@@ -5,8 +5,10 @@ import mail_icon from "../../assets/mail-icon.png";
 import phone_icon from "../../assets/phone-icon.png";
 import location_icon from "../../assets/location-icon.png";
 import white_arrow from "../../assets/white-arrow.png";
+import { useSelector } from 'react-redux';
 
 const Contact = () => {
+  const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
   const [result, setResult] = React.useState("");
 
   const onSubmit = async (event) => {
@@ -33,7 +35,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact" id="contact">
+    <div className={`contact ${theme}`} id="contact">
       <div className="contact-col">
         <h3 className="send">
           Send us a message<img src={msg_icon} alt=""></img>
@@ -44,7 +46,7 @@ const Contact = () => {
         </p>
         <ul>
           <li>
-            <img src={mail_icon} alt=""></img>Contact@StartConnectHub.in
+            <img src={mail_icon} alt=""></img><a href="mailto:startconnecthub@gmail.com"> startconnecthub@gmail.com</a>
           </li>
           <li>
             <img src={phone_icon} alt=""></img>+91 1234567890

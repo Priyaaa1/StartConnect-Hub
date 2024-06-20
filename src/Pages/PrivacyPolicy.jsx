@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
         <h1>Privacy Policy</h1>
         <section>
           <p>Last updated: May 19, 2024</p>
-          <p>Welcome to StartConnect Hub! We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy or our practices regarding your personal information, please contact us at startconnect@hub.com.</p>
+          <p>Welcome to StartConnect Hub! We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy or our practices regarding your personal information, please contact us at <a href="mailto:startconnecthub@gmail.com"> startconnecthub@gmail.com</a>.</p>
         </section>
         <section>
           <h2>Information We Collect</h2>
@@ -42,7 +42,7 @@ const PrivacyPolicy = () => {
         </section>
         <section>
           <h2>Your Data Protection Rights</h2>
-          <p>You have certain rights under data protection laws regarding your personal information. These may include the right to access, correct, update, or delete your personal information. If you wish to exercise any of these rights, please contact us at startconnect@hub.com.</p>
+          <p>You have certain rights under data protection laws regarding your personal information. These may include the right to access, correct, update, or delete your personal information. If you wish to exercise any of these rights, please contact us at <a href="mailto:startconnecthub@gmail.com"> startconnecthub@gmail.com</a>.</p>
         </section>
         <section>
           <h2>Changes to This Privacy Policy</h2>
@@ -50,18 +50,18 @@ const PrivacyPolicy = () => {
         </section>
         <section>
           <h2>Contact Us</h2>
-          <p>If you have any questions or comments about this policy, you may email us at startconnect@hub.com.</p>
+          <p>If you have any questions or comments about this policy, you may email us at <a href="mailto:startconnecthub@gmail.com"> startconnecthub@gmail.com</a></p>
         </section>
       </div>
     </PolicyWrapper>
   );
 };
 
+  // color: #333;
 const PolicyWrapper = styled.div`
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
-  color: #333;
   line-height: 1.6;
 
   h1 {
@@ -72,7 +72,6 @@ const PolicyWrapper = styled.div`
 
 h2 {
     text-align: center;
-    color: #212EA0;
     font-weight: 600;
     display: flex;
     justify-content: left;
