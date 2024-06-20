@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import "./Login.css";
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
+import jwt_decode from 'jwt-decode'; // Add this if jwt_decode is used for decoding JWT
 
 const Login = () => {
   const [email, setEmail] = useState("");

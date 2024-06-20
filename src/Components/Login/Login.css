@@ -15,7 +15,6 @@
   padding: 10px 10px 20px 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
-  background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -41,7 +40,6 @@ input {
   border: 1px solid #ccc;
   border-radius: 10px;
   box-sizing: border-box;
-  border: none;
   outline: none;
 }
 
@@ -75,6 +73,7 @@ p a:hover {
   color: #0056b3;
   text-decoration: underline;
 }
+
 .googlelogin {
   padding: 20px;
   margin-top: 12px;
@@ -82,6 +81,7 @@ p a:hover {
   text-align: center;
   margin-left: 50px;
 }
+
 .warningmsg {
   margin: 0;
   text-align: left;

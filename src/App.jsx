@@ -10,7 +10,6 @@ import Title from "./Components/Title/Title";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
-import Signup from "./Components/Signup/Signup";
 import AboutUs from "./Components/Footer/Components/AboutUS";
 import Faq from "./Components/Footer/Components/faq";
 import ContactUS from "./Components/Footer/Components/contact";

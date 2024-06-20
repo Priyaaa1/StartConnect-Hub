@@ -4,6 +4,7 @@
   align-items: center;
   height: 90.5vh;
 }
+
 .signup-container {
   max-width: 400px;
   margin: 0 auto;
@@ -42,7 +43,6 @@ button {
   cursor: pointer;
 }
 
-/* Signup.css */
 .error-message {
   color: red;
   display: block;
@@ -55,9 +55,6 @@ input.valid {
 input.invalid {
   border-color: red;
 }
-
-
-
 
 .signup-container button:hover {
   background-color: #0056b3;

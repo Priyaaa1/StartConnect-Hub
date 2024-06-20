@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import { scroller } from "react-scroll";
 import { useLocation, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
@@ -15,7 +15,7 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [visible, setVisible] = useState(true);
   const isDark = useSelector((state) => state.theme.value);
-  const theme = "header-light";
+  const theme = "header-light"; // Placeholder, adjust according to your logic
   const dispatch = useDispatch();
   const menuRef = useRef(null);
   const menuIconRef = useRef(null);
@@ -74,13 +74,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`container1 ${
-        sticky ||
-        location.pathname === "/login" ||
-        location.pathname === "/signup"
-          ? "dark-nav"
-          : ""
-      } ${visible ? "" : "hidden-nav"} ${theme}`}
+      className={`container1 ${sticky || location.pathname === "/login" || location.pathname === "/signup" ? "dark-nav" : ""} ${visible ? "" : "hidden-nav"} ${theme}`}
     >
       <NavLink to="/" onClick={() => handleMenuItemClick("hero", 0)}>
         <p>Start Connect Hub</p>
@@ -108,13 +102,6 @@ const Navbar = () => {
             </NavLink>
           </div>
         </li>
-        {/* <li>
-          <div className="nav1">
-            <NavLink to="/#faq" onClick={() => handleMenuItemClick("accordian", -260)}>
-              FAQ's
-            </NavLink>
-          </div>
-        </li> */}
         <li>
           <div className="nav1">
             <NavLink to="/#contact" onClick={() => handleMenuItemClick("contact", -260)}>
@@ -122,13 +109,6 @@ const Navbar = () => {
             </NavLink>
           </div>
         </li>
-        {/* <li>
-          <div className="nav1">
-            <NavLink to="/feedback" onClick={() => setMobileMenu(false)}>
-              Feedback
-            </NavLink>
-          </div>
-        </li> */}
         <li>
           <NavLink to="/login" onClick={() => setMobileMenu(false)}>
             <button className='logIn'>LOG IN</button>
