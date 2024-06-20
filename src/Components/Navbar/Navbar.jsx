@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState, useRef } from "react";
 import { scroller } from "react-scroll";
 import { useLocation, NavLink } from "react-router-dom";
@@ -13,26 +14,15 @@ const Navbar = () => {
   const location = useLocation();
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [visible, setVisible] = useState(true);
   const isDark = useSelector((state) => state.theme.value);
-  const theme = "header-light";
+  const theme = "header-dark";
   const dispatch = useDispatch();
   const menuRef = useRef(null);
   const menuIconRef = useRef(null);
 
-  let lastScrollY = window.scrollY;
-
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setSticky(currentScrollY > 200);
-
-      if (currentScrollY > lastScrollY) {
-        setVisible(false);
-      } else {
-        setVisible(true);
-      }
-      lastScrollY = currentScrollY;
+      setSticky(window.scrollY > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -74,13 +64,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`container1 ${
-        sticky ||
-        location.pathname === "/login" ||
-        location.pathname === "/signup"
+      className={`container1 ${sticky ||
+          location.pathname === "/login" ||
+          location.pathname === "/signup"
           ? "dark-nav"
           : ""
-      } ${visible ? "" : "hidden-nav"} ${theme}`}
+        } ${theme} sticky-nav`}
     >
       <NavLink to="/" onClick={() => handleMenuItemClick("hero", 0)}>
         <p>Start Connect Hub</p>
@@ -108,13 +97,6 @@ const Navbar = () => {
             </NavLink>
           </div>
         </li>
-        {/* <li>
-          <div className="nav1">
-            <NavLink to="/#faq" onClick={() => handleMenuItemClick("accordian", -260)}>
-              FAQ's
-            </NavLink>
-          </div>
-        </li> */}
         <li>
           <div className="nav1">
             <NavLink to="/#contact" onClick={() => handleMenuItemClick("contact", -260)}>
@@ -122,13 +104,6 @@ const Navbar = () => {
             </NavLink>
           </div>
         </li>
-        {/* <li>
-          <div className="nav1">
-            <NavLink to="/feedback" onClick={() => setMobileMenu(false)}>
-              Feedback
-            </NavLink>
-          </div>
-        </li> */}
         <li>
           <NavLink to="/login" onClick={() => setMobileMenu(false)}>
             <button className='logIn'>LOG IN</button>
@@ -145,7 +120,7 @@ const Navbar = () => {
         onClick={toggleMenu}
         ref={menuIconRef}
       />
-    </nav> 
+    </nav>
   );
 };
 
