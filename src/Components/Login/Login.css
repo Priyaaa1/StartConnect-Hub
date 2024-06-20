@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
-  margin-top: 150px; /* Adjust this value to move the login box down */
+  height: auto;
+  margin-top: 100px; /* Adjust this value to move the login box down */
+  padding-bottom: 10px;
 }
 
 .login-container {
@@ -11,7 +12,7 @@
   background-image: linear-gradient(315deg, #ffffff 0%, #91a6ff 74%);
   width: 400px;
   margin: 0 auto;
-  padding: 05px;
+  padding: 10px 10px 20px 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
   background-color: #fff;
@@ -81,7 +82,7 @@ p a:hover {
   text-align: center;
   margin-left: 50px;
 }
-.warningmsg{
+.warningmsg {
   margin: 0;
   text-align: left;
   padding: 0;
