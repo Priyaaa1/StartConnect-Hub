@@ -119,7 +119,7 @@ function Explore() {
       <Container className="cardDiv">
         {/* <Row className="justify-content-center"> */}
           <Col md={4} className="mb-3">
-            <div className="card">
+            
               <Card>
                 <div className="card-body">
                   <Card.Body>
@@ -139,11 +139,10 @@ function Explore() {
                   </Card.Body>
                 </div>
               </Card>
-            </div>
           </Col>
 
           <Col md={4} className="mb-3">
-            <div className="card">
+            
               <Card>
                 <div className="card-body">
                   <Card.Body>
@@ -162,12 +161,12 @@ function Explore() {
                   </Card.Body>
                 </div>
               </Card>
-            </div>
+            
           </Col>
         {/* </Row> */}
         {/* <Row className="justify-content-center"> */}
           <Col md={4} className="mb-3">
-            <div className="card">
+            
               <Card>
                 <div className="card-body">
                   <Card.Body>
@@ -187,7 +186,7 @@ function Explore() {
                   </Card.Body>
                 </div>
               </Card>
-            </div>
+            
           </Col>
         {/* </Row> */}
       </Container>

@@ -81,8 +81,8 @@ const Footer = () => {
         <a href="https://facebook.com/yourpage" target="_blank" rel='noreferrer'>
         <i className="fab fa-facebook" style={{ fontSize: "25px" }}/>
         </a>
-        <a href="https://twitter.com/yourpage" target="_blank" rel='noreferrer'>
-        <i className="fab fa-twitter" style={{ fontSize: "25px" }}/>
+        <a href="https://x.com/yourpage" target="_blank" rel='noreferrer'>
+        <i className="fab fa-x-twitter" style={{ fontSize: "25px" }}/>
         </a>
         <a href="https://instagram.com/yourpage" target="_blank" rel='noreferrer'>
         <i className="fab fa-instagram" style={{ fontSize: "25px" }}/>

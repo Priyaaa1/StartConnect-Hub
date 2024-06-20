@@ -2,7 +2,9 @@
   padding-left: 10%;
   padding-right: 10%;
 }
-nav{
+
+
+nav{ 
   width: 100%;
    background: rgba(0, 0, 128,.6);
   color: #fff;
@@ -16,6 +18,30 @@ nav{
   z-index: 10;
   transition: top 0.3s ease-in-out;
 }
+nav.container1 p {
+    color: #edf2f2;
+    position: absolute;
+    right: 66.6vw;
+    top: 1vw;
+    font-size: 29px;
+}
+ /* CSS for name in navbar */
+/*  .name_nav {
+  color: rgb(255, 255, 255); 
+  font-size: 2vw; 
+  position: relative;
+  bottom: 5.5vw; 
+  left: 5.5vw; 
+}
+
+/* Media query for smaller screens */
+/*@media (max-width: 768px) {
+  .name_nav {
+    font-size: 4vw;
+    bottom: 8vw;
+    left: 6vw;
+  }
+} */
 .logo{
   width: 80px;
 }
@@ -38,6 +64,7 @@ nav ul li{
 nav ul li a.active{
   color: lightgoldenrodyellow;
 }
+ 
 nav ul li a:hover{
   text-decoration: none;
 }
@@ -100,6 +127,23 @@ nav ul li a:hover:before {
   color: #c266d3;
 }
 
+
+
+nav a {
+  color : #212EA0
+  transition : color 0.3s ease;
+}
+nav a:hover {
+   
+  background-color: rgb(109, 65, 151); /* Background color on hover */
+  background-size: 80% 80%;
+  color: black;
+  border-radius: 3px ;
+
+}
+
+
+ 
 .dark-nav{
   background: #212EA0;
   transition: 0.5s;
