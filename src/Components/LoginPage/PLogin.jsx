@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import * as Components from './Components'
-import { GoogleLogin } from "@react-oauth/google";
+import { GoogleLogin,GoogleOAuthProvider } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 import './PLogin.css'
 import { Navigate, useNavigate } from 'react-router-dom';
@@ -26,20 +26,74 @@ const PLogin = () => {
       navigate("/explore");
     }
   };
+//
+const handleEmailChange = (e) => {
+  const emailValue = e.target.value;
+  setEmail(emailValue);
+  if (!emailValue) {
+    setWarnings({...warnings, email: "*Please enter your email" });
+  } else if (!validateEmail(emailValue)) {
+    setWarnings({...warnings, email: "*Please enter a valid email address!" });
+  } else {
+    setWarnings({...warnings, email: "" });
+  }
+};
 
+const handlePasswordChange = (e) => {
+  const passwordValue = e.target.value;
+  setPassword(passwordValue);
+  if (!passwordValue) {
+    setWarnings({...warnings, password: "*Please enter your password" });
+  } else if (!validatePassword(passwordValue)) {
+    setWarnings({...warnings, password: "Username should be atlest 4 to 16 characters, mustn't have special character!" });
+  } else {
+    setWarnings({...warnings, password: "" });
+  }
+};
+
+const handleConfirmPasswordChange = (e) => {
+  const confirmPasswordValue = e.target.value;
+  setConfirmPassword(confirmPasswordValue);
+  if (!confirmPasswordValue) {
+    setWarnings({...warnings, confirmPassword: "*Please enter your confirm password" });
+  } else if (password!== confirmPasswordValue) {
+    setWarnings({...warnings, confirmPassword: "Passwords do not match!" });
+  } else {
+    setWarnings({...warnings, confirmPassword: "" });
+  }
+};
+
+//
   const validateEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
   const [signIn, toggle] = React.useState(true);
+  const validatePassword = (password) => {
+    return password.length >= 4 && password.length <= 16 && /^[a-zA-Z0-9]+$/.test(password);
+  };
+
+  const handleSignUp = () => {
+    console.log("Signing up with email:", email, "and password:", password);
+    // Your signup logic here
+  };
+
   return (
+    <GoogleOAuthProvider clientId="784513715091-aa0p18bmv854re0amstgj2up3656cvsd.apps.googleusercontent.com">
+
     <Components.Container>
     <Components.SignUpContainer signinIn={signIn}>
         <Components.Form>
             <Components.Title className='createacc-title'>Create Account</Components.Title>
             <Components.Input type='text' placeholder='Name' />
-            <Components.Input type='email' placeholder='Email'  />
-            <Components.Input type='password' placeholder='Password' />
-            <Components.Button>Sign Up</Components.Button>
+            <Components.Input type='email' placeholder='Email' 
+             value={email}
+             onChange={handleEmailChange} />
+            {warnings.email && <p style={{ color: "red" }} className="warningmsg">{warnings.email}</p>}
+            <Components.Input type='password' placeholder='Password'
+             value={password}
+             onChange={handlePasswordChange} />
+             
+            <Components.Button  onClick={handleSignUp} >Sign Up</Components.Button>
             <div className="google-login-container">
           <GoogleLogin
             onSuccess={(credentialResponse) => {
@@ -131,6 +185,7 @@ const PLogin = () => {
     </Components.OverlayContainer>
     
 </Components.Container>
+</GoogleOAuthProvider>
   )
 }
 
