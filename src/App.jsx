@@ -23,6 +23,7 @@ import 'react-chatbot-kit/build/main.css';
 import Explore from './Pages/Explore';
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
+import Licensing from './Pages/Licensing';
 import VisionAndMission from "./Pages/VisionAndMission";
 import HowItWorks from "./Pages/HowItWorks";
 import InvestorManagementPage from "./Pages/InvestorManagementPage";
@@ -69,6 +70,7 @@ const App = () => {
               <Route path='/explore' element={<Explore />} />
               <Route path='/privacypolicy' element={<PrivacyPolicy />} />
               <Route path='/termsandconditions' element={<TermsAndConditions />} />
+              <Route path='/licensing' element={<Licensing />} />
               <Route path='/visionandmission' element={<VisionAndMission />} />
               <Route path='/howitworks' element={<HowItWorks />} />
               <Route path='/investormanagementpage' element={<InvestorManagementPage />} />
