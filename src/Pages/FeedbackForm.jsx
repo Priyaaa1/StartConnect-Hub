@@ -50,6 +50,10 @@ function FeedbackPage() {
       `Name: ${name}\nEmail: ${email}\nRating: ${rating}\nFeedback: ${feedback}`
     );
     window.location.href = `mailto:startconnecthub@gmail.com?subject=${subject}&body=${body}`;
+    setRating(null);
+    setName("");
+    setEmail("");
+    setFeedback("");
   };
 
   return (
