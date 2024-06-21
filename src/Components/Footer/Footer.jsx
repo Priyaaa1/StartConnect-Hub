@@ -69,6 +69,7 @@ const Footer = () => {
             <ul className='footer-links'>
             <NavLink to="/privacypolicy"><li className='footer-link'>Privacy Policy</li></NavLink>
               <NavLink to="/termsandconditions"><li className='footer-link'>Terms & Conditions</li></NavLink>
+              <NavLink to="/licensing"><li className='footer-link'>Licensing</li></NavLink>
               <NavLink to="/visionandmission"><li className='footer-link'>Vision and Mission</li></NavLink>
               <li className='footer-link'>Career</li>
             </ul>
