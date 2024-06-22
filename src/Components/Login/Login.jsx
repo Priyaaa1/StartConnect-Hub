@@ -2,12 +2,24 @@ import React, { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import "./Login.css";
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";    /*react libraries used 
+                                                                       for importing eye icon */
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [warnings, setWarnings] = useState({ email: "", password: "" });
+  const [isVisible,setVisible] = useState(false);
   const navigate = useNavigate();
+
+  const eye = <FontAwesomeIcon icon={faEye} />;
+
+  const  togglePasswordFunction=()=>{      //toggling function for visibility of password
+    setVisible(isVisible?false:true)
+  };
+  
 
   const handleLogin = () => {
     let emailWarning = "";
@@ -66,8 +78,10 @@ const Login = () => {
               }}
             />
             {warnings.email && <p style={{ color: "red" }} className="warningmsg">{warnings.email}</p>}
+           
             <input
-              type="password"
+              type={ isVisible ? "text" : "password"}
+              className="pasword"
               placeholder="Password"
               value={password}
               onChange={(e) => {
@@ -80,6 +94,8 @@ const Login = () => {
                 }
               }}
             />
+           <i className = "eye" onClick={togglePasswordFunction}>{eye}</i>{" "} 
+
             {warnings.password && <p style={{ color: "red" }} className="warningmsg">{warnings.password}</p>}
           </div>
           <button onClick={handleLogin}>Login</button>
