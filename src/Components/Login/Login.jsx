@@ -84,6 +84,9 @@ const Login = () => {
           </div>
           <button onClick={handleLogin}>Login</button>
           <p>
+          Forgot your password? <NavLink to="/forgot-password">Reset it here</NavLink>
+        </p>
+          <p>
             Don't have an account? <NavLink to="/signup">Sign up</NavLink>
           </p>
           <GoogleLogin
