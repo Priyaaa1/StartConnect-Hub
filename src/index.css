@@ -19,7 +19,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #acc1ff; /* Color of the track */
+  background: #f1f1f1; /* Color of the track */
 }
 
 body::-webkit-scrollbar-thumb {
