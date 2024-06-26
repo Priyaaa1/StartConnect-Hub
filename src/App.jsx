@@ -33,6 +33,7 @@ import FullServiceFund from './Pages/FullServiceFund';
 import Notfound from './Components/Notfound/Notfound';
 import { useSelector } from 'react-redux';
 import FeedbackPage from './Pages/FeedbackForm';
+import ScrollProgressBar from './Components/ProgressBar';
 
 const ThemeContext = createContext();
 
@@ -61,6 +62,7 @@ const App = () => {
         <div className={`main-div ${currentTheme}`}>
           <Router>
             <Navbar />
+            <ScrollProgressBar />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />

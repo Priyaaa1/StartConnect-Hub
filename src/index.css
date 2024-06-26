@@ -19,12 +19,16 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Color of the track */
+  background: transparent; /* Color of the track */
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #007bff; /* Color of the thumb */
-  border-radius: 6px; /* Roundness of the thumb */
+  background: #2259ff; /* Color of the thumb */
+  border-radius: 5px; /* Roundness of the thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #4d79fd; /* Color of the thumb */
 }
 
 
