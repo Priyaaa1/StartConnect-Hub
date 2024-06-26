@@ -10,6 +10,7 @@ import Title from "./Components/Title/Title";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
+import ForgotPassword from './Components/ForgotPassword/ForgotPassword';
 import Signup from "./Components/Signup/Signup";
 import AboutUs from "./Components/Footer/Components/AboutUS";
 import Faq from "./Components/Footer/Components/faq";
@@ -63,6 +64,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/aboutus" element={<AboutUs />} />
               <Route path="/faq" element={<Faq />} />
