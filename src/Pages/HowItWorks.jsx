@@ -100,6 +100,8 @@ const HowItWorksWrapper = styled.div`
     font-size: 2rem;
     margin-top: 20px;
     justify-content: left;
+    padding: 0;
+    margin-top: 0px;
   }
 
   p {
@@ -116,7 +118,7 @@ const HowItWorksWrapper = styled.div`
   }
 
   section {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
   }
 `;
 
