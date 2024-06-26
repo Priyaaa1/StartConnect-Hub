@@ -55,7 +55,6 @@ const TermsWrapper = styled.div`
 
   h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
     margin-top: 80px;
   }
 
@@ -63,6 +62,7 @@ const TermsWrapper = styled.div`
     font-size: 1.5rem;
     margin-top: 20px;
     justify-content: left;
+    padding: 0;
   }
 
   p {
