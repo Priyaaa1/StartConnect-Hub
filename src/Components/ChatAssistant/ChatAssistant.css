@@ -82,6 +82,13 @@
   width: 90px;
   margin: 0px 10px;
 }
+.Logo:hover {
+  
+  transition : 1s ;
+  box-shadow: 2px 2px 2px #76a0cc;
+  transform: scale(1.2);
+
+}
 
 .Logo {
   cursor: pointer;
