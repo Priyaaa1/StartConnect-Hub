@@ -67,12 +67,12 @@ const Contact = () => {
           ></input>
           <label>Phone number</label>
           <input
-            type="tel"
+            type="number"
             name="phone"
-            pattern="[0-9]*"
+            pattern="\d{10}"
             minLength="10"
             maxLength="10"
-            placeholder="Enter your phone"
+            placeholder="Only digits are allowed"
             required
           ></input>
           <label>Write your message here</label>
