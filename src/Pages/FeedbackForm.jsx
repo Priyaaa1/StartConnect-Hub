@@ -9,6 +9,7 @@ function FeedbackPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [feedback, setFeedback] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const getEmojis = () => {
     switch (rating) {
@@ -45,16 +46,19 @@ function FeedbackPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent("Feedback and Suggestions for Improvement");
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nRating: ${rating}\nFeedback: ${feedback}`
-    );
-    window.location.href = `mailto:startconnecthub@gmail.com?subject=${subject}&body=${body}`;
-    setRating(null);
-    setName("");
-    setEmail("");
-    setFeedback("");
-  };
+    setTimeout(() => {
+        const subject = encodeURIComponent("Feedback and Suggestions for Improvement");
+        const body = encodeURIComponent(
+          `Name: ${name}\nEmail: ${email}\nRating: ${rating}\nFeedback: ${feedback}`
+        );
+        window.location.href = `mailto:startconnecthub@gmail.com?subject=${subject}&body=${body}`;
+        setRating(null);
+        setName("");
+        setEmail("");
+        setFeedback("");
+        setIsSubmitted(true);
+      }, 1000); // 1000 means 1second :)
+    };
 
   return (
     <div className="feedback-wrapper">
@@ -110,6 +114,17 @@ function FeedbackPage() {
           </form>
         </div>
       </div>
+      {isSubmitted && (
+        <div className="popup">
+          <div className="popup-content">
+            <button className="popup-close" onClick={() => setIsSubmitted(false)}>×</button>
+            <h2>Thank you for your feedback! ❤️</h2>
+            <div className="popup-icon"><img src="https://icons.veryicon.com/png/o/miscellaneous/monochromatic-surface-icon-library/success-56.png" width="84" alt="✔️" /></div>
+            <p>Your feedback has been received.<br /> We appreciate the input you provide.</p>
+            <button className="popup-button" onClick={() => setIsSubmitted(false)}> <a class="active" href="/" aria-current="page">Back to Home</a></button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
