@@ -70,7 +70,7 @@ const Startups = () => {
           <ul ref={carouselRef} className='carousel'>
           <a href='/heartfeltventures'><li className='card'>
               <div className='img'>
-                <img src='/src/assets/project-2.jpg' alt='' draggable='false' />
+                <img src="project-2.jpg" alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
                 Heartfelt Ventures
@@ -79,7 +79,7 @@ const Startups = () => {
             </li></a>
             <a href='/understandingunited'><li className='card'>
               <div className='img'>
-                <img src='/src/assets/project-1.PNG' alt='' draggable='false' />
+                <img src="project-1.PNG" alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
                 Understanding United
@@ -88,7 +88,7 @@ const Startups = () => {
             </li></a>
             <a href='/shespark'><li className='card'>
               <div className='img'>
-                <img src='/src/assets/project-3.jpg' alt='' draggable='false' />
+                <img src="project-3.jpg" alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
                 SheSpark Innovations
@@ -97,7 +97,7 @@ const Startups = () => {
             </li></a>
             <a href='/hopephoenix'><li className='card'>
               <div className='img'>
-                <img src='/src/assets/project-4.jpg' alt='' draggable='false' />
+                <img src="project-4.jpg" alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
                 Hope Phoenix
@@ -106,7 +106,7 @@ const Startups = () => {
             </li></a>
             <a href='/justbrew'><li className='card'>
               <div className='img'>
-                <img src='/src/assets/project-5.PNG' alt='' draggable='false' />
+                <img src="project-5.PNG" alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
                 Just Brew
@@ -115,7 +115,7 @@ const Startups = () => {
             </li></a>
             <a href='/empowerher'><li className='card'>
               <div className='img'>
-                <img src='/src/assets/project-6.PNG' alt='' draggable='false' />
+                <img src="project-6.PNG" alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
                 EmpowerHer Co.
