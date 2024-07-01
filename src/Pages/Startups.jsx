@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { GoChevronLeft } from "react-icons/go";
+import { GoChevronRight } from "react-icons/go";
 
 const Startups = () => {
   return (
@@ -7,7 +9,7 @@ const Startups = () => {
       <h1>View Startups</h1>
       <Wrapper>
         <div className='wrapper'>
-          <i id='left' className='fa-solid fas fa-angle-left'></i>
+          <i className='fa-solid fas fa-angle-left'><GoChevronLeft /></i>
           <ul className='carousel'>
             <li className='card'>
               <div className='img'>
@@ -64,7 +66,7 @@ const Startups = () => {
               <span>Bringing Flavor to Every Bite</span>
             </li>
           </ul>
-          <i id='right' className='fa-solid fas fa-angle-right'></i>
+          <i id='right' className='fa-solid fas fa-angle-right'><GoChevronRight /></i>
         </div>
       </Wrapper>
     </div>
