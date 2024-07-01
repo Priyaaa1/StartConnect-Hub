@@ -129,6 +129,7 @@ const Startups = () => {
 };
 
 const Wrapper = styled.div`
+  padding: 20px;
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
