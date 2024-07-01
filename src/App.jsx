@@ -28,6 +28,7 @@ import Licensing from './Pages/Licensing';
 import VisionAndMission from "./Pages/VisionAndMission";
 import HowItWorks from "./Pages/HowItWorks";
 import InvestorManagementPage from "./Pages/InvestorManagementPage";
+import Startups from "./Pages/Startups.jsx";
 import FinancialServices from './Pages/FinancialServices';
 import FullServiceFund from './Pages/FullServiceFund';
 import Notfound from './Components/Notfound/Notfound';
@@ -78,6 +79,7 @@ const App = () => {
               <Route path='/visionandmission' element={<VisionAndMission />} />
               <Route path='/howitworks' element={<HowItWorks />} />
               <Route path='/investormanagementpage' element={<InvestorManagementPage />} />
+              <Route path='/startups' element={<Startups />} />
               <Route path='/financialservicesPage' element={<FinancialServices />} />
               <Route path="/fullservicefund" element={<FullServiceFund />} />
               <Route path='/feedback' element={<FeedbackPage />} />
