@@ -1,22 +1,77 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { GoChevronLeft } from "react-icons/go";
 import { GoChevronRight } from "react-icons/go";
 
 const Startups = () => {
+  const carouselRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [startScrollLeft, setStartScrollLeft] = useState(0);
+  const [timeoutId, setTimeoutId] = useState(null);
+
+  useEffect(() => {
+    const carousel = carouselRef.current;
+
+    const dragStart = (e) => {
+      setIsDragging(true);
+      carousel.classList.add("dragging");
+      setStartX(e.pageX);
+      setStartScrollLeft(carousel.scrollLeft);
+    };
+
+    const dragging = (e) => {
+      if (!isDragging) return;
+
+      const deltaX = e.pageX - startX;
+      carousel.scrollLeft = startScrollLeft - deltaX;
+    };
+
+    const dragStop = () => {
+      setIsDragging(false);
+      carousel.classList.remove("dragging");
+    };
+
+    const autoPlay = () => {
+      if (window.innerWidth < 800) return;
+
+      const totalCardWidth = carousel.scrollWidth;
+      const maxScrollLeft = totalCardWidth - carousel.offsetWidth;
+
+      if (carousel.scrollLeft >= maxScrollLeft) return;
+
+      setTimeoutId(setTimeout(() => {
+        carousel.scrollLeft += carousel.offsetWidth;
+      }, 2500));
+    };
+
+    carousel.addEventListener("mousedown", dragStart);
+    carousel.addEventListener("mousemove", dragging);
+    document.addEventListener("mouseup", dragStop);
+    carousel.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+    carousel.addEventListener("mouseleave", autoPlay);
+
+    return () => {
+      carousel.removeEventListener("mousedown", dragStart);
+      carousel.removeEventListener("mousemove", dragging);
+      document.removeEventListener("mouseup", dragStop);
+      carousel.removeEventListener("mouseenter", () => clearTimeout(timeoutId));
+      carousel.removeEventListener("mouseleave", autoPlay);
+    };
+  }, [carouselRef, isDragging, startX, startScrollLeft, timeoutId]);
+
   return (
     <div>
-      <h1>View Startups</h1>
       <Wrapper>
         <div className='wrapper'>
           <i className='fa-solid fas fa-angle-left'><GoChevronLeft /></i>
-          <ul className='carousel'>
+          <ul ref={carouselRef} className='carousel'>
             <li className='card'>
               <div className='img'>
                 <img src='/src/assets/project-2.jpg' alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
-                <a href='/startups'>Heartfelt Ventures</a>
+                <a href='/heartfeltventures'>Heartfelt Ventures</a>
               </h2>
               <span>Building Dreams, Bridging Realities</span>
             </li>
@@ -25,7 +80,7 @@ const Startups = () => {
                 <img src='/src/assets/project-1.PNG' alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
-                <a href='/startups'>Understanding United</a>
+                <a href='/understandingunited'>Understanding United</a>
               </h2>
               <span>Together, We Thrive: Understanding United</span>
             </li>
@@ -34,7 +89,7 @@ const Startups = () => {
                 <img src='/src/assets/project-3.jpg' alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
-                <a href='/startups'>SheSpark Innovations</a>
+                <a href='/shespark'>SheSpark Innovations</a>
               </h2>
               <span>Empowering Unity, Empowering Tomorrow</span>
             </li>
@@ -43,7 +98,7 @@ const Startups = () => {
                 <img src='/src/assets/project-4.jpg' alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
-                <a href='/startups'>Hope Phoenix</a>
+                <a href='/hopehoenix'>Hope Phoenix</a>
               </h2>
               <span>Embracing Tomorrow's Promise</span>
             </li>
@@ -52,7 +107,7 @@ const Startups = () => {
                 <img src='/src/assets/project-5.PNG' alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
-                <a href='/startups'>Just Brew</a>
+                <a href='/justbrew'>Just Brew</a>
               </h2>
               <span>Turning Ideas into Impact</span>
             </li>
@@ -61,7 +116,7 @@ const Startups = () => {
                 <img src='/src/assets/project-6.PNG' alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
-                <a href='/startups'>EmpowerHer Co.</a>
+                <a href='/empowerher'>EmpowerHer Co.</a>
               </h2>
               <span>Bringing Flavor to Every Bite</span>
             </li>
