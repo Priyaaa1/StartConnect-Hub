@@ -41,7 +41,7 @@ const HeartfeltVentures = () => {
   return (
     <Content>
       <Heading>Welcome To HEARTFELT VENTURES!</Heading>
-      <Image src="/src/assets/project-2.jpg" alt="Heartfelt Ventures" className="logImg" />
+      <Image src="project-2.jpg" alt="Heartfelt Ventures" className="logImg" />
       <br />
       <button className="invest">
         <InvestLink href="#">Invest</InvestLink>
