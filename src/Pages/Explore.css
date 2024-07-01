@@ -40,7 +40,7 @@
     background-size: cover;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(7, 7, 7, 0.1);
     justify-content:space-between ;
     margin-bottom: 20px;
     
@@ -81,15 +81,15 @@
     justify-content:center
   }
 .btn{
-  background-color: rgb(0, 0, 0)
+  background-color: rgb(206 152 206)
 }
 .btn:hover{
     color:rgb(17, 1, 1);
-    background-color: rgb(206, 152, 206);
+    background-color: rgb(129, 166, 235);
     text-decoration: none;
 }
 .card:hover{
-    background-color:rgb(206, 204, 254);
+    background-color:#212ea0;
 }
 
 /* Explore.css */
@@ -107,7 +107,7 @@
   width: 100%;
   max-width: 600px;
   height: auto;
-  transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: transform 0.3s ease-in-out;
 }
 
 .header-image:hover {
@@ -148,7 +148,7 @@ h1 {
   width: 100%;
   max-width: 600px;
   height: auto;
-  transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: transform 0.3s ease-in-out;
 }
 
 .header-image:hover {

@@ -1,136 +1,150 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+
 const FinancialServices = () => {
+  const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
+
   return (
-    <FinancialPageWrapper>
-    <h1>Financial Services</h1>
-    <section>
-    At StartConnectHub, we recognize that securing and managing finances is crucial for the success of any startup. 
-    Our comprehensive financial services are designed to support entrepreneurs and investors at every stage of their journey, 
-    from initial funding to scaling and beyond. 
-    We are committed to providing the tools, resources, and expert guidance needed to navigate the financial complexities of the business world.
-    </section>
+    <FinancialPageWrapper className={theme}>
+      <h1>Financial Services</h1>
+      <section>
+        At StartConnectHub, we recognize that securing and managing finances is crucial for the success of any startup. 
+        Our comprehensive financial services are designed to support entrepreneurs and investors at every stage of their journey, 
+        from initial funding to scaling and beyond. 
+        We are committed to providing the tools, resources, and expert guidance needed to navigate the financial complexities of the business world.
+      </section>
 
-    <h2 className='sub-heading'>
-    Our Financial Services
-    </h2>
+      <h2 className='sub-heading'>
+        Our Financial Services
+      </h2>
 
-    <img className = "image" src="financialService.gif"/>
-    
-    <section>
+      <img className="image" src="financialService.gif" alt="Financial Services"/>
+
+      <section>
         <span>
-        Funding Solutions
+          Funding Solutions
         </span>
         <ul>
-            <li>
+          <li>
             <span>Venture Capital</span>: Connect with top venture capital firms looking to invest in promising startups.
-            </li>
-            <li>
+          </li>
+          <li>
             <span>Angel Investors</span>: Access a network of angel investors who provide not just capital, but also mentorship and industry connections.
-            </li>
-            <li>
+          </li>
+          <li>
             <span>Crowdfunding:</span>: Leverage the power of the crowd to raise funds and validate your business idea through our crowdfunding platform.
-            </li>
-
+          </li>
         </ul>
+      </section>
 
-    </section>
-
-    <section>
+      <section>
         <span>
-        Exclusive Access to Promising Startups:
+          Exclusive Access to Promising Startups:
         </span>  Investors at StartConnectHub gain exclusive access to a curated selection of high-potential startups. 
         Our rigorous vetting process ensures that only the most promising ventures are showcased, 
         giving you the opportunity to invest in businesses with strong growth potential. 
         Whether you're looking for early-stage startups or more established ventures, 
         StartConnectHub provides a diverse range of investment opportunities.
-    </section>
+      </section>
 
-    <section>
+      <section>
         <span>
-        Comprehensive Support and Resources:
+          Comprehensive Support and Resources:
         </span>  We understand that successful investments require more than just capital. 
         That's why StartConnectHub offers comprehensive support and resources to both entrepreneurs and investors. 
         From detailed business analysis and market research to strategic advisory services, 
         we provide the tools and insights needed to make informed investment decisions.
-    </section>
+      </section>
 
-    <section>
+      <section>
         <span>
-        Comprehensive Support and Resources:
-        </span>
-          We understand that successful investments require more than just capital. 
-        That's why StartConnectHub offers comprehensive support and resources to both entrepreneurs and investors. 
-        From detailed business analysis and market research to strategic advisory services, 
-        we provide the tools and insights needed to make informed investment decisions.
-    </section>
-
-    <section>
-        <span>
-        Comprehensive Support and Resources:
+          Comprehensive Support and Resources:
         </span>  We understand that successful investments require more than just capital. 
         That's why StartConnectHub offers comprehensive support and resources to both entrepreneurs and investors. 
         From detailed business analysis and market research to strategic advisory services, 
         we provide the tools and insights needed to make informed investment decisions.
-    </section>
-    <NavLink to="/#contact"><button className='button'> Drop us your Query </button></NavLink>
-    
+      </section>
+
+      <NavLink to="/#contact">
+        <button className='button'> Drop us your Query </button>
+      </NavLink>
     </FinancialPageWrapper>
   )
-}
-const FinancialPageWrapper= styled.div`
-padding: 20px;
-max-width: 1000px;
-margin: 0 auto;
-line-height: 1.6;
+};
 
-.button{
-    background-color:#8a8f95;
-    height:51px;
-    display:flex-end;
-    margin:auto;
-}
-.button:hover{
-    background-color:#464e57;
-}
-img{
-    background:transparent;
+const FinancialPageWrapper = styled.div`
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.6;
+
+  &.dark {
+    background-color: #333;
+    color: #fff;
+  }
+
+  &.light {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .button {
+    height: 51px;
+    display: flex-end;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #464e57;
+  }
+
+  img {
+    background: transparent;
     display: block;
     margin: 0 auto;
     width: 35%;
-    padding-bottom:50px;
-}
+    padding-bottom: 50px;
+  }
 
-section{
-    font-size:medium;
-    padding-bottom:60px;
-}
+  section {
+    font-size: medium;
+    padding-bottom: 60px;
+  }
 
-span{
-    font-weight:semi-bold;
-    color:rgb(84,114,228);
-    font-size:large;
-}
-h1{
-    padding:45px;
-    color:rgb(84,114,228);
-    text-align:center;
-    margin-top:122px;
-    font-weight:normal;
-}
-h2{
-    text-align:left;
-}
-.sub-heading{
-    font-weight:normal;
-    padding:45px;
-    text-align:center;
-    color:rgb(84,114,228);
-    margin-top:20px;
+  span {
+    font-weight: semi-bold;
+    color: rgb(84, 114, 228);
+    font-size: large;
+  }
 
-}
+  h1 {
+    padding: 45px;
+    color: rgb(84, 114, 228);
+    text-align: center;
+    margin-top: 122px;
+    font-weight: normal;
+  }
 
-`
+  h2 {
+    text-align: left;
+  }
 
-export default FinancialServices
+  .sub-heading {
+    font-weight: normal;
+    padding: 45px;
+    text-align: center;
+    color: rgb(84, 114, 228);
+    margin-top: 20px;
+  }
+`;
+
+export default FinancialServices;

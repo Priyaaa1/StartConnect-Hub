@@ -1,61 +1,71 @@
-h2 {
+body.dark-mode {
+    background-color: #121212; /* Dark background for the entire body */
+    color: #e0e0e0; /* Light text color */
+  }
+  
+  h2 {
     text-align: center;
     font-weight: 600;
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
-    
-}
-
-.question {
+    color: #000000; /* Light text color */
+  }
+  
+  .question {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(33,46,160);
-    border: 2px solid whitesmoke;
-    color: azure;
+    background-color: #1e1e1e; /* Dark background */
+    border: 2px solid #333; /* Dark border */
+    color: #e0e0e0; /* Light text color */
     border-radius: 10px;
     padding-top: 15px;
     padding-right: 20px;
     padding-bottom: 15px;
     padding-left: 10px;
-} 
-
-.accordian .question:hover {
-    background-color: #000c7c;
-}
-
-.arrow-icon {
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+  }
+  
+  .accordian .question:hover {
+    background-color: #333; /* Darker hover background */
+  }
+  
+  .arrow-icon {
     transition: transform 0.5s ease-in-out;
-}
-
-.accordian .active-faq {
+    color: #bbbbbb; /* Light gray color */
+  }
+  
+  .accordian .active-faq {
     transform: rotate(-180deg);
-}
-
-h3 {
+  }
+  
+  h3 {
     padding: 10px;
-}
-
-.item {
+    color: #e0e0e0; /* Light text color */
+  }
+  
+  .item {
     padding: 10px;
-}
-
-.content {
-    transition: max-height 1s ease-in-out;
+    color: #e0e0e0; /* Light text color */
+  }
+  
+  .content {
     justify-content: center;
     box-sizing: content-box;
-    /* padding: 20px; */
-    /* border: 3px solid black; */
     border-radius: 10px;
-    /* margin: 10px; */
-    font-family: "Outfit", sans-serif;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, margin 0.5s ease-in-out, border 0.5s ease-in-out;
-}
-.content.show {
+    background-color: #1e1e1e; /* Dark background for content */
+    color: #e0e0e0; /* Light text color */
+  }
+  
+  .content.show {
     max-height: 500px; /* Set a reasonable max-height to allow transition */
     padding-top: 20px;
     padding-bottom: 20px;
-}
+    background-color: #282828; /* Slightly lighter dark background for content */
+    border: 1px solid #444; /* Darker border for content */
+  }
+  

@@ -100,7 +100,6 @@
   transform: none;
 }
 
-
 @media (min-width: 1200px) {
   .feedback-wrapper {
     padding: 50px;
@@ -108,7 +107,6 @@
 }
 
 .popup {
-
   position: fixed;
   top: 0;
   left: 0;
@@ -119,74 +117,113 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
-
 }
 
-
 .popup-content {
-
   background: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   position: relative;
-
 }
 
-
-
 .popup-close {
-  
   position: absolute;
   top: 0px;
   right: 0px;
   background: none;
-
   border: none;
   font-size: 14px;
   cursor: pointer;
-
 }
 
 .popup h2 {
-
   color: #001164;
   font-size: 30px;
-  
 }
-
-
-/* .popup-icon {
-
-  font-size: 45px;
-  color: #4caf50;
-
-} */
 
 .popup p {
-
   margin: 16px 0;
   color: #666;
-
 }
 
-
 .popup-button {
-
   background-color: #2989ffec;
   color: white;
   border: none;
-
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-
 }
 
-
 .popup-button:hover {
-
   background-color: #04376e;
+}
 
+/* Dark mode styles */
+.feedback-wrapper.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.feedback-form.dark {
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.feedback-form.dark h2 {
+  color: #2259ff;
+}
+
+.feedback-form.dark p {
+  color: #bbb;
+}
+
+.feedback-form.dark label {
+  color: #e0e0e0;
+}
+
+.feedback-form.dark input[type="text"],
+.feedback-form.dark input[type="email"],
+.feedback-form.dark textarea {
+  background-color: #444;
+  border: 1px solid #555;
+  color: #e0e0e0;
+}
+
+.feedback-form.dark input[type="text"]:focus,
+.feedback-form.dark input[type="email"]:focus,
+.feedback-form.dark textarea:focus {
+  border-color: #2259ff;
+}
+
+.feedback-form.dark button[type="submit"] {
+  background-color: #2259ff;
+  color: #121212;
+}
+
+.feedback-form.dark button[type="submit"]:hover {
+  background-color: #2259ff;
+}
+
+.popup.dark .popup-content {
+  background-color: #333;
+}
+
+.popup.dark h2 {
+  color: #2259ff;
+}
+
+.popup.dark p {
+  color: #bbb;
+}
+
+.popup.dark .popup-button {
+  background-color: #2259ff;
+  color: #121212;
+}
+
+.popup.dark .popup-button:hover {
+  background-color: #2259ff;
 }

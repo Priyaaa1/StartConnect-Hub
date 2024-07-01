@@ -109,3 +109,48 @@ input.invalid {
   border-color: red;
   /* Red border for invalid inputs */
 }
+
+
+&.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+
+  &.dark {
+    background-color: #1e1e1e;
+    background-image: none;
+    color: #f0f0f0;
+  }
+
+
+    &.dark {
+      background-color: #333;
+      color: #f0f0f0;
+      border: 1px solid #555;
+    }
+
+
+p {
+  margin-top: 10px;
+  text-align: center;
+  padding-bottom: 20px;
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+
+    &:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    &.dark {
+      color: #66b2ff;
+
+      &:hover {
+        color: #3399ff;
+      }
+    }
+  }
+}

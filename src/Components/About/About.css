@@ -1,20 +1,23 @@
-.about{
+.about {
   margin: 100px auto;
   display: flex;
   justify-items: center;
   justify-content: space-between;
   width: 90%;
+  background-color: #060f31; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+  padding: 20px;
+  border-radius: 10px;
 }
-
-.about-left{
+.about-left {
   flex-basis: 40%;
 }
 
 #dark .about-heading {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
-.about-right{
+.about-right {
   flex-basis: 56%;
   display: flex;
   flex-direction: column;
@@ -22,26 +25,25 @@
   text-align: center;
 }
 
-.about-img{
+.about-img {
   width: 100%;
   border-radius: 10px;
 }
 
-.about h3{
+.about h3 {
   font-weight: 600;
-  font-weight: 16px;
+  font-size: 16px;
 }
 
-.about h2{
+.about h2 {
   font-weight: 600;
   font-size: 35px;
   margin: 10px 0;
   max-width: 400px;
   text-align: center;
-  
 }
 
-.about p{
+.about p {
   margin-bottom: 15px;
 }
 
@@ -51,20 +53,20 @@
     align-items: center; /* Center align items */
   }
 
-  #heading{
-      display: flex;
-      justify-content: center;
+  #heading {
+    display: flex;
+    justify-content: center;
   }
 
   .about-left,
   .about-right {
     flex-basis: 100%;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
     flex-direction: column;
   }
 
   .about-img {
-    border-radius: 15px; 
+    border-radius: 15px;
   }
 
   .about h2 {
@@ -73,6 +75,27 @@
   }
 
   .about p {
-    text-align: center; 
+    text-align: center;
   }
+}
+
+/* Additional styles for dark mode */
+body.dark-mode {
+  background-color: #090909; /* Dark background for the entire body */
+  color: #ffffff; /* Light text color */
+}
+
+body.dark-mode .about {
+  background-color: #1e1e1e; /* Slightly lighter dark background for the about section */
+  color: #e0e0e0; /* Light text color */
+}
+
+body.dark-mode .about h2,
+body.dark-mode .about h3,
+body.dark-mode .about p {
+  color: #e0e0e0; /* Ensure text inside about section is light */
+}
+
+body.dark-mode .about-img {
+  border: 1px solid #393838; /* Optional: Add a border to images for better visibility */
 }

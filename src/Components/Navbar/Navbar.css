@@ -50,6 +50,22 @@ nav.container1 p {
 .logIn {
   /* background-color: rgb(145, 99, 187); */
   background-color: transparent;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.logIn {
+  background-color: transparent;
 }
 
 .logIn:hover {

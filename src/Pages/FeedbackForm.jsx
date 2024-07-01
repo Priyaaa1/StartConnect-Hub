@@ -1,15 +1,19 @@
 import { React, useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import "./feedback.css";
 
 function FeedbackPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const [rating, setRating] = useState(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [feedback, setFeedback] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const theme = useSelector((state) => state.theme.value) ? 'dark' : 'light';
 
   const getEmojis = () => {
     switch (rating) {
@@ -47,22 +51,22 @@ function FeedbackPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setTimeout(() => {
-        const subject = encodeURIComponent("Feedback and Suggestions for Improvement");
-        const body = encodeURIComponent(
-          `Name: ${name}\nEmail: ${email}\nRating: ${rating}\nFeedback: ${feedback}`
-        );
-        window.location.href = `mailto:startconnecthub@gmail.com?subject=${subject}&body=${body}`;
-        setRating(null);
-        setName("");
-        setEmail("");
-        setFeedback("");
-        setIsSubmitted(true);
-      }, 1000); // 1000 means 1second :)
-    };
+      const subject = encodeURIComponent("Feedback and Suggestions for Improvement");
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nRating: ${rating}\nFeedback: ${feedback}`
+      );
+      window.location.href = `mailto:startconnecthub@gmail.com?subject=${subject}&body=${body}`;
+      setRating(null);
+      setName("");
+      setEmail("");
+      setFeedback("");
+      setIsSubmitted(true);
+    }, 1000); // 1000 means 1 second :)
+  };
 
   return (
-    <div className="feedback-wrapper">
-      <div className="feedback-form">
+    <div className={`feedback-wrapper ${theme}`}>
+      <div className={`feedback-form ${theme}`}>
         <div>
           <h2>We'd Love Your Feedback!</h2>
           <p>Let us know how we're doing and how we can improve. <br /> StartConnect-Hub</p>
