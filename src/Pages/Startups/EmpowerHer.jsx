@@ -41,7 +41,7 @@ const EmpowerHer = () => {
   return (
     <Content>
       <Heading>Welcome To Empower Her Co.!</Heading>
-      <Image src="/src/assets/project-6.PNG" alt="Empower Her Co." className="logImg" />
+      <Image src="project-6.PNG" alt="Empower Her Co." className="logImg" />
       <br />
       <button className="invest">
         <InvestLink href="#">Invest</InvestLink>
