@@ -62,64 +62,66 @@ const Startups = () => {
 
   return (
     <div>
+
       <Wrapper>
+      <h1 >View Startups</h1>
         <div className='wrapper'>
           <i className='fa-solid fas fa-angle-left'><GoChevronLeft /></i>
           <ul ref={carouselRef} className='carousel'>
-            <li className='card'>
+          <a href='/heartfeltventures'><li className='card'>
               <div className='img'>
                 <img src='/src/assets/project-2.jpg' alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
-                <a href='/heartfeltventures'>Heartfelt Ventures</a>
+                Heartfelt Ventures
               </h2>
               <span>Building Dreams, Bridging Realities</span>
-            </li>
-            <li className='card'>
+            </li></a>
+            <a href='/understandingunited'><li className='card'>
               <div className='img'>
                 <img src='/src/assets/project-1.PNG' alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
-                <a href='/understandingunited'>Understanding United</a>
+                Understanding United
               </h2>
               <span>Together, We Thrive: Understanding United</span>
-            </li>
-            <li className='card'>
+            </li></a>
+            <a href='/shespark'><li className='card'>
               <div className='img'>
                 <img src='/src/assets/project-3.jpg' alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
-                <a href='/shespark'>SheSpark Innovations</a>
+                SheSpark Innovations
               </h2>
               <span>Empowering Unity, Empowering Tomorrow</span>
-            </li>
-            <li className='card'>
+            </li></a>
+            <a href='/hopephoenix'><li className='card'>
               <div className='img'>
                 <img src='/src/assets/project-4.jpg' alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
-                <a href='/hopehoenix'>Hope Phoenix</a>
+                Hope Phoenix
               </h2>
               <span>Embracing Tomorrow's Promise</span>
-            </li>
-            <li className='card'>
+            </li></a>
+            <a href='/justbrew'><li className='card'>
               <div className='img'>
                 <img src='/src/assets/project-5.PNG' alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
-                <a href='/justbrew'>Just Brew</a>
+                Just Brew
               </h2>
               <span>Turning Ideas into Impact</span>
-            </li>
-            <li className='card'>
+            </li></a>
+            <a href='/empowerher'><li className='card'>
               <div className='img'>
                 <img src='/src/assets/project-6.PNG' alt='' draggable='false' />
               </div>
               <h2 style={{ color: 'rgb(0, 0, 0)', fontWeight: 'bold' }}>
-                <a href='/empowerher'>EmpowerHer Co.</a>
+                EmpowerHer Co.
               </h2>
               <span>Bringing Flavor to Every Bite</span>
-            </li>
+            </li></a>
           </ul>
           <i id='right' className='fa-solid fas fa-angle-right'><GoChevronRight /></i>
         </div>
@@ -129,12 +131,21 @@ const Startups = () => {
 };
 
 const Wrapper = styled.div`
-  padding: 20px;
+  padding: 50px;
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
+  background-color: #f8f8f8 ;
+
+  h1{
+    padding: 20px ;
+    text-align: center;
+    align-items: center;
+    text-decoration: underline;
+  }
 
   .carousel {
+    padding: 20px;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% / 3) - 12px);
