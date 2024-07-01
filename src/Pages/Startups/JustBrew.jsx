@@ -41,7 +41,7 @@ const JustBrew = () => {
   return (
     <Content>
       <Heading>Welcome To Just Brew!</Heading>
-      <Image src="/src/assets/project-5.PNG" alt="Just Brew" className="logImg" />
+      <Image src="project-5.PNG" alt="Just Brew" className="logImg" />
       <br />
       <button className="invest">
         <InvestLink href="#">Invest</InvestLink>
