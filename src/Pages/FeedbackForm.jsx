@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from 'react';
 import "./feedback.css";
+import emailjs from 'emailjs-com';
 
 function FeedbackPage() {
   useEffect(() => {
@@ -44,21 +45,39 @@ function FeedbackPage() {
     setFeedback(e.target.value);
   };
 
+  const sendFeedbackEmail = async (formData) => {
+    try {
+      const response = await emailjs.send(
+        'service_7ifnpdc',  // EmailJS service ID
+        ' template_lwovuy9', // EmailJS template ID
+        formData,
+        'mFZbq2zn7d1nHMIYM'      // EmailJS user ID
+      );
+      console.log('Email sent successfully:', response);
+      setIsSubmitted(true);
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 5000);
+    } catch (error) {
+      console.error('Failed to send email:', error);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTimeout(() => {
-        const subject = encodeURIComponent("Feedback and Suggestions for Improvement");
-        const body = encodeURIComponent(
-          `Name: ${name}\nEmail: ${email}\nRating: ${rating}\nFeedback: ${feedback}`
-        );
-        window.location.href = `mailto:startconnecthub@gmail.com?subject=${subject}&body=${body}`;
-        setRating(null);
-        setName("");
-        setEmail("");
-        setFeedback("");
-        setIsSubmitted(true);
-      }, 1000); // 1000 means 1second :)
+    const formData = {
+      name,
+      email,
+      rating,
+      feedback
     };
+    
+    sendFeedbackEmail(formData);
+    setRating(null);
+    setName("");
+    setEmail("");
+    setFeedback("");
+  };
 
   return (
     <div className="feedback-wrapper">
