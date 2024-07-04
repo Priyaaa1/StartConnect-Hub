@@ -1,9 +1,43 @@
+/* Styles for the wrapper */
+.wrapper.light {
+  background-color: #ffffff; /* Light background color */
+  color: #000000; /* Dark text color */
+}
+
+.wrapper.dark {
+  background-color: #222; /* Dark background color */
+  color: #f1f1f1; /* Light text color */
+}
+
+/* Styles for the body */
+body.light {
+  background-color: #f0f0f0; /* Light background color */
+  color: #000000; /* Dark text color */
+}
+
+body.dark {
+  background-color: #222; /* Dark background color */
+  color: #f1f1f1; /* Light text color */
+}
+
+
 .contact {
   margin: 70px auto;
   max-width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px; /* Padding to create space for the colored padding effect */
+  background-color: #444; /* Color for the padding area */
+  border-radius: 10px;
+}
+
+.contact-inner {
+  width: 100%;
+  background-color: #333; /* Background color for the inner content area */
+  padding: 50px;
+  border-radius: 90px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-col {
@@ -25,7 +59,6 @@
 
 .contact-col p {
   max-width: 450px;
-  list-style: 0.3;
 }
 
 .contact-col ul li {
@@ -43,7 +76,8 @@
 .contact form textarea {
   display: block;
   width: 90%;
-  /* background: #ebebeb; */
+  background: #555; 
+  color: #000000; 
   padding: 15px;
   border: 0;
   outline: 0;
@@ -52,25 +86,28 @@
   resize: none;
   border-radius: 10px;
 }
+
 .contact form {
   display: flex;
   flex-direction: column;
 }
+
 .contact form label {
   display: flex;
   text-align: left;
+  color: #0d00ff; 
 }
 
 .contact-col span {
   display: block;
   margin: 20px 0;
 }
-/*Added the hover effct here on  submit button */
-.btn-div .btn:hover{
 
+
+.btn-div .btn:hover {
   display: flex;
-  background-color:rgb(111, 111, 160);
-  color:white;
+  background-color: rgb(111, 111, 160);
+  color: rgb(255, 255, 255);
   justify-content: center;
 }
 
@@ -81,19 +118,17 @@
   padding-left: 40px;
   padding-right: 40px;
 }
-/* input{
-  width:70vw;
-} */
 
- .btn:hover{
-  background-color:rgb(111, 111, 160);
-  color:white;
+.btn:hover {
+  background-color: rgb(111, 111, 160);
+  color: rgb(255, 255, 255);
 }
+
 /* Media query for Smart Phone */
 @media (max-width: 600px) {
   .contact {
     margin-top: 10%;
-    flex-direction: column; /* Change flex direction to stack elements vertically */
+    flex-direction: column; 
   }
 
   .contact-col {
@@ -102,10 +137,9 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    /* background-color: black; */
   }
+
   .contact-right form {
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -114,33 +148,27 @@
 
   .contact-col h3 {
     font-size: 20px;
-    margin-bottom: 10px; /* Reduce margin bottom */
+    margin-bottom: 10px;
     justify-content: center;
   }
 
   .contact-col h3 img {
-    width: 25px; /* Reduce image size */
+    width: 25px; 
   }
 
   .contact form input,
   .contact form textarea {
     padding: 10px;
     font-size: 18px;
-    /* width: 350px; */
   }
-
-  /* .contact-col button {
-    width: 100%;
-  } */
 }
 
 @media (max-width: 370px) {
-  .contact-col form{
+  .contact-col form {
     width: 80vw;
-    }
-  .contact-col form input, .contact-col form textarea{
+  }
+
+  .contact-col form input, .contact-col form textarea {
     width: 80vw;
-    }
- 
-   
+  }
 }
