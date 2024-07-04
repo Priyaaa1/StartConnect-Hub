@@ -35,60 +35,63 @@ const Contact = () => {
   };
 
   return (
-    <div className={`contact ${theme}`} id="contact">
-      <div className="contact-col">
-        <h3 className="send">
-          Send us a message<img src={msg_icon} alt=""></img>
-        </h3>
-        <p>
-          Feel free to reach out through contact form. Your feedback, questions
-          and suggestions are important to us.
-        </p>
-        <ul>
-          <li>
-            <img src={mail_icon} alt=""></img><a href="mailto:startconnecthub@gmail.com"> startconnecthub@gmail.com</a>
-          </li>
-          <li>
-            <img src={phone_icon} alt=""></img>+91 1234567890
-          </li>
-          <li>
-            <img src={location_icon} alt=""></img>Address xyz
-          </li>
-        </ul>
-      </div>
-      <div className="contact-col">
-        <form onSubmit={onSubmit}>
-          <label>Your name</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-            required
-          ></input>
-          <label>Phone number</label>
-          <input
-            type="number"
-            name="phone"
-            pattern="\d{10}"
-            minLength="10"
-            maxLength="10"
-            placeholder="Only digits are allowed"
-            required
-          ></input>
-          <label>Write your message here</label>
-          <textarea
-            name="message"
-            rows="6"
-            placeholder="Enter your message"
-            required
-          ></textarea>
-          <div className="btn-div">
-            <button type="submit" className="btn dark-btn">
-              Submit <img src={white_arrow}></img>
-            </button>
-          </div>
-        </form>
-        <span>{result}</span>
+    <div className={`wrapper ${theme}`}>
+      <div className={`contact ${theme}`} id="contact">
+        <div className="contact-col">
+          <h3 className="send">
+            Send us a message<img src={msg_icon} alt=""></img>
+          </h3>
+          <p>
+            Feel free to reach out through contact form. Your feedback, questions
+            and suggestions are important to us.
+          </p>
+          <ul>
+            <li>
+              <img src={mail_icon} alt=""></img>
+              <a href="mailto:startconnecthub@gmail.com"> startconnecthub@gmail.com</a>
+            </li>
+            <li>
+              <img src={phone_icon} alt=""></img>+91 1234567890
+            </li>
+            <li>
+              <img src={location_icon} alt=""></img>Address xyz
+            </li>
+          </ul>
+        </div>
+        <div className="contact-col">
+          <form onSubmit={onSubmit}>
+            <label>Your name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              required
+            ></input>
+            <label>Phone number</label>
+            <input
+              type="number"
+              name="phone"
+              pattern="\d{10}"
+              minLength="10"
+              maxLength="10"
+              placeholder="Only digits are allowed"
+              required
+            ></input>
+            <label>Write your message here</label>
+            <textarea
+              name="message"
+              rows="6"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+            <div className="btn-div">
+              <button type="submit" className="btn dark-btn">
+                Submit <img src={white_arrow}></img>
+              </button>
+            </div>
+          </form>
+          <span>{result}</span>
+        </div>
       </div>
     </div>
   );
