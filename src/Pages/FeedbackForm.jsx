@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from 'react';
+import emailjs from 'emailjs-com'; 
 import "./feedback.css";
-import emailjs from 'emailjs-com';
 
 function FeedbackPage() {
   useEffect(() => {
@@ -45,13 +45,18 @@ function FeedbackPage() {
     setFeedback(e.target.value);
   };
 
+  // Initialize
+  useEffect(() => {
+    emailjs.init('mFZbq2zn7d1nHMIYM'); // EmailJS user ID
+  }, []);
+
   const sendFeedbackEmail = async (formData) => {
     try {
       const response = await emailjs.send(
         'service_7ifnpdc',  // EmailJS service ID
-        ' template_lwovuy9', // EmailJS template ID
+        'template_lwovuy9', // EmailJS template ID
         formData,
-        'mFZbq2zn7d1nHMIYM'      // EmailJS user ID
+        'mFZbq2zn7d1nHMIYM'     // EmailJS user ID
       );
       console.log('Email sent successfully:', response);
       setIsSubmitted(true);
@@ -65,19 +70,23 @@ function FeedbackPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const formData = {
       name,
       email,
       rating,
       feedback
     };
-    
-    sendFeedbackEmail(formData);
-    setIsSubmitted(true);
-    setRating(null);
-    setName("");
-    setEmail("");
-    setFeedback("");
+
+    sendFeedbackEmail(formData).then(() => {
+      setRating(null);
+      setName("");
+      setEmail("");
+      setFeedback("");
+      setIsSubmitted(true);
+    }).catch((error) => {
+      console.error('Error sending feedback email:', error);
+    });
   };
 
   return (
