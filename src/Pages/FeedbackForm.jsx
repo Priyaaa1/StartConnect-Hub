@@ -73,6 +73,7 @@ function FeedbackPage() {
     };
     
     sendFeedbackEmail(formData);
+    setIsSubmitted(true);
     setRating(null);
     setName("");
     setEmail("");
