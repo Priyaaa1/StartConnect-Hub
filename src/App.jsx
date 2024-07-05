@@ -33,6 +33,7 @@ import FullServiceFund from './Pages/FullServiceFund';
 import Notfound from './Components/Notfound/Notfound';
 import { useSelector } from 'react-redux';
 import FeedbackPage from './Pages/FeedbackForm';
+import Blogs from './Pages/Blogs'
 import ScrollProgressBar from './Components/ProgressBar';
 
 const ThemeContext = createContext();
@@ -73,6 +74,7 @@ const App = () => {
               <Route path="/contact" element={<ContactUS />} />
               <Route path='/explore' element={<Explore />} />
               <Route path='/privacypolicy' element={<PrivacyPolicy />} />
+              <Route path='/blogs' element={<Blogs />} />
               <Route path='/termsandconditions' element={<TermsAndConditions />} />
               <Route path='/licensing' element={<Licensing />} />
               <Route path='/visionandmission' element={<VisionAndMission />} />
