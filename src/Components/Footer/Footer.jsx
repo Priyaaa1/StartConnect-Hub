@@ -47,7 +47,9 @@ const Footer = () => {
                   About Us
                 </a>
               </li>
+              <NavLink to="/blogs">
               <li className="footer-link">Blogs</li>
+              </NavLink>
               <a
                 href="https://github.com/Priyaaa1/StartConnect-Hub"
                 target="_blank"
