@@ -28,6 +28,13 @@ import Licensing from './Pages/Licensing';
 import VisionAndMission from "./Pages/VisionAndMission";
 import HowItWorks from "./Pages/HowItWorks";
 import InvestorManagementPage from "./Pages/InvestorManagementPage";
+import Startups from "./Pages/Startups.jsx";
+import EmpowerHer from "./Pages/Startups/EmpowerHer.jsx";
+import UnderstandingUnited from "./Pages/Startups/UnderstandingUnited.jsx";
+import HeartfeltVentures from "./Pages/Startups/HeartfeltVentures.jsx";
+import HopePhoenix from "./Pages/Startups/HopePhoenix.jsx";
+import JustBrew from "./Pages/Startups/JustBrew.jsx";
+import SheSpark from "./Pages/Startups/SheSpark.jsx";
 import FinancialServices from './Pages/FinancialServices';
 import FullServiceFund from './Pages/FullServiceFund';
 import Notfound from './Components/Notfound/Notfound';
@@ -80,6 +87,13 @@ const App = () => {
               <Route path='/visionandmission' element={<VisionAndMission />} />
               <Route path='/howitworks' element={<HowItWorks />} />
               <Route path='/investormanagementpage' element={<InvestorManagementPage />} />
+              <Route path='/startups' element={<Startups />} />
+              <Route path='/empowerher' element={<EmpowerHer />} />
+              <Route path='/heartfeltventures' element={<HeartfeltVentures />} />
+              <Route path='/hopephoenix' element={<HopePhoenix />} />
+              <Route path='/justbrew' element={<JustBrew />} />
+              <Route path='/shespark' element={<SheSpark />} />
+              <Route path='/understandingunited' element={<UnderstandingUnited />} />
               <Route path='/financialservicesPage' element={<FinancialServices />} />
               <Route path="/fullservicefund" element={<FullServiceFund />} />
               <Route path='/feedback' element={<FeedbackPage />} />

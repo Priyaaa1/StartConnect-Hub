@@ -50,6 +50,8 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "html-webpack-plugin": "^5.6.0",
     "postcss": "^8.4.38",
+    "rimraf": "^5.0.7",
+    "svgo": "^3.3.2",
     "tailwindcss": "^3.4.3",
     "vite": "^5.2.12",
     "webpack": "^5.92.1",
