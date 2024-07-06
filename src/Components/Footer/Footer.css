@@ -73,6 +73,7 @@
   gap: 1rem;
   margin-top: 1rem;
   font-size: x-large;
+  flex-wrap: wrap; /* Added for responsiveness */
 }
 
 .footer-icons i {
@@ -172,6 +173,7 @@
   .footer-2 {
     width: 100%;
   }
+
   .footer-icons {
     justify-content: center;
   }
