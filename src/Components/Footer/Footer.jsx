@@ -48,7 +48,7 @@ const Footer = () => {
                 </a>
               </li>
               <NavLink to="/blogs">
-              <li className="footer-link">Blogs</li>
+                <li className="footer-link">Blogs</li>
               </NavLink>
               <a
                 href="https://github.com/Priyaaa1/StartConnect-Hub"
@@ -143,10 +143,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <i
-                  class="fa-brands fa-x-twitter"
-                  style={{ fontSize: "25px" }}
-                />
+                <i class="fa-brands fa-x-twitter" style={{ fontSize: "25px" }} />
               </a>
               <a
                 href="https://instagram.com/yourpage"
