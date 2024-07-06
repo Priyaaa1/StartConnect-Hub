@@ -7,6 +7,7 @@ const InvestorManagementPage = () => {
   const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
 
   return (
+
     <ManagementPageWrapper className={theme}>
       <h1>Investor Management</h1>
       <section>
@@ -16,10 +17,13 @@ const InvestorManagementPage = () => {
         With our platform, entrepreneurs can bring their visions to life and take their businesses to new heights.
       </section>
 
+    <a href="/startups">
+    <button className = "button-container">View StartUps</button>
+    </a>
+
       <h2 className='sub-heading'>
         Why Choose StartConnectHub?
       </h2>
-
       <img className="image" src="whychooseus.gif" alt="Why Choose Us"/>
 
       <section>
