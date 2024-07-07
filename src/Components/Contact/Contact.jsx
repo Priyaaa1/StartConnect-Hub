@@ -5,16 +5,40 @@ import mail_icon from "../../assets/mail-icon.png";
 import phone_icon from "../../assets/phone-icon.png";
 import location_icon from "../../assets/location-icon.png";
 import white_arrow from "../../assets/white-arrow.png";
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
 const Contact = () => {
   const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
+  const [emailError, setEmailError] = React.useState("");
+
   const [result, setResult] = React.useState("");
+
+  //-----email vaidation check
+  const validateEmail = (email) => {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    const approvedDomains = [".com", ".in", ".org", ".net"]; // Add more domains as needed
+
+    if (emailPattern.test(email)) {
+      let domain = email.substring(email.lastIndexOf("."));
+      return approvedDomains.includes(domain);
+    } else {
+      return false;
+    }
+  };
 
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
+    setEmailError(""); // Reset email error message
+
     const formData = new FormData(event.target);
+    const email = formData.get("email");
+
+    if (!validateEmail(email)) {
+        setEmailError("Please enter a valid email address.");
+        setResult("");
+        return;
+    }
 
     formData.append("access_key", "5759d7fc-28f1-473a-a904-ab8d5f981280");
 
@@ -46,7 +70,11 @@ const Contact = () => {
         </p>
         <ul>
           <li>
-            <img src={mail_icon} alt=""></img><a href="mailto:startconnecthub@gmail.com"> startconnecthub@gmail.com</a>
+            <img src={mail_icon} alt=""></img>
+            <a href="mailto:startconnecthub@gmail.com">
+              {" "}
+              startconnecthub@gmail.com
+            </a>
           </li>
           <li>
             <img src={phone_icon} alt=""></img>+91 1234567890
@@ -65,6 +93,16 @@ const Contact = () => {
             placeholder="Enter your name"
             required
           ></input>
+
+          <label>Email Address</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          ></input>
+          {emailError && <span style={{ color: "red" }}>{emailError}</span>}
+
           <label>Phone number</label>
           <input
             type="number"
