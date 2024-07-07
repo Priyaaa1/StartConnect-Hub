@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import "./Footer.css";
+import logo from "../../assets/logo2.png";
 import { FaGithub } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
+import Visitors from "./Components/Visitors";
 
 const Footer = () => {
   const [sticky, setSticky] = useState(false);
@@ -36,7 +38,20 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-container footer-container-md">
         <div className="footer-1">
+          <div className="footer-logo">
+            <a href="/">
+            <img
+              src={logo}
+              alt="Start Connect hub logo"
+              className="footer-logo"
+            />
+            </a>
+          </div>
           <div className="footer-title">Start Connect hub</div>
+            <a href="https://github.com/Priyaaa1/StartConnect-Hub" className="star-us">Star us ⭐</a>
+          <div className="footer-text">
+            <Visitors />
+          </div>
         </div>
         <div className="footer-half footer-sections">
           <div className="footer-2">
@@ -114,7 +129,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-2">
-            <p className="footer-section-title">Let's Connect</p>
+            <p className="footer-section-title">Let&rsquo;s Connect</p>
             <div className="footer-icons footer-icons-md">
               <a
                 href="https://linkedin.com/yourpage"
@@ -144,7 +159,7 @@ const Footer = () => {
                 rel="noreferrer"
               >
                 <i
-                  class="fa-brands fa-x-twitter"
+                  className="fa-brands fa-x-twitter"
                   style={{ fontSize: "25px" }}
                 />
               </a>
