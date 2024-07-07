@@ -3,7 +3,6 @@
   color: white;
   padding: 2.5rem 2.5rem 1rem 2.5rem;
 }
-
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -75,20 +74,19 @@
 .footer-link {
   padding: 0.25rem 0;
   cursor: pointer;
-  transition: transform 0.3s, color 0.3s; 
+  transition: all 0.5s; 
 }
 
 .footer-link a {
   text-decoration: none;
   color: white;
-  transition: color 0.3s, text-decoration 0.3s, transform 0.3s; 
+  transition: all 0.5s; 
 }
 
 .footer-link a:hover, 
 .footer-link:hover {
   color: #dc54b1; 
-  text-decoration: underline; 
-  transform: scale(1.05); 
+  scale: 1.1; 
 }
 
 .footer-icons {
