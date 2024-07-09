@@ -115,13 +115,13 @@ const Navbar = () => {
       <button className="theme-toggle-button" onClick={() => dispatch(changeTheme())} title="Change Theme">
         <img src={isDark ? moonIcon : sunIcon} alt="Theme Icon" />
       </button>
-      <img
-        src={menu_icon}
-        alt="Menu Icon"
-        className="menu-icon"
-        onClick={toggleMenu}
+      <div
+      onClick={toggleMenu}
         ref={menuIconRef}
-      />
+        className={`Menu_Icon ${mobileMenu?"Open_menu":""}`}
+        >
+          <div className="lines" ></div>
+        </div>
     </nav>
   );
 };

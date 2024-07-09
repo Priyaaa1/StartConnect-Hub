@@ -218,3 +218,31 @@ nav a:hover {
   background: rgba(128, 128, 128, 0.4);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+nav .Menu_Icon{
+  position: relative;
+  width:3rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .Menu_Icon .lines{
+  width: 1.8rem;
+  height: 2px;
+  background: white; 
+  position: relative;
+  transition: 0.3s ease-in;
+}
+nav .Menu_Icon .lines::after,nav .Menu_Icon .lines::before{
+  background: white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  content: "";
+  transition: 0.3s ease-in;
+}
+nav .Menu_Icon .lines::after{top: 10px;}
+nav .Menu_Icon .lines::before{top: -10px;}
+nav .Menu_Icon.Open_menu .lines{position: absolute;background-color: transparent;}
+nav .Menu_Icon.Open_menu .lines::before{rotate: -45deg;top: 0px;}
+nav .Menu_Icon.Open_menu .lines::after{rotate: 45deg;top: 0px;}
