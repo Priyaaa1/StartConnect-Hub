@@ -13,7 +13,7 @@ const About = () => {
         {/* <img src={play_icon} alt='' className='play-icon'></img> */}
       </div>
       <div className="about-right" id="heading" data-aos="slide-left" >
-        <h2 className={`about-heading ${theme}`}>Bridging the gap between ideas and investments</h2>
+        <h2 className="about-heading" >Bridging the gap between ideas and investments</h2>
         <div className="about-right-div2">
           <p>
             At StartConnectHub, our mission is to create a thriving ecosystem

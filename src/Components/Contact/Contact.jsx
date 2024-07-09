@@ -5,10 +5,13 @@ import mail_icon from "../../assets/mail-icon.png";
 import phone_icon from "../../assets/phone-icon.png";
 import location_icon from "../../assets/location-icon.png";
 import white_arrow from "../../assets/white-arrow.png";
+import black_arrow from "../../assets/dark-arrow.png";
 import { useSelector } from "react-redux";
 
 const Contact = () => {
   const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
+  const reversetheme = useSelector((state) => state.theme.value) ? "light" : "dark";
+  const arrowImage = theme === 'light' ? white_arrow : black_arrow;
   const [emailError, setEmailError] = React.useState("");
 
   const [result, setResult] = React.useState("");
@@ -121,8 +124,8 @@ const Contact = () => {
             required
           ></textarea>
           <div className="btn-div">
-            <button type="submit" className="btn dark-btn">
-              Submit <img src={white_arrow}></img>
+            <button type="submit" className={`btn ${reversetheme}`}>
+              Submit <img src={arrowImage}></img>
             </button>
           </div>
         </form>
