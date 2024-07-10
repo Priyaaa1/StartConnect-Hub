@@ -125,6 +125,9 @@ const Footer = () => {
                 <li className="footer-link">Vision and Mission</li>
               </NavLink>
               <li className="footer-link">Career</li>
+              <NavLink to="/contributor">
+              <li className="footer-link">Our Contributors</li>
+              </NavLink>
             </ul>
           </div>
 

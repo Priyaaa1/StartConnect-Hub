@@ -42,6 +42,7 @@ import { useSelector } from 'react-redux';
 import FeedbackPage from './Pages/FeedbackForm';
 import Blogs from './Pages/Blogs'
 import ScrollProgressBar from './Components/ProgressBar';
+import Contributors from './Pages/Contributors.jsx';
 
 const ThemeContext = createContext();
 
@@ -94,6 +95,7 @@ const App = () => {
               <Route path='/justbrew' element={<JustBrew />} />
               <Route path='/shespark' element={<SheSpark />} />
               <Route path='/understandingunited' element={<UnderstandingUnited />} />
+              <Route path='/contributor' element={<Contributors/>}/>
               <Route path='/financialservicesPage' element={<FinancialServices />} />
               <Route path="/fullservicefund" element={<FullServiceFund />} />
               <Route path='/feedback' element={<FeedbackPage />} />
