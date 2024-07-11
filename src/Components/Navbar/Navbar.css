@@ -1,11 +1,11 @@
 .container1 {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 6%;
+  padding-right: 7%;
 }
 
 nav {
   width: 100%;
-  background-color:#212ea0; 
+  background-color: #212ea0; 
   font-size: 14px;
   padding: 10px 0;
   position: fixed;
@@ -15,25 +15,7 @@ nav {
   display: flex;
   align-items: center;
   z-index: 10;
-  transition: top 0.3s ease-in-out;
 }
- /* CSS for name in navbar */
-/*  .name_nav {
-  color: rgb(255, 255, 255); 
-  font-size: 2vw; 
-  position: relative;
-  bottom: 5.5vw; 
-  left: 5.5vw; 
-}
-
-/* Media query for smaller screens */
-/*@media (max-width: 768px) {
-  .name_nav {
-    font-size: 4vw;
-    bottom: 8vw;
-    left: 6vw;
-  }
-} */
 
 nav.container1 p {
   color: #edf2f2;
@@ -47,52 +29,69 @@ nav.container1 p {
   margin-right: 5px;
 }
 
+.webtitle {
+  font-weight: bold; 
+  font-size: 22px; 
+  color: #edf2f2; 
+  margin: 0;
+  display: inline; 
+}
+
 .logIn {
-  /* background-color: rgb(145, 99, 187); */
   background-color: transparent;
 }
 
 .logIn:hover {
-  background-color: rgb(109, 65, 151);
+  color: rgb(255, 255, 128);
+  transform: scale(1.1);
 }
 
 nav ul li {
   display: inline-block;
   list-style: none;
   margin: 5px 20px;
-  font-size: 14px;
+  font-size: 16px;
+  color: white;
+  position: relative;
+  transition: transform 200ms ease-in-out;
 }
 
-nav ul li a.active {
-  color: lightgoldenrodyellow;
+nav ul li::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li:hover {
+  color: rgb(255, 255, 128);
+  transform: scale(1.1);
+}
+
+nav ul li:hover::before {
+  visibility: visible;
+  width: 100%;
 }
 
 nav a {
   flex-wrap: wrap;
   color: white;
   margin-right: auto;
-  transition: color 0.3s ease;
   display: flex;
   flex-direction: row-reverse;
 }
 
-nav a:hover {
-  background-color: rgb(109, 65, 151); /* Background color on hover */
-  background-size: 80% 80%;
-  color: black;
-  border-radius: 3px;
-  padding: 6px;
-  text-decoration: underline;
-  font-size: 20px;
-}
-
 .dark-nav {
-  /* background: #212EA0; */
   transition: 0.5s;
 }
 
 .hidden-nav {
-  top: -100px; /* Adjust this value to hide the navbar completely */
+  top: -100px; 
 }
 
 .menu-icon {
@@ -136,7 +135,7 @@ nav a:hover {
     position: absolute;
     top: 98px;
     right: 0px;
-    background:  rgba(0, 0, 128, .6);;
+    background: rgba(0, 0, 128, .6);
     z-index: 10;
     width: 100%;
     padding-top: 20px;
@@ -160,22 +159,13 @@ nav a:hover {
     display: block; 
   }
 
-  
   nav ul li a {
     display: block;
     padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  nav ul li a:hover {
-    background-color: rgb(109, 65, 151);
-    color: black;
-    border-radius: 3px;
   }
 }
 
 .theme-toggle-button {
-  /* background: rgba(128, 128, 128, 0.2); Subtle grey background */
   height: 42px;
   width: 42px;
   border: none;
@@ -185,8 +175,8 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  padding: 0; /* Increase padding for larger button */
-  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  padding: 0;
+  transition: box-shadow 0.3s, background 0.3s;
 }
 
 .theme-toggle-button img {
@@ -196,20 +186,16 @@ nav a:hover {
   border-radius: 20px;
 }
 
-.theme-toggle-button:hover {
-  transform: scale(1.1);
-  background: rgba(128, 128, 128, 0.4); /* Darker grey on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-}
-
 .theme-toggle-button:focus {
   outline: none;
 }
+
 .theme-toggle-button box-icon {
   width: 20px; /* Smaller icon size */
   height: 20px; /* Smaller icon size */
   fill: white; /* Icon color to white */
 }
+
 .dark-nav .theme-toggle-button {
   background: rgba(128, 128, 128, 0.2);
 }
@@ -218,3 +204,4 @@ nav a:hover {
   background: rgba(128, 128, 128, 0.4);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
