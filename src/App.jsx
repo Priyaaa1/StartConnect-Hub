@@ -68,7 +68,7 @@ const App = () => {
   return (
     <ThemeContext.Provider value={{ theme: currentTheme, toggleTheme }}>
       <>
-        <div className={`main-div ${currentTheme}`}>
+        <div className={`main-div ${theme}`}>
           <Router>
             <Navbar />
             <ScrollProgressBar />
@@ -115,7 +115,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <div className="container">
+      <div className={`container `}>
         <h3 id='header'>ABOUT US</h3>
         <About />
         <Testimonials />

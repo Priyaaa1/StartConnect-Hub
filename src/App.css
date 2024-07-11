@@ -37,7 +37,7 @@
 }
 .cardTheme-dark{
     background-color: rgb(24,25,27) !important;
-    border-color: #2D3135 !important;
+    border:2px solid #ffffff !important;
     color: white !important;
 }
 .light {
@@ -48,7 +48,7 @@
     
 .dark {
     background-color:#141726 !important;
-    border-color: #2D3135 !important;
+    border-color: #fbfbfb !important;
     color: white !important;
 }
 
