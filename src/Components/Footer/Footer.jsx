@@ -4,8 +4,7 @@ import logo from "../../assets/logo2.png";
 import { FaGithub } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
-import Visitors from "./Components/Visitors";
-
+import Visitors from "../Visitors";
 const Footer = () => {
   const [sticky, setSticky] = useState(false);
   const navigate = useNavigate();
