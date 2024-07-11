@@ -73,10 +73,10 @@ const Navbar = () => {
           : ""
         } ${theme} sticky-nav`}
     >
-      <NavLink to="/" onClick={() => handleMenuItemClick("/", "hero", 0)}>
-        <p>Start Connect Hub</p>
-        <img src={logo} alt="Logo" className="logo" />
-      </NavLink>
+          <NavLink to="/" onClick={() => handleMenuItemClick("/", "hero", 0)}>
+              <p className="webtitle">Start Connect Hub</p>
+              <img src={logo} alt="Logo" className="logo" />
+           </NavLink>
       <ul ref={menuRef} className={mobileMenu ? "show-mobile-menu" : ""}>
         <li>
           <div className="nav1">
@@ -107,9 +107,11 @@ const Navbar = () => {
           </div>
         </li>
         <li>
+        <div className="nav1">
           <NavLink to="/login" onClick={() => handleMenuItemClick("/login", null, 0)}>
-            <button className='logIn'>LOG IN</button>
+            LOG IN
           </NavLink>
+          </div>
         </li>
       </ul>
       <button className="theme-toggle-button" onClick={() => dispatch(changeTheme())} title="Change Theme">
