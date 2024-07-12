@@ -16,12 +16,15 @@ const ChatAssistant = () => {
 
   return (
     <div className="chatbot chatbot-scroll">
-      <img 
-        className="Logo" 
-        src={isOpen ? cancel_icon : "chatbotLogo.jpeg"} 
-        alt="Logo" 
-        onClick={toggleChatbot} 
-      />
+      <div className={`tooltip ${isOpen ? 'hidden' : ''}`}>
+        <img 
+          className="Logo" 
+          src={isOpen ? cancel_icon : "bot.gif"} 
+          alt="Logo" 
+          onClick={toggleChatbot} 
+        />
+        <span className="tooltiptext">Welcome to Start Connect-Hub. <br /> How can I help you?</span>
+      </div>
       {isOpen && 
         <Chatbot
           config={config}
