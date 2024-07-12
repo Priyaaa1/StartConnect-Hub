@@ -80,8 +80,8 @@ const Navbar = () => {
       <ul ref={menuRef} className={mobileMenu ? "show-mobile-menu" : ""}>
         <li>
           <div className="nav1">
-            <NavLink to="/" onClick={() => handleMenuItemClick("/", "hero", 0)}>
-              Home
+            <NavLink to="/explore" >
+            Services
             </NavLink>
           </div>
         </li>
