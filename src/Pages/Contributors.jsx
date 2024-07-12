@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Contributors.css';
+
 function Contributors() {
   const [contributors, setContributors] = useState([]);
+
   useEffect(() => {
-    async function Contributors() {
+    async function fetchContributors() {
       try {
         const response = await axios.get(
           'https://api.github.com/repos/Priyaaa1/StartConnect-Hub/contributors'
@@ -14,12 +16,12 @@ function Contributors() {
         console.error('Error in fetching contributors:', error);
       }
     }
-    Contributors();
+    fetchContributors();
   }, []);
 
   return (
     <div className="contributors-container">
-      <h1 className="contributors-title">Contributors</h1>
+      <h1 className="contributors-title">Our Contributors</h1>
       <div className="contributors-grid">
         {contributors.map((contributor) => (
           <div key={contributor.id} className="contributor-card">
