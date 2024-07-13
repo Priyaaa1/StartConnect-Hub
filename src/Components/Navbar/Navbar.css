@@ -5,7 +5,7 @@
 
 nav {
   width: 100%;
-  background-color:#212ea0; 
+  background-color: #212ea0;
   font-size: 14px;
   padding: 10px 0;
   position: fixed;
@@ -17,7 +17,7 @@ nav {
   z-index: 10;
   transition: top 0.3s ease-in-out;
 }
- /* CSS for name in navbar */
+/* CSS for name in navbar */
 /*  .name_nav {
   color: rgb(255, 255, 255); 
   font-size: 2vw; 
@@ -50,6 +50,7 @@ nav.container1 p {
 .logIn {
   /* background-color: rgb(145, 99, 187); */
   background-color: transparent;
+  transition: 0.15s ease;
 }
 
 .logIn:hover {
@@ -67,25 +68,29 @@ nav ul li a.active {
   color: lightgoldenrodyellow;
 }
 
-nav a {
+nav a,
+nav .nav1 {
   flex-wrap: wrap;
   color: white;
   margin-right: auto;
   transition: color 0.3s ease;
   display: flex;
   flex-direction: row-reverse;
+  position: relative;
 }
-
-nav a:hover {
-  background-color: rgb(109, 65, 151); /* Background color on hover */
-  background-size: 80% 80%;
-  color: black;
-  border-radius: 3px;
-  padding: 6px;
-  text-decoration: underline;
-  font-size: 20px;
+nav .nav1::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  border-bottom: 1px solid lightgoldenrodyellow;
+  padding: 10px 0;
+  width: 35%;
+  /* display: none; */
+  transition: all 900ms ease;
 }
-
+nav .nav1:hover::before {
+  width: 100%;
+}
 .dark-nav {
   /* background: #212EA0; */
   transition: 0.5s;
@@ -100,10 +105,9 @@ nav a:hover {
   margin-left: 15px;
 }
 
-.hideHamburger{
+.hideHamburger {
   display: none;
 }
-
 
 /* Media query for tablets */
 @media (max-width: 1100px) {
@@ -141,12 +145,12 @@ nav a:hover {
     position: absolute;
     top: 98px;
     right: 0px;
-    background:  rgba(0, 0, 128, .6);;
+    background: rgba(0, 0, 128, 0.6);
     z-index: 10;
     width: 100%;
     padding-top: 20px;
     transition: 0.5s;
-    display: none; 
+    display: none;
   }
 
   nav ul li {
@@ -160,17 +164,15 @@ nav a:hover {
     width: 30px;
     cursor: pointer;
   }
-    .hideHamburger{
-      display: block;
-      cursor: pointer;
-    }
-  
-  
-  .show-mobile-menu {
-    display: block; 
+  .hideHamburger {
+    display: block;
+    cursor: pointer;
   }
 
-  
+  .show-mobile-menu {
+    display: block;
+  }
+
   nav ul li a {
     display: block;
     padding: 10px 15px;
