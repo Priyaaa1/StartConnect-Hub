@@ -35,12 +35,28 @@ const GoToTop = () => {
 };
 
 const Wrapper = styled.div`
+@media (max-width:481px){
+display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 68px;
+  left: 86%;
+  color: white;
+  background-color: blue;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    background-color: #007bff;
+  }}
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   bottom: 17px;
-  left: 20px;
+  left: 85px;
   color: white;
   background-color: blue;
   width: 48px;

@@ -130,6 +130,7 @@
 }
 
 .footer-bottom-link {
+  padding-right: 4%;
   cursor: pointer;
   transition: color 0.3s, transform 0.3s; 
 }
