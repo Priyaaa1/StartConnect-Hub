@@ -1,14 +1,25 @@
 import React, { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import "./Login.css";
-import { GoogleLogin } from "@react-oauth/google";
-import {jwtDecode} from "jwt-decode";
+import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";    /*react libraries used 
+                                                                       for importing eye icon */
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [warnings, setWarnings] = useState({ email: "", password: "" });
+  const [isVisible,setVisible] = useState(false);
   const navigate = useNavigate();
+
+  const eye = <FontAwesomeIcon icon={faEye} />;
+
+  const  togglePasswordFunction=()=>{      //toggling function for visibility of password
+    setVisible(isVisible?false:true)
+  };
+  
 
   const handleLogin = () => {
     let emailWarning = "";
@@ -36,57 +47,71 @@ const Login = () => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
+  const handleGoogleLoginSuccess = (credentialResponse) => {
+    const credentialDecoded = jwt_decode(credentialResponse.credential);
+    console.log("Google Login Success:", credentialDecoded);
+    navigate("/explore");
+  };
+
+  const handleGoogleLoginFailure = () => {
+    console.log("Login Failed");
+  };
+
   return (
-    <div className="login-outerContainer">
-      <div className="login-container">
-        <h2>Login</h2>
-        <div className="input">
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-              setWarnings((prevWarnings) => ({ ...prevWarnings, email: "" }));
-            }}
-            onBlur={(e) => {
-              if (!validateEmail(e.target.value)) {
-                setWarnings((prevWarnings) => ({ ...prevWarnings, email: "*Please enter a valid email address!" }));
-              }
-            }}
-          />
-          {warnings.email && <p style={{ color: "red" }} className="warningmsg">{warnings.email}</p>}
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-              setWarnings((prevWarnings) => ({ ...prevWarnings, password: "" }));
-            }}
-            onBlur={(e) => {
-              if (!e.target.value) {
-                setWarnings((prevWarnings) => ({ ...prevWarnings, password: "*Please enter your password" }));
-              }
-            }}
-          />
-          {warnings.password && <p style={{ color: "red" }} className="warningmsg">{warnings.password}</p>}
-        </div>
-        <button onClick={handleLogin}>Login</button>
-        <p>
-          Don't have an account? <NavLink to="/signup">Sign up</NavLink>
+    <GoogleOAuthProvider clientId="784513715091-aa0p18bmv854re0amstgj2up3656cvsd.apps.googleusercontent.com">
+      <div className="login-outerContainer">
+        <div className="login-container">
+          <h2>Login</h2>
+          <div className="input">
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                setWarnings((prevWarnings) => ({ ...prevWarnings, email: "" }));
+              }}
+              onBlur={(e) => {
+                if (!validateEmail(e.target.value)) {
+                  setWarnings((prevWarnings) => ({ ...prevWarnings, email: "*Please enter a valid email address!" }));
+                }
+              }}
+            />
+            {warnings.email && <p style={{ color: "red" }} className="warningmsg">{warnings.email}</p>}
+           
+            <input
+              type={ isVisible ? "text" : "password"}
+              className="pasword"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+                setWarnings((prevWarnings) => ({ ...prevWarnings, password: "" }));
+              }}
+              onBlur={(e) => {
+                if (!e.target.value) {
+                  setWarnings((prevWarnings) => ({ ...prevWarnings, password: "*Please enter your password" }));
+                }
+              }}
+            />
+           <i className = "eye" onClick={togglePasswordFunction}>{eye}</i>{" "} 
+
+            {warnings.password && <p style={{ color: "red" }} className="warningmsg">{warnings.password}</p>}
+          </div>
+          <button onClick={handleLogin}>Login</button>
+          <p>
+          Forgot your password? <NavLink to="/forgot-password">Reset it here</NavLink>
         </p>
-        <GoogleLogin
-          onSuccess={(credentialResponse) => {
-            const credentialDecoded = jwtDecode(credentialResponse.credential);
-            console.log(credentialDecoded);
-          }}
-          onError={() => {
-            console.log("Login Failed");
-          }}
-        />
+          <p>
+            Don't have an account? <NavLink to="/signup">Sign up</NavLink>
+          </p>
+          <GoogleLogin
+            onSuccess={handleGoogleLoginSuccess}
+            onError={handleGoogleLoginFailure}
+          />
+        </div>
       </div>
-    </div>
+    </GoogleOAuthProvider>
   );
 };
 

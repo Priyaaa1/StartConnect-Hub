@@ -81,15 +81,15 @@
     justify-content:center
   }
 .btn{
-  background-color: rgb(206 152 206)
+  background-color: rgb(0, 0, 0)
 }
 .btn:hover{
     color:rgb(17, 1, 1);
-    background-color: rgb(129, 166, 235);
+    background-color: rgb(206, 152, 206);
     text-decoration: none;
 }
 .card:hover{
-    background-color:rgb(24,25,27);
+    background-color:rgb(206, 204, 254);
 }
 
 /* Explore.css */
@@ -107,7 +107,7 @@
   width: 100%;
   max-width: 600px;
   height: auto;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .header-image:hover {
@@ -148,7 +148,7 @@ h1 {
   width: 100%;
   max-width: 600px;
   height: auto;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .header-image:hover {

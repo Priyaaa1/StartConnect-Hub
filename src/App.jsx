@@ -1,7 +1,5 @@
-// import ReactDOM from 'react-dom';
-// import React, { useEffect } from 'react';
-import ReactDOM from 'react-dom';
 import React, { createContext, useEffect, useState } from 'react';
+import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -12,6 +10,7 @@ import Title from "./Components/Title/Title";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
+import ForgotPassword from './Components/ForgotPassword/ForgotPassword';
 import Signup from "./Components/Signup/Signup";
 import AboutUs from "./Components/Footer/Components/AboutUS";
 import Faq from "./Components/Footer/Components/faq";
@@ -21,27 +20,38 @@ import GoToTop from "./Components/GoToTop";
 import Accordian from "./Components/FAQ/accordian";
 import './App.css';
 import ChatAssistant from "./Components/ChatAssistant/ChatAssistant";
-import Chatbot from 'react-chatbot-kit'
-import 'react-chatbot-kit/build/main.css'
-import Explore from '../src/Pages/Explore'
+import 'react-chatbot-kit/build/main.css';
+import Explore from './Pages/Explore';
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
+import Licensing from './Pages/Licensing';
 import VisionAndMission from "./Pages/VisionAndMission";
 import HowItWorks from "./Pages/HowItWorks";
 import InvestorManagementPage from "./Pages/InvestorManagementPage";
-import FinancialServices from './Pages/FinancialServices'
+import Startups from "./Pages/Startups.jsx";
+import EmpowerHer from "./Pages/Startups/EmpowerHer.jsx";
+import UnderstandingUnited from "./Pages/Startups/UnderstandingUnited.jsx";
+import HeartfeltVentures from "./Pages/Startups/HeartfeltVentures.jsx";
+import HopePhoenix from "./Pages/Startups/HopePhoenix.jsx";
+import JustBrew from "./Pages/Startups/JustBrew.jsx";
+import SheSpark from "./Pages/Startups/SheSpark.jsx";
+import FinancialServices from './Pages/FinancialServices';
 import FullServiceFund from './Pages/FullServiceFund';
-import { PiSelectionInverseThin } from "react-icons/pi";
 import Notfound from './Components/Notfound/Notfound';
 import { useSelector } from 'react-redux';
 import FeedbackPage from './Pages/FeedbackForm';
+import Blogs from './Pages/Blogs'
+import ScrollProgressBar from './Components/ProgressBar';
+import Contributors from './Pages/Contributors.jsx';
 
+const ThemeContext = createContext();
 
 const App = () => {
   const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
+  const [currentTheme, setTheme] = useState(theme);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
   };
@@ -56,32 +66,46 @@ const App = () => {
   }, []);
 
   return (
-    <div className={`main-div ${theme}`}>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/contact" element={<ContactUS />} />
-          <Route path='/explore' element={<Explore />} />
-          <Route path='/privacypolicy' element={<PrivacyPolicy />} />
-          <Route path='/termsandconditions' element={<TermsAndConditions />} />
-          <Route path='/visionandmission' element={<VisionAndMission />} />
-          <Route path='/howitworks' element={<HowItWorks />} />
-          <Route path='/investormanagementpage' element={<InvestorManagementPage />} />
-          <Route path='/financialservicesPage' element={<FinancialServices />} />
-          <Route path="/fullservicefund" element={<FullServiceFund />} />
-          <Route path='/feedback' element={<FeedbackPage />} />
-          <Route path="*" element={<Notfound />} />
-        </Routes>
-        <ChatAssistant />
-        <GoToTop />
-        <Footer />
-      </Router>
-    </div>
+    <ThemeContext.Provider value={{ theme: currentTheme, toggleTheme }}>
+      <div className={`main-div ${theme}`}>
+        <Router>
+          <Navbar />
+          <ScrollProgressBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/contact" element={<ContactUS />} />
+            <Route path='/explore' element={<Explore />} />
+            <Route path='/privacypolicy' element={<PrivacyPolicy />} />
+            <Route path='/blogs' element={<Blogs />} />
+            <Route path='/termsandconditions' element={<TermsAndConditions />} />
+            <Route path='/licensing' element={<Licensing />} />
+            <Route path='/visionandmission' element={<VisionAndMission />} />
+            <Route path='/howitworks' element={<HowItWorks />} />
+            <Route path='/investormanagementpage' element={<InvestorManagementPage />} />
+            <Route path='/startups' element={<Startups />} />
+            <Route path='/empowerher' element={<EmpowerHer />} />
+            <Route path='/heartfeltventures' element={<HeartfeltVentures />} />
+            <Route path='/hopephoenix' element={<HopePhoenix />} />
+            <Route path='/justbrew' element={<JustBrew />} />
+            <Route path='/shespark' element={<SheSpark />} />
+            <Route path='/understandingunited' element={<UnderstandingUnited />} />
+            <Route path='/contributor' element={<Contributors />} />
+            <Route path='/financialservicesPage' element={<FinancialServices />} />
+            <Route path="/fullservicefund" element={<FullServiceFund />} />
+            <Route path='/feedback' element={<FeedbackPage />} />
+            <Route path="*" element={<Notfound />} />
+          </Routes>
+          <ChatAssistant />
+          <GoToTop />
+          <Footer />
+        </Router>
+      </div>
+    </ThemeContext.Provider>
   );
 };
 
@@ -89,8 +113,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-
-      <div className="container">
+      <div className={`container `}>
         <h3 id='header'>ABOUT US</h3>
         <About />
         <Testimonials />
@@ -103,3 +126,5 @@ const Home = () => {
 };
 
 export default App;
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);

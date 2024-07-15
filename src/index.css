@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import 'font-awesome/css/font-awesome.min.css';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 * {
   margin: 0;
@@ -14,19 +16,25 @@ body {
 /*Scrollbar*/
 body::-webkit-scrollbar {
   width: 8px;
-  /* Width of the scrollbar */
+
 }
+
 
 body::-webkit-scrollbar-track {
   background: #f1f1f1;
-  /* Color of the track */
+
 }
 
 body::-webkit-scrollbar-thumb {
   background: #007bff;
-  /* Color of the thumb */
+
   border-radius: 6px;
-  /* Roundness of the thumb */
+
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #4d79fd;
+  /* Color of the thumb on hover */
 }
 
 

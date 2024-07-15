@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
-  margin-top: 150px; /* Adjust this value to move the login box down */
+  height: auto;
+  margin-top: 100px; /* Adjust this value to move the login box down */
+  padding-bottom: 10px;
 }
 
 .login-container {
@@ -11,7 +12,7 @@
   background-image: linear-gradient(315deg, #ffffff 0%, #91a6ff 74%);
   width: 400px;
   margin: 0 auto;
-  padding: 05px;
+  padding: 10px 10px 20px 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
   background-color: #fff;
@@ -55,7 +56,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #007bff;
 }
 
 .login-container p {
@@ -81,11 +82,24 @@ p a:hover {
   text-align: center;
   margin-left: 50px;
 }
-.warningmsg{
+.warningmsg {
   margin: 0;
   text-align: left;
   padding: 0;
   margin-bottom: 10px;
   /* justify-content: center;
   display: flex; */
+}
+.eye {
+  float: right;
+  left:-9px;
+  margin-top: -45px;
+  position: relative;
+  z-index: 2;
+  width: 14px; /*Desired width*/
+  height: 14px; /*Desired height*/
+}
+.eye:hover {
+  color: #007efc;
+  cursor: pointer;
 }
