@@ -78,10 +78,17 @@ const Navbar = () => {
         <img src={logo} alt="Logo" className="logo" />
       </NavLink>
       <ul ref={menuRef} className={mobileMenu ? "show-mobile-menu" : ""}>
-        <li>
+      <li>
           <div className="nav1">
             <NavLink to="/" onClick={() => handleMenuItemClick("/", "hero", 0)}>
               Home
+            </NavLink>
+          </div>
+        </li>
+        <li>
+          <div className="nav1">
+            <NavLink to="/explore" >
+            Services
             </NavLink>
           </div>
         </li>
