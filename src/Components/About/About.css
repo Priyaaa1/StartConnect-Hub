@@ -1,20 +1,27 @@
-.about{
+.about {
   margin: 100px auto;
-  display: flex;
   justify-items: center;
   justify-content: space-between;
   width: 90%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 1);
 }
 
-.about-left{
+.about-left {
   flex-basis: 40%;
+  position: relative;
+  width: 250px;
+  margin: 0 10px;
 }
 
-#dark .about-heading {
+#dark.about-heading {
   color: white;
 }
 
-.about-right{
+.about-right {
   flex-basis: 56%;
   display: flex;
   flex-direction: column;
@@ -22,57 +29,97 @@
   text-align: center;
 }
 
-.about-img{
+.about-img {
   width: 100%;
   border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  /* Ensuring smooth transition */
+  display: block;
 }
 
-.about h3{
+.about-img:hover {
+  transform: scale(0.8);
+  /* Zoom out effect on hover */
+  z-index: 2;
+}
+
+.about h3 {
   font-weight: 600;
-  font-weight: 16px;
+  font-size: 16px;
 }
 
-.about h2{
+.about h2 {
   font-weight: 600;
   font-size: 35px;
   margin: 10px 0;
   max-width: 400px;
   text-align: center;
-  
+  text-decoration: underline;
+  /* This line adds an underline */
 }
 
-.about p{
+.about p {
   margin-bottom: 15px;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.lightbox-img {
+  max-width: 80%;
+  max-height: 80%;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
   .about {
-    flex-direction: column; /* Change flex direction to stack elements vertically */
-    align-items: center; /* Center align items */
+    flex-direction: column;
+    align-items: center;
   }
 
-  #heading{
-      display: flex;
-      justify-content: center;
+  #heading {
+    display: flex;
+    justify-content: center;
   }
 
   .about-left,
   .about-right {
     flex-basis: 100%;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
     flex-direction: column;
   }
 
   .about-img {
-    border-radius: 15px; 
+    border-radius: 15px;
   }
 
   .about h2 {
-    font-size: 28px; /* Reduce font size */
-    text-align: start; /* Center align text */
+    font-size: 28px;
+    text-align: start;
   }
 
   .about p {
-    text-align: center; 
+    text-align: center;
   }
 }

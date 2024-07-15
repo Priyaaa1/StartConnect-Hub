@@ -36,6 +36,7 @@ import Notfound from './Components/Notfound/Notfound';
 import { useSelector } from 'react-redux';
 import FeedbackPage from './Pages/FeedbackForm';
 
+
 const App = () => {
   const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
 
@@ -56,8 +57,8 @@ const App = () => {
 
   return (
     <div className={`main-div ${theme}`}>
-    <Router>
-      <Navbar />
+      <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -65,35 +66,35 @@ const App = () => {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/contact" element={<ContactUS />} />
-          <Route path='/explore' element={<Explore/>}/>
-          <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
-          <Route path='/termsandconditions' element={<TermsAndConditions />}/>
-          <Route path='/visionandmission' element={<VisionAndMission />}/>
-          <Route path='/howitworks' element={<HowItWorks />}/>
-          <Route path='/investormanagementpage' element={<InvestorManagementPage/>}/>
-          <Route path='/financialservicesPage' element = {<FinancialServices/>}/>
-          <Route path="/fullservicefund" element={<FullServiceFund/>}/>
-          <Route path='/feedback' element={<FeedbackPage />}/>
-          <Route path="*" element={<Notfound/>}/>
+          <Route path='/explore' element={<Explore />} />
+          <Route path='/privacypolicy' element={<PrivacyPolicy />} />
+          <Route path='/termsandconditions' element={<TermsAndConditions />} />
+          <Route path='/visionandmission' element={<VisionAndMission />} />
+          <Route path='/howitworks' element={<HowItWorks />} />
+          <Route path='/investormanagementpage' element={<InvestorManagementPage />} />
+          <Route path='/financialservicesPage' element={<FinancialServices />} />
+          <Route path="/fullservicefund" element={<FullServiceFund />} />
+          <Route path='/feedback' element={<FeedbackPage />} />
+          <Route path="*" element={<Notfound />} />
         </Routes>
-        <ChatAssistant/>
-        <GoToTop/>
+        <ChatAssistant />
+        <GoToTop />
         <Footer />
-    </Router>
+      </Router>
     </div>
   );
 };
 
 const Home = () => {
   return (
-    <> 
+    <>
       <Hero />
 
       <div className="container">
         <h3 id='header'>ABOUT US</h3>
         <About />
         <Testimonials />
-        <Accordian /> 
+        <Accordian />
         <Title subTitle="Contact Us" title="Get in Touch" />
         <Contact />
       </div>
