@@ -67,46 +67,44 @@ const App = () => {
 
   return (
     <ThemeContext.Provider value={{ theme: currentTheme, toggleTheme }}>
-      <>
-        <div className={`main-div ${theme}`}>
-          <Router>
-            <Navbar />
-            <ScrollProgressBar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/forgot-password" element={<ForgotPassword />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/aboutus" element={<AboutUs />} />
-              <Route path="/faq" element={<Faq />} />
-              <Route path="/contact" element={<ContactUS />} />
-              <Route path='/explore' element={<Explore />} />
-              <Route path='/privacypolicy' element={<PrivacyPolicy />} />
-              <Route path='/blogs' element={<Blogs />} />
-              <Route path='/termsandconditions' element={<TermsAndConditions />} />
-              <Route path='/licensing' element={<Licensing />} />
-              <Route path='/visionandmission' element={<VisionAndMission />} />
-              <Route path='/howitworks' element={<HowItWorks />} />
-              <Route path='/investormanagementpage' element={<InvestorManagementPage />} />
-              <Route path='/startups' element={<Startups />} />
-              <Route path='/empowerher' element={<EmpowerHer />} />
-              <Route path='/heartfeltventures' element={<HeartfeltVentures />} />
-              <Route path='/hopephoenix' element={<HopePhoenix />} />
-              <Route path='/justbrew' element={<JustBrew />} />
-              <Route path='/shespark' element={<SheSpark />} />
-              <Route path='/understandingunited' element={<UnderstandingUnited />} />
-              <Route path='/contributor' element={<Contributors/>}/>
-              <Route path='/financialservicesPage' element={<FinancialServices />} />
-              <Route path="/fullservicefund" element={<FullServiceFund />} />
-              <Route path='/feedback' element={<FeedbackPage />} />
-              <Route path="*" element={<Notfound />} />
-            </Routes>
-            <ChatAssistant />
-            <GoToTop />
-            <Footer />
-          </Router>
-        </div>
-      </>
+      <div className={`main-div ${theme}`}>
+        <Router>
+          <Navbar />
+          <ScrollProgressBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/contact" element={<ContactUS />} />
+            <Route path='/explore' element={<Explore />} />
+            <Route path='/privacypolicy' element={<PrivacyPolicy />} />
+            <Route path='/blogs' element={<Blogs />} />
+            <Route path='/termsandconditions' element={<TermsAndConditions />} />
+            <Route path='/licensing' element={<Licensing />} />
+            <Route path='/visionandmission' element={<VisionAndMission />} />
+            <Route path='/howitworks' element={<HowItWorks />} />
+            <Route path='/investormanagementpage' element={<InvestorManagementPage />} />
+            <Route path='/startups' element={<Startups />} />
+            <Route path='/empowerher' element={<EmpowerHer />} />
+            <Route path='/heartfeltventures' element={<HeartfeltVentures />} />
+            <Route path='/hopephoenix' element={<HopePhoenix />} />
+            <Route path='/justbrew' element={<JustBrew />} />
+            <Route path='/shespark' element={<SheSpark />} />
+            <Route path='/understandingunited' element={<UnderstandingUnited />} />
+            <Route path='/contributor' element={<Contributors />} />
+            <Route path='/financialservicesPage' element={<FinancialServices />} />
+            <Route path="/fullservicefund" element={<FullServiceFund />} />
+            <Route path='/feedback' element={<FeedbackPage />} />
+            <Route path="*" element={<Notfound />} />
+          </Routes>
+          <ChatAssistant />
+          <GoToTop />
+          <Footer />
+        </Router>
+      </div>
     </ThemeContext.Provider>
   );
 };

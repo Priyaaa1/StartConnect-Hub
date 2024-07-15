@@ -1,77 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import 'font-awesome/css/font-awesome.min.css';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
 }
 
-body{
+body {
   background: #F5F5F5;
 }
 
 /*Scrollbar*/
 body::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
+  width: 8px;
+
 }
 
+
 body::-webkit-scrollbar-track {
-  background: transparent; /* Color of the track */
+  background: #f1f1f1;
+
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #2259ff; /* Color of the thumb */
-  border-radius: 5px; /* Roundness of the thumb */
+  background: #007bff;
+
+  border-radius: 6px;
+
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: #4d79fd; /* Color of the thumb */
+  background: #4d79fd;
+  /* Color of the thumb on hover */
 }
 
 
-a{
+a {
   text-decoration: none;
   color: inherit;
   line-height: 1;
   cursor: pointer;
   transition: color 0.3s ease, text-decoration 0.3s ease;
-  background-color: transparent; 
+  background-color: transparent;
   transition: color 0.3s ease, text-decoration 0.3s ease;
-  background-color: transparent; 
+  background-color: transparent;
 }
 
-a:hover{
+a:hover {
   text-decoration: rgb(141, 108, 124);
 }
 
-nav1{
+nav1 {
   padding: 10px 15px;
   border-radius: 15px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav1:hover{
-  background-color: plum; /* Background color on hover */
-  color: black; /* Text color on hover */
+nav1:hover {
+  background-color: plum;
+  /* Background color on hover */
+  color: black;
+  /* Text color on hover */
 }
 
-.container{
+.container {
   padding-left: 10%;
   padding-right: 10%;
 }
 
-#testimonials h3{
+#testimonials h3 {
   /* color: #212EA0; */
   font-weight: 600;
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
-  
+
 }
 
-.btn{
+.btn {
   background: white;
   /* color: #212121; */
   padding: 14px 25px;
@@ -85,7 +94,7 @@ nav1:hover{
   justify-content: center;
 }
 
-.btn img{
+.btn img {
   width: 20px;
   margin-left: 10px;
 }
@@ -97,12 +106,13 @@ nav1:hover{
 
 
 
-@media(max-width: 1200px){
-    .container{
-      /* padding-left: 5%; */
-      /* padding-right: 5%; */
-    }
-    .btn{
-      padding: 14px 22px;
-    }
+@media(max-width: 1200px) {
+  .container {
+    /* padding-left: 5%; */
+    /* padding-right: 5%; */
+  }
+
+  .btn {
+    padding: 14px 22px;
+  }
 }

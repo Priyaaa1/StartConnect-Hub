@@ -1,0 +1,3 @@
+[submodule "StartConnect-Hub"]
+    path = StartConnect-Hub
+    url = https://github.com/KomalSrivastava/StartConnect-Hub.git

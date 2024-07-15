@@ -2,18 +2,17 @@ import React from 'react';
 import "./About.css";
 import about_img from "../../assets/about1.jpg";
 import { useSelector } from 'react-redux';
-// import play_icon from "../../assets/play-icon.png";
+
 
 const About = () => {
   const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
   return (
     <div className="about" id="about">
       <div className="about-left">
-        <img src={about_img} alt="" className="about-img" data-aos="slide-right" />
-        {/* <img src={play_icon} alt='' className='play-icon'></img> */}
+        <img src={about_img} alt="About Image" className="about-img" data-aos="slide-right" />
       </div>
-      <div className="about-right" id="heading" data-aos="slide-left" >
-        <h2 className="about-heading" >Bridging the gap between ideas and investments</h2>
+      <div className="about-right" id="heading" data-aos="slide-left">
+        <h2 className={`about-heading ${theme}`}>Bridging the gap between ideas and investments</h2>
         <div className="about-right-div2">
           <p>
             At StartConnectHub, our mission is to create a thriving ecosystem
@@ -40,3 +39,4 @@ const About = () => {
 };
 
 export default About;
+
