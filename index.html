@@ -15,9 +15,42 @@
     <link rel="icon" href="/src/assets/fav2.ico">
     
     <title>StartConnect-Hub</title>
+    <style>
+      body {
+        margin: 0; /* Ensure no margin around the body */
+        font-family: Arial, sans-serif;
+      }
+
+      #translate-container {
+        position: fixed;
+        top: 80px; /* Adjust this value to move the box down from the top */
+        left: 20px; /* Keeps the box aligned to the left */
+        background: #fff;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+
+      /* Optional: Add a dark mode for your website */
+      .dark-mode {
+        background-color: #343434;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <div id="translate-container">
+      <div id="google_translate_element"></div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>
