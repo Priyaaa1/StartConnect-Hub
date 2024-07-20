@@ -3,7 +3,13 @@ import React from 'react';
 const MessageParser = ({ children, actions }) => {
     
   const parse = (message) => {
-    message = message.toLowerCase().trim(); // Added trim to remove leading/trailing spaces
+    message = message.toLowerCase().trim(); // Normalize the message
+
+    // Check if the message is empty after trimming
+    if (message === '') {
+      actions.defaultResponse(); // Handle empty input
+      return; // Return early to stop further processing
+    }
 
     if (
       message.includes('company') ||
@@ -13,10 +19,8 @@ const MessageParser = ({ children, actions }) => {
       message.includes('startconnect-hub') ||
       message.includes('startconnect') ||
       message.includes('site')
-      
     ) {
       actions.companyDetails();
-     
     } else if (
       message.includes('hello') || 
       message.includes('hi') || 
@@ -57,7 +61,7 @@ const MessageParser = ({ children, actions }) => {
       message.includes('tell more') 
     ) {
       actions.handleMore();
-    }else if (
+       }else if (
       message.includes('graet') ||
       message.includes('okay') ||
       message.includes('fine') ||
@@ -75,9 +79,8 @@ const MessageParser = ({ children, actions }) => {
     } else {
       actions.defaultResponse();
     }
-  } 
-
-  return (
+  };
+   return (
     <div>
       {React.Children.map(children, (child) => {
         return React.cloneElement(child, {
