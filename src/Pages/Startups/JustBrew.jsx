@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Content = styled.div`
   padding: 20px;
@@ -16,14 +17,23 @@ const Image = styled.img`
   border-radius: 50% ;
 `;
 
-const button = styled.button`
+const InvestButton = styled.button`
   background-color: #ff6600;
   border: none;
   padding: 10px 20px;
   margin-top: 10px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #e65c00;
+  }
 `;
 
-const InvestLink = styled.a`
+const InvestLink = styled(Link)`
   color: #fff;
   text-decoration: none;
 `;
@@ -43,9 +53,9 @@ const JustBrew = () => {
       <Heading>Welcome To Just Brew!</Heading>
       <Image src="project-5.PNG" alt="Just Brew" className="logImg" />
       <br />
-      <button className="invest">
-        <InvestLink href="#">Invest</InvestLink>
-      </button>
+      <InvestButton>
+        <InvestLink to="/pay">Invest</InvestLink>
+      </InvestButton>
       <br />
       <SectionHeading>Problem We Solve</SectionHeading>
       <p>
