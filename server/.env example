@@ -1,0 +1,3 @@
+//used by server.js for backend
+
+STRIPE_SECRET_KEY= stripe secret key 

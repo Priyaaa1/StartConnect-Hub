@@ -5,8 +5,11 @@ import axios from 'axios';
 import CheckoutForm from './CheckoutForm';
 import './pay.scss';
 
+
 // Initialize Stripe with your publishable key
-const stripePromise = loadStripe("pk_test_51OZeOJSHKQ5UtevikLLJG3vvyhNe2XwePgVfDVvW1aalKTW1yhPJyiEg50tZJ9xldsoauRrhEfAjpdzritmEGAQ100wKhUGSSq");
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+// or use this statement, paste publisable key here
+// const stripePromise = loadStripe("paste key here");
 
 const Pay = () => {
   const [clientSecret, setClientSecret] = useState("");
@@ -15,7 +18,9 @@ const Pay = () => {
   useEffect(() => {
     const makeRequest = async () => {
       try {
-        const backendUrl = 'http://localhost:8801';
+        const backendUrl = process.env.REACT_APP_BACKEND_URL;
+        //or use this statement, paste backend url
+        // const backendUrl = 'paste backend url';
         const response = await axios.post(`${backendUrl}/create-payment-intent`, { amount });
         setClientSecret(response.data.clientSecret);
       } catch (err) {
