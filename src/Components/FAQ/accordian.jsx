@@ -49,16 +49,9 @@ function Accordian() {
 
                 <div
                   ref={(el) => (refs.current[index] = el)}
-                  className="content"
+                  className={`content ${selected === dataItem.id ? "show" : ""}`}
                   style={{
-                    maxHeight:
-                      selected === dataItem.id
-                        ? // dataItem.id gives content height dynamycally and 100 added for extra space if needed
-                          `${heights[dataItem.id] + 100}px`
-                        : "0",
-                    padding: selected === dataItem.id ? "20px" : "",
-                    border: selected === dataItem.id ? "3px solid black" : "",
-                    margin: selected === dataItem.id ? "10px" : "",
+                    maxHeight: selected === dataItem.id ? `${heights[dataItem.id]}px` : "0",
                   }}
                 >
                   {dataItem.answer}
@@ -66,7 +59,7 @@ function Accordian() {
               </div>
             ))
           ) : (
-            <div> No data present </div>
+            <div className="no-data"> No data present </div>
           )}
         </div>
       </div>
