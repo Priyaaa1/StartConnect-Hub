@@ -100,15 +100,19 @@ const Signup = () => {
         <p>
           Already have an account? <NavLink to="/login">Login</NavLink>
         </p>
-        <GoogleLogin
-          onSuccess={(credentialResponse) => {
-            const credentialDecoded = jwtDecode(credentialResponse.credential);
-            console.log(credentialDecoded);
-          }}
-          onError={() => {
-            console.log("Sign-Up Failed");
-          }}
-        />
+        <div className="google-login-wrapper">
+          <GoogleLogin
+            onSuccess={(credentialResponse) => {
+              const credentialDecoded = jwtDecode(credentialResponse.credential);
+              console.log(credentialDecoded);
+            }}
+            onError={() => {
+              console.log("Sign-Up Failed");
+            }}
+          />
+        </div>
+
+
       </div>
     </div>
   );
