@@ -107,7 +107,7 @@ const Signup = () => {
               console.log(credentialDecoded);
             }}
             onError={() => {
-              console.log("Sign-Up Failed");
+              console.log("Sign-Up Failed!");
             }}
           />
         </div>
