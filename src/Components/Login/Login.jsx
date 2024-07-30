@@ -63,6 +63,7 @@ const Login = () => {
         <div className="login-container">
           <h2>Login</h2>
           <div className="input">
+            <label>Email</label>
             <input
               type="email"
               placeholder="Email"
@@ -78,7 +79,7 @@ const Login = () => {
               }}
             />
             {warnings.email && <p style={{ color: "red" }} className="warningmsg">{warnings.email}</p>}
-           
+            <label>Password</label>
             <input
               type={ isVisible ? "text" : "password"}
               className="pasword"
@@ -105,10 +106,13 @@ const Login = () => {
           <p>
             Don't have an account? <NavLink to="/signup">Sign up</NavLink>
           </p>
-          <GoogleLogin
-            onSuccess={handleGoogleLoginSuccess}
-            onError={handleGoogleLoginFailure}
-          />
+          <div className="google-login-wrapper">
+            <GoogleLogin
+              onSuccess={handleGoogleLoginSuccess}
+              onError={handleGoogleLoginFailure}
+            />
+          </div>
+
         </div>
       </div>
     </GoogleOAuthProvider>

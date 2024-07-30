@@ -103,3 +103,8 @@ p a:hover {
   color: #007efc;
   cursor: pointer;
 }
+.google-login-wrapper {
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+}
