@@ -1,25 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import "./Login.css";
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";    /*react libraries used 
-                                                                       for importing eye icon */
-import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
-
-const Login = () => {
+const Login = ({ isDarkMode }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [warnings, setWarnings] = useState({ email: "", password: "" });
-  const [isVisible,setVisible] = useState(false);
+  const [isVisible, setVisible] = useState(false);
   const navigate = useNavigate();
 
-  const eye = <FontAwesomeIcon icon={faEye} />;
-
-  const  togglePasswordFunction=()=>{      //toggling function for visibility of password
-    setVisible(isVisible?false:true)
+  const togglePasswordFunction = () => {
+    setVisible(!isVisible);
   };
-  
 
   const handleLogin = () => {
     let emailWarning = "";
@@ -57,12 +52,21 @@ const Login = () => {
     console.log("Login Failed");
   };
 
+  useEffect(() => {
+    const body = document.body;
+    if (isDarkMode) {
+      body.classList.add("dark-mode");
+    } else {
+      body.classList.remove("dark-mode");
+    }
+  }, [isDarkMode]);
+
   return (
     <GoogleOAuthProvider clientId="784513715091-aa0p18bmv854re0amstgj2up3656cvsd.apps.googleusercontent.com">
       <div className="login-outerContainer">
-        <div className="login-container">
+        <div className={`login-container ${isDarkMode ? 'dark-mode' : ''}`}>
           <h2>Login</h2>
-          <div className="input">
+          <div className="input-container">
             <label>Email</label>
             <input
               type="email"
@@ -79,40 +83,45 @@ const Login = () => {
               }}
             />
             {warnings.email && <p style={{ color: "red" }} className="warningmsg">{warnings.email}</p>}
-            <label>Password</label>
-            <input
-              type={ isVisible ? "text" : "password"}
-              className="pasword"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-                setWarnings((prevWarnings) => ({ ...prevWarnings, password: "" }));
-              }}
-              onBlur={(e) => {
-                if (!e.target.value) {
-                  setWarnings((prevWarnings) => ({ ...prevWarnings, password: "*Please enter your password" }));
-                }
-              }}
-            />
-           <i className = "eye" onClick={togglePasswordFunction}>{eye}</i>{" "} 
 
+            <div className="input-container">
+            <label>Password</label>
+              <input
+                type={isVisible ? "text" : "password"}
+                placeholder="Password"
+                value={password}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  setWarnings((prevWarnings) => ({ ...prevWarnings, password: "" }));
+                }}
+                onBlur={(e) => {
+                  if (!e.target.value) {
+                    setWarnings((prevWarnings) => ({ ...prevWarnings, password: "*Please enter your password" }));
+                  }
+                }}
+              />
+              <i
+                className="eye"
+                onClick={togglePasswordFunction}
+              >
+                <FontAwesomeIcon icon={isVisible ? faEyeSlash : faEye} />
+              </i>
+            </div>
             {warnings.password && <p style={{ color: "red" }} className="warningmsg">{warnings.password}</p>}
           </div>
           <button onClick={handleLogin}>Login</button>
           <p>
-          Forgot your password? <NavLink to="/forgot-password">Reset it here</NavLink>
-        </p>
+            Forgot your password? <NavLink to="/forgot-password">Reset it here</NavLink>
+          </p>
           <p>
             Don't have an account? <NavLink to="/signup">Sign up</NavLink>
           </p>
-          <div className="google-login-wrapper">
+          <div className="googlelogin">
             <GoogleLogin
               onSuccess={handleGoogleLoginSuccess}
               onError={handleGoogleLoginFailure}
             />
           </div>
-
         </div>
       </div>
     </GoogleOAuthProvider>
