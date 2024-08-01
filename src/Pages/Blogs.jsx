@@ -122,13 +122,13 @@ const BlogsWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   line-height: 1.6;
-  background-color: #e3f2fd;
+  
 
   h1 {
     font-size: 2.5rem;
     margin-top: 80px;
     text-align: center;
-    color: #212ea0;
+    
   }
 `;
 
