@@ -179,7 +179,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="footer-bottom-link">
-          &copy; 2024 StartConnect-Hub. All rights reserved.
+          &copy; {new Date().getFullYear()} StartConnect-Hub. All rights reserved.
         </div>
       </div>
     </div>

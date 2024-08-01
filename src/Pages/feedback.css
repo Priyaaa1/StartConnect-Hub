@@ -13,12 +13,12 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 600px;
   box-sizing: border-box;
+  margin-top: 55px;
 }
 
 .feedback-form h2 {
@@ -29,7 +29,7 @@
 }
 
 .feedback-form p {
-  color: #666;
+  
   font-size: 16px;
   margin-bottom: 20px;
   text-align: center;
@@ -58,7 +58,7 @@
 .feedback-form label {
   font-size: 14px;
   margin-bottom: 5px;
-  color: #333;
+  
 }
 
 .feedback-form input[type="text"],

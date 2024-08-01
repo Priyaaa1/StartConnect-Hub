@@ -1,81 +1,83 @@
 import React from 'react';
 
 const MessageParser = ({ children, actions }) => {
-    
-  const parse = (message) => {
-    message = message.toLowerCase().trim(); // Added trim to remove leading/trailing spaces
 
-    if (
-      message.includes('company') ||
-      message.includes('website') ||
-      message.includes('mission') ||
-      message.includes('what does this company do') ||
-      message.includes('startconnect-hub') ||
-      message.includes('startconnect') ||
-      message.includes('site')
-      
-    ) {
-      actions.companyDetails();
-     
-    } else if (
-      message.includes('hello') || 
-      message.includes('hi') || 
-      message.includes('hey') ||
-      message.includes('who are you') 
-    ) {
-      actions.handleHello();
-    } else if (
-      message.includes('how to reach') ||
-      message.includes('contact') ||
-      message.includes('phone')
-    ) {
-      actions.contactUs();
-    } else if (
-      message.includes('price') ||
-      message.includes('pricing') ||
-      message.includes('cost')
-    ) {
-      actions.handleCost();
-    } else if (
-      message.includes('how long') ||
-      message.includes('experience')
-    ) {
-      actions.handleExperience();
-    } else if (
-      message.includes('where') ||
-      message.includes('located')
-    ) {
-      actions.handleLocation();
-    } else if (
-      message.includes('services') ||
-      message.includes('service') ||
-      message.includes('what can you do')
-    ) {
-      actions.handleServices();
-    } else if (
-      message.includes('more details') ||
-      message.includes('tell more') 
-    ) {
-      actions.handleMore();
-    }else if (
-      message.includes('graet') ||
-      message.includes('okay') ||
-      message.includes('fine') ||
-      message.includes('thankyou') ||
-      message.includes('thanks') 
-    ) {
-      actions.handleThank();
-    } else if (
-      message.includes('suggest questions') ||
-      message.includes('give me questions') ||
-      message.includes('what should i ask') ||
-      message.includes('questions')
-    ) {
-      actions.suggestQuestions();
+  const parse = (message) => {
+    message = message.toLowerCase().trim(); 
+
+    const options = [
+      'services', 'pricing', 'contact', 'mission', 'location',
+      'experience', 'startups', 'featured', 'benefits', 'resources',
+      'collaboration', 'contact', 'SuccessStories', 'investors'
+    ];
+
+    const foundOption = options.find(option => message.includes(option));
+
+    if (foundOption) {
+      switch (foundOption) {
+        case 'services':
+          actions.handleServices();
+          break;
+        case 'pricing':
+          actions.handleCost();
+          break;
+        case 'contact':
+        case 'contact support':
+          actions.contactUs();
+          break;
+        case 'mission':
+          actions.companyDetails();
+          break;
+        case 'location':
+          actions.handleLocation();
+          break;
+        case 'experience':
+          actions.handleExperience();
+          break;
+        case 'startups':
+          actions.handleStartups();
+          break;
+        case 'featured':
+          actions.handleFeatured();
+          break;
+        case 'benefits':
+          actions.handleBenefits();
+          break;
+        case 'resources':
+          actions.handleResources();
+          break;
+        case 'collaboration':
+          actions.handleCollaboration();
+          break;
+        case 'success stories':
+          actions.handleSuccessStories();
+          break;
+        case 'investors':
+          actions.handleInvestors();
+          break;
+        default:
+          actions.defaultResponse();
+      }
     } else {
-      actions.defaultResponse();
+      if (
+        message.includes('hello') || 
+        message.includes('hi') || 
+        message.includes('hey') ||
+        message.includes('who are you')
+      ) {
+        actions.handleHello();
+      }else if (
+        message.includes('thank you') || 
+        message.includes('thanks') || 
+        message.includes('okay') ||
+        message.includes('hmm')
+      ) {
+        actions.handleThank();
+      } else {
+        actions.defaultResponse();
+      }
     }
-  } 
+  }
 
   return (
     <div>

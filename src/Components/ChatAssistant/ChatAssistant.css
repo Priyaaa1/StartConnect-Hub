@@ -42,7 +42,7 @@
 
 .react-chatbot-kit-chat-message-container {
   overflow-x: hidden;
-  padding: 0.5px 5px 25px 5.5px;
+  padding: 0.5px 1px 0px 6.5px;
 }
 
 .react-chatbot-kit-user-chat-message {
@@ -65,13 +65,13 @@
 
 .react-chatbot-kit-chat-container {
   width: 90vw;
-  max-width: 336px;
-  height: 97vh;
-  max-height: 475px;
+  max-width: 349px;
+  height: 173vh;
+  max-height: 508px;
   border: 2px solid blue;
   border-radius: 22px;
   overflow: hidden;
-  margin-bottom: 34px;
+  margin-bottom: 49px;
 }
 
 .react-chatbot-kit-chat-bot-message {
