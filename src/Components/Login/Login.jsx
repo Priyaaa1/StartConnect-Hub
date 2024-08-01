@@ -67,6 +67,7 @@ const Login = ({ isDarkMode }) => {
         <div className={`login-container ${isDarkMode ? 'dark-mode' : ''}`}>
           <h2>Login</h2>
           <div className="input-container">
+            <label>Email</label>
             <input
               type="email"
               placeholder="Email"
@@ -84,6 +85,7 @@ const Login = ({ isDarkMode }) => {
             {warnings.email && <p style={{ color: "red" }} className="warningmsg">{warnings.email}</p>}
 
             <div className="input-container">
+            <label>Password</label>
               <input
                 type={isVisible ? "text" : "password"}
                 placeholder="Password"

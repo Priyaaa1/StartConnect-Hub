@@ -109,3 +109,11 @@ input.invalid {
   border-color: red;
   /* Red border for invalid inputs */
 }
+
+
+/*  style for google login button */
+.google-login-wrapper {
+  width: 100%;
+  display: flex; 
+  justify-content: center; 
+}
