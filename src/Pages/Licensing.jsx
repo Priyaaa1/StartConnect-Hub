@@ -8,7 +8,6 @@ const Container = styled.div`
   margin-top: 60px;
   padding: 20px;
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
   border-radius: 5px;
 `;
 
