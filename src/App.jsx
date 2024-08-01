@@ -44,17 +44,6 @@ import Blogs from './Pages/Blogs'
 import ScrollProgressBar from './Components/ProgressBar';
 import Contributors from './Pages/Contributors.jsx';
 
-const ThemeContext = createContext();
-
-const App = () => {
-  const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
-  const [currentTheme, setTheme] = useState(theme);
-
-  const toggleTheme = () => {
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-  };
 
   useEffect(() => {
     AOS.init({
@@ -64,6 +53,18 @@ const App = () => {
       disable: 'mobile',
     });
   }, []);
+
+  const ThemeContext = createContext();
+
+  const App = () => {
+    const theme = useSelector((state) => state.theme.value) ? "dark" : "light";
+    const [currentTheme, setTheme] = useState(theme);
+  
+    const toggleTheme = () => {
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      setTheme(newTheme);
+      localStorage.setItem('theme', newTheme);
+    };
 
   return (
     <ThemeContext.Provider value={{ theme: currentTheme, toggleTheme }}>
