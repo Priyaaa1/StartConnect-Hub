@@ -1,4 +1,5 @@
 
+
 .contributors-container {
   width: 100%;
   height: 100%; 
@@ -54,6 +55,7 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
+  border: 2.5px solid #9e9eff;
 }
 
 .contributor-name {
