@@ -66,11 +66,10 @@
   margin: 20px 0;
 }
 /*Added the hover effct here on  submit button */
-.btn-div .btn:hover{
-
+.btn-div .btn:hover {
   display: flex;
-  background-color:rgb(111, 111, 160);
-  color:white;
+  background-color: rgb(111, 111, 160);
+  color: white;
   justify-content: center;
 }
 
@@ -85,9 +84,9 @@
   width:70vw;
 } */
 
- .btn:hover{
-  background-color:rgb(111, 111, 160);
-  color:white;
+.btn:hover {
+  background-color: rgb(111, 111, 160);
+  color: white;
 }
 /* Media query for Smart Phone */
 @media (max-width: 600px) {
@@ -134,13 +133,14 @@
   } */
 }
 
+/* ToastStyles.css */
+
 @media (max-width: 370px) {
-  .contact-col form{
+  .contact-col form {
     width: 80vw;
-    }
-  .contact-col form input, .contact-col form textarea{
+  }
+  .contact-col form input,
+  .contact-col form textarea {
     width: 80vw;
-    }
- 
-   
+  }
 }
