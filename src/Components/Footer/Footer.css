@@ -3,6 +3,7 @@
   color: white;
   padding: 2.5rem 2.5rem 1rem 2.5rem;
 }
+
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -15,9 +16,10 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 40%;
+  width: 25%;
 }
-.star-us{
+
+.star-us {
   display: flex;
   border: 1px solid white;
   background: #c3c3c3;
@@ -28,34 +30,38 @@
   cursor: pointer;
   transition: all 0.3s;
 }
-.star-us:hover{
-  scale: 1.1;
+
+.star-us:hover {
+  transform: scale(1.1); /* Change scale on hover */
 }
+
 .footer-1 img {
   height: 4rem;
 }
 
 .footer-half {
-  width: 60%;
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.footer-text{
+
+.footer-text {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .footer-2 {
   width: 25%;
 }
 
 .footer-title {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 28px;
   font-weight: bold;
   text-align: center;
-  margin: 0px;
+  margin: 0;
 }
 
 .footer-section-title {
@@ -74,19 +80,19 @@
 .footer-link {
   padding: 0.25rem 0;
   cursor: pointer;
-  transition: all 0.5s; 
+  transition: all 0.5s;
 }
 
 .footer-link a {
   text-decoration: none;
   color: white;
-  transition: all 0.5s; 
+  transition: all 0.5s;
 }
 
 .footer-link a:hover, 
 .footer-link:hover {
-  color: #dc54b1; 
-  scale: 1.1; 
+  color: #dc54b1; /* Change color on hover */
+  transform: scale(1.1); /* Scale on hover */
 }
 
 .footer-icons {
@@ -98,23 +104,23 @@
 
 .footer-icons i {
   color: white;
-  transition: color 0.3s, font-size 0.3s, transform 0.3s; 
+  transition: color 0.3s, font-size 0.3s, transform 0.3s;
 }
 
 .footer-icons i:hover {
-  color: #dc54b1; 
-  font-size: 2rem;
-  transform: scale(1.2); 
+  color: #dc54b1; /* Change color on hover */
+  font-size: 2rem; /* Increase font size on hover */
+  transform: scale(1.2); /* Scale on hover */
 }
 
 .footer-icons a {
   text-decoration: none;
-  transition: transform 0.3s; 
+  transition: transform 0.3s;
 }
 
 .footer-icons a:hover {
-  color: #dc54b1; 
-  transform: scale(1.2); 
+  color: #dc54b1; /* Change color on hover */
+  transform: scale(1.2); /* Scale on hover */
 }
 
 .footer-icons-md {
@@ -132,12 +138,12 @@
 .footer-bottom-link {
   padding-right: 4%;
   cursor: pointer;
-  transition: color 0.3s, transform 0.3s; 
+  transition: color 0.3s, transform 0.3s;
 }
 
 .footer-bottom-link:hover {
-  color: #dc54b1; 
-  transform: scale(1.05); 
+  color: #dc54b1; /* Change color on hover */
+  transform: scale(1.05); /* Scale on hover */
 }
 
 .footer-sections {
@@ -151,6 +157,39 @@
 
 .footer-title a {
   text-decoration: none;
+}
+
+/* Newsletter subscription form styles */
+.subscription-form {
+  margin-top: 20px;
+}
+
+.subscription-form h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px; /* Space below the heading */
+  margin-top: 24px;
+}
+
+.subscription-form input {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.subscription-form button {
+  padding: 10px;
+  background-color: navy;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.subscription-message {
+  color: #28a745; /* Green color for success message */
+  margin-top: 10px; /* Space above the message */
 }
 
 @media (max-width: 768px) {
@@ -194,6 +233,7 @@
   .footer-2 {
     width: 100%;
   }
+  
   .footer-icons {
     justify-content: center;
   }
