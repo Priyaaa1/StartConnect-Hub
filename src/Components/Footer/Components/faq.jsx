@@ -12,7 +12,7 @@ function Faq () {
 
     return (
         <>
-            <h2 className='faqh2'>FAQ's</h2>
+            <h2 className='faqh2'>FAQs</h2>
             <div id="faq">
                 <div className="faq">
                     {data && data.length > 0 ? (

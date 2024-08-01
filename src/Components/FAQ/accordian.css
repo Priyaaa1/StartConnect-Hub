@@ -1,10 +1,12 @@
+/* accordian.css */
+
 h2 {
     text-align: center;
     font-weight: 600;
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
-    
+    color: #212eA0; /* Added a color for the heading */
 }
 
 .question {
@@ -14,13 +16,11 @@ h2 {
     background-color: rgb(33,46,160);
     border: 2px solid whitesmoke;
     color: azure;
-    border-radius: 10px;
-    padding-top: 15px;
-    padding-right: 20px;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    cursor : pointer;
-} 
+    border-radius: 10px 10px 0 0; /* Rounded corners at the top */
+    padding: 15px 20px 15px 10px; /* Consolidated padding properties */
+    cursor: pointer; /* Added cursor pointer for better UX */
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+}
 
 .accordian .question:hover {
     background-color: #000c7c;
@@ -36,27 +36,38 @@ h2 {
 
 h3 {
     padding: 10px;
+    margin: 0; /* Removed default margin */
+    font-size: 1.1em; /* Increased font size */
 }
 
 .item {
-    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .content {
-    transition: max-height 1s ease-in-out;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
     justify-content: center;
     box-sizing: content-box;
-    /* padding: 20px; */
-    /* border: 3px solid black; */
-    border-radius: 10px;
-    /* margin: 10px; */
-    font-family: "Outfit", sans-serif;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, margin 0.5s ease-in-out, border 0.5s ease-in-out;
+    background-color: #1d1d35; /* Dark background color for answer section */
+    padding: 0 20px; /* Padding for content area */
+    border-left: 2px solid whitesmoke;
+    border-right: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+    color: #fff; /* White text for dark mode */
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
 }
+
 .content.show {
     max-height: 500px; /* Set a reasonable max-height to allow transition */
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 1.2em;
 }
