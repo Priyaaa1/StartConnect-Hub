@@ -1,10 +1,15 @@
-
 .contributors-container {
   width: 100%;
   height: 100%; 
   padding-top: 2rem;
   overflow: hidden;
-  background-color: rgb(221, 229, 246); /* Change background color to white or any light color */
+  
+}
+
+.github-icon {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  fill: white; /* Adjust color as needed */
 }
 
 
@@ -13,7 +18,6 @@
   text-align: center;
   font-size: 2.5rem;
   font-weight: 600;
-  color: #1f2937;
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
@@ -23,7 +27,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
 }
 
 .contributor-card {
@@ -32,8 +36,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1f2937;
-  border: 1px solid #d1d5db;
+  background-color: rgb(0, 0, 85);
+  border: 2px solid #6969ff;
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   padding: 1rem;
@@ -55,6 +59,7 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
+  border: 2.5px solid #9e9eff;
 }
 
 .contributor-name {
