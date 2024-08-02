@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { FaArrowUp } from "react-icons/fa";
+import { FaChevronUp } from "react-icons/fa"; 
 
 const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,7 +27,10 @@ const GoToTop = () => {
     <>
       {isVisible && (
         <Wrapper onClick={goToTop}>
-          <FaArrowUp className="top-btn--icon" />
+          <div className="icon-container">
+            <FaChevronUp className="top-btn--icon" />
+            <FaChevronUp className="top-btn--icon double" />
+          </div>
         </Wrapper>
       )}
     </>
@@ -35,36 +38,48 @@ const GoToTop = () => {
 };
 
 const Wrapper = styled.div`
-@media (max-width:481px){
-display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 68px;
-  left: 86%;
-  color: white;
-  background-color: blue;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  cursor: pointer;
-  &:hover {
-    background-color: #007bff;
-  }}
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   bottom: 17px;
-  left: 85px;
+  left: 15px;
   color: white;
-  background-color: blue;
+  background: radial-gradient(circle, navy 0%, #0000ff 100%);
   width: 48px;
   height: 48px;
   border-radius: 50%;
   cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
   &:hover {
-    background-color: #007bff;
+    background: navy;
+    transform: scale(1.1); 
+  }
+
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .top-btn--icon {
+    color: white; 
+    transition: transform 0.3s ease;
+  }
+
+  .top-btn--icon.double {
+    margin-top: -8px; 
+  }
+
+  &:hover .top-btn--icon {
+    transform: translateY(-2px); 
+  }
+
+  @media (max-width: 481px) {
+    bottom: 68px;
+    left: 86%;
   }
 `;
 
