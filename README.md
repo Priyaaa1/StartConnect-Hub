@@ -88,17 +88,23 @@ Contributions are always welcome! Follow these steps to get started:
    ```sh
    git checkout -b <your_branch_name>
    ```
-
+8. **🛠️ Install dependencies.**
+   ```sh
+   npm install
+   ```
+9. **📊 Run the Application.**
+   ```sh
+   npm run dev 
 You are all set! 🎉
 
-8. **🛠️ Perform your desired changes to the code base.**
+10. **🛠️ Perform your desired changes to the code base.**
 
-9. **📊 Track your changes.**
-   ```sh
-   git add .
-   ```
+11. **📊 Track your changes.**
+    ```sh
+    git add .
+    ```
 
-10. **💬 Commit your changes with a relevant commit message.** For example, if you added a new feature, you could use:
+12. **💬 Commit your changes with a relevant commit message.** For example, if you added a new feature, you could use:
     ```sh
     git commit -m "Add feature X"
     ```
@@ -107,14 +113,14 @@ You are all set! 🎉
     git commit -m "Fix issue Y"
     ```
 
-11. **🚀 Push the committed changes in your feature branch to your remote repo.**
+13. **🚀 Push the committed changes in your feature branch to your remote repo.**
     ```sh
     git push -u origin <your_branch_name>
     ```
 
-12. **🔄 To create a pull request,** go to your forked repository on GitHub and click on `Compare & pull request`. Ensure you compare your feature branch to the desired branch of the repo you are supposed to make a PR to.
+14. **🔄 To create a pull request,** go to your forked repository on GitHub and click on `Compare & pull request`. Ensure you compare your feature branch to the desired branch of the repo you are supposed to make a PR to.
 
-13. **🎉 Voila!** You have made a PR to the StartConnect-Hub project. Sit back patiently and relax while the project maintainers review your PR.
+15. **🎉 Voila!** You have made a PR to the StartConnect-Hub project. Sit back patiently and relax while the project maintainers review your PR.
 
 ---
 
