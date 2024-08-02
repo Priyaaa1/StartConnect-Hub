@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -40,9 +40,10 @@ import FullServiceFund from './Pages/FullServiceFund';
 import Notfound from './Components/Notfound/Notfound';
 import { useSelector } from 'react-redux';
 import FeedbackPage from './Pages/FeedbackForm';
-import Blogs from './Pages/Blogs'
+import Blogs from './Pages/Blogs';
 import ScrollProgressBar from './Components/ProgressBar';
 import Contributors from './Pages/Contributors.jsx';
+import Pay from "./Pages/pay/pay.jsx"; // Ensure you import the correct Pay component
 
 const ThemeContext = createContext();
 
@@ -98,6 +99,7 @@ const App = () => {
             <Route path='/financialservicesPage' element={<FinancialServices />} />
             <Route path="/fullservicefund" element={<FullServiceFund />} />
             <Route path='/feedback' element={<FeedbackPage />} />
+            <Route path='/pay' element={<Pay />} /> {/* Corrected to use Pay */}
             <Route path="*" element={<Notfound />} />
           </Routes>
           <ChatAssistant />
@@ -126,5 +128,3 @@ const Home = () => {
 };
 
 export default App;
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
