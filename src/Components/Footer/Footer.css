@@ -220,12 +220,10 @@
     margin-right: 0;
     justify-content: flex-start;
   }
-
   .footer-bottom {
     justify-content: center;
   }
 }
-
 @media (max-width: 400px) {
   .footer-half {
     flex-direction: column;
