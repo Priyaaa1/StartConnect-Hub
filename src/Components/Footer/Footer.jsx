@@ -1,33 +1,33 @@
-import { useEffect, useState } from "react"; // Import hooks from React
-import "./Footer.css"; // Import CSS for styling
-import logo from "../../assets/logo2.png"; // Import the logo image
-import { FaGithub } from "react-icons/fa"; // Import GitHub icon from react-icons
-import { NavLink, useNavigate } from "react-router-dom"; // Import NavLink and useNavigate for navigation
-import { scroller } from "react-scroll"; // Import scroller for smooth scrolling
-import Visitors from "../Visitors"; // Import Visitors component
+import { useEffect, useState } from "react";
+import "./Footer.css";
+import logo from "../../assets/logo2.png";
+import { FaGithub, FaLinkedin, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { NavLink, useNavigate } from "react-router-dom";
+import { scroller } from "react-scroll";
+import Visitors from "../Visitors";
+import { AiFillHome, AiFillInfoCircle, AiFillPhone, AiFillQuestionCircle, AiFillLock, AiFillFileText } from "react-icons/ai";
+import { BiBook, BiSupport, BiCommentDetail, BiBriefcase, BiGroup } from "react-icons/bi";
 
 const Footer = () => {
-  const [sticky, setSticky] = useState(false); // State to track sticky footer
-  const [mobileMenu, setMobileMenu] = useState(false); // State to toggle mobile menu
-  const navigate = useNavigate(); // Hook for programmatic navigation
+  const [sticky, setSticky] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const navigate = useNavigate();
 
-  // Effect to handle scroll event for sticky footer
   useEffect(() => {
     const handleScroll = () => {
-      setSticky(window.scrollY > 200); // Set sticky based on scroll position
+      setSticky(window.scrollY > 200);
     };
 
-    window.addEventListener("scroll", handleScroll); // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll); // Clean up event listener
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const toggleMenu = () => {
-    setMobileMenu(!mobileMenu); // Toggle mobile menu state
+    setMobileMenu(!mobileMenu);
   };
 
-  // Function to scroll to a section smoothly
   const scrollToSection = (section) => {
     scroller.scrollTo(section, {
       smooth: true,
@@ -36,39 +36,35 @@ const Footer = () => {
     });
   };
 
-  // Function to handle navigation and scrolling
   const handleNavigation = (path, section) => {
-    navigate(path); // Navigate to the specified path
-    setTimeout(() => scrollToSection(section), 0); // Scroll to the section after navigation
+    navigate(path);
+    setTimeout(() => scrollToSection(section), 0);
   };
 
-  // Component for the subscription form
   const SubscriptionForm = () => {
-    const [email, setEmail] = useState(""); // State for email input
-    const [message, setMessage] = useState(""); // State for success message
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
 
-    // Handle form submission
     const handleSubmit = (e) => {
-      e.preventDefault(); // Prevent default form submission behavior
-      // Add your subscription logic here (e.g., API call to subscribe the email)
-      setMessage("Thank you for subscribing!"); // Set success message
-      setEmail(""); // Clear email input
+      e.preventDefault();
+      setMessage("Thank you for subscribing!");
+      setEmail("");
     };
 
     return (
       <div className="subscription-form">
-        <h3>Subscribe to our Newsletter</h3> {/* Form heading */}
-        <form onSubmit={handleSubmit}> {/* Form submission handler */}
+        <h3>Subscribe to our Newsletter</h3>
+        <form onSubmit={handleSubmit}>
           <input
             type="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)} // Update email state on input change
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
-            required // Make input required
+            required
           />
-          <button type="submit">Subscribe</button> {/* Submit button */}
+          <button type="submit">Subscribe</button>
         </form>
-        {message && <p className="subscription-message">{message}</p>} {/* Display success message if available */}
+        {message && <p className="subscription-message">{message}</p>}
       </div>
     );
   };
@@ -76,104 +72,101 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-container footer-container-md">
-        {/* Top section of the footer */}
         <div className="footer-1">
           <div className="footer-logo">
             <a href="/">
-              <img src={logo} alt="Start Connect hub logo" className="footer-logo" /> {/* Logo image */}
+              <img src={logo} alt="Start Connect hub logo" className="footer-logo" />
             </a>
           </div>
-          <div className="footer-title">Start Connect hub</div> {/* Footer title */}
-          <a href="https://github.com/Priyaaa1/StartConnect-Hub" className="star-us">Star us ⭐</a> {/* GitHub star link */}
+          <div className="footer-title">Start Connect hub</div>
+          <a href="https://github.com/Priyaaa1/StartConnect-Hub" className="star-us">Star us ⭐</a>
           <div className="footer-text">
-            <Visitors /> {/* Visitors component */}
+            <Visitors />
           </div>
         </div>
         <div className="footer-half footer-sections">
-          {/* Footer sections */}
           <div className="footer-2">
-            <p className="footer-section-title">Company</p> {/* Section title */}
+            <p className="footer-section-title">Company</p>
             <ul className="footer-links">
               <li className="footer-link">
-                <a onClick={() => handleNavigation("/#about", "about")}>About Us</a> {/* Navigation link */}
+                <a onClick={() => handleNavigation("/#about", "about")}><AiFillInfoCircle className="footer-icon" /> About Us</a>
               </li>
               <NavLink to="/blogs">
-                <li className="footer-link">Blogs</li> {/* Blogs link */}
+                <li className="footer-link"><BiBook className="footer-icon" /> Blogs</li>
               </NavLink>
               <a href="https://github.com/Priyaaa1/StartConnect-Hub" target="_blank" rel="noopener noreferrer">
-                <li className="footer-link">Collaboration</li> {/* Collaboration link */}
+                <li className="footer-link"><BiSupport className="footer-icon" /> Collaboration</li>
               </a>
-              <li className="footer-link">Media</li> {/* Media link */}
+              <li className="footer-link"><AiFillPhone className="footer-icon" /> Media</li>
             </ul>
           </div>
           <div className="footer-2">
-            <p className="footer-section-title">Need Help</p> {/* Section title */}
+            <p className="footer-section-title">Need Help</p>
             <ul className="footer-links">
               <li className="footer-link">
-                <a onClick={() => handleNavigation("/#contact", "contact")}>Contact Us</a> {/* Contact link */}
+                <a onClick={() => handleNavigation("/#contact", "contact")}><AiFillPhone className="footer-icon" /> Contact Us</a>
               </li>
               <li className="footer-link">
-                <a onClick={() => handleNavigation("/#testimonials", "testimonials")}>Testimonials</a> {/* Testimonials link */}
+                <a onClick={() => handleNavigation("/#testimonials", "testimonials")}><BiCommentDetail className="footer-icon" /> Testimonials</a>
               </li>
               <li className="footer-link">
-                <a onClick={() => handleNavigation("/#accordian", "accordian")}>FAQ</a> {/* FAQ link */}
+                <a onClick={() => handleNavigation("/#accordian", "accordian")}><AiFillQuestionCircle className="footer-icon" /> FAQ</a>
               </li>
               <li className="footer-link">
-                <a onClick={() => handleNavigation("/howitworks", "howitworks")}>How it Works</a> {/* How it Works link */}
+                <a onClick={() => handleNavigation("/howitworks", "howitworks")}><AiFillHome className="footer-icon" /> How it Works</a>
               </li>
               <NavLink to="/feedback">
-                <li className="footer-link">Feedback</li> {/* Feedback link */}
+                <li className="footer-link"><BiCommentDetail className="footer-icon" /> Feedback</li>
               </NavLink>
             </ul>
           </div>
           <div className="footer-2">
-            <p className="footer-section-title">More Info</p> {/* Section title */}
+            <p className="footer-section-title">More Info</p>
             <ul className="footer-links">
               <NavLink to="/privacypolicy">
-                <li className="footer-link">Privacy Policy</li> {/* Privacy Policy link */}
+                <li className="footer-link"><AiFillLock className="footer-icon" /> Privacy Policy</li>
               </NavLink>
               <NavLink to="/termsandconditions">
-                <li className="footer-link">Terms & Conditions</li> {/* Terms & Conditions link */}
+                <li className="footer-link"><AiFillFileText className="footer-icon" /> Terms & Conditions</li>
               </NavLink>
               <NavLink to="/licensing">
-                <li className="footer-link">Licensing</li> {/* Licensing link */}
+                <li className="footer-link"><BiBook className="footer-icon" /> Licensing</li>
               </NavLink>
               <NavLink to="/visionandmission">
-                <li className="footer-link">Vision and Mission</li> {/* Vision and Mission link */}
+                <li className="footer-link"><AiFillQuestionCircle className="footer-icon" /> Vision and Mission</li>
               </NavLink>
-              <li className="footer-link">Career</li> {/* Career link */}
+              <li className="footer-link"><BiBriefcase className="footer-icon" /> Career</li>
               <NavLink to="/contributor">
-                <li className="footer-link">Our Contributors</li> {/* Contributors link */}
+                <li className="footer-link"><BiGroup className="footer-icon" /> Our Contributors</li>
               </NavLink>
             </ul>
           </div>
           <div className="footer-2">
-            <p className="footer-section-title">Let&rsquo;s Connect</p> {/* Section title */}
+            <p className="footer-section-title">Let&rsquo;s Connect</p>
             <div className="footer-icons footer-icons-md">
-              {/* Social media icons */}
               <a href="https://linkedin.com/yourpage" target="_blank" rel="noreferrer">
-                <i className="fab fa-linkedin" style={{ fontSize: "25px" }} />
+                <FaLinkedin style={{ fontSize: "25px" }} />
               </a>
               <a href="https://github.com/Priyaaa1/StartConnect-Hub" className="github" target="_blank" rel="noreferrer">
                 <FaGithub />
               </a>
               <a href="https://facebook.com/yourpage" target="_blank" rel="noreferrer">
-                <i className="fab fa-facebook" style={{ fontSize: "25px" }} />
+                <FaFacebook style={{ fontSize: "25px" }} />
               </a>
               <a href="https://twitter.com/yourpage" target="_blank" rel="noreferrer">
-                <i className="fa-brands fa-x-twitter" style={{ fontSize: "25px" }} />
+                <FaTwitter style={{ fontSize: "25px" }} />
               </a>
               <a href="https://instagram.com/yourpage" target="_blank" rel="noreferrer">
-                <i className="fab fa-instagram" style={{ fontSize: "25px" }} />
+                <FaInstagram style={{ fontSize: "25px" }} />
               </a>
             </div>
-            <SubscriptionForm /> {/* Render subscription form */}
+            <SubscriptionForm />
           </div>
         </div>
       </div>
       <div className="footer-bottom">
         <div className="footer-bottom-link">
-          &copy; {new Date().getFullYear()} StartConnect-Hub. All rights reserved. {/* Footer bottom text */}
+          &copy; {new Date().getFullYear()} StartConnect-Hub. All rights reserved.
         </div>
       </div>
     </div>
