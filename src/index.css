@@ -15,25 +15,26 @@ body {
 
 /*Scrollbar*/
 body::-webkit-scrollbar {
-  width: 8px;
+  width: 9px;
 
 }
 
 
 body::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #11131f;
+  
 
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #007bff;
+  background: blue;
 
   border-radius: 6px;
 
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: #4d79fd;
+  background: rgb(0, 128, 255);
   /* Color of the thumb on hover */
 }
 
