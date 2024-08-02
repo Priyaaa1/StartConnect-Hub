@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 const Content = styled.div`
   padding: 20px;
@@ -17,23 +16,14 @@ const Image = styled.img`
   border-radius: 50% ;
 `;
 
-const InvestButton = styled.button`
+const button = styled.button`
   background-color: #ff6600;
   border: none;
   padding: 10px 20px;
   margin-top: 10px;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #e65c00;
-  }
 `;
 
-const InvestLink = styled(Link)`
+const InvestLink = styled.a`
   color: #fff;
   text-decoration: none;
 `;
@@ -53,9 +43,9 @@ const HeartfeltVentures = () => {
       <Heading>Welcome To HEARTFELT VENTURES!</Heading>
       <Image src="project-2.jpg" alt="Heartfelt Ventures" className="logImg" />
       <br />
-      <InvestButton>
-        <InvestLink to="/pay">Invest</InvestLink>
-      </InvestButton>
+      <button className="invest">
+        <InvestLink href="#">Invest</InvestLink>
+      </button>
       <br />
       <SectionHeading>Problem We Solve</SectionHeading>
       <p>

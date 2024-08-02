@@ -1,4 +1,0 @@
-//used for frontend
-
-REACT_APP_STRIPE_PUBLISHABLE_KEY= stripe publishable key
-REACT_APP_BACKEND_URL= backend local host url
