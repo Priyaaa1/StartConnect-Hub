@@ -16,6 +16,8 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@react-oauth/google": "^0.12.1",
     "@reduxjs/toolkit": "^2.2.5",
+    "@stripe/react-stripe-js": "^2.7.3",
+    "@stripe/stripe-js": "^4.1.0",
     "antd": "^5.17.4",
     "aos": "^2.3.4",
     "axios": "^1.7.2",
@@ -34,6 +36,7 @@
     "react-router-dom": "^6.23.1",
     "react-scripts": "^5.0.1",
     "react-scroll": "^1.9.0",
+    "sass": "^1.77.8",
     "react-toastify": "^10.0.5",
     "styled-components": "^6.1.11"
   },
