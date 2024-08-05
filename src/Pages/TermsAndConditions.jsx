@@ -1,9 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const TermsAndConditions = () => {
+  const [lastUpdatedDate, setLastUpdatedDate] = useState('');
+
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const currentDate = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = new Intl.DateTimeFormat('en-US', options).format(currentDate);
+
+    setLastUpdatedDate(formattedDate);
   }, []);
 
   return (
@@ -11,7 +19,7 @@ const TermsAndConditions = () => {
       <div>
         <h1>Terms and Conditions</h1>
         <section>
-          <p>Last updated: May 22, 2024</p>
+          <p>Last updated: {lastUpdatedDate}</p>
           <p>Welcome to StartConnect Hub! By using our platform, you agree to comply with and be bound by the following terms and conditions. Please review these terms carefully. If you do not agree to these terms, you should not use our platform.</p>
         </section>
         <section>
@@ -55,6 +63,7 @@ const TermsWrapper = styled.div`
 
   h1 {
     font-size: 2.5rem;
+    margin-bottom: 20px;
     margin-top: 80px;
   }
 
@@ -72,4 +81,3 @@ const TermsWrapper = styled.div`
 `;
 
 export default TermsAndConditions;
-

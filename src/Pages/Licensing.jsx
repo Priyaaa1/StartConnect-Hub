@@ -1,6 +1,5 @@
-import {React,useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-
 
 const Container = styled.div`
   max-width: 800px;
@@ -31,15 +30,21 @@ const Subtitle = styled.h2`
 `;
 
 const Licensing = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-      }, []);
+  const [currentYear, setCurrentYear] = useState('');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    const year = new Date().getFullYear();
+    setCurrentYear(year);
+  }, []);
+
   return (
     <Container>
       <Title>Licensing</Title>
       <Paragraph>Welcome to StartConnect Hub! This website is licensed under the MIT License. This page outlines the terms of the license and provides details on how you can use, modify, and distribute our software.</Paragraph>
       <Subtitle>MIT License</Subtitle>
-      <Paragraph>Copyright (c) 2024 StartConnect-Hub</Paragraph>
+      <Paragraph>Copyright (c) {currentYear} StartConnect-Hub</Paragraph>
       <Paragraph>
         Permission is hereby granted, free of charge, to any person obtaining a copy
         of this software and associated documentation files (the "Software"), to deal
@@ -63,7 +68,6 @@ const Licensing = () => {
       </Paragraph>
       <Subtitle>Contact Information</Subtitle>
       <p>If you have any questions or concerns about this licensing agreement, please contact us at Email: <a href="mailto:startconnecthub@gmail.com">startconnecthub@gmail.com</a> </p>
-
     </Container>
   );
 };
