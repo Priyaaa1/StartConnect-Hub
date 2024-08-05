@@ -50,24 +50,6 @@ const InvestorManagementPage = () => {
         we provide the tools and insights needed to make informed investment decisions.
     </section>
 
-    <section>
-        <span>
-        Comprehensive Support and Resources:
-        </span>
-          We understand that successful investments require more than just capital. 
-        That's why StartConnectHub offers comprehensive support and resources to both entrepreneurs and investors. 
-        From detailed business analysis and market research to strategic advisory services, 
-        we provide the tools and insights needed to make informed investment decisions.
-    </section>
-
-    <section>
-        <span>
-        Comprehensive Support and Resources:
-        </span>  We understand that successful investments require more than just capital. 
-        That's why StartConnectHub offers comprehensive support and resources to both entrepreneurs and investors. 
-        From detailed business analysis and market research to strategic advisory services, 
-        we provide the tools and insights needed to make informed investment decisions.
-    </section>
     <NavLink to="/#contact"><button className='button'> Drop us your Query </button></NavLink>
     
     </ManagementPageWrapper>
