@@ -7,22 +7,28 @@ import { scroller } from "react-scroll";
 import Visitors from "../Visitors";
 import { AiFillHome, AiFillInfoCircle, AiFillPhone, AiFillQuestionCircle, AiFillLock, AiFillFileText } from "react-icons/ai";
 import { BiBook, BiSupport, BiCommentDetail, BiBriefcase, BiGroup } from "react-icons/bi";
+import GoogleTranslateComponent from "../GoogleTranslate/GoogleTranslate";
 
 const Footer = () => {
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const navigate = useNavigate();
 
+  
+
   useEffect(() => {
+    
+
     const handleScroll = () => {
       setSticky(window.scrollY > 200);
     };
-
+    
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
 
   const toggleMenu = () => {
     setMobileMenu(!mobileMenu);
@@ -99,6 +105,16 @@ const Footer = () => {
               </a>
               <li className="footer-link"><AiFillPhone className="footer-icon" /> Media</li>
             </ul>
+
+
+
+            {/* <div id="translate-container">
+              <div id="google_translate_element"></div>
+            </div> */}
+            <GoogleTranslateComponent />
+
+
+
           </div>
           <div className="footer-2">
             <p className="footer-section-title">Need Help</p>
