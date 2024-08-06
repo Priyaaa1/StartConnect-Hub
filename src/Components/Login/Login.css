@@ -2,9 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
-  margin-top: 100px;
-  padding-bottom: 10px;
+  min-height: 100vh;
+  /* margin-top: 100px; */
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
 .login-container {
@@ -73,6 +74,7 @@ p a:hover {
 }
 
 .googlelogin {
+  display: flex;
   width: 100%;
   justify-content: center;
   margin-top: 10px;
