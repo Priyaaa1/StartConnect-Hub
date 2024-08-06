@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from 'react';
 import styled from 'styled-components';
+import noResultsImage from '../assets/no-results.png'
 
 const Blogs = () => {
   useEffect(() => {
@@ -81,7 +82,7 @@ const Blogs = () => {
   return (
     <BlogsWrapper>
       <h1>Blogs</h1>
-      <SearchBar 
+      <SearchBar
         type="text"
         value={search}
         onChange={handleSearch}
@@ -89,9 +90,9 @@ const Blogs = () => {
       />
       <TagContainer>
         {uniqueTags.map((tag, index) => (
-          <Tag 
-            key={index} 
-            onClick={() => handleTagClick(tag)} 
+          <Tag
+            key={index}
+            onClick={() => handleTagClick(tag)}
             active={selectedTags.includes(tag)}
           >
             {tag}
@@ -113,6 +114,14 @@ const Blogs = () => {
           </Card>
         ))}
       </GridContainer>
+      {
+        blogs.length === 0 && (
+          <NoResultsContainer>
+            <NoResultsImage src={noResultsImage} alt="No results found" />
+            <NoResultsMessage>Hmmm, We are not getting any results. Our bad - Try another search!</NoResultsMessage>
+          </NoResultsContainer>
+        )
+      }
     </BlogsWrapper>
   );
 };
@@ -223,6 +232,26 @@ const CardContent = styled.div`
   a:hover {
     text-decoration: underline;
   }
+`;
+
+const NoResultsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+`;
+
+const NoResultsImage = styled.img`
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+`;
+
+const NoResultsMessage = styled.p`
+  font-size: 18px;
+  color: #212ea0;
 `;
 
 export default Blogs;
