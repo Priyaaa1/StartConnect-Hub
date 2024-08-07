@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./Footer.css";
 import logo from "../../assets/logo2.png";
 import { FaGithub, FaLinkedin, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { ReactComponent as TwitterIcon } from '../../assets/twitter.png';
 import { NavLink, useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
 import Visitors from "../Visitors";
@@ -143,21 +144,22 @@ const Footer = () => {
           </div>
           <div className="footer-2">
             <p className="footer-section-title">Let&rsquo;s Connect</p>
+           
             <div className="footer-icons footer-icons-md">
               <a href="https://linkedin.com/yourpage" target="_blank" rel="noreferrer">
-                <FaLinkedin style={{ fontSize: "25px" }} />
+                <FaLinkedin style={{ fontSize: "25px", color: "#0A66C2" }} />
               </a>
-              <a href="https://github.com/Priyaaa1/StartConnect-Hub" className="github" target="_blank" rel="noreferrer">
-                <FaGithub />
+              <a href="https://github.com/yourpage" target="_blank" rel="noreferrer">
+                <FaGithub style={{ fontSize: "25px", color: "#333" }} />
               </a>
               <a href="https://facebook.com/yourpage" target="_blank" rel="noreferrer">
-                <FaFacebook style={{ fontSize: "25px" }} />
+                <FaFacebook style={{ fontSize: "25px", color: "#1877F2" }} />
               </a>
-              <a href="https://twitter.com/yourpage" target="_blank" rel="noreferrer">
-                <FaTwitter style={{ fontSize: "25px" }} />
+              <a href="https://x.com/yourpage" target="_blank" rel="noreferrer">
+                <TwitterXIcon style={{ fontSize: "25px", color: "#1DA1F2" }} />
               </a>
               <a href="https://instagram.com/yourpage" target="_blank" rel="noreferrer">
-                <FaInstagram style={{ fontSize: "25px" }} />
+                <FaInstagram style={{ fontSize: "25px", color: "#C13584" }} />
               </a>
             </div>
             <SubscriptionForm />
