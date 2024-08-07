@@ -190,7 +190,8 @@
 }
 
 .subscription-message {
-  color: #28a745; /* Green color for success message */
+  font-weight:600;
+  color: #ffff00; 
   margin-top: 10px; /* Space above the message */
 }
 
