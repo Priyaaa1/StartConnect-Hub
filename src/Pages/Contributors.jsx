@@ -6,12 +6,25 @@ function Contributors() {
   const [contributors, setContributors] = useState([]);
 
   useEffect(() => {
-    async function fetchContributors() {
+    async function fetchContributors(page = 1, allContributors = []) {
       try {
         const response = await axios.get(
-          'https://api.github.com/repos/Priyaaa1/StartConnect-Hub/contributors'
+          `https://api.github.com/repos/Priyaaa1/StartConnect-Hub/contributors`,
+          {
+            params: {
+              per_page: 100, 
+              page,
+            },
+          }
         );
-        setContributors(response.data);
+
+        const newContributors = response.data;
+        if (newContributors.length > 0) {
+          
+          fetchContributors(page + 1, [...allContributors, ...newContributors]);
+        } else {
+          setContributors(allContributors);
+        }
       } catch (error) {
         console.error('Error in fetching contributors:', error);
       }
