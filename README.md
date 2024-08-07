@@ -4,8 +4,18 @@ StartConnect Hub is a revolutionary platform designed to bridge the gap between 
 
 <div align=center>
   <h2>This Project is the part of</h2>
-  <img alt="GSSoC" src="https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png#gh-light-mode-only" width=87%>
-  <img alt="GSSoC" src="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png#gh-dark-mode-only"/>
+  <table>
+    <tr>
+      <th>Event Logo</th>
+      <th>Event Name</th>
+      <th>Event Description</th>
+    </tr>
+    <tr>
+        <td><img src="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png#gh-dark-mode-only" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
+        <td>GirlScript Summer of Code 2024</td>
+        <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development. 
+    </tr>
+</table>
 </div>
 
 ##  Project Admin ✨
@@ -125,6 +135,18 @@ You are all set! 🎉
 ---
 
 Thank you for your contributions! Your efforts help improve StartConnect Hub and support our mission to empower startups and investors. Happy coding! 🚀✨
+
+## Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+## Contributing Guidelines
+
+We believe in the power of collaboration. If you have ideas to improve College.ai, feel free to contribute! Check out our [Contribution Guidelines](CONTRIBUTING.md) to get started.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 <div align="center">
   <h2 style="font-size:3rem;">Our Contributors <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /></h2>
