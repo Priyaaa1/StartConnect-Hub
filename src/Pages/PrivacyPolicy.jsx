@@ -1,15 +1,25 @@
-import {React,useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+
 const PrivacyPolicy = () => {
+  const [lastUpdatedDate, setLastUpdatedDate] = useState('');
+
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const currentDate = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = new Intl.DateTimeFormat('en-US', options).format(currentDate);
+
+    setLastUpdatedDate(formattedDate);
   }, []);
+
   return (
     <PolicyWrapper>
       <div>
         <h1>Privacy Policy</h1>
         <section>
-          <p>Last updated: May 19, 2024</p>
+          <p>Last updated: {lastUpdatedDate}</p>
           <p>Welcome to StartConnect Hub! We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy or our practices regarding your personal information, please contact us at <a href="mailto:startconnecthub@gmail.com"> startconnecthub@gmail.com</a>.</p>
         </section>
         <section>
@@ -66,16 +76,16 @@ const PolicyWrapper = styled.div`
 
   h1 {
     font-size: 2.5rem;
+    margin-bottom: 20px;
     margin-top: 80px;
   }
 
-h2 {
+  h2 {
     text-align: center;
     font-weight: 600;
     display: flex;
     justify-content: left;
     margin-bottom: 15px;
-    padding: 0;
   }
 
   p {

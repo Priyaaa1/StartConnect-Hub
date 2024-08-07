@@ -1,0 +1,11 @@
+#translate-container {
+    /* position: fixed; */
+    height: 100px;
+    width: 300px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
