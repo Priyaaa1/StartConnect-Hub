@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./Footer.css";
 import logo from "../../assets/logo2.png";
 import { FaGithub, FaLinkedin, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
-import { ReactComponent as TwitterIcon } from '../../assets/twitter.png';
+import twitterIcon from '../../assets/twitter.png';
 import { NavLink, useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
 import Visitors from "../Visitors";
@@ -163,19 +163,19 @@ const Footer = () => {
            
             <div className="footer-icons footer-icons-md">
               <a href="https://linkedin.com/yourpage" target="_blank" rel="noreferrer">
-                <FaLinkedin style={{ fontSize: "25px", color: "#0A66C2" }} />
+                <FaLinkedin style={{ fontSize: "25px"}} />
               </a>
               <a href="https://github.com/yourpage" target="_blank" rel="noreferrer">
-                <FaGithub style={{ fontSize: "25px", color: "#333" }} />
+                <FaGithub style={{ fontSize: "25px"}} />
               </a>
               <a href="https://facebook.com/yourpage" target="_blank" rel="noreferrer">
-                <FaFacebook style={{ fontSize: "25px", color: "#1877F2" }} />
+                <FaFacebook style={{ fontSize: "25px"}} />
               </a>
               <a href="https://x.com/yourpage" target="_blank" rel="noreferrer">
-                <TwitterXIcon style={{ fontSize: "25px", color: "#1DA1F2" }} />
-              </a>
+  <img src={twitterIcon} alt="Twitter" style={{ width: "20px", height: "20px"}} />
+</a>
               <a href="https://instagram.com/yourpage" target="_blank" rel="noreferrer">
-                <FaInstagram style={{ fontSize: "25px", color: "#C13584" }} />
+                <FaInstagram style={{ fontSize: "25px"}} />
               </a>
             </div>
             <SubscriptionForm />
