@@ -19,12 +19,12 @@ const Contact = () => {
   const [emailError, setEmailError] = React.useState("");
 
   const [result, setResult] = React.useState("");
-
+  
   //-----email vaidation check
   const validateEmail = (email) => {
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     const approvedDomains = [".com", ".in", ".org", ".net"]; // Add more domains as needed
-
+    
     if (emailPattern.test(email)) {
       let domain = email.substring(email.lastIndexOf("."));
       return approvedDomains.includes(domain);
@@ -32,12 +32,35 @@ const Contact = () => {
       return false;
     }
   };
+  const [mobileNumber, setMobileNumber] = React.useState('');
+  const [message, setMessage] = React.useState('');
+  const [isDisabled, setIsDisabled] = React.useState(true);
+  const handleInputChange = (event) => {
+    const value = event.target.value;
+    
+    if (/^\d*$/.test(value)) {
+      setMobileNumber(value);
 
+      // Regular expression to match exactly 10 digits
+      const regex = /[2-9]{2}\d{8}/;
+      if ( regex.test(value)) {
+        setMessage(value.length === 10 ? 'Mobile number is valid.' : 'Mobile number not valid. It must be exactly 10 digits and should not start with 0 or 1.');
+     setIsDisabled(value.length===10?false:true)
+      } 
+      else {
+        setMessage('Mobile number must be exactly 10 digits and should not start with 0 or 1.');
+        setIsDisabled(true)
+      }
+    } else {
+      setMessage('Only digits are allowed.');
+      setIsDisabled(true)
+    }
+  };
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
     setEmailError(""); // Reset email error message
-
+setMessage("")
     const formData = new FormData(event.target);
     const email = formData.get("email");
 
@@ -46,6 +69,7 @@ const Contact = () => {
       setResult("");
       return;
     }
+
 
     formData.append("access_key", "5759d7fc-28f1-473a-a904-ab8d5f981280");
 
@@ -132,6 +156,7 @@ const Contact = () => {
       </div>
       <div className="contact-col">
         <form onSubmit={onSubmit}>
+        {/* <p style={{color:'black'}}>{isDisabled==true?'1':'0'}</p> */}
           <label>Your name</label>
           <input
             type="text"
@@ -151,14 +176,15 @@ const Contact = () => {
 
           <label>Phone number</label>
           <input
-            type="number"
-            name="phone"
-            pattern="\d{10}"
-            minLength="10"
-            maxLength="10"
-            placeholder="Only digits are allowed"
+             type="text"
+             name="phone"
+             value={mobileNumber}
+             onChange={handleInputChange}
+            placeholder="Only digits are allowed and it must be 10 digit and should not start with 0 or 1"
             required
           ></input>
+                     {message && <span style={{ color: "red" }}>{message}</span>}
+
           <label>Write your message here</label>
           <textarea
             name="message"
@@ -167,7 +193,7 @@ const Contact = () => {
             required
           ></textarea>
           <div className="btn-div">
-            <button type="submit" className={`btn ${reversetheme}`}>
+            <button type="submit" className={`btn ${reversetheme}`} disabled={isDisabled} >
               Submit <img src={arrowImage}></img>
             </button>
           </div>
