@@ -73,6 +73,11 @@
   justify-content: center;
 }
 
+.btn-div .btn:disabled{
+  cursor: none;
+
+}
+
 .contact-col button {
   width: max-content;
   justify-content: center;
