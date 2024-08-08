@@ -9,6 +9,8 @@
     align-items: center;
     justify-content: center;
     animation: animate 10s ease-in-out infinite;
+    background-blend-mode: overlay;
+    background: rgba(0, 0, 0, 0.46);
 }
 
 @keyframes animate{
