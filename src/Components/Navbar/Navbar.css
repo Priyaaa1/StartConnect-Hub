@@ -7,7 +7,7 @@ nav {
   width: 100%;
   background-color: #212ea0; 
   font-size: 14px;
-  padding: 10px 0;
+  padding: 2px 0;
   position: fixed;
   top: 0;
   border-bottom: 2px solid white;
@@ -21,6 +21,7 @@ nav.container1 p {
   color: #edf2f2;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .logo {
@@ -187,6 +188,8 @@ nav a {
   background-color: #ffffff;
   padding: 0;
   transition: box-shadow 0.3s, background 0.3s;
+  margin-top: 10px;
+  
 }
 
 .theme-toggle-button img {
