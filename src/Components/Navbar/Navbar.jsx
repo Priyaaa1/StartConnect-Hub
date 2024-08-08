@@ -81,42 +81,42 @@ const Navbar = () => {
       <li>
           <div className="nav1">
             <NavLink to="/" onClick={() => handleMenuItemClick("/", "hero", 0)}>
-              Home 🏠︎
+              🏠︎ Home 
             </NavLink>
           </div>
         </li>
         <li>
           <div className="nav1">
             <NavLink to="/explore" >
-            Services 👨‍🔧
+            👨‍🔧 Services 
             </NavLink>
           </div>
         </li>
         <li>
           <div className="nav1">
             <NavLink to="/#about" onClick={() => handleMenuItemClick("/", "about", -260)}>
-              About 📖
+             📖 About 
             </NavLink>
           </div>
         </li>
         <li>
           <div className="nav1">
             <NavLink to="/#testimonials" onClick={() => handleMenuItemClick("/", "testimonials", -260)}>
-              Testimonials 💬
+             💬 Testimonials 
             </NavLink>
           </div>
         </li>
         <li>
           <div className="nav1">
             <NavLink to="/#contact" onClick={() => handleMenuItemClick("/", "contact", -260)}>
-              Contact Us ☎
+              ☎ Contact Us 
             </NavLink>
           </div>
         </li>
         <li>
         <div className="nav1">
           <NavLink to="/login" onClick={() => handleMenuItemClick("/login", null, 0)}>
-            LOG IN 💻
+            💻 LOG IN 
           </NavLink>
           </div>
         </li>
