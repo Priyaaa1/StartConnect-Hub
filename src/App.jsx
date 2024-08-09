@@ -43,6 +43,7 @@ import FeedbackPage from './Pages/FeedbackForm';
 import Blogs from './Pages/Blogs'
 import ScrollProgressBar from './Components/ProgressBar';
 import Contributors from './Pages/Contributors.jsx';
+import CookieConsent from './Components/CookiePolicy/CookieConsent.jsx';
 
 const ThemeContext = createContext();
 
@@ -102,6 +103,7 @@ const App = () => {
           </Routes>
           <ChatAssistant />
           <GoToTop />
+          <CookieConsent />
           <Footer />
         </Router>
       </div>
