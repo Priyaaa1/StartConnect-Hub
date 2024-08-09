@@ -1,4 +1,7 @@
 import React from "react";
+import communityGif from '../../assets/about-community.gif';
+import missionImg from '../../assets/about-ourmission.jpg';
+import thirdGif from '../../assets/about-third.gif';
 import "./About.css";
 import { useSelector } from "react-redux";
 
@@ -19,7 +22,8 @@ const About = () => {
           <div className="about-section" data-aos="fade-right">
             <div className="about-image-container">
               <img
-                src="src/assets/about-ourmission.jpg"
+                /*src="src/assets/about-ourmission.jpg"*/
+                src={missionImg}
                 alt="Mission"
                 className="about-img"
               />
@@ -40,7 +44,8 @@ const About = () => {
           <div className="about-section" data-aos="fade-left">
           <div className="about-image-container">
               <img
-                src="src/assets/about-community.gif"
+                /*src="src/assets/about-community.gif"*/
+                src={communityGif}
                 alt="Commitment"
                 className="about-img"
               />
@@ -61,7 +66,8 @@ const About = () => {
           <div className="about-section" data-aos="fade-up">
             <div className="about-image-container">
               <img
-                src="src/assets/about-third.gif"
+              /*src="src/assets/about-third.gif"*/
+                src={thirdGif}
                 alt="Community"
                 className="about-img"
               />
