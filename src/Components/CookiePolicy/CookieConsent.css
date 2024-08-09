@@ -57,3 +57,17 @@
     color: white;
 }
 
+.close-button {
+    position: absolute;
+    bottom: 105px;
+    left: 230px;
+    background: none !important;
+    border: none;
+    font-size: 25px;
+    color: white !important;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #ffcccb;
+}
