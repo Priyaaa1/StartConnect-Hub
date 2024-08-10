@@ -105,6 +105,14 @@ nav1:hover {
   color: #fff;
 } */
 
+@media (max-width:1024px) {
+  .container{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+}
+
 
 
 @media(max-width: 1200px) {
