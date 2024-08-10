@@ -1,0 +1,73 @@
+.cookie-consent {
+    position: fixed;
+    bottom: 10px;
+    left: 68px;
+    background-color: #234fff;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.392);
+    z-index: 1000;
+    max-width: 330px;
+    height: 170px;
+}
+
+.cookie-consent p {
+    margin: 0 0 2px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.cookie-consent-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.learn-more {
+    color: white;
+    /* text-decoration: underline; */
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.learn-more:hover {
+    color: #fff080;
+    text-decoration: underline;
+    
+}
+
+.cookie-consent button {
+    background-color: white;
+    color: #001850;
+    /* border: 2px solid rgb(255, 255, 255); */
+    border-radius: 4px;
+    padding: 8px 2px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 110px;
+    margin-left: 30px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cookie-consent button:hover {
+    background-color: #002042;
+    color: white;
+}
+
+.close-button {
+    position: absolute;
+    bottom: 105px;
+    left: 230px;
+    background: none !important;
+    border: none;
+    font-size: 25px;
+    color: white !important;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #ffcccb;
+}
