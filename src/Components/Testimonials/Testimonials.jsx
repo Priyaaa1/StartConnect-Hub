@@ -8,31 +8,59 @@ function Testimonials() {
   const cardTheme = useSelector((state) => state.theme.value) ? "cardTheme-dark" : "light";
   const carouselRef = useRef(null);
 
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    const items = Array.from(carousel.children);
+
+    // Clone items for infinite scroll
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      carousel.appendChild(clone);
+    });
+
+    // Adjust scroll position
+    const adjustScroll = () => {
+      carousel.scrollLeft = carousel.scrollWidth / 2;
+    };
+
+    adjustScroll();
+
+    const autoSlideInterval = setInterval(() => {
+      const cardWidth = carousel.querySelector(".card").offsetWidth;
+      const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+
+      if (carousel.scrollLeft + carousel.clientWidth >= maxScrollLeft) {
+        carousel.scrollLeft = carousel.scrollWidth / 2 - cardWidth; // Smooth transition
+      } else {
+        carousel.scrollLeft += cardWidth;
+      }
+    }, 3000);
+
+    const handleScroll = () => {
+      const cardWidth = carousel.querySelector(".card").offsetWidth;
+      const maxScrollLeft = carousel.scrollWidth / 2 - cardWidth;
+
+      if (carousel.scrollLeft <= 0) {
+        carousel.scrollLeft = carousel.scrollWidth / 2;
+      } else if (carousel.scrollLeft >= maxScrollLeft) {
+        carousel.scrollLeft = 0;
+      }
+    };
+
+    carousel.addEventListener('scroll', handleScroll);
+    return () => {
+      clearInterval(autoSlideInterval);
+      carousel.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const scrollCarousel = (direction) => {
     const carousel = carouselRef.current;
     const cardWidth = carousel.querySelector(".card").offsetWidth;
-
     const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
 
-    if (
-      direction === "right" &&
-      carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - cardWidth
-    ) {
-      carousel.scrollLeft = 0;
-    } else if (direction === "left" && carousel.scrollLeft <= 0) {
-      carousel.scrollLeft = carousel.scrollWidth - carousel.offsetWidth;
-    } else {
-      carousel.scrollLeft += scrollAmount;
-    }
+    carousel.scrollLeft += scrollAmount;
   };
-
-  useEffect(() => {
-    const autoSlideInterval = setInterval(() => {
-      scrollCarousel("right");
-    }, 3000);
-
-    return () => clearInterval(autoSlideInterval);
-  }, []);
 
   return (
     <>
